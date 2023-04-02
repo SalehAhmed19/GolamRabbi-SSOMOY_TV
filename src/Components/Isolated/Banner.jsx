@@ -19,9 +19,12 @@ function Banner() {
         }}
         className="pt-20 h-screen flex flex-col justify-center lg:px-24 px-5"
       >
-        <div>
+        <div className="pt-20">
           <h1 className="text-5xl font-bold text-[#fff]">ভয়, জড়তা, শঙ্কা আর</h1>
-          <h1 className="text-[#F90162] my-6 text-5xl font-bold">
+          <h1
+            style={{ fonFamily: "MyBanglaFont" }}
+            className="text-[#F90162] my-6 text-5xl font-bold"
+          >
             অনিশ্চয়তাকে পেছনে ফেলে
           </h1>
           <h3 className="text-[#F3B004] font-bold text-xl">
@@ -35,7 +38,9 @@ function Banner() {
           <div className="bg-[#212429] inline-block my-5">
             <div className="flex text-[#8A8EA0] text-xl">
               {socialLinks.map((socialLink) => (
-                <div className="p-4 hover:bg-[#171a1d]">{socialLink.icon}</div>
+                <div key={socialLink._id} className="p-4 hover:bg-[#171a1d]">
+                  {socialLink.icon}
+                </div>
               ))}
             </div>
           </div>
