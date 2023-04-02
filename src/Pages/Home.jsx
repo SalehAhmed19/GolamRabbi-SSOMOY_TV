@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../Components/Isolated/Banner";
+import Features from "../Components/Isolated/Features";
 import Statistics from "../Components/Isolated/Statistics";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <div>
       <Banner />
       <Statistics />
+      <Features />
     </div>
   );
 }
