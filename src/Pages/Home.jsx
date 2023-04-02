@@ -1,4 +1,5 @@
 import React from "react";
+import Advertisement from "../Components/Isolated/Advertisement";
 import Banner from "../Components/Isolated/Banner";
 import FanFun from "../Components/Isolated/FanFun";
 import Features from "../Components/Isolated/Features";
@@ -11,6 +12,7 @@ function Home() {
       <Statistics />
       <Features />
       <FanFun />
+      <Advertisement />
     </div>
   );
 }
