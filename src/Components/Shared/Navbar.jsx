@@ -96,7 +96,7 @@ function Navbar(props) {
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                 >
-                  <div className="flex items-center lg:px-14">
+                  <div className="flex items-center lg:pl-14">
                     <IconButton
                       color="primary"
                       aria-label="open drawer"
@@ -114,7 +114,11 @@ function Navbar(props) {
                     />
                   </div>
                 </Box>
-                <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                <Box
+                  sx={{
+                    display: { xs: "none", sm: "block", paddingRight: "28px" },
+                  }}
+                >
                   {upperNavItems.map((item) => (
                     <Button
                       key={item}
@@ -126,7 +130,7 @@ function Navbar(props) {
                 </Box>
               </div>
               {/* Lower Menu */}
-              <div className="w-full flex p-5 bg-[#0000004b] lg:px-14">
+              <div className="w-full flex p-5 bg-[#0000004b] lg:pl-14">
                 <Box
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
@@ -140,11 +144,14 @@ function Navbar(props) {
                 </Box>
                 <Box
                   sx={{
-                    display: { xs: "none", sm: "block" },
+                    display: { xs: "none", sm: "block", paddingRight: "28px" },
                   }}
                 >
                   {lowerNavItems.map((item) => (
-                    <Button key={item} sx={{ color: "#fff", padding: "0px" }}>
+                    <Button
+                      key={item}
+                      sx={{ color: "#fff", padding: "0px", fontSize: "18px" }}
+                    >
                       {item}
                     </Button>
                   ))}
