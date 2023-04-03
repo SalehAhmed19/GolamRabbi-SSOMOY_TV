@@ -1,5 +1,6 @@
 import React from "react";
 import bg from "../../assets/images/mentor-bg.png";
+import presenter from "../../assets/images/presenter.png";
 
 const Mentor = () => {
   return (
@@ -9,11 +10,27 @@ const Mentor = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="lg:px-24 py-14"
+      className="lg:px-24 py-14 text-[#fff]"
     >
-      <h2 className="text-[#fff] text-center text-4xl font-bold mb-5">
-        পেইড মেন্টরশিপ
-      </h2>
+      <h2 className="text-center text-4xl font-bold mb-5">পেইড মেন্টরশিপ</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
+        <div className="flex flex-col justify-center">
+          <p className="text-xl">
+            উপস্থাপনার ঝকঝকে ক্যারিয়ারে আসার টোটাল প্রস্তুতি নিয়ে নিতে চাও।
+            থাকতে চাও অভিজ্ঞ কারো ছায়ায়। তাহলে দেরী কেনো, উপস্থাপনা কত ধরণের।
+            দেশি-বিদেশি যেকোনো গণমাধ্যমের প্রস্তুতি। কোনটাতে তোমার আগ্রহ আর
+            কিভাবে আসবে এ ক্যারিয়ারে। মূলত: এটি একটি দীর্ঘদিনের প্রস্তুতি
+            প্ল্যান। ধরতে পারো একটা ইন্টার্নশিপ। যা তোমাকে দিবে সার্বিক
+            প্রস্তুতি। এবং এ প্রোগ্রামে থাকতে থাকেতেই মিলবে সুযোগ….
+          </p>
+        </div>
+        <div>
+          <img src={presenter} alt="" />
+        </div>
+      </div>
+      <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
+        আমাকে বুক করতে
+      </button>
     </div>
   );
 };
