@@ -1,5 +1,9 @@
+:root{
+    font-family: 'Hind Siliguri', sans-serif;
+}
 .App{
     background-color: #16181D;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 .text-primary{
     color: #F6B30F;
