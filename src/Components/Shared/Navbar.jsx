@@ -130,7 +130,7 @@ function Navbar(props) {
                 </Box>
               </div>
               {/* Lower Menu */}
-              <div className="w-full flex p-5 bg-[#171c23b8] lg:pl-14">
+              <div className="w-full flex p-5 bg-[#171c23c8] lg:pl-14">
                 <Box
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}

@@ -10,7 +10,7 @@ const Mentor = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="lg:px-24 py-14 text-[#fff]"
+      className="lg:px-24 px-5 py-14 text-[#fff]"
     >
       <h2 className="text-center text-4xl font-bold mb-5">পেইড মেন্টরশিপ</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">

@@ -29,7 +29,7 @@ function Course() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-5">
         {image.map((im, idx) => (
-          <img key={idx} src={im} className="mx-5" alt="" />
+          <img key={idx} src={im} className="lg:mx-5" alt="" />
         ))}
       </div>
       <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">

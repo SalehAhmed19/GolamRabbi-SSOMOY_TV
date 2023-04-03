@@ -6,6 +6,7 @@ import FanFun from "../Components/Isolated/FanFun";
 import Features from "../Components/Isolated/Features";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
+import MockTest from "../Components/Isolated/MockTest";
 import Statistics from "../Components/Isolated/Statistics";
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
       <MediaJobCircular />
       <Course />
       <Mentor />
+      <MockTest />
     </div>
   );
 }
