@@ -17,7 +17,7 @@ function FanFun() {
           ফ্যানদের সাথে ফান
         </h1>
       </Fade>
-      <div className="flex my-20">
+      <div className="flex flex-col lg:flex-row my-20 mx-5">
         <Fade left>
           <FanFunLeft />
         </Fade>
@@ -29,7 +29,7 @@ function FanFun() {
                   key={image._id}
                   src={image.img}
                   alt="img"
-                  className="border border-[#229796] w-36"
+                  className="border border-[#229796] lg:w-36"
                 />
               </Zoom>
             ))}

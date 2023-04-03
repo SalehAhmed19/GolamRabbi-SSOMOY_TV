@@ -17,12 +17,12 @@ function Features() {
       }}
       className="py-24 lg:px-24"
     >
-      <div className="flex justify-center gap-10">
+      <div className="flex flex-col lg:flex-row justify-center gap-10">
         {features.map((feature) => (
           <Fade up>
             <div
               key={feature._id}
-              className="text-4xl font-bold text-[#FCAE01] text-center bg-[#03273B] rounded-xl h-56 w-56 flex flex-col justify-center items-center"
+              className="text-4xl font-bold text-[#FCAE01] text-center bg-[#03273B] rounded-xl h-56 lg:w-56 flex flex-col justify-center items-center mx-5"
             >
               <h3 className="mb-5">{feature.qty}</h3>
               <h3 className="text-[#fff]">{feature.title}</h3>

@@ -40,16 +40,16 @@ function MediaJobCircular() {
           মিডিয়া জব সার্কুলার
         </h2>
       </Fade>
-      <div className="lg:mx-24">
+      <div className="lg:mx-24 mx-5">
         <div className="navigation-wrapper">
           <Zoom>
             <div ref={sliderRef} className="keen-slider">
-              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
             </div>
           </Zoom>
         </div>

@@ -20,22 +20,22 @@ function Course() {
           কোর্স
         </h2>
       </Fade>
-      <div className="flex flex-col lg:flex-row justify-center ">
+      <div className="flex lg:flex-row justify-center mx-5 gap-2 ">
         {data.map((d) => (
           <Zoom>
             <div
               key={d}
-              className="bg-secondary my-7 mx-5 w-40 py-2 rounded-full cursor-pointer text-[#fff] text-xl text-center"
+              className="bg-secondary my-7 lg:mx-5 w-40 py-2 rounded-full cursor-pointer text-[#fff] text-xl text-center"
             >
               <h3>{d}</h3>
             </div>
           </Zoom>
         ))}
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-5 mx-5">
         {image.map((im, idx) => (
           <Fade up>
-            <img key={idx} src={im} className="lg:mx-5" alt="" />
+            <img key={idx} src={im} className="lg:mx-5 rounded-xl" alt="" />
           </Fade>
         ))}
       </div>

@@ -16,7 +16,7 @@ function Blogs() {
         <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
       </div>
       <Link to="/">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-5 mx-5">
           <Zoom>
             <div>
               <h3 className="text-primary my-6 font-bold text-2xl">
