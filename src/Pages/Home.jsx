@@ -9,6 +9,7 @@ import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
 import MockTest from "../Components/Isolated/MockTest";
 import Services from "../Components/Isolated/Services";
+import Skills from "../Components/Isolated/Skills";
 import Statistics from "../Components/Isolated/Statistics";
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
       <MockTest />
       <Blogs />
       <Services />
+      <Skills />
     </div>
   );
 }

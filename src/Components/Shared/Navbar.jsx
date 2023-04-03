@@ -118,6 +118,7 @@ function Navbar(props) {
                     </IconButton>
                     <input
                       className="bg-transparent py-2 px-5 rounded-full border-2 text-center text-[#fff]"
+                      style={{ fontFamily: "Hind Siliguri" }}
                       type="text"
                       placeholder="সার্চ বার"
                     />
@@ -131,7 +132,11 @@ function Navbar(props) {
                   {upperNavItems.map((item) => (
                     <Button
                       key={item}
-                      sx={{ color: "#FBAF18", fontSize: "18px" }}
+                      sx={{
+                        color: "#FBAF18",
+                        fontSize: "18px",
+                        fontFamily: "Hind Siliguri",
+                      }}
                     >
                       {item}
                     </Button>
@@ -159,7 +164,12 @@ function Navbar(props) {
                   {lowerNavItems.map((item) => (
                     <Button
                       key={item}
-                      sx={{ color: "#fff", padding: "0px", fontSize: "18px" }}
+                      sx={{
+                        color: "#fff",
+                        padding: "0px",
+                        fontSize: "18px",
+                        fontFamily: "Hind Siliguri",
+                      }}
                     >
                       {item}
                     </Button>
