@@ -4,6 +4,7 @@ import "./App.css";
 import "./global.css";
 import Navbar from "./Components/Shared/Navbar";
 import Home from "./Pages/Home";
+import Footer from "./Components/Shared/Footer";
 
 function App() {
   const theme = createTheme({
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
+      <Footer />
     </ThemeProvider>
   );
 }
