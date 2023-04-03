@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import bg from "../../assets/images/pencils.jpeg";
 
 function Features() {
@@ -18,13 +19,15 @@ function Features() {
     >
       <div className="flex justify-center gap-10">
         {features.map((feature) => (
-          <div
-            key={feature._id}
-            className="text-4xl font-bold text-[#FCAE01] text-center bg-[#03273B] rounded-xl h-56 w-56 flex flex-col justify-center items-center"
-          >
-            <h3 className="mb-5">{feature.qty}</h3>
-            <h3 className="text-[#fff]">{feature.title}</h3>
-          </div>
+          <Fade up>
+            <div
+              key={feature._id}
+              className="text-4xl font-bold text-[#FCAE01] text-center bg-[#03273B] rounded-xl h-56 w-56 flex flex-col justify-center items-center"
+            >
+              <h3 className="mb-5">{feature.qty}</h3>
+              <h3 className="text-[#fff]">{feature.title}</h3>
+            </div>
+          </Fade>
         ))}
       </div>
     </div>

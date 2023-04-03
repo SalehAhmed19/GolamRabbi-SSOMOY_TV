@@ -3,6 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../../Styles/MediaJobCircular.css";
 import bg from "../../assets/images/job-bg.jpg";
+import { Fade, Zoom } from "react-reveal";
 
 function MediaJobCircular() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,19 +35,23 @@ function MediaJobCircular() {
       }}
       className="pb-10"
     >
-      <h2 className="text-primary text-center py-10 text-4xl font-bold">
-        মিডিয়া জব সার্কুলার
-      </h2>
+      <Fade down>
+        <h2 className="text-primary text-center py-10 text-4xl font-bold">
+          মিডিয়া জব সার্কুলার
+        </h2>
+      </Fade>
       <div className="lg:mx-24">
         <div className="navigation-wrapper">
-          <div ref={sliderRef} className="keen-slider">
-            <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-            <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-            <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-            <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-            <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-            <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-          </div>
+          <Zoom>
+            <div ref={sliderRef} className="keen-slider">
+              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              <div className="keen-slider__slide h-48 w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+            </div>
+          </Zoom>
         </div>
         {loaded && instanceRef.current && (
           <div className="dots mt-10">

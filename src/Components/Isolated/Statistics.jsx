@@ -1,4 +1,5 @@
 import React from "react";
+import { Zoom } from "react-reveal";
 
 function Statistics() {
   const statistics = [
@@ -15,13 +16,15 @@ function Statistics() {
     <div className="my-14 lg:mx-24">
       <div className="grid lg:grid-cols-8 grid-cols-1 gap-2">
         {statistics.map((statistic) => (
-          <div
-            key={statistic._id}
-            className="px-5 py-10 border-2 border-[#860E3F] flex flex-col items-center text-[#fff]"
-          >
-            <h3 className="text-xl">{statistic.qty}</h3>
-            <h3 className="text-center text-xl">{statistic.activity}</h3>
-          </div>
+          <Zoom>
+            <div
+              key={statistic._id}
+              className="px-5 py-10 border-2 border-[#860E3F] flex flex-col items-center text-[#fff]"
+            >
+              <h3 className="text-xl">{statistic.qty}</h3>
+              <h3 className="text-center text-xl">{statistic.activity}</h3>
+            </div>
+          </Zoom>
         ))}
       </div>
     </div>
