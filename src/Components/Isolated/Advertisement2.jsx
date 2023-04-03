@@ -15,13 +15,13 @@ function Advertisement2() {
       className="lg:px-24 py-20 text-[#fff]"
     >
       <Fade down>
-        <h2 className="text-center text-4xl font-bold mb-5 text-primary">
+        <h2 className="text-center lg:text-4xl text-xl font-bold mb-5 text-primary mx-5">
           মিডিয়া জব। বিশেষ করে সংবাদ উপস্থাপনা। তাও আবার টিভিতে। এ চাকরি নিয়ে
           জানতে চাও? তাহলে দেরী না করে এখনই ওয়াটস্ অ্যাপ করো অথবা মেইল করো।
         </h2>
       </Fade>
       <Fade right>
-        <div className="flex flex-col items-end text-xl">
+        <div className="flex flex-col lg:items-end items-center text-xl">
           <span>
             <p className="flex items-center">
               <IoLogoWhatsapp className="text-primary mr-5" /> (+880)

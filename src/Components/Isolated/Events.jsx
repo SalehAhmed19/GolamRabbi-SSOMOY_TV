@@ -12,7 +12,7 @@ function Events() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="lg:px-24 py-14 text-[#fff]"
+      className="lg:px-24 py-14 text-[#fff] px-5"
     >
       <Fade down>
         <h1 className="text-primary text-center text-4xl font-bold">
