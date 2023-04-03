@@ -81,17 +81,17 @@ function Services() {
         </Fade>
         <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
       </div>
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row">
         <div>
           <img className="border-4 border-[#fff]" src={image} alt="" />
         </div>
-        <div className="w-full mx-5">
-          <div className="flex justify-center gap-5 mt-10 mb-5">
+        <div className="w-full lg:mx-5">
+          <div className="flex flex-col lg:flex-row justify-center gap-5 mt-10 mb-5">
             {data.slice(0, 2).map((d) => (
               <Zoom>
                 <div
                   key={d._id}
-                  className="p-5 border-2 rounded-lg w-48 flex flex-col justify-center items-center"
+                  className="p-5 border-2 rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5"
                 >
                   <h4 className="text-primary text-3xl mb-5 flex justify-center">
                     {d.icon}
@@ -114,12 +114,12 @@ function Services() {
               </Zoom>
             ))}
           </div>
-          <div className="flex justify-center gap-5 my-5">
+          <div className="flex flex-col lg:flex-row justify-center gap-5 my-5">
             {data.slice(2, 6).map((d) => (
               <Zoom>
                 <div
                   key={d._id}
-                  className="p-5 border-2 rounded-lg w-48 flex flex-col justify-center items-center"
+                  className="p-5 border-2 rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5"
                 >
                   <h4 className="text-primary text-3xl mb-5 flex justify-center">
                     {d.icon}
@@ -142,12 +142,12 @@ function Services() {
               </Zoom>
             ))}
           </div>
-          <div className="flex justify-center gap-5 my-5">
+          <div className="flex flex-col lg:flex-row justify-center gap-5 my-5">
             {data.slice(6, 9).map((d) => (
               <Zoom>
                 <div
                   key={d._id}
-                  className="p-5 border-2 rounded-lg w-48 flex flex-col justify-center items-center"
+                  className="p-5 border-2 rounded-lg lg:w-48 flex flex-col justify-center items-center bg-secondary bg-[#14161C] mx-5"
                 >
                   <h4 className="text-primary text-3xl mb-5 ">{d.icon}</h4>
                   <h3
