@@ -1,8 +1,10 @@
 import React from "react";
 import Advertisement from "../Components/Isolated/Advertisement";
+import Advertisement2 from "../Components/Isolated/Advertisement2";
 import Banner from "../Components/Isolated/Banner";
 import Blogs from "../Components/Isolated/Blogs";
 import Course from "../Components/Isolated/Course";
+import Events from "../Components/Isolated/Events";
 import FanFun from "../Components/Isolated/FanFun";
 import Features from "../Components/Isolated/Features";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
@@ -27,6 +29,8 @@ function Home() {
       <Blogs />
       <Services />
       <Skills />
+      <Advertisement2 />
+      <Events />
     </div>
   );
 }
