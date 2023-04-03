@@ -22,7 +22,7 @@ function Advertisement() {
           তাহলে দেরী কেনো? এখনই লিখে ফেলো তোমার কথা। আর পেয়ে যাও <br /> সুন্দর
           সমাধান।
         </p>
-        <button className="my-10 py-2 border-2 border-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <button className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
           অংশ নিতে ক্লিক করো
         </button>
       </Zoom>

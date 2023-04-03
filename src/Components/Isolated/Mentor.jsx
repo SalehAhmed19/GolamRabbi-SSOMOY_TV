@@ -36,7 +36,7 @@ const Mentor = () => {
         </div>
       </div>
       <Fade up>
-        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
           আমাকে বুক করতে
         </button>
       </Fade>

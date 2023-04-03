@@ -37,7 +37,7 @@ function MockTest() {
         </div>
       </div>
       <Fade up>
-        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
           টেস্ট দিতে সেট করে নাও টাইম
         </button>
       </Fade>

@@ -25,7 +25,7 @@ function Course() {
           <Zoom>
             <div
               key={d}
-              className="bg-secondary my-7 mx-5 w-40 py-2 rounded-full text-[#fff] text-xl text-center"
+              className="bg-secondary my-7 mx-5 w-40 py-2 rounded-full cursor-pointer text-[#fff] text-xl text-center"
             >
               <h3>{d}</h3>
             </div>
@@ -40,7 +40,7 @@ function Course() {
         ))}
       </div>
       <Fade up>
-        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
           এনরোল
         </button>
       </Fade>
