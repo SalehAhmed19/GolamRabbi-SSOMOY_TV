@@ -5,6 +5,8 @@ import "./global.css";
 import Navbar from "./Components/Shared/Navbar";
 import Home from "./Pages/Home";
 import Footer from "./Components/Shared/Footer";
+import ScrollToTop from "react-scroll-to-top";
+import { TbArrowBigUpLinesFilled } from "react-icons/tb";
 
 function App() {
   const theme = createTheme({
@@ -30,6 +32,18 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <ScrollToTop
+        style={{
+          borderRadius: "50%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#333",
+          backgroundColor: "#D89F17",
+        }}
+        component={<TbArrowBigUpLinesFilled />}
+        smooth
+      />
     </ThemeProvider>
   );
 }

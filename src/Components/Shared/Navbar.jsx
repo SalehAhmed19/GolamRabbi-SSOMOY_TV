@@ -67,6 +67,15 @@ function Navbar(props) {
             </ListItemButton>
           </ListItem>
         ))}
+        <div className="bg-[#00000029]">
+          {lowerNavItems.map((item) => (
+            <ListItem key={item} disablePadding>
+              <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </div>
       </List>
     </Box>
   );
