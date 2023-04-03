@@ -82,7 +82,9 @@ function Services() {
         <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
       </div>
       <div className="flex">
-        <img className="w-96 border-4 border-[#fff]" src={image} alt="" />
+        <div>
+          <img className="border-4 border-[#fff]" src={image} alt="" />
+        </div>
         <div className="w-full mx-5">
           <div className="flex justify-center gap-5 mt-10 mb-5">
             {data.slice(0, 2).map((d) => (
