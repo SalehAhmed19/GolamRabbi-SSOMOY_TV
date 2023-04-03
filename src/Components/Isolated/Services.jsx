@@ -83,7 +83,9 @@ function Services() {
       </div>
       <div className="flex flex-col lg:flex-row">
         <div>
-          <img className="border-4 border-[#fff]" src={image} alt="" />
+          <Fade left>
+            <img className="border-4 border-[#fff]" src={image} alt="" />
+          </Fade>
         </div>
         <div className="w-full lg:mx-5">
           <div className="flex flex-col lg:flex-row justify-center gap-5 mt-10 mb-5">

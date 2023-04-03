@@ -1,6 +1,7 @@
 import React from "react";
 import { GiLifeBar, GiPublicSpeaker } from "react-icons/gi";
 import { HiNewspaper } from "react-icons/hi";
+import { Fade, Zoom } from "react-reveal";
 
 function Skills() {
   const skills = [
@@ -14,18 +15,22 @@ function Skills() {
   ];
   return (
     <div className="lg:px-24 py-14 text-[#fff]">
-      <h2 className="text-center text-4xl font-bold mb-5 text-primary">
-        স্কিল সমূহ
-      </h2>
+      <Fade down>
+        <h2 className="text-center text-4xl font-bold mb-5 text-primary">
+          স্কিল সমূহ
+        </h2>
+      </Fade>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mx-5">
         {skills.map((skill) => (
-          <div
-            key={skill._id}
-            className="flex flex-col justify-center items-center border-2 border-[#AE1553] p-5 shadow-xl rounded-md"
-          >
-            <h3 className="text-primary text-5xl my-5">{skill.icon}</h3>
-            <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>
-          </div>
+          <Zoom>
+            <div
+              key={skill._id}
+              className="flex flex-col justify-center items-center border-2 border-[#AE1553] p-5 shadow-xl rounded-md"
+            >
+              <h3 className="text-primary text-5xl my-5">{skill.icon}</h3>
+              <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>
+            </div>
+          </Zoom>
         ))}
       </div>
     </div>
