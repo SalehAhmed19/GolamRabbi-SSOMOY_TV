@@ -10,8 +10,10 @@ import Features from "../Components/Isolated/Features";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
 import MockTest from "../Components/Isolated/MockTest";
+import MyAward from "../Components/Isolated/MyAward";
 import Services from "../Components/Isolated/Services";
 import Skills from "../Components/Isolated/Skills";
+import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
 
 function Home() {
@@ -31,6 +33,8 @@ function Home() {
       <Skills />
       <Advertisement2 />
       <Events />
+      <MyAward />
+      <SocialMedia />
     </div>
   );
 }

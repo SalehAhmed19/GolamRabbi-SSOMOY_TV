@@ -38,7 +38,7 @@ function Banner() {
             <h1 className="text-[#F3B004] font-bold text-xl">
               <Typewriter
                 options={{
-                  strings: ["বিজয়ের গল্পের শুরু এখানেই ............"],
+                  strings: ["বিজয়ের গল্পের শুরু এখানেই ..."],
                   autoStart: true,
                   loop: true,
                 }}
