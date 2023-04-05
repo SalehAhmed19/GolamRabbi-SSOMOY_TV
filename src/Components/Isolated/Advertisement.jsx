@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/depression.jpg";
+import { Modal } from "antd";
 
 function Advertisement() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div
       style={{
@@ -22,9 +33,23 @@ function Advertisement() {
           তাহলে দেরী কেনো? এখনই লিখে ফেলো তোমার কথা। আর পেয়ে যাও <br /> সুন্দর
           সমাধান।
         </p>
-        <button className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <button
+          onClick={showModal}
+          className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl"
+        >
           অংশ নিতে ক্লিক করো
         </button>
+        <Modal
+          centered
+          title="Basic Modal"
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
       </Zoom>
     </div>
   );

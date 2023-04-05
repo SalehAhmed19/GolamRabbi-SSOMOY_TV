@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fade } from "react-reveal";
 import presenter from "../../assets/images/presenter.png";
+import { Modal } from "antd";
 
 function MockTest() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="lg:px-24 py-14 text-[#fff]">
       <Fade down>
@@ -37,9 +48,23 @@ function MockTest() {
         </div>
       </div>
       <Fade up>
-        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <button
+          onClick={showModal}
+          className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+        >
           টেস্ট দিতে সেট করে নাও টাইম
         </button>
+        <Modal
+          centered
+          title="Basic Modal"
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
       </Fade>
     </div>
   );

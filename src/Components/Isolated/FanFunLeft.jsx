@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal } from "antd";
 
 const FanFunLeft = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="flex flex-col justify-center">
       <h2 className="text-secondary text-3xl font-bold mb-5">
@@ -19,9 +30,23 @@ const FanFunLeft = () => {
         অংশ নিতে পারবে যেকেউ। অংশ নিতে পারো তুমিও। শিখতে পারো। থাকবে মজাও। আর
         সেলফি, আড্ডাতো থাকছেই..!
       </p>
-      <button className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] text-xl">
+      <button
+        onClick={showModal}
+        className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] text-xl"
+      >
         অংশ নিতে ক্লিক করো
       </button>
+      <Modal
+        centered
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div>
   );
 };

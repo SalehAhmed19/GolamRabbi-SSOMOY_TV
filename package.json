@@ -14,6 +14,7 @@
     "@mui/icons-material": "^5.11.11",
     "@mui/joy": "^5.0.0-alpha.73",
     "@mui/material": "^5.11.15",
+    "antd": "^5.4.0",
     "firebase": "^9.19.1",
     "keen-slider": "^6.8.5",
     "react": "^18.2.0",
