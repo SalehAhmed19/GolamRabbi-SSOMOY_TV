@@ -72,22 +72,26 @@ function Services() {
       }}
       className="lg:px-24 py-14 text-[#fff]"
     >
-      <div className="flex items-center justify-center">
-        <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
-        <Fade down>
-          <h2 className="text-center text-4xl font-bold mb-5 text-primary mx-10">
-            সেবা
-          </h2>
-        </Fade>
-        <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
-      </div>
       <div className="flex flex-col lg:flex-row">
         <div>
           <Fade left>
-            <img className="border-4 border-[#fff]" src={image} alt="" />
+            <img
+              className="border-4 border-[#fff] w-[500px]"
+              src={image}
+              alt=""
+            />
           </Fade>
         </div>
         <div className="w-full lg:mx-5">
+          <div className="flex items-center justify-center">
+            <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
+            <Fade down>
+              <h2 className="text-center text-4xl font-bold mb-5 text-primary mx-10">
+                সেবা
+              </h2>
+            </Fade>
+            <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
+          </div>
           <div className="flex flex-col lg:flex-row justify-center gap-5 mt-10 mb-5">
             {data.slice(0, 2).map((d) => (
               <Zoom>

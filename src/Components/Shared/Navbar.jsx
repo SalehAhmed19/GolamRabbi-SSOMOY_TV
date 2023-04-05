@@ -91,13 +91,13 @@ function Navbar(props) {
           <Toolbar>
             {/* Upper Menu */}
             <div className="w-full">
-              <div className="w-full flex p-5 bg-[#000]">
+              <div className="w-full flex p-2 bg-[#000]">
                 <IconButton
                   color="primary"
                   aria-label="open drawer"
                   edge="start"
                   onClick={handleDrawerToggle}
-                  sx={{ display: { sm: "none" }, padding: "0px" }}
+                  sx={{ display: { sm: "none" }, padding: "0 20px" }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -105,7 +105,7 @@ function Navbar(props) {
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                 >
-                  <div className="flex items-center lg:pl-14">
+                  {/* <div className="flex items-center lg:pl-14">
                     <IconButton
                       color="primary"
                       aria-label="open drawer"
@@ -117,12 +117,12 @@ function Navbar(props) {
                       <MenuIcon />
                     </IconButton>
                     <input
-                      className="bg-transparent py-2 px-5 rounded-full border-2 text-center text-[#fff]"
+                      className="bg-transparent py-1 px-5 rounded-full border-2 text-center text-[#fff]"
                       style={{ fontFamily: "Hind Siliguri" }}
                       type="text"
                       placeholder="সার্চ বার"
                     />
-                  </div>
+                  </div> */}
                 </Box>
                 <Box
                   sx={{
@@ -144,7 +144,7 @@ function Navbar(props) {
                 </Box>
               </div>
               {/* Lower Menu */}
-              <div className="w-full flex p-5 bg-[#171c23c8] lg:pl-14">
+              <div className="w-full flex p-8 bg-[#000] lg:pl-14 border-t border-t-[#222]">
                 <Box
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
@@ -161,6 +161,13 @@ function Navbar(props) {
                     display: { xs: "none", sm: "block", paddingRight: "28px" },
                   }}
                 >
+                  {" "}
+                  <input
+                    className="bg-transparent py-2 mr-3 px-5 rounded-full border-2 border-[#333] text-center text-[#fff]"
+                    style={{ fontFamily: "Hind Siliguri" }}
+                    type="text"
+                    placeholder="সার্চ বার"
+                  />
                   {lowerNavItems.map((item) => (
                     <Button
                       key={item}

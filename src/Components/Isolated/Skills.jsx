@@ -14,7 +14,7 @@ function Skills() {
     { _id: 7, skill: "ওয়্যারফ্রেম ডিজাইন", icon: <HiNewspaper /> },
   ];
   return (
-    <div className="lg:px-24 py-14 text-[#fff]">
+    <div className="lg:px-24 pt-14 pb-64 text-[#fff]">
       <Fade down>
         <h2 className="text-center text-4xl font-bold mb-5 text-primary">
           স্কিল সমূহ

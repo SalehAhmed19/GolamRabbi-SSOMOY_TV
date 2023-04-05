@@ -7,10 +7,26 @@ import img4 from "../../assets/images/social4.png";
 
 function SocialMedia() {
   const arr = [
-    { img: img1, social: "ফেইসবুক" },
-    { img: img2, social: "ইন্সটাগ্রাম" },
-    { img: img3, social: "ইউটিউব" },
-    { img: img4, social: "লিংকড ইন" },
+    {
+      img: img1,
+      social: "ফেইসবুক",
+      href: "https://www.facebook.com/golam.rabby.739326",
+    },
+    {
+      img: img2,
+      social: "ইন্সটাগ্রাম",
+      href: "#",
+    },
+    {
+      img: img3,
+      social: "ইউটিউব",
+      href: "#",
+    },
+    {
+      img: img4,
+      social: "লিংকড ইন",
+      href: "#",
+    },
   ];
   return (
     <div className="lg:px-24 py-14 text-[#fff] px-5">
@@ -23,21 +39,23 @@ function SocialMedia() {
         <div className="mt-10 flex flex-col lg:flex-row gap-5">
           {arr.map((a, idx) => (
             <Fade up>
-              <div
-                key={idx}
-                className="w-56 h-56 shadow-lg shadow-[#282828] rounded-md flex items-end justify-center cursor-pointer"
-                style={{
-                  background: `url(${a.img})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
-                <Fade up>
-                  <h3 className="text-center my-3 font-bold text-xl">
-                    {a.social}
-                  </h3>
-                </Fade>
-              </div>
+              <a href={a.href} target="_blank">
+                <div
+                  key={idx}
+                  className="w-56 h-56 shadow-lg shadow-[#282828] rounded-md flex items-end justify-center cursor-pointer"
+                  style={{
+                    background: `url(${a.img})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <Fade up>
+                    <h3 className="text-center my-3 font-bold text-xl">
+                      {a.social}
+                    </h3>
+                  </Fade>
+                </div>
+              </a>
             </Fade>
           ))}
         </div>

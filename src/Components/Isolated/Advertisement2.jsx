@@ -21,9 +21,9 @@ function Advertisement2() {
         </h2>
       </Fade>
       <Fade right>
-        <div className="flex flex-col lg:items-end items-center text-xl">
+        <div className="flex flex-col lg:items-end items-center justify-center pt-10 text-xl">
           <span>
-            <p className="flex items-center">
+            <p className="flex items-center mb-7">
               <IoLogoWhatsapp className="text-primary mr-5" /> (+880)
               1721-576389
             </p>

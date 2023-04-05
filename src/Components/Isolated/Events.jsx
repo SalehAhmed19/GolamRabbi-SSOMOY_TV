@@ -2,7 +2,8 @@ import React from "react";
 import bg from "../../assets/images/event-bg.jpg";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
-import { Fade } from "react-reveal";
+import { Fade, Zoom } from "react-reveal";
+import Advertisement2 from "./Advertisement2";
 
 function Events() {
   return (
@@ -14,6 +15,7 @@ function Events() {
       }}
       className="lg:px-24 py-14 text-[#fff] px-5"
     >
+      <Zoom>{/* <Advertisement2 /> */}</Zoom>
       <Fade down>
         <h1 className="text-primary text-center text-4xl font-bold">
           আসন্ন ইভেন্টস
