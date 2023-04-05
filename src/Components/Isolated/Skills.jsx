@@ -25,7 +25,7 @@ function Skills() {
           <Zoom>
             <div
               key={skill._id}
-              className="flex flex-col justify-center items-center border-2 border-[#AE1553] p-5 shadow-xl rounded-md"
+              className="flex flex-col justify-center items-center p-5 shadow-lg shadow-[#0000005c] rounded-md"
             >
               <h3 className="text-primary text-5xl my-5">{skill.icon}</h3>
               <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>

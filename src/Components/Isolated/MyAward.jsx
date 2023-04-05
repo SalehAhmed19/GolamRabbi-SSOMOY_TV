@@ -13,7 +13,7 @@ function MyAward() {
       <div className="flex flex-col items-center mb-14">
         <div className="mt-10 flex flex-col lg:flex-row gap-7">
           {arr.map((a) => (
-            <div className="w-36 h-36 shadow-lg shadow-[#282828] rounded-md"></div>
+            <div className="w-36 h-36 shadow-lg shadow-[#0000005c] rounded-md"></div>
           ))}
         </div>
       </div>

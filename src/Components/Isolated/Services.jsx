@@ -97,7 +97,7 @@ function Services() {
               <Zoom>
                 <div
                   key={d._id}
-                  className="p-5 border-2 rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5 lg:mx-0"
+                  className="p-5 shadow-lg shadow-[#0000005c] rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5 lg:mx-0"
                 >
                   <h4 className="text-primary text-3xl mb-5 flex justify-center">
                     {d.icon}
@@ -125,7 +125,7 @@ function Services() {
               <Zoom>
                 <div
                   key={d._id}
-                  className="p-5 border-2 rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5 lg:mx-0"
+                  className="p-5 shadow-lg shadow-[#0000005c] rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5 lg:mx-0"
                 >
                   <h4 className="text-primary text-3xl mb-5 flex justify-center">
                     {d.icon}
@@ -153,7 +153,7 @@ function Services() {
               <Zoom>
                 <div
                   key={d._id}
-                  className="p-5 border-2 rounded-lg lg:w-48 flex flex-col justify-center items-center bg-secondary bg-[#14161C] mx-5 lg:mx-0"
+                  className="p-5 shadow-lg shadow-[#0000005c] rounded-lg lg:w-48 flex flex-col justify-center items-center bg-secondary bg-[#14161C] mx-5 lg:mx-0"
                 >
                   <h4 className="text-primary text-3xl mb-5 ">{d.icon}</h4>
                   <h3
