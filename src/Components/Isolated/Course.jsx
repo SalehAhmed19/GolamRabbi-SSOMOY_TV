@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import bg from "../../assets/images/course-bg.png";
-import img from "../../assets/images/gr.png";
+import img1 from "../../assets/images/mediacourse.jpg";
+import img2 from "../../assets/images/leadership.jpg";
+import img3 from "../../assets/images/lifecourse.jpg";
 import { Modal } from "antd";
 import CourseModal from "./Modals/CourseModal";
 
@@ -12,7 +14,7 @@ function Course() {
     setOpen(false);
   };
   const data = ["মিডিয়া", "লিডারশীপ", "লাইফ কোর্স"];
-  const image = [img, img, img];
+  const image = [img1, img2, img3];
   return (
     <div
       style={{
@@ -42,7 +44,12 @@ function Course() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-5 mx-5">
         {image.map((im, idx) => (
           <Fade up>
-            <img key={idx} src={im} className="lg:mx-5 rounded-xl" alt="" />
+            <img
+              key={idx}
+              src={im}
+              className="lg:mx-5 rounded-xl cursor-pointer"
+              alt=""
+            />
           </Fade>
         ))}
       </div>

@@ -144,7 +144,7 @@ function Navbar(props) {
                 </Box>
               </div>
               {/* Lower Menu */}
-              <div className="w-full flex p-8 bg-[#000] lg:pl-14 border-t border-t-[#222]">
+              <div className="w-full flex p-4 bg-[#000] lg:pl-14 border-t border-t-[#222]">
                 <Box
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
@@ -152,7 +152,7 @@ function Navbar(props) {
                   <div className="flex items-center">
                     <img className="w-10" src={logo} alt="" />{" "}
                     <p className="text-[#fff] font-bold text-xl ml-2">
-                      Golam Rabbi
+                      Golam Rabby
                     </p>
                   </div>
                 </Box>
