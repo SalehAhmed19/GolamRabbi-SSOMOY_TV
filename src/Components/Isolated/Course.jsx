@@ -3,17 +3,13 @@ import { Fade, Zoom } from "react-reveal";
 import bg from "../../assets/images/course-bg.png";
 import img from "../../assets/images/gr.png";
 import { Modal } from "antd";
+import CourseModal from "./Modals/CourseModal";
 
 function Course() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
+  const [open, setOpen] = useState(false);
+  const onCreate = (values) => {
+    console.log("Received values of form: ", values);
+    setOpen(false);
   };
   const data = ["মিডিয়া", "লিডারশীপ", "লাইফ কোর্স"];
   const image = [img, img, img];
@@ -51,23 +47,9 @@ function Course() {
         ))}
       </div>
       <Fade up>
-        <button
-          onClick={showModal}
-          className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl"
-        >
-          এনরোল
-        </button>
-        <Modal
-          centered
-          title="Basic Modal"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-        </Modal>
+        <div className="flex justify-center">
+          <CourseModal open={open} onCreate={onCreate} />
+        </div>
       </Fade>
     </div>
   );
