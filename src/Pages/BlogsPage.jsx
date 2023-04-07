@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function BlogsPage() {
   return (
-    <div className="py-24 mx-20">
+    <div className="py-24 lg:mx-20 mx-5">
       <h2 className="text-4xl font-bold text-center pt-20 pb-10 text-primary">
         ব্লগ
       </h2>

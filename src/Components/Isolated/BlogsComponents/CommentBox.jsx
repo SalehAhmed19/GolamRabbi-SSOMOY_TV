@@ -13,11 +13,11 @@ function CommentBox() {
           সাইন ইন করুন
         </button>
       </div>
-      <div className="my-10 flex">
-        <div className="h-10 w-10 bg-[#333] rounded-full"></div>
+      <div className="my-10 flex flex-col lg:flex-row">
+        <div className="h-10 w-10 bg-[#333] rounded-full mx-auto mb-5"></div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col lg:w-1/2 mx-5"
+          className="flex flex-col lg:w-1/2 w-full lg:mx-5"
           action=""
         >
           <textarea

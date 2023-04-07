@@ -77,9 +77,11 @@ function Navbar(props) {
         <div className="bg-[#00000029]">
           {lowerNavItems.map((item, idx) => (
             <ListItem key={idx} disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item.menu} />
-              </ListItemButton>
+              <Link to={item.route}>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={item.menu} />
+                </ListItemButton>
+              </Link>
             </ListItem>
           ))}
         </div>
