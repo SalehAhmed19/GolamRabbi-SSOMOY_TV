@@ -1,10 +1,11 @@
 import React from "react";
-import img3 from "../../assets/images/bloghsm.png";
 import BlogsHeading from "../../Components/Isolated/BlogsComponents/BlogsHeading";
 import BlogsSubHeading from "../../Components/Isolated/BlogsComponents/BlogsSubHeading";
 import BlogContent from "../../Components/Isolated/BlogsComponents/BlogContent";
 import BlogsAdd from "../../Components/Isolated/BlogsComponents/BlogsAdd";
 import MoreBlogsVertical from "../../Components/Isolated/BlogsComponents/MoreBlogsVertical";
+import CommentBox from "../../Components/Isolated/BlogsComponents/CommentBox";
+import SocialMedia from "../../Components/Isolated/SocialMedia";
 
 function Blog1() {
   return (
@@ -24,6 +25,8 @@ function Blog1() {
           </div>
         </div>
       </div>
+      <CommentBox />
+      <SocialMedia />
     </div>
   );
 }
