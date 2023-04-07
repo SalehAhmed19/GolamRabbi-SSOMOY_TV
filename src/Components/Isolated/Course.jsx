@@ -6,6 +6,10 @@ import img2 from "../../assets/images/leadership.jpg";
 import img3 from "../../assets/images/lifecourse.jpg";
 import { Modal } from "antd";
 import CourseModal from "./Modals/CourseModal";
+import { Link, Outlet } from "react-router-dom";
+import MediaCourse from "./Courses/MediaCourse";
+import LeaderShipCourse from "./Courses/LeaderShipCourse";
+import LifeCourse from "./Courses/LifeCourse";
 
 function Course() {
   const [open, setOpen] = useState(false);
@@ -13,8 +17,11 @@ function Course() {
     console.log("Received values of form: ", values);
     setOpen(false);
   };
-  const data = ["মিডিয়া", "লিডারশীপ", "লাইফ কোর্স"];
-  const image = [img1, img2, img3];
+  const data = [
+    { title: "মিডিয়া", route: "/" },
+    { title: "লিডারশীপ", route: "/course/leadership-course" },
+    { title: "লাইফ কোর্স", route: "course/life-course" },
+  ];
   return (
     <div
       style={{
@@ -30,28 +37,26 @@ function Course() {
         </h2>
       </Fade>
       <div className="flex lg:flex-row justify-center mx-5 gap-2 ">
-        {data.map((d) => (
+        {data.map((d, idx) => (
           <Zoom>
-            <div
-              key={d}
-              className="bg-secondary my-7 lg:mx-5 w-40 py-2 rounded-full cursor-pointer text-[#fff] text-xl text-center"
-            >
-              <h3>{d}</h3>
-            </div>
+            <Link to={d.route}>
+              <div
+                to={d.route}
+                key={idx}
+                className="bg-secondary my-7 lg:mx-5 w-40 py-2 rounded-full cursor-pointer text-[#fff] text-xl text-center"
+              >
+                <h3>{d.title}</h3>
+              </div>
+            </Link>
           </Zoom>
         ))}
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-5 mx-5">
-        {image.map((im, idx) => (
-          <Fade up>
-            <img
-              key={idx}
-              src={im}
-              className="lg:mx-5 rounded-xl cursor-pointer"
-              alt=""
-            />
-          </Fade>
-        ))}
+      <div className=" my-5 mx-5">
+        {/* {image.map((im, idx) => ( */}
+        <Fade up>
+          <Outlet />
+        </Fade>
+        {/* ))} */}
       </div>
       <Fade up>
         <div className="flex justify-center">

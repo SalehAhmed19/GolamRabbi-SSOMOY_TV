@@ -11,6 +11,12 @@
 .text-secondary{
     color:#F40A5C;
 }
+.text-basic{
+    color: #E0E0E0;
+}
+.text-accent{
+    color: #BBBBBB;
+}
 .bg-primary{
     background-color: #F6B30F;
 }

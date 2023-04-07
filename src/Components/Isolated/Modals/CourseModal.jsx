@@ -1,4 +1,4 @@
-import { Form, Input, Modal, Select, Space } from "antd";
+import { Form, Input, Modal, Select } from "antd";
 import { useState } from "react";
 const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
   const handleChange = (value) => {

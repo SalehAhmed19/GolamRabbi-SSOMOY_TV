@@ -7,6 +7,11 @@ import Home from "./Pages/Home";
 import Footer from "./Components/Shared/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import { TbArrowBigUpLinesFilled } from "react-icons/tb";
+import MediaCourse from "./Components/Isolated/Courses/MediaCourse";
+import LeaderShipCourse from "./Components/Isolated/Courses/LeaderShipCourse";
+import LifeCourse from "./Components/Isolated/Courses/LifeCourse";
+import BlogsPage from "./Pages/BlogsPage";
+import Blog1 from "./Pages/Blogs/Blog1";
 
 function App() {
   const theme = createTheme({
@@ -28,7 +33,16 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />}>
+            <Route index element={<MediaCourse />} />
+            <Route
+              path="course/leadership-course"
+              element={<LeaderShipCourse />}
+            />
+            <Route path="course/life-course" element={<LifeCourse />} />
+          </Route>
+          <Route path="/blogs" element={<BlogsPage />}></Route>
+          <Route path="/blogs/blog-1" element={<Blog1 />} />
         </Routes>
       </div>
       <Footer />

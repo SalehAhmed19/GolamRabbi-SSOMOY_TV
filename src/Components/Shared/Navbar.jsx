@@ -16,10 +16,17 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import logo from "../../assets/logo/logo.png";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 const upperNavItems = ["লগইন", "সাবস্ক্রাইব"];
-const lowerNavItems = ["চাকরি", "ইভেন্ট", "কোর্স", "ব্লগ", "ইনভাইট"];
+const lowerNavItems = [
+  { menu: "চাকরি", route: "/jobs" },
+  { menu: "ইভেন্ট", route: "/events" },
+  { menu: "কোর্স", route: "/courses" },
+  { menu: "ব্লগ", route: "/blogs" },
+  { menu: "ইনভাইট", route: "/invitation" },
+];
 
 const theme = createTheme({
   palette: {
@@ -68,10 +75,10 @@ function Navbar(props) {
           </ListItem>
         ))}
         <div className="bg-[#00000029]">
-          {lowerNavItems.map((item) => (
-            <ListItem key={item} disablePadding>
+          {lowerNavItems.map((item, idx) => (
+            <ListItem key={idx} disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item} />
+                <ListItemText primary={item.menu} />
               </ListItemButton>
             </ListItem>
           ))}
@@ -168,18 +175,20 @@ function Navbar(props) {
                     type="text"
                     placeholder="সার্চ বার"
                   />
-                  {lowerNavItems.map((item) => (
-                    <Button
-                      key={item}
-                      sx={{
-                        color: "#fff",
-                        padding: "0px",
-                        fontSize: "18px",
-                        fontFamily: "Hind Siliguri",
-                      }}
-                    >
-                      {item}
-                    </Button>
+                  {lowerNavItems.map((item, idx) => (
+                    <Link to={item.route}>
+                      <Button
+                        key={idx}
+                        sx={{
+                          color: "#fff",
+                          padding: "0px",
+                          fontSize: "18px",
+                          fontFamily: "Hind Siliguri",
+                        }}
+                      >
+                        {item.menu}
+                      </Button>
+                    </Link>
                   ))}
                 </Box>
               </div>
