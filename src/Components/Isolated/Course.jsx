@@ -29,21 +29,20 @@ function Course() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="lg:px-24 py-14"
+      className="lg:px-24 py-10"
     >
       <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary pt-14">
+        <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
           কোর্স
         </h2>
       </Fade>
-      <div className="flex lg:flex-row justify-center mx-5 gap-2 ">
+      <div className="flex flex-col items-center lg:flex-row justify-center mx-5 gap-2 ">
         {data.map((d, idx) => (
           <Zoom>
             <Link to={d.route}>
               <div
-                to={d.route}
                 key={idx}
-                className="bg-secondary my-7 lg:mx-5 w-40 py-2 rounded-full cursor-pointer text-[#fff] text-xl text-center"
+                className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 rounded-full cursor-pointer lg:text-[#fff] text-xl text-center"
               >
                 <h3>{d.title}</h3>
               </div>

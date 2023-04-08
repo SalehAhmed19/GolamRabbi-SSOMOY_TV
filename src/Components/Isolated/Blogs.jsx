@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
-import blog from "../../assets/images/blogs.jpg";
-import { Modal } from "antd";
 
 function Blogs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,35 +31,53 @@ function Blogs() {
               <h3 className="text-primary my-6 font-bold text-2xl">
                 প্রফেশনাল ব্লগ
               </h3>
-              <img src={blog} alt="" />
+              <div className="relative">
+                <img
+                  className="opacity-50 rounded-md"
+                  src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                  alt=""
+                />
+                <div className="absolute bottom-[20px] mx-10">
+                  <h3 className="text-2xl text-basic font-bold">
+                    আবহাওয়া - আজকের আবহাওয়া কেমন থাকবে
+                  </h3>
+                  <p>
+                    পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
+                    আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
+                  </p>
+                </div>
+              </div>
             </div>
             <div>
               <h3 className="text-primary my-6 font-bold text-2xl">
                 পার্সোনাল ব্লগ
               </h3>
-              <img src={blog} alt="" />
+              <div className="relative">
+                <img
+                  className="opacity-50 rounded-md"
+                  src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                  alt=""
+                />
+                <div className="absolute bottom-[20px] mx-10">
+                  <h3 className="text-2xl text-basic font-bold">
+                    আবহাওয়া - আজকের আবহাওয়া কেমন থাকবে
+                  </h3>
+                  <p>
+                    পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
+                    আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
+                  </p>
+                </div>
+              </div>
             </div>
           </Zoom>
         </div>
       </Link>
       <Fade up>
-        <button
-          onClick={showModal}
-          className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
-        >
-          সব ব্লগ দেখতে
-        </button>
-        <Modal
-          centered
-          title="Basic Modal"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-        </Modal>
+        <Link to="/blogs">
+          <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
+            সব ব্লগ দেখতে
+          </button>
+        </Link>
       </Fade>
     </div>
   );

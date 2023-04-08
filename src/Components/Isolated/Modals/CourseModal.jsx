@@ -115,18 +115,6 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         >
           <Input />
         </Form.Item>
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: "তুমি তোমার ঠিকানা লিখো নি!",
-            },
-          ]}
-          name="address"
-          label="তোমার ঠিকানা"
-        >
-          <Input type="address" />
-        </Form.Item>
       </Form>
     </Modal>
   );
