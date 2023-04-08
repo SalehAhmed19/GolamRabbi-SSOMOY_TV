@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../assets/images/mediacourse.jpg";
+import img from "../../../assets/images/media.png";
 
 function MediaCourse() {
   return (

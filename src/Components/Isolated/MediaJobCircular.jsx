@@ -4,8 +4,10 @@ import "keen-slider/keen-slider.min.css";
 import "../../Styles/MediaJobCircular.css";
 import bg from "../../assets/images/job-bg.jpg";
 import { Fade, Zoom } from "react-reveal";
+import job from "../../assets/images/Job.png";
 
 function MediaJobCircular() {
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -44,12 +46,26 @@ function MediaJobCircular() {
         <div className="navigation-wrapper">
           <Zoom>
             <div ref={sliderRef} className="keen-slider">
-              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
-              <div className="keen-slider__slide h-48 lg:w-20 border-[#59D8DE] border-2 bg-[#212429] rounded-lg"></div>
+              {arr.map((a) => (
+                <div
+                  key={a}
+                  className="keen-slider__slide rounded-lg bg-[#222]"
+                >
+                  <img src={job} alt="" />
+                  <div className="text-basic p-5">
+                    <h3 className="text-xl">
+                      <span className="font-bold">পদবিঃ </span> সাংবাদিক
+                    </h3>
+                    <p>
+                      <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
+                      সাংবাদিক
+                    </p>
+                    <p>
+                      <span className="font-bold">প্রতিষ্ঠানঃ </span> সময় টিভি
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </Zoom>
         </div>

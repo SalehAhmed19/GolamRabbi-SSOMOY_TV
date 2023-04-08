@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-secondary p-10">
-      <p className="text-[#fff] text-center font-bold">
+    <div className="bg-primary p-10">
+      <p className="text-[#222] text-center font-bold">
         &copy; 2023. Developed by Saleh Ahmed Mahin
       </p>
     </div>

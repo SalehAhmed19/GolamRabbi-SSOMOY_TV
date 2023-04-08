@@ -88,7 +88,7 @@ function FanFun() {
     <div className="py-14 lg:px-24">
       <Fade down>
         <h1 className="text-primary text-center text-4xl font-bold">
-          ফ্যানদের সাথে ফান
+          ফান উইথ ফ্যান
         </h1>
       </Fade>
       <div className="flex flex-col lg:flex-row my-20 mx-5">

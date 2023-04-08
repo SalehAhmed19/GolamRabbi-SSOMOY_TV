@@ -26,6 +26,7 @@ const lowerNavItems = [
   { menu: "কোর্স", route: "/courses" },
   { menu: "ব্লগ", route: "/blogs" },
   { menu: "ইনভাইট", route: "/invitation" },
+  { menu: "হোয়াটস নিউ", route: "/invitation" },
 ];
 
 const theme = createTheme({
@@ -77,7 +78,7 @@ function Navbar(props) {
         <div className="bg-[#00000029]">
           {lowerNavItems.map((item, idx) => (
             <ListItem key={idx} disablePadding>
-              <Link to={item.route}>
+              <Link className="w-full" to={item.route}>
                 <ListItemButton sx={{ textAlign: "center" }}>
                   <ListItemText primary={item.menu} />
                 </ListItemButton>
@@ -153,7 +154,7 @@ function Navbar(props) {
                 </Box>
               </div>
               {/* Lower Menu */}
-              <div className="w-full flex p-4 bg-[#000] lg:pl-14 border-t border-t-[#222]">
+              <div className="w-full flex p-4 bg-[#000] lg:pl-14 lg:border-t border-t-[#222]">
                 <Box
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
@@ -171,19 +172,19 @@ function Navbar(props) {
                   }}
                 >
                   {" "}
-                  <input
+                  {/* <input
                     className="bg-transparent py-2 mr-3 px-5 rounded-full border-2 border-[#333] text-center text-[#fff]"
                     style={{ fontFamily: "Hind Siliguri" }}
                     type="text"
                     placeholder="সার্চ বার"
-                  />
+                  /> */}
                   {lowerNavItems.map((item, idx) => (
                     <Link to={item.route}>
                       <Button
                         key={idx}
                         sx={{
                           color: "#fff",
-                          padding: "0px",
+                          padding: "0 5px",
                           fontSize: "18px",
                           fontFamily: "Hind Siliguri",
                         }}

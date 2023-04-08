@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../assets/images/lifecourse.jpg";
+import img from "../../../assets/images/life.png";
 
 function LifeCourse() {
   return (

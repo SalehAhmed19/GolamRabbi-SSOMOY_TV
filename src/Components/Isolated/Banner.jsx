@@ -46,7 +46,7 @@ function Banner() {
             </h1>
           </div>
           <div className="mt-24">
-            <h4 className="text-[#F3B004] font-bold">
+            <h4 className="text-[#F3B004] font-bold text-center cursor-pointer">
               শেয়ার করে স্বপ্নকে জয় করো
             </h4>
             <div className="bg-[#212429] inline-block my-5">

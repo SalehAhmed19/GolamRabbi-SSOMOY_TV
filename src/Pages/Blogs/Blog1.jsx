@@ -9,7 +9,7 @@ import SocialMedia from "../../Components/Isolated/SocialMedia";
 
 function Blog1() {
   return (
-    <div className="py-24 lg:mx-20 mx-5">
+    <div className="lg:py-24 lg:mx-20 mx-5">
       <BlogsHeading />
 
       <div className="grid grid-cols-1 lg:grid-cols-2">

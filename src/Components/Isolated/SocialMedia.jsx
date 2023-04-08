@@ -25,7 +25,7 @@ function SocialMedia() {
     {
       img: img4,
       social: "লিংকড ইন",
-      href: "#",
+      href: "https://www.linkedin.com/in/golam-rabby/",
     },
   ];
   return (
