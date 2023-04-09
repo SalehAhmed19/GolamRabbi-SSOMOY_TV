@@ -12,6 +12,7 @@
 
 // export default Footer;
 import React from "react";
+import bg from "../../assets/footer/mesh-757.png";
 import { Grid, Link, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import Fade from "react-reveal/Fade";
@@ -62,9 +63,17 @@ const Footer = () => {
       description: ["Privacy policy", "Terms of use"],
     },
   ];
+  // #D9A017
   return (
     <Fade up>
-      <div className="bg-[#D9A017] bg-footer relative w-full">
+      <div
+        style={{
+          background: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="bg-footer relative w-full"
+      >
         <Container
           maxWidth="md"
           component="footer"
