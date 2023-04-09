@@ -16,6 +16,7 @@ import Skills from "../Components/Isolated/Skills";
 import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
 import Quotes from "../Components/Isolated/Quotes";
+import Subscribe from "../Components/Isolated/Subscribe";
 
 function Home() {
   return (
@@ -36,6 +37,7 @@ function Home() {
       <Events />
       <MyAward />
       <Quotes />
+      <Subscribe />
       <SocialMedia />
     </div>
   );
