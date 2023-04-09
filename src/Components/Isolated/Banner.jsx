@@ -1,15 +1,15 @@
 import React from "react";
 import reporter from "../../assets/Banner/reporter.jpg";
-import { FiFacebook, FiTwitter, FiLinkedin } from "react-icons/fi";
+import { BsFacebook, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-reveal";
 
 function Banner() {
-  const socialLinks = [
-    { _id: 1, icon: <FiFacebook />, href: "" },
-    { _id: 2, icon: <FiTwitter />, href: "" },
-    { _id: 3, icon: <FiLinkedin />, href: "" },
-  ];
+  // const socialLinks = [
+  //   { _id: 1, icon: <GrFacebook />, href: "" },
+  //   { _id: 2, icon: <GrFacebook />, href: "" },
+  //   { _id: 3, icon: <GrFacebook />, href: "" },
+  // ];
   return (
     <React.Fragment>
       <div
@@ -49,13 +49,20 @@ function Banner() {
             <h4 className="text-[#F3B004] font-bold text-center cursor-pointer">
               শেয়ার করে স্বপ্নকে জয় করো
             </h4>
-            <div className="bg-[#212429] inline-block my-5">
-              <div className="flex text-[#8A8EA0] text-xl">
-                {socialLinks.map((socialLink) => (
-                  <div key={socialLink._id} className="p-4 hover:bg-[#171a1d]">
-                    {socialLink.icon}
-                  </div>
-                ))}
+            <div className="inline-block my-5">
+              <div className="flex text-[#8A8EA0] text-3xl">
+                <div className="px-2 cursor-pointer hover:text-[#2C7DEB]">
+                  <BsFacebook />
+                </div>
+                <div className="px-2 cursor-pointer hover:text-[#F2A65B]">
+                  <BsInstagram />
+                </div>
+                <div className="px-2 cursor-pointer hover:text-[#2C7DEB]">
+                  <BsTwitter />
+                </div>
+                <div className="px-2 cursor-pointer hover:text-[#F50103]">
+                  <BsYoutube />
+                </div>
               </div>
             </div>
           </div>

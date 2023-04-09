@@ -20,12 +20,25 @@ function Skills() {
           স্কিল সমূহ
         </h2>
       </Fade>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mx-5">
-        {skills.map((skill) => (
+      <div className="flex flex-col lg:flex-row items-center gap-5 mx-5">
+        {skills.slice(0, 4).map((skill) => (
           <Zoom>
             <div
               key={skill._id}
-              className="flex flex-col justify-center items-center p-5 shadow-lg shadow-[#0000005c] rounded-md"
+              className="flex flex-col justify-center items-center p-5 shadow-lg shadow-[#0000005c] rounded-md lg:w-96 w-80"
+            >
+              <h3 className="text-primary text-5xl my-5">{skill.icon}</h3>
+              <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>
+            </div>
+          </Zoom>
+        ))}
+      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center my-5">
+        {skills.slice(4, 8).map((skill) => (
+          <Zoom>
+            <div
+              key={skill._id}
+              className="flex flex-col justify-center lg:w-96 w-80 items-center p-5 shadow-lg shadow-[#0000005c] rounded-md"
             >
               <h3 className="text-primary text-5xl my-5">{skill.icon}</h3>
               <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>
