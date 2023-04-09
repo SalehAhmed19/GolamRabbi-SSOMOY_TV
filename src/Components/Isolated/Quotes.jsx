@@ -11,10 +11,10 @@ function Quotes() {
           The key to being extraordinary is knowing what rules to follow and
           what rules to break.
         </h3>
-        <img className="lg:mt-56 mt-96 w-48" src={signature} alt="" />
+        <img className="lg:mt-60 mt-96 w-48" src={signature} alt="" />
       </div>
       <img
-        className="absolute rounded-md right-0 lg:top-5 lg:w-7/12"
+        className="absolute rounded-md right-0 lg:top-16 lg:w-7/12"
         src={img}
         alt=""
       />
