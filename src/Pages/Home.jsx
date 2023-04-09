@@ -15,6 +15,7 @@ import Services from "../Components/Isolated/Services";
 import Skills from "../Components/Isolated/Skills";
 import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
+import Quotes from "../Components/Isolated/Quotes";
 
 function Home() {
   return (
@@ -34,6 +35,7 @@ function Home() {
       <Advertisement2 />
       <Events />
       <MyAward />
+      <Quotes />
       <SocialMedia />
     </div>
   );

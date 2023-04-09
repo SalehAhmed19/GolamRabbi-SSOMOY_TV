@@ -21,7 +21,9 @@ function Statistics() {
               key={statistic._id}
               className="px-5 py-10 rounded-lg bg-[#D9A017] flex flex-col items-center text-[#222]"
             >
-              <h3 className="text-xl font-bold">{statistic.qty}</h3>
+              <h3 className="text-2xl font-bold text-[#04273B]">
+                {statistic.qty}
+              </h3>
               <h3 className="text-center text-xl">{statistic.activity}</h3>
             </div>
           </Zoom>
