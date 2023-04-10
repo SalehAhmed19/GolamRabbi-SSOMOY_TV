@@ -7,7 +7,6 @@ import img3 from "../../assets/images/lifecourse.jpg";
 import { Modal } from "antd";
 import CourseModal from "./Modals/CourseModal";
 import { Link, Outlet } from "react-router-dom";
-import CustomModal from "./Modals/CourseModal";
 
 function Course() {
   const [show, setShow] = useState(false);
@@ -59,7 +58,7 @@ function Course() {
       <Fade up>
         <div className="flex justify-center"></div>
       </Fade>
-      <CustomModal onClose={handleOnClose} visible={show} />
+      <CourseModal onClose={handleOnClose} visible={show} />
     </div>
   );
 }

@@ -20,7 +20,6 @@ import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
 import About from "../Components/Isolated/About";
 import Invite from "../Components/Isolated/Invite";
-import CustomModal from "../Components/Isolated/Modals/CourseModal";
 
 function Home() {
   return (
