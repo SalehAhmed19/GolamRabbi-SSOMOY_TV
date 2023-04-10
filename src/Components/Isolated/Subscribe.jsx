@@ -4,7 +4,9 @@ import { RiSendPlane2Fill } from "react-icons/ri";
 function Subscribe() {
   return (
     <div className="bg-[#0e0f14] p-7 lg:mx-20 mx-5 rounded-md text-primary mt-20 mb-10">
-      <h3 className="font-bold text-3xl">নিউজ লেটার সাবস্ক্রাইব করো</h3>
+      <h3 className="font-bold text-3xl">
+        জীবনকে এগিয়ে নিতে। সম্যকে উপভোগ করতে। এখনই সাবস্ক্রাইব করো।
+      </h3>
       <div className="my-5 p-2 bg-[#333] rounded-full lg:w-1/3 flex items-center">
         <input
           placeholder="তোমার ইমেইল লিখো"

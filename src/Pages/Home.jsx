@@ -18,6 +18,8 @@ import Statistics from "../Components/Isolated/Statistics";
 import Quotes from "../Components/Isolated/Quotes";
 import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
+import About from "../Components/Isolated/About";
+import Invite from "../Components/Isolated/Invite";
 
 function Home() {
   return (
@@ -40,6 +42,8 @@ function Home() {
       <Quotes />
       <Subscribe />
       <Testimonals />
+      <Invite />
+      <About />
       <SocialMedia />
     </div>
   );

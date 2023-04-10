@@ -1,6 +1,6 @@
 import React from "react";
 import reporter from "../../assets/Banner/reporter.jpg";
-import { BsFacebook, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-reveal";
 
@@ -51,15 +51,27 @@ function Banner() {
             </h4>
             <div className="inline-block my-5">
               <div className="flex text-[#8A8EA0] text-3xl">
-                <div className="px-2 cursor-pointer hover:text-[#2C7DEB]">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/golam.rabby.739326"
+                  className="px-2 cursor-pointer hover:text-[#2C7DEB]"
+                >
                   <BsFacebook />
-                </div>
-                <div className="px-2 cursor-pointer hover:text-[#F2A65B]">
+                </a>
+                <a
+                  href="https://www.instagram.com/golam.rabby.739326"
+                  target="_blank"
+                  className="px-2 cursor-pointer hover:text-[#F2A65B]"
+                >
                   <BsInstagram />
-                </div>
-                <div className="px-2 cursor-pointer hover:text-[#2C7DEB]">
-                  <BsTwitter />
-                </div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/golam-rabby/"
+                  target="_blank"
+                  className="px-2 cursor-pointer hover:text-[#2C7DEB]"
+                >
+                  <BsLinkedin />
+                </a>
                 <div className="px-2 cursor-pointer hover:text-[#F50103]">
                   <BsYoutube />
                 </div>

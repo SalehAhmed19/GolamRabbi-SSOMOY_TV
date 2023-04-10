@@ -40,12 +40,12 @@ function Course() {
         {data.map((d, idx) => (
           <Zoom>
             <Link to={d.route}>
-              <div
+              <button
                 key={idx}
                 className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 rounded-full cursor-pointer lg:text-[#fff] text-xl text-center"
               >
                 <h3>{d.title}</h3>
-              </div>
+              </button>
             </Link>
           </Zoom>
         ))}
