@@ -80,7 +80,9 @@ function Course() {
             type="text"
           />
         </form>
-        <button></button>
+        <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+          সাবমিট করো
+        </button>
       </Modal>
     </div>
   );

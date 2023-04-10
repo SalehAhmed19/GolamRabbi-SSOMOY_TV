@@ -10,7 +10,7 @@ function Modal({ visible, onClose, children }) {
     <div
       id="container"
       onClick={handleOnClose}
-      className="fixed inset-0 bg-[#000] bg-opacity-50 backdrop-blur-sm flex justify-center items-center"
+      className="fixed inset-0 bg-[#000] bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50"
     >
       <div className="bg-[#222] text-basic rounded-md p-5 mx-5">
         <button className="block ml-auto mb-3" onClick={onClose}>
