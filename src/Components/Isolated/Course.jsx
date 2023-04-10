@@ -4,8 +4,7 @@ import bg from "../../assets/images/course-bg.png";
 import img1 from "../../assets/images/mediacourse.jpg";
 import img2 from "../../assets/images/leadership.jpg";
 import img3 from "../../assets/images/lifecourse.jpg";
-import { Modal } from "antd";
-import CourseModal from "./Modals/CourseModal";
+import Modal from "./Modals/Modal";
 import { Link, Outlet } from "react-router-dom";
 
 function Course() {
@@ -58,7 +57,31 @@ function Course() {
       <Fade up>
         <div className="flex justify-center"></div>
       </Fade>
-      <CourseModal onClose={handleOnClose} visible={show} />
+      <Modal onClose={handleOnClose} visible={show}>
+        <form action="">
+          <select class="form-select text-primary w-full bg-[#333] rounded my-2 py-1 px-3 focus:outline-none">
+            <option>মিডিয়া কোর্স</option>
+            <option>লিডারশীপ কোর্স</option>
+            <option>লাইফ কোর্স</option>
+          </select>
+          <input
+            placeholder="তোমার নাম লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার ইমেইল লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার মোবাইল নাম্বার লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+        </form>
+        <button></button>
+      </Modal>
     </div>
   );
 }
