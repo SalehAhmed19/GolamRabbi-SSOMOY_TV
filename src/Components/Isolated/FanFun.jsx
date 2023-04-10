@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FanFunLeft from "./FanFunLeft";
 import gr1 from "../../assets/images/people.png";
 import gr2 from "../../assets/images/gr1.jpg";
@@ -8,14 +8,11 @@ import gr5 from "../../assets/images/gr4.jpg";
 import gr6 from "../../assets/images/gr5.jpg";
 import { Fade, Zoom } from "react-reveal";
 import { ImageList, ImageListItem } from "@mui/material";
+import Modal from "./Modals/Modal";
 
 function FanFun() {
-  // const images = [
-  //   { _id: 1, img: people },
-  //   { _id: 2, img: people },
-  //   { _id: 3, img: people },
-  //   { _id: 4, img: people },
-  // ];
+  const [show, setShow] = useState(false);
+  const handleOnClose = () => setShow(false);
   const itemData = [
     {
       img: gr3,
@@ -93,7 +90,7 @@ function FanFun() {
       </Fade>
       <div className="flex flex-col lg:flex-row my-20 mx-5">
         <Fade left>
-          <FanFunLeft />
+          <FanFunLeft setShow={setShow} />
         </Fade>
         <div className="flex justify-end w-full">
           <ImageList
@@ -118,6 +115,28 @@ function FanFun() {
           </ImageList>
         </div>
       </div>
+      <Modal visible={show} onClose={handleOnClose}>
+        <form action="">
+          <input
+            placeholder="তোমার নাম লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার ইমেইল লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার মোবাইল নাম্বার লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+        </form>
+        <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+          সাবমিট করো
+        </button>
+      </Modal>
     </div>
   );
 }

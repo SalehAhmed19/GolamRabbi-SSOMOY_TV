@@ -2,19 +2,11 @@ import React, { useState } from "react";
 import { Fade } from "react-reveal";
 import bg from "../../assets/images/mentor-bg.png";
 import presenter from "../../assets/images/presenter.png";
-import { Modal } from "antd";
+import Modal from "./Modals/Modal";
 
 const Mentor = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  const [show, setShow] = useState(false);
+  const handleOnClose = () => setShow(false);
   return (
     <div
       style={{
@@ -54,23 +46,34 @@ const Mentor = () => {
       </div>
       <Fade up>
         <button
-          onClick={showModal}
+          onClick={() => setShow(true)}
           className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl"
         >
           আমাকে বুক করতে
         </button>
-        <Modal
-          centered
-          title="Basic Modal"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-        </Modal>
       </Fade>
+      <Modal visible={show} onClose={handleOnClose}>
+        <form action="">
+          <input
+            placeholder="তোমার নাম লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার ইমেইল লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার মোবাইল নাম্বার লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+        </form>
+        <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+          সাবমিট করো
+        </button>
+      </Modal>
     </div>
   );
 };

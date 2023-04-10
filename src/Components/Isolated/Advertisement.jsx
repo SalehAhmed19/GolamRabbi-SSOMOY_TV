@@ -1,19 +1,11 @@
 import React, { useState } from "react";
 import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/depression.jpg";
-import { Modal } from "antd";
+import Modal from "./Modals/Modal";
 
 function Advertisement() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  const [show, setShow] = useState(false);
+  const handleOnClose = () => setShow(false);
   return (
     <div
       style={{
@@ -37,23 +29,40 @@ function Advertisement() {
           সমাধান।
         </p>
         <button
-          onClick={showModal}
+          onClick={() => setShow(true)}
           className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[250px] text-center rounded-full text-[#fff] font-bold text-xl"
         >
           সমাধান পেতে; লিখে জানাও
         </button>
-        <Modal
-          centered
-          title="Basic Modal"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-        </Modal>
       </Zoom>
+      <Modal visible={show} onClose={handleOnClose}>
+        <form action="">
+          <input
+            placeholder="তোমার নাম লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার ইমেইল লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার মোবাইল নাম্বার লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <textarea
+            className="w-full mt-3 bg-[#333] rounded py-1 px-3"
+            placeholder="তোমার কথা লিখো"
+            name=""
+            id=""
+          ></textarea>
+        </form>
+        <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+          সাবমিট করো
+        </button>
+      </Modal>
     </div>
   );
 }
