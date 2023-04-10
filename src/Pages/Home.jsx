@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Advertisement from "../Components/Isolated/Advertisement";
 import Advertisement2 from "../Components/Isolated/Advertisement2";
 import Banner from "../Components/Isolated/Banner";
@@ -20,6 +20,7 @@ import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
 import About from "../Components/Isolated/About";
 import Invite from "../Components/Isolated/Invite";
+import CustomModal from "../Components/Isolated/Modals/CourseModal";
 
 function Home() {
   return (

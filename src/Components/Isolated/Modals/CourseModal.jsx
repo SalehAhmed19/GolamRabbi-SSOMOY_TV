@@ -1,149 +1,46 @@
-import { Form, Input, Modal, Select } from "antd";
-import { useState } from "react";
-const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-  };
+import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
-  const [form] = Form.useForm();
-  return (
-    <Modal
-      open={open}
-      centered
-      title="কোর্স এনরোলমেন্ট"
-      footer={[
-        <button
-          style={{
-            backgroundColor: "red",
-            color: "#fff",
-            padding: "5px 25px",
-            borderRadius: "5px",
-          }}
-        >
-          Cancel
-        </button>,
-        <button
-          typeof="submit"
-          style={{
-            backgroundColor: "#D9A017",
-            padding: "5px 25px",
-            borderRadius: "5px",
-            marginLeft: "10px",
-          }}
-        >
-          সাবমিট করো
-        </button>,
-      ]}
-      onCancel={onCancel}
-      onOk={() => {
-        form
-          .validateFields()
-          .then((values) => {
-            form.resetFields();
-            onCreate(values);
-          })
-          .catch((info) => {
-            console.log("Validate Failed:", info);
-          });
-      }}
-    >
-      <Form
-        form={form}
-        layout="vertical"
-        name="form_in_modal"
-        initialValues={{
-          modifier: "public",
-        }}
-      >
-        <Form.Item>
-          <Select
-            name="course"
-            defaultValue="কোর্স নির্বাচন"
-            style={{
-              width: "100%",
-            }}
-            allowClear
-            options={[
-              {
-                value: "মিডিয়া",
-                label: "মিডিয়া",
-              },
-              {
-                value: "লিডারশীপ",
-                label: "লিডারশীপ",
-              },
-              {
-                value: "লাইফ কোর্স",
-                label: "লাইফ কোর্স",
-              },
-            ]}
-          />
-        </Form.Item>
-        <Form.Item
-          name="name"
-          label="তোমার নাম"
-          rules={[
-            {
-              required: true,
-              message: "তুমি তোমার নাম লিখো নি!",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: "তুমি তোমার ইমেইল লিখো নি!",
-            },
-          ]}
-          name="email"
-          label="তোমার ইমেইল"
-        >
-          <Input type="email" />
-        </Form.Item>
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: "তুমি তোমার ফোন নাম্বার লিখো নি!",
-            },
-          ]}
-          name="phone"
-          label="তোমার ফোন নাম্বার"
-        >
-          <Input />
-        </Form.Item>
-      </Form>
-    </Modal>
-  );
-};
-const CourseModal = () => {
-  const [open, setOpen] = useState(false);
-  const onCreate = (values) => {
-    console.log("Received values of form: ", values);
-    setOpen(false);
+function CourseModal({ visible, onClose }) {
+  const handleOnClose = (e) => {
+    if (e.target.id === "container") onClose();
   };
+  if (!visible) return null;
   return (
-    <div>
-      <button
-        className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] text-xl"
-        type="primary"
-        onClick={() => {
-          setOpen(true);
-        }}
-      >
-        এনরোল করো
-      </button>
-      <CollectionCreateForm
-        open={open}
-        onCreate={onCreate}
-        onCancel={() => {
-          setOpen(false);
-        }}
-      />
+    <div
+      id="container"
+      onClick={handleOnClose}
+      className="fixed inset-0 bg-[#000] bg-opacity-50 backdrop-blur-sm flex justify-center items-center"
+    >
+      <div className="bg-[#222] text-basic rounded-md p-5 mx-5">
+        <button className="block ml-auto mb-3" onClick={onClose}>
+          <AiOutlineClose className="text-xl text-primary" />
+        </button>
+        <form action="">
+          <select class="form-select text-primary w-full bg-[#333] rounded my-2 py-1 px-3 focus:outline-none">
+            <option>মিডিয়া কোর্স</option>
+            <option>লিডারশীপ কোর্স</option>
+            <option>লাইফ কোর্স</option>
+          </select>
+          <input
+            placeholder="তোমার নাম লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার ইমেইল লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+          <input
+            placeholder="তোমার মোবাইল নাম্বার লিখো"
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="text"
+          />
+        </form>
+      </div>
     </div>
   );
-};
+}
+
 export default CourseModal;

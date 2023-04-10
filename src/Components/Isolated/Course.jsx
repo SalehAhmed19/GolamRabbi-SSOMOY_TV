@@ -7,16 +7,11 @@ import img3 from "../../assets/images/lifecourse.jpg";
 import { Modal } from "antd";
 import CourseModal from "./Modals/CourseModal";
 import { Link, Outlet } from "react-router-dom";
-import MediaCourse from "./Courses/MediaCourse";
-import LeaderShipCourse from "./Courses/LeaderShipCourse";
-import LifeCourse from "./Courses/LifeCourse";
+import CustomModal from "./Modals/CourseModal";
 
 function Course() {
-  const [open, setOpen] = useState(false);
-  const onCreate = (values) => {
-    console.log("Received values of form: ", values);
-    setOpen(false);
-  };
+  const [show, setShow] = useState(false);
+  const handleOnClose = () => setShow(false);
   const data = [
     { title: "মিডিয়া", route: "/" },
     { title: "লিডারশীপ", route: "/course/leadership-course" },
@@ -51,17 +46,20 @@ function Course() {
         ))}
       </div>
       <div className=" my-5 mx-5">
-        {/* {image.map((im, idx) => ( */}
         <Fade up>
           <Outlet />
         </Fade>
-        {/* ))} */}
+        <button
+          className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+          onClick={() => setShow(true)}
+        >
+          এনরোল করো
+        </button>
       </div>
       <Fade up>
-        <div className="flex justify-center">
-          <CourseModal open={open} onCreate={onCreate} />
-        </div>
+        <div className="flex justify-center"></div>
       </Fade>
+      <CustomModal onClose={handleOnClose} visible={show} />
     </div>
   );
 }
