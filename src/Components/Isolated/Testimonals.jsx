@@ -30,7 +30,7 @@ function Testimonals() {
         {data.map((d, idx) => (
           <div
             key={idx}
-            className="bg-white/10 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 cursor-pointer p-8 rounded-md text-base mx-5"
+            className="bg-white/10 w-full group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 cursor-pointer p-8 rounded-md text-base lg:mx-5"
           >
             <img
               className="rounded-full h-20 mx-auto"

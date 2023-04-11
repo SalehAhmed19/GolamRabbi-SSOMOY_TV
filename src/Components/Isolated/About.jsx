@@ -17,28 +17,28 @@ function About() {
         <div className="flex justify-center">
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
             সর্ট বায়ো
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
             সর্ট বায়ো
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
             সর্ট বায়ো
           </button>
         </div>
-        <div className="flex text-basic">
+        <div className="flex flex-col lg:flex-row items-center text-basic">
           <div>
-            <img className="rounded-md" src={img} alt="" />
+            <img className="rounded-md mt-10 lg:mt-0" src={img} alt="" />
           </div>
-          <div className="bg-[#222] w-full ml-5 rounded-md p-5">
+          <div className="bg-[#222] w-full lg:ml-5 rounded-md p-5">
             <h3 className="font-bold text-2xl mb-5">
               Short Bio of Golam Rabby, Founder, Dream Deviser
             </h3>

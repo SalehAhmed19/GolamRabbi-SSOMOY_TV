@@ -10,43 +10,41 @@ function Invite() {
     <div className="lg:mx-20 mx-5 my-14">
       <Fade down>
         <h1 className="text-primary text-center text-4xl font-bold my-5">
-          ইনভাইট
+          আমা ইনভাইট করতে
         </h1>
       </Fade>
       <div>
         <div className="flex justify-center">
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            স্পিকার
+            সর্ট বায়ো
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            ট্রেইনার
+            সর্ট বায়ো
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            লাইফ কোর্স
+            সর্ট বায়ো
           </button>
         </div>
-        <div className="flex text-basic">
+        <div className="flex flex-col lg:flex-row-reverse items-center text-basic">
           <div>
-            <img className="rounded-md" src={img} alt="" />
+            <img className="rounded-md mt-10 lg:mt-0" src={img} alt="" />
           </div>
-          <div className="bg-[#222] w-full ml-5 rounded-md p-5">
-            <h3 className="font-bold text-2xl mb-5">
-              আমাকে ইনভাইট করতে পারো স্পিকার হিসেবে
-            </h3>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              cumque tempora eligendi accusantium? Nisi, autem ex reprehenderit
-              laudantium quae, velit beatae similique corrupti doloremque eos
-              porro facilis ullam repellat a?
+          <div className="bg-[#222] w-full lg:mr-5 rounded-md p-5">
+            <h3 className="font-bold text-2xl mb-5">ইনভাইট</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores nostrum aut rerum corrupti saepe quis atque tempore
+              voluptatibus, ea sunt aperiam consectetur voluptatum culpa autem
+              ab! Quisquam deserunt omnis maiores.
             </p>
           </div>
         </div>

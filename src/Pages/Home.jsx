@@ -20,6 +20,7 @@ import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
 import About from "../Components/Isolated/About";
 import Invite from "../Components/Isolated/Invite";
+import BookSection from "../Components/Isolated/BookSection";
 
 function Home() {
   return (
@@ -44,6 +45,7 @@ function Home() {
       <Testimonals />
       <Invite />
       <About />
+      <BookSection />
       <SocialMedia />
     </div>
   );

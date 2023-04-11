@@ -53,7 +53,7 @@ function Advertisement() {
             type="text"
           />
           <textarea
-            className="w-full mt-3 bg-[#333] rounded py-1 px-3"
+            className="w-full mt-3 bg-[#333] rounded py-1 px-3 focus:outline-none text-primary"
             placeholder="তোমার কথা লিখো"
             name=""
             id=""

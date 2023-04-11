@@ -54,25 +54,25 @@ function Banner() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/golam.rabby.739326"
-                  className="px-2 cursor-pointer hover:text-[#2C7DEB]"
+                  className="px-2 cursor-pointer hover:text-[#2C7DEB] duration-500"
                 >
                   <BsFacebook />
                 </a>
                 <a
                   href="https://www.instagram.com/golam.rabby.739326"
                   target="_blank"
-                  className="px-2 cursor-pointer hover:text-[#F2A65B]"
+                  className="px-2 cursor-pointer hover:text-[#F2A65B] duration-500"
                 >
                   <BsInstagram />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/golam-rabby/"
                   target="_blank"
-                  className="px-2 cursor-pointer hover:text-[#2C7DEB]"
+                  className="px-2 cursor-pointer hover:text-[#2C7DEB] duration-500"
                 >
                   <BsLinkedin />
                 </a>
-                <div className="px-2 cursor-pointer hover:text-[#F50103]">
+                <div className="px-2 cursor-pointer hover:text-[#F50103] duration-500">
                   <BsYoutube />
                 </div>
               </div>
