@@ -22,33 +22,37 @@ function Banner() {
         className="pt-20 h-screen flex flex-col justify-center lg:px-24 px-5"
       >
         <Fade left>
-          <div className="pt-20">
-            <h1 className="text-5xl font-bold text-[#fff]">
-              ভয়, জড়তা, শঙ্কা আর
-            </h1>
-            <h1
-              style={{ fonFamily: "MyBanglaFont" }}
-              className="text-[#F90162] my-6 text-5xl font-bold"
-            >
-              অনিশ্চয়তাকে পেছনে ফেলে
-            </h1>
-            {/* <h3 className="text-[#F3B004] font-bold text-xl">
+          <div className="pt-20 flex items-end">
+            <div>
+              <h1 className="text-5xl font-bold text-[#fff]">
+                ভয়, জড়তা, শঙ্কা আর
+              </h1>
+              <h1
+                style={{ fonFamily: "MyBanglaFont" }}
+                className="text-[#F90162] my-6 text-5xl font-bold"
+              >
+                অনিশ্চয়তাকে পেছনে ফেলে
+              </h1>
+              {/* <h3 className="text-[#F3B004] font-bold text-xl">
             বিজয়ের গল্পের শুরু এখানেই ............
           </h3> */}
-            <h1 className="text-[#F3B004] font-bold text-xl">
-              <Typewriter
-                options={{
-                  strings: ["বিজয়ের গল্পের শুরু এখানেই ..."],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </h1>
+              <h1 className="text-[#F3B004] font-bold text-xl">
+                <Typewriter
+                  options={{
+                    strings: ["বিজয়ের গল্পের শুরু এখানেই ..."],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h1>
+            </div>
+            <div>
+              <h4 className="text-[#F3B004] text-xl font-bold cursor-pointer text-center hover:bg-[#F3B004] hover:p-3 hover:text-[#222] duration-700 rounded-md">
+                শেয়ার করে স্বপ্নকে জয় করো
+              </h4>
+            </div>
           </div>
           <div className="mt-24">
-            <h4 className="text-[#F3B004] font-bold text-center cursor-pointer">
-              শেয়ার করে স্বপ্নকে জয় করো
-            </h4>
             <div className="inline-block my-5">
               <div className="flex text-[#8A8EA0] text-3xl">
                 <a
