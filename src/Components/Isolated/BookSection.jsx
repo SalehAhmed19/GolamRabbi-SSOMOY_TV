@@ -14,11 +14,13 @@ function BookSection() {
     >
       <div>
         <div className="mb-5 text-center">
-          <h3 className="text-primary font-bold text-4xl">বই মেলায় আসছে</h3>
+          <h3 className="text-primary font-bold text-4xl mb-2">
+            বই মেলায় আসছে
+          </h3>
           <p className="text-basic text-xl font-bold">এপ্রিল ১৪</p>
         </div>
-        <img className="w-72 mx-auto shadow-xl" src={book} alt="" />
-        <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
+        <img className="w-72 mx-auto shadow-2xl" src={book} alt="" />
+        <button className="block shadow-lg mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
           কিনতে ক্লিক করো
         </button>
       </div>
