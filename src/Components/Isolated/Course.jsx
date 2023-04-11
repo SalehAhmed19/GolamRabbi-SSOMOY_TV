@@ -58,7 +58,10 @@ function Course() {
         <div className="flex justify-center"></div>
       </Fade>
       <Modal onClose={handleOnClose} visible={show}>
-        <form action="">
+        <h4 className="text-primary font-bold text-xl">
+          কোর্সে এনরোল করতে চাও?
+        </h4>
+        <form className="lg:w-96" action="">
           <select class="form-select text-primary w-full bg-[#333] rounded my-2 py-1 px-3 focus:outline-none">
             <option>মিডিয়া কোর্স</option>
             <option>লিডারশীপ কোর্স</option>
@@ -80,7 +83,7 @@ function Course() {
             type="text"
           />
         </form>
-        <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+        <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
           সাবমিট করো
         </button>
       </Modal>

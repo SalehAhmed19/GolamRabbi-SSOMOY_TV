@@ -36,7 +36,10 @@ function Advertisement() {
         </button>
       </Zoom>
       <Modal visible={show} onClose={handleOnClose}>
-        <form action="">
+        <h4 className="text-primary font-bold text-xl">
+          সমাধান পেতে; লিখো এখানে
+        </h4>
+        <form className="lg:w-96" action="">
           <input
             placeholder="তোমার নাম লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
@@ -59,7 +62,7 @@ function Advertisement() {
             id=""
           ></textarea>
         </form>
-        <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+        <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
           সাবমিট করো
         </button>
       </Modal>

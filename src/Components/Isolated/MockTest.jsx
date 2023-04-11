@@ -48,7 +48,8 @@ function MockTest() {
         </button>
       </Fade>
       <Modal visible={show} onClose={handleOnClose}>
-        <form action="">
+        <form className="lg:w-96" action="">
+          <h4 className="text-primary font-bold text-xl">মক টেস্ট দিতে চাও?</h4>
           <input
             placeholder="তোমার নাম লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
