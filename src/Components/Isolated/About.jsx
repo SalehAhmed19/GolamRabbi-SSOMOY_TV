@@ -14,24 +14,42 @@ function About() {
         </h1>
       </Fade>
       <div>
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-3 lg:flex-row justify-center">
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            সর্ট বায়ো
+            শর্ট বায়ো
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            সর্ট বায়ো
+            প্রেজেন্টেশন ক্যারিয়ার
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            সর্ট বায়ো
+            RJ
+          </button>
+          <button
+            style={{ borderRadius: "10px 0px" }}
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+          >
+            রাইটার
+          </button>
+          <button
+            style={{ borderRadius: "10px 0px" }}
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+          >
+            ট্রেইনার
+          </button>
+          <button
+            style={{ borderRadius: "10px 0px" }}
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+          >
+            ইনফ্লুয়েন্সার
           </button>
         </div>
         <div className="flex flex-col lg:flex-row items-center text-basic">

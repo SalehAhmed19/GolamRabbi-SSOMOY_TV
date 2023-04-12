@@ -14,24 +14,24 @@ function Invite() {
         </h1>
       </Fade>
       <div>
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-3 lg:flex-row justify-center">
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            সর্ট বায়ো
+            অ্যাংকর / MC
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            সর্ট বায়ো
+            কনসালটেন্ট
           </button>
           <button
             style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 lg:mx-5 mx-1 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
+            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
-            সর্ট বায়ো
+            ওয়েবিনার
           </button>
         </div>
         <div className="flex flex-col lg:flex-row-reverse items-center text-basic">
