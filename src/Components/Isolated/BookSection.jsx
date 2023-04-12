@@ -31,7 +31,7 @@ function BookSection() {
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
-          centeredSlides={true}
+          centeredSlides={false}
           slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 50,
@@ -44,39 +44,6 @@ function BookSection() {
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          {/* <SwiperSlide>
-            <img
-              className="md:w-72 lg:w-96 mx-auto shadow-2xl"
-              src={book}
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="md:w-72 lg:w-96 mx-auto shadow-2xl"
-              src={book}
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="md:w-72 lg:w-96 mx-auto shadow-2xl"
-              src={book}
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="md:w-72 lg:w-96 mx-auto shadow-2xl"
-              src={book}
-              alt=""
-            />
-          </SwiperSlide> */}
-          {/* <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide> */}
           <SwiperSlide>
             <img
               className="md:w-72 lg:w-96 mx-auto shadow-2xl"
