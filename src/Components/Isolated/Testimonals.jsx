@@ -32,12 +32,15 @@ function Testimonals() {
       <Zoom>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           {data.map((d, idx) => (
-            <div key={idx} className="relative text-basic rounded-md">
+            <div
+              key={idx}
+              className="relative text-basic rounded-md cursor-pointer"
+            >
               <div
                 id="particles-js"
                 className="absolute inset-0 rounded-md"
               ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 opacity-50 rounded-md"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#222] to-[#0E0F14] opacity-50 rounded-md"></div>
               <div className="absolute inset-0 backdrop-blur-lg backdrop-filter bg-opacity-75"></div>
               <div className="relative z-10 p-10 rounded-md">
                 <FaQuoteRight className="absolute top-6 right-2 text-[100px] opacity-5" />

@@ -51,6 +51,12 @@ function MockTest() {
         <form className="lg:w-96" action="">
           <h4 className="text-primary font-bold text-xl">মক টেস্ট দিতে চাও?</h4>
           <input
+            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+            type="datetime-local"
+            id="birthdaytime"
+            name="birthdaytime"
+          ></input>
+          <input
             placeholder="তোমার নাম লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
