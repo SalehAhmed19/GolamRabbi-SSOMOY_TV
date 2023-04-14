@@ -2,6 +2,7 @@ import React from "react";
 import { Fade } from "react-reveal";
 import img from "../../assets/images/gr1.jpg";
 import ShortBio from "./ShortBio";
+import { Link, Outlet } from "react-router-dom";
 
 function Invite() {
   const longText =
@@ -10,43 +11,35 @@ function Invite() {
     <div className="lg:mx-20 mx-5 my-14">
       <Fade down>
         <h1 className="text-primary text-center text-4xl font-bold my-5">
-          আমা ইনভাইট করতে
+          আমাকে ইনভাইট করতে
         </h1>
       </Fade>
       <div>
         <div className="flex flex-col items-center gap-3 lg:flex-row justify-center">
-          <button
+          <Link
+            to="/"
             style={{ borderRadius: "10px 0px" }}
             className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
             অ্যাংকর / MC
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/invite/consultant"
             style={{ borderRadius: "10px 0px" }}
             className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
             কনসালটেন্ট
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/invite/webinar"
             style={{ borderRadius: "10px 0px" }}
             className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
           >
             ওয়েবিনার
-          </button>
+          </Link>
         </div>
         <div className="flex flex-col lg:flex-row-reverse items-center text-basic">
-          <div>
-            <img className="rounded-md mt-10 lg:mt-0" src={img} alt="" />
-          </div>
-          <div className="bg-[#222] w-full lg:mr-5 rounded-md p-5">
-            <h3 className="font-bold text-2xl mb-5">ইনভাইট</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores nostrum aut rerum corrupti saepe quis atque tempore
-              voluptatibus, ea sunt aperiam consectetur voluptatum culpa autem
-              ab! Quisquam deserunt omnis maiores.
-            </p>
-          </div>
+          <Outlet />
         </div>
       </div>
     </div>

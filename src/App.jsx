@@ -12,6 +12,10 @@ import LeaderShipCourse from "./Components/Isolated/Courses/LeaderShipCourse";
 import LifeCourse from "./Components/Isolated/Courses/LifeCourse";
 import BlogsPage from "./Pages/BlogsPage";
 import Blog1 from "./Pages/Blogs/Blog1";
+import Ancor from "./Components/Isolated/Invite/Ancor";
+import Consultant from "./Components/Isolated/Invite/Consultant";
+import Webinar from "./Components/Isolated/Invite/Webinar";
+import AllEvents from "./Pages/AllEvents";
 
 function App() {
   const theme = createTheme({
@@ -34,14 +38,20 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>
-            <Route index element={<MediaCourse />} />
+            <Route path="/" element={<MediaCourse />} />
             <Route
-              path="course/leadership-course"
+              path="/course/leadership-course"
               element={<LeaderShipCourse />}
             />
-            <Route path="course/life-course" element={<LifeCourse />} />
+            <Route path="/course/life-course" element={<LifeCourse />} />
           </Route>
-          <Route path="/blogs" element={<BlogsPage />}></Route>
+          <Route path="/" element={<Home />}>
+            <Route path="/" element={<Ancor />} />
+            <Route path="/invite/consultant" element={<Consultant />} />
+            <Route path="/invite/webinar" element={<Webinar />} />
+          </Route>
+          <Route path="/events" element={<AllEvents />} />
+          <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/blog-1" element={<Blog1 />} />
         </Routes>
       </div>
