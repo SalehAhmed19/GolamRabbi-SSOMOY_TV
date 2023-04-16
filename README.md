@@ -1,5 +1,5 @@
 # [GolamRabbi](https://golamrabbi.web.app/)
 
-Run command for localhost
+Run in localhost
 ```
 npm run dev
