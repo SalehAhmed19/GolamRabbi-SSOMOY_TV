@@ -12,7 +12,7 @@ const data = [
   {
     id: 1,
     heading: "প্রথম সন্দেশ, সবচেয়ে সেরা 1",
-    headline: "বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 1",
+    headline: "বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 1বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 1বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 1",
     editor: "গোলাম রাব্বী",
     date: "২ এপ্রিল ২০২৩",
     subHeading:
@@ -69,7 +69,7 @@ function Blog1() {
           <BlogContent blogContent={found.blogContent} />
         </div>
         <div>
-          <div className="mb-5 flex flex-col items-end lg:mx-24 mx-5">
+          <div className="mb-5 flex flex-col items-end lg:mx-36 mx-5">
             <BlogsAdd />
             <div className="my-5">
               <h3 className="text-basic text-xl font-bold text-left my-5">

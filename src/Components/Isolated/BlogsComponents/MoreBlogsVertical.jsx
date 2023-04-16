@@ -8,8 +8,8 @@ function MoreBlogsVertical({ data }) {
       <img className="rounded-md" src={img} alt="" />
       <div className="flex flex-col justify-between mx-5">
         <h3 className="font-bold">
-          {/* {split3} */}
-          ‘২০৪০ সালে ট্রিলিয়ন ডলারের <br /> অর্থনীতিতে পরিণত হবে বাংলাদেশ’
+          {data.headline}
+          {/* ‘২০৪০ সালে ট্রিলিয়ন ডলারের <br /> অর্থনীতিতে পরিণত হবে বাংলাদেশ’ */}
         </h3>
         <p className="text-accent">{data?.date}</p>
       </div>
