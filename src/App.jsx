@@ -52,7 +52,7 @@ function App() {
           </Route>
           <Route path="/events" element={<AllEvents />} />
           <Route path="/blogs" element={<BlogsPage />} />
-          <Route path="/blogs/blog-1" element={<Blog1 />} />
+          <Route path="/blogs/:id" element={<Blog1 />} />
         </Routes>
       </div>
       <Footer />

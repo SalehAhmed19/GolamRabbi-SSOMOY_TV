@@ -6,12 +6,20 @@ import BlogsAdd from "../../Components/Isolated/BlogsComponents/BlogsAdd";
 import MoreBlogsVertical from "../../Components/Isolated/BlogsComponents/MoreBlogsVertical";
 import CommentBox from "../../Components/Isolated/BlogsComponents/CommentBox";
 import SocialMedia from "../../Components/Isolated/SocialMedia";
+import { useParams } from "react-router-dom";
+
+const data = [
+  { id: 1, country: "Austria" },
+  { id: 2, country: "Germany" },
+  { id: 3, country: "Austria" },
+];
 
 function Blog1() {
+  const { id } = useParams();
   return (
     <div className="lg:py-24 lg:mx-20 mx-5">
       <BlogsHeading />
-
+      {id}
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="pb-14 lg:my-0">
           <BlogsSubHeading />

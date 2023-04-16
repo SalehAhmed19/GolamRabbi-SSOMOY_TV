@@ -3,7 +3,28 @@ import blog from "../assets/images/blogs.jpg";
 import { Link } from "react-router-dom";
 
 function BlogsPage() {
-  const arr = [1, 2, 3, 4, 5, 6, 7];
+  const arr = [
+    {
+      id: 1,
+      title: "a,",
+    },
+    {
+      id: 2,
+      title: "a,",
+    },
+    {
+      id: 3,
+      title: "a,",
+    },
+    {
+      id: 4,
+      title: "a,",
+    },
+    {
+      id: 5,
+      title: "a,",
+    },
+  ];
   return (
     <div className="lg:py-24 py-10 lg:mx-20 mx-5">
       <h2 className="text-4xl font-bold text-center pt-20 pb-10 text-primary">
@@ -11,7 +32,7 @@ function BlogsPage() {
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
         {arr.map((a) => (
-          <Link to="/blogs/blog-1">
+          <Link to={`/blogs/${a?.id}`}>
             <div className="relative text-basic ">
               <img
                 className="opacity-50 rounded-md"
