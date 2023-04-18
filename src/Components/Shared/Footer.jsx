@@ -54,11 +54,7 @@ const Footer = () => {
   // #D9A017
   return (
     <Fade up>
-      <div
-       
-        className=" text-[#222222] bg-[#D9A017] relative w-full lg:px-14 px-5 py-20 grid grid-cols-1 lg:grid-cols-4 gap-5"
-      >
-       
+      <div className="bg-footer text-[#222222] bg-[#D9A017] relative w-full lg:px-14 px-5 py-20 grid grid-cols-1 lg:grid-cols-4 gap-5">
         <div>
           <div className="flex items-center mt-8 ">
             <img className="w-14 mr-3" src={logo} alt="" />
@@ -75,32 +71,32 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://www.facebook.com/golam.rabby.739326"
-              className="icn mt-8"
+              className="mt-8 mr-4"
             >
-              <i className="fa-brands fa-facebook-f  "></i>
+              <i className="fa-brands fa-facebook-f"></i>
             </a>
             <a
               target="_blank"
-              // href="https://www.facebook.com/golam.rabby.739326"
-              className="icn"
+              href="https://www.facebook.com/golam.rabby.739326"
+              className=""
             >
-              <i class="fa-brands fa-twitter icn shadow "></i>
+              <i class="fa-brands fa-twitter"></i>
             </a>
 
             <a
               href="https://www.linkedin.com/in/golam-rabby/"
               target="_blank"
-              className="icn"
+              className="mx-4"
             >
-              <i class="fa-brands fa-linkedin-in icn  "></i>
+              <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <div className=" icn">
+            <a className="mx-4" href="#" target="_blank">
               <i class="fa-brands fa-youtube"></i>
-            </div>
+            </a>
             <a
               href="https://www.instagram.com/golam.rabby.739326"
               target="_blank"
-              className="icn"
+              className="mx-4"
             >
               <i class="fa-brands fa-instagram"></i>
             </a>
@@ -128,7 +124,8 @@ const Footer = () => {
           </a>
 
           <a className="texts" href="/invitation">
-            <i class="fa-sharp fa-regular fa-folder-open ml-3 mx-7"></i> What'New
+            <i class="fa-sharp fa-regular fa-folder-open ml-3 mx-7"></i>{" "}
+            What'New
           </a>
         </div>
         <div className="flex flex-col lg:items-center gap-2 mt-8">
@@ -144,13 +141,13 @@ const Footer = () => {
             {/* Melbourne 005 */}
           </a>
           <a className="texts" href="#">
-            <i class="fa-solid fa-mobile-screen-button ml-2 mx-2"></i> Phone : (+880)
-            800 433 633
+            <i class="fa-solid fa-mobile-screen-button ml-2 mx-2"></i> Phone :
+            (+880) 800 433 633
           </a>
           <a className="texts" href="#">
-            <i class="fa-solid fa-envelope ml-4 mx-2"></i> Email : Golmraby@gmail.com
+            <i class="fa-solid fa-envelope ml-4 mx-2"></i> Email :
+            Golmraby@gmail.com
           </a>
-        
         </div>
         <div className=" text-[#222] text-2xl">
           <h1 className="text-3xl font-bold mb-8 mt-8">
