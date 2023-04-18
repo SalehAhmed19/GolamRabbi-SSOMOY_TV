@@ -2,6 +2,7 @@ import React from "react";
 import { Fade } from "react-reveal";
 import img from "../../assets/images/gr1.jpg";
 import ShortBio from "./ShortBio";
+import AboutTabs from "./Tabs/AboutTabs";
 
 function About() {
   const longText =
@@ -13,7 +14,7 @@ function About() {
           আমার সম্পর্কে কিছু কথা
         </h1>
       </Fade>
-      <div>
+      {/* <div>
         <div className="flex flex-col items-center gap-3 lg:flex-row justify-center">
           <button
             style={{ borderRadius: "10px 0px" }}
@@ -65,7 +66,8 @@ function About() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+      <AboutTabs />
     </div>
   );
 }

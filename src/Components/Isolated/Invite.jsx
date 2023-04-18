@@ -1,8 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import img from "../../assets/images/gr1.jpg";
-import ShortBio from "./ShortBio";
-import { Link, Outlet } from "react-router-dom";
+import InviteTabs from "./Tabs/InviteTabs";
 
 function Invite() {
   const longText =
@@ -14,34 +13,7 @@ function Invite() {
           আমাকে ইনভাইট করতে
         </h1>
       </Fade>
-      <div>
-        <div className="flex flex-col items-center gap-3 lg:flex-row justify-center">
-          <Link
-            to="/"
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            অ্যাংকর / MC
-          </Link>
-          <Link
-            to="/invite/consultant"
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            কনসালটেন্ট
-          </Link>
-          <Link
-            to="/invite/webinar"
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            ওয়েবিনার
-          </Link>
-        </div>
-        <div className="flex flex-col lg:flex-row-reverse items-center text-basic">
-          <Outlet />
-        </div>
-      </div>
+      <InviteTabs />
     </div>
   );
 }
