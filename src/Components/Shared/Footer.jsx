@@ -1,18 +1,17 @@
 import React from "react";
 import bg from "../../assets/footer/mesh-757.png";
-import { Grid, Link, Typography } from "@mui/material";
-import { Container } from "@mui/system";
 import Fade from "react-reveal/Fade";
 import "../../Styles/Footer.css";
 import logo from "../../assets/logo/footer-logo.png";
-import { BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
-import { AiFillFacebook } from "react-icons/ai";
+
+import "./Footer.css";
 
 const Footer = () => {
   function Copyright(props) {
     return (
       <div className="flex justify-center items-center mt-10">
         <img className="w-6 mx-5" src={logo} alt="" />
+
         <p className="text-[#222]">
           Copyright &copy;{" "}
           <a className="underline" href="#home">
@@ -56,156 +55,123 @@ const Footer = () => {
   return (
     <Fade up>
       <div
-        // style={{
-        //   background: `url(${bg})`,
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-        className=" text-[#222222] bg-[#D9A017] relative w-full lg:px-14 px-5 py-14 grid grid-cols-2 lg:grid-cols-4 gap-5"
+       
+        className=" text-[#222222] bg-[#D9A017] relative w-full lg:px-14 px-5 py-20 grid grid-cols-1 lg:grid-cols-4 gap-5"
       >
-        {/* <Container
-          maxWidth="md"
-          component="footer"
-          sx={{
-            borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-            py: [3, 6],
-          }}
-        >
-          <Grid container spacing={4} justifyContent="space-evenly">
-            {footers.map((footer) => (
-              <Grid item xs={6} sm={3} key={footer.title}>
-                <Typography variant="h6" color="#222" gutterBottom>
-                  {footer.title}
-                </Typography>
-                <ul>
-                  {footer.description.map((item) => (
-                    <li key={item}>
-                      <Link
-                        href="#"
-                        variant="subtitle1"
-                        color="#222"
-                        className="cursor-pointer"
-                      >
-                        {item}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Grid>
-            ))}
-          </Grid>
-          <Copyright sx={{ mt: 5, color: "#fff" }} />
-        </Container> */}
-        {/* End footer */}
+       
         <div>
-          <div className="flex items-center">
+          <div className="flex items-center mt-8 ">
             <img className="w-14 mr-3" src={logo} alt="" />
-            <h2 className="font-bold text-3xl">Golam Rabby</h2>
+
+            <h2 className="font-bold text-4xl">Golam Rabby</h2>
           </div>
           <p className="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-            quas eius, laudantium possimus nesciunt quidem totam cupiditate
-            exercitationem maxime repudiandae, placeat incidunt hic porro sequi.
-            Deleniti iste quo ipsum veritatis.
+            I Golam Rabby would like to learn from everywhere even it may be
+            from my junior, uneducated & general people like Rickshaw-Puller. In
+            addition, I have much affection for teaching & facilitating a class,
+            discussion, and seminar as well.
           </p>
-          <div className="flex items-center text-[#222] text-2xl">
+          <div className=" text-[#222] text-2xl">
             <a
               target="_blank"
               href="https://www.facebook.com/golam.rabby.739326"
-              className="px-2 cursor-pointer duration-500 text-3xl"
+              className="icn mt-8"
             >
-              <AiFillFacebook />
+              <i className="fa-brands fa-facebook-f  "></i>
             </a>
             <a
-              href="https://www.instagram.com/golam.rabby.739326"
               target="_blank"
-              className="px-2 cursor-pointer duration-500"
+              // href="https://www.facebook.com/golam.rabby.739326"
+              className="icn"
             >
-              <BsInstagram />
+              <i class="fa-brands fa-twitter icn shadow "></i>
             </a>
+
             <a
               href="https://www.linkedin.com/in/golam-rabby/"
               target="_blank"
-              className="px-2 cursor-pointer duration-500"
+              className="icn"
             >
-              <BsLinkedin />
+              <i class="fa-brands fa-linkedin-in icn  "></i>
             </a>
-            <div className="px-2 cursor-pointer duration-500">
-              <BsYoutube />
+            <div className=" icn">
+              <i class="fa-brands fa-youtube"></i>
             </div>
-          </div>
-        </div>
-        <div className="flex flex-col lg:items-end gap-2">
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
-          </a>
-          <a className="underline" href="#">
-            অডিশন টিপস
-          </a>
-          <a className="underline" href="#">
-            লাইফ হ্যাকস
-          </a>
-          <a className="underline" href="#">
-            মেন্টরশীপ
-          </a>
-          <a className="underline" href="#">
-            মক টেস্ট
-          </a>
-          <a className="underline" href="#">
-            মিট আপ
-          </a>
-          <div className="flex flex-col lg:items-end gap-3 mt-10">
-            <a className="underline" href="#">
-              কিযে করি
-            </a>
-            <a className="underline" href="#">
-              মিডিয়া জব সার্কুলার
-            </a>
-            <a className="underline" href="#">
-              মিডিয়া জব সার্কুলার
+            <a
+              href="https://www.instagram.com/golam.rabby.739326"
+              target="_blank"
+              className="icn"
+            >
+              <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
         </div>
-        <div className="flex flex-col lg:items-center gap-2">
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+        <div className="flex flex-col lg:items-center  mt-8 ">
+          <h1 className="text-3xl font-bold">
+            Useful Links
+            <div className="underlines "></div>
+          </h1>
+
+          <a className="texts   mt-3" href="/jobs">
+            <i class="fa-solid fa-suitcase mx-5 "></i> Jobs News
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+          <a className="texts  " href="/events">
+            <i class="fa-sharp fa-solid fa-arrow-up-right-dots ml-5 mx-2 "></i>{" "}
+            Popular Event
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+          <a className="texts" href="/courses">
+            <i class="fa-brands fa-discourse ml-7 mx-3"></i> Latest Course
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+
+          <a className="texts" href="/invitation">
+            <i class="fa-sharp fa-solid fa-radio ml-5 mx-3"></i> My Invitation
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+
+          <a className="texts" href="/invitation">
+            <i class="fa-sharp fa-regular fa-folder-open ml-3 mx-7"></i> What'New
           </a>
         </div>
-        <div className="flex flex-col lg:items-start gap-2">
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+        <div className="flex flex-col lg:items-center gap-2 mt-8">
+          <h1 className="text-3xl font-bold">
+            Keep In Touch
+            <div className="underlines "></div>
+          </h1>
+          <a className="texts mt-3" href="#">
+            <i class="fa-solid fa-location-dot ml-3 mx-2"></i> Address :Dhaka
+            Bangladesh
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+          <a className="texts" href="#">
+            {/* Melbourne 005 */}
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+          <a className="texts" href="#">
+            <i class="fa-solid fa-mobile-screen-button ml-2 mx-2"></i> Phone : (+880)
+            800 433 633
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
+          <a className="texts" href="#">
+            <i class="fa-solid fa-envelope ml-4 mx-2"></i> Email : Golmraby@gmail.com
           </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
-          </a>
-          <a className="underline" href="#">
-            মিডিয়া জব সার্কুলার
-          </a>
+        
+        </div>
+        <div className=" text-[#222] text-2xl">
+          <h1 className="text-3xl font-bold mb-8 mt-8">
+            Sign up for our newsletter
+            <div className="underlinese "></div>
+          </h1>
+
+          <input
+            className=" mb-3 p-2 w-64 shadow"
+            placeholder="Text"
+            type="text"
+          />
+          <br />
+          <button class="rounded-full bg-black text-white p-1 textwidth w-32 bg-color">
+            Submit
+          </button>
         </div>
       </div>
-      <div className="py-14 bg-[#dba015]">
-        <p className="text-center font-bold">
+
+      <div className="py-6 bg-black">
+        <p className="text-center text-white font-bold">
           &copy; Developed by Saleh Ahmed Mahin
         </p>
       </div>
