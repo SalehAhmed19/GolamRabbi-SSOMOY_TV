@@ -133,3 +133,9 @@ body {
     fill: rgba(65, 65, 65, 0.5);
   }
   
+  @media (max-width: 480px) {
+    .arrow {
+      display: none;
+    }
+  }
+  
