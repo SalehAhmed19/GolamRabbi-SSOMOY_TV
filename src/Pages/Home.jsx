@@ -48,7 +48,8 @@ function Home() {
       <Featured />
       <Invite />
       <About />
-      <BookSection />
+      {/* <BookSection /> */}
+      <BookSection/>
       <SocialMedia />
     </div>
   );
