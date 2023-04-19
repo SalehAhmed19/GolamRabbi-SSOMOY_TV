@@ -1,24 +1,27 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import bg from "../../assets/images/book-bg.png";
+// import bg from "../../assets/images/book-bg.png";
 import book from "../../assets/images/book1.jpg";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
+import { Autoplay } from "swiper";
 import "../../Styles/BookSection.css";
 import { EffectCoverflow, Pagination } from "swiper";
 
 function BookSection() {
   return (
+    <>
+
+
     <div
-      style={{
-        background: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      // style={{
+      //   background: `url(${bg})`,
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      // }}
       className="py-20"
     >
       <div>
@@ -38,11 +41,16 @@ function BookSection() {
             stretch: 0,
             depth: 100,
             modifier: 4,
+            loop:true,
             slideShadows: true,
           }}
           // pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper"
+          modules={[EffectCoverflow, Pagination,Autoplay]}
+          className="myswiper "
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
         >
           <SwiperSlide>
             <img
@@ -112,7 +120,10 @@ function BookSection() {
           কিনতে ক্লিক করো
         </button>
       </div>
+     
     </div>
+    </>
+    
   );
 }
 
