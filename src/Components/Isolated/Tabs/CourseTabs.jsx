@@ -60,7 +60,6 @@ export default function CourseTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab sx={{ color: "#E0E0E0" }} label="মিডিয়া" {...a11yProps(0)} />
           <Tab sx={{ color: "#E0E0E0" }} label="লিডারশীপ" {...a11yProps(1)} />
           <Tab sx={{ color: "#E0E0E0" }} label="লাইফ কোর্স" {...a11yProps(2)} />

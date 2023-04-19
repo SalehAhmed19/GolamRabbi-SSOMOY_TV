@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import mc from "../../../assets/images/mc.png";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,7 +65,16 @@ export default function InviteTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <p className="text-basic">অ্যাংকর / MC</p>
+        <div className="p-5 flex">
+          <img
+            className="w-96 px-5 py-10 rounded-md bg-[#111118] shadow-lg"
+            src={mc}
+            alt=""
+          />
+          <h3 className="text-primary text-3xl font-bold">
+            Master of Ceremony
+          </h3>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <p className="text-basic">কনসালটেন্ট</p>
