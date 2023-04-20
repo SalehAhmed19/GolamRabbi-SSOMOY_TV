@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import mc from "../../../assets/images/mc.png";
+import DatePicker from "../Invite/DatePicker";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,7 +57,7 @@ export default function InviteTabs() {
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab
             sx={{ color: "#E0E0E0" }}
-            label="অ্যাংকর / MC"
+            label="অ্যাংকর / DatePicker"
             {...a11yProps(0)}
           />
           <Tab sx={{ color: "#E0E0E0" }} label="কনসালটেন্ট" {...a11yProps(1)} />
@@ -66,21 +66,23 @@ export default function InviteTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="p-5 flex">
-          <img
-            className="w-96 px-5 py-10 rounded-md bg-[#111118] shadow-lg"
-            src={mc}
-            alt=""
-          />
+          <DatePicker />
           <h3 className="text-primary text-3xl font-bold">
             Master of Ceremony
           </h3>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <p className="text-basic">কনসালটেন্ট</p>
+        <div className="flex p-5">
+          <DatePicker />
+          <p className="text-basic">কনসালটেন্ট</p>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <p className="text-basic">ওয়েবিনার</p>
+        <div className="flex p-5">
+          <DatePicker />
+          <p className="text-basic">ওয়েবিনার</p>
+        </div>
       </TabPanel>
     </Box>
   );
