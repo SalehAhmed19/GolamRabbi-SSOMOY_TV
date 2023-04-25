@@ -65,7 +65,7 @@ export default function InviteTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="p-5 flex">
+        <div className="p-5 flex flex-col lg:flex-row">
           <DatePicker />
           <h3 className="text-primary text-3xl font-bold">
             Master of Ceremony
@@ -73,13 +73,13 @@ export default function InviteTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="flex p-5">
+        <div className="flex flex-col lg:flex-row p-5">
           <DatePicker />
           <p className="text-basic">কনসালটেন্ট</p>
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="flex p-5">
+        <div className="flex flex-col lg:flex-row p-5">
           <DatePicker />
           <p className="text-basic">ওয়েবিনার</p>
         </div>
