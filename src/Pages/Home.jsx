@@ -21,10 +21,12 @@ import Testimonals from "../Components/Isolated/Testimonals";
 import About from "../Components/Isolated/About";
 import Invite from "../Components/Isolated/Invite";
 import BookSection from "../Components/Isolated/BookSection";
+import Featured from "../Components/Isolated/Featured";
 
 function Home() {
   return (
     <div>
+      হি
       <Banner />
       <Statistics />
       <Features />
@@ -43,9 +45,11 @@ function Home() {
       <Quotes />
       <Subscribe />
       <Testimonals />
+      <Featured />
       <Invite />
       <About />
-      <BookSection />
+      {/* <BookSection /> */}
+      <BookSection/>
       <SocialMedia />
     </div>
   );

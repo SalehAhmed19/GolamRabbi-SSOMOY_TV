@@ -2,6 +2,7 @@ import React from "react";
 import { Fade } from "react-reveal";
 import img from "../../assets/images/gr1.jpg";
 import ShortBio from "./ShortBio";
+import AboutTabs from "./Tabs/AboutTabs";
 
 function About() {
   const longText =
@@ -13,59 +14,8 @@ function About() {
           আমার সম্পর্কে কিছু কথা
         </h1>
       </Fade>
-      <div>
-        <div className="flex flex-col items-center gap-3 lg:flex-row justify-center">
-          <button
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            শর্ট বায়ো
-          </button>
-          <button
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            প্রেজেন্টেশন ক্যারিয়ার
-          </button>
-          <button
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            RJ
-          </button>
-          <button
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            রাইটার
-          </button>
-          <button
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            ট্রেইনার
-          </button>
-          <button
-            style={{ borderRadius: "10px 0px" }}
-            className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-56 py-2 cursor-pointer lg:text-[#fff] text-xl text-center"
-          >
-            ইনফ্লুয়েন্সার
-          </button>
-        </div>
-        <div className="flex flex-col lg:flex-row items-center text-basic">
-          <div>
-            <img className="rounded-md mt-10 lg:mt-0" src={img} alt="" />
-          </div>
-          <div className="bg-[#222] w-full lg:ml-5 rounded-md p-5">
-            <h3 className="font-bold text-2xl mb-5">
-              Short Bio of Golam Rabby, Founder, Dream Deviser
-            </h3>
-            <p>
-              <ShortBio longText={longText} maxChar={500} />
-            </p>
-          </div>
-        </div>
-      </div>
+
+      <AboutTabs />
     </div>
   );
 }
