@@ -57,6 +57,7 @@ export default function CourseTabs() {
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
+          sx={{ borderRadius: "8px", background: "#111118", margin: "0 5px" }}
           onChange={handleChange}
           aria-label="basic tabs example"
         >

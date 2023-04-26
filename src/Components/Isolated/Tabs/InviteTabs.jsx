@@ -50,6 +50,7 @@ export default function InviteTabs() {
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
+          sx={{ borderRadius: "8px", background: "#111118", margin: "0 5px" }}
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
