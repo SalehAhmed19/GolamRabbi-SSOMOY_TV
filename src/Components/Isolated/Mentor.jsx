@@ -7,6 +7,19 @@ import Modal from "./Modals/Modal";
 const Mentor = () => {
   const [show, setShow] = useState(false);
   const handleOnClose = () => setShow(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const mobile = event.target.mobile.value;
+    const form = {
+      name: name,
+      email: email,
+      mobile: mobile,
+    };
+    console.log(form);
+    setShow(false);
+  };
   return (
     <div
       style={{
@@ -56,26 +69,34 @@ const Mentor = () => {
         <h4 className="text-primary font-bold text-xl">
           আমাকে মেন্টর হিসেবে চাও?
         </h4>
-        <form className="lg:w-96" action="">
+        <form
+          onSubmit={() => handleSubmit(event)}
+          className="lg:w-96"
+          action=""
+        >
           <input
+            name="name"
             placeholder="তোমার নাম লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
           />
           <input
+            name="email"
             placeholder="তোমার ইমেইল লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
           />
           <input
+            name="mobile"
             placeholder="তোমার মোবাইল নাম্বার লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
           />
+
+          <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+            সাবমিট করো
+          </button>
         </form>
-        <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-          সাবমিট করো
-        </button>
       </Modal>
     </div>
   );

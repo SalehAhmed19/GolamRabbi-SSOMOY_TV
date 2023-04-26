@@ -16,6 +16,7 @@ import Ancor from "./Components/Isolated/Invite/Ancor";
 import Consultant from "./Components/Isolated/Invite/Consultant";
 import Webinar from "./Components/Isolated/Invite/Webinar";
 import AllEvents from "./Pages/AllEvents";
+import { useState } from "react";
 
 function App() {
   const theme = createTheme({
@@ -31,14 +32,23 @@ function App() {
       },
     },
   });
-
+  const [active, setActive] = useState(false);
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 80) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>
-            <Route path="/" element={<MediaCourse />} />
+            <Route index element={<MediaCourse />} />
             <Route
               path="/course/leadership-course"
               element={<LeaderShipCourse />}
