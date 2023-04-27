@@ -13,6 +13,22 @@ function Course() {
     { title: "লিডারশীপ", route: "/course/leadership-course" },
     { title: "লাইফ কোর্স", route: "course/life-course" },
   ];
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const mobile = event.target.mobile.value;
+    const course = event.target.course.value;
+    const form = {
+      name: name,
+      email: email,
+      mobile: mobile,
+      course: course,
+    };
+    console.log(form);
+    setShow(false);
+  };
   return (
     <div
       style={{
@@ -43,31 +59,41 @@ function Course() {
         <h4 className="text-primary font-bold text-xl">
           কোর্সে এনরোল করতে চাও?
         </h4>
-        <form className="lg:w-96" action="">
-          <select class="form-select text-primary w-full bg-[#333] rounded my-2 py-1 px-3 focus:outline-none">
+        <form
+          onSubmit={() => handleSubmit(event)}
+          className="lg:w-96"
+          action=""
+        >
+          <select
+            name="course"
+            class="form-select text-primary w-full bg-[#333] rounded my-2 py-1 px-3 focus:outline-none"
+          >
             <option>মিডিয়া কোর্স</option>
             <option>লিডারশীপ কোর্স</option>
             <option>লাইফ কোর্স</option>
           </select>
           <input
+            name="name"
             placeholder="তোমার নাম লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
           />
           <input
+            name="email"
             placeholder="তোমার ইমেইল লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
           />
           <input
+            name="mobile"
             placeholder="তোমার মোবাইল নাম্বার লিখো"
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             type="text"
           />
+          <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+            সাবমিট করো
+          </button>
         </form>
-        <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-          সাবমিট করো
-        </button>
       </Modal>
     </div>
   );
