@@ -11,6 +11,8 @@ import BlogsPage from "./Pages/BlogsPage";
 import Blog1 from "./Pages/Blogs/Blog1";
 import AllEvents from "./Pages/AllEvents";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const theme = createTheme({
@@ -48,6 +50,18 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <ScrollToTop
         style={{
           borderRadius: "50%",

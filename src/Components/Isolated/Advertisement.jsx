@@ -20,6 +20,16 @@ function Advertisement() {
     };
     console.log(form);
     setShow(false);
+    // toast("🦄 Wow so easy!", {
+    //   position: "top-right",
+    //   autoClose: 3000,
+    //   hideProgressBar: true,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    //   theme: "dark",
+    // });
   };
   return (
     <div
@@ -83,7 +93,6 @@ function Advertisement() {
             name="description"
             id=""
           ></textarea>
-
           <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
             সাবমিট করো
           </button>
