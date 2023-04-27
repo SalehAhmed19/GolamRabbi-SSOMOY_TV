@@ -9,7 +9,7 @@ function CourseCard({ course }) {
         <p className="text-gray-500 text-sm mb-4">Course Description</p>
         <div className="flex items-center justify-between">
           <button className="bg-primary hover:bg-yellow-600 text-[#222] font-bold py-2 px-4 rounded-full">
-            Enroll Now
+            এনরোল করো
           </button>
           <button className="text-primary hover:text-yellow-600 flex">
             <svg
@@ -26,7 +26,7 @@ function CourseCard({ course }) {
                 d="M15 19l-3-1.5-3 1.5V5a2 2 0 012-2h2a2 2 0 012 2v14z"
               />
             </svg>
-            Add to Wishlist
+            উইশ লিস্ট
           </button>
         </div>
       </div>
