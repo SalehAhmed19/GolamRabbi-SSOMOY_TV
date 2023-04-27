@@ -13,6 +13,7 @@ import AllEvents from "./Pages/AllEvents";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Courses from "./Pages/Courses/Courses";
 
 function App() {
   const theme = createTheme({
@@ -47,6 +48,7 @@ function App() {
           <Route path="/events" element={<AllEvents />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:id" element={<Blog1 />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
       </div>
       <Footer />
