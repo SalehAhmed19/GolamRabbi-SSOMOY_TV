@@ -10,6 +10,7 @@ import { TbArrowBigUpLinesFilled } from "react-icons/tb";
 import BlogsPage from "./Pages/BlogsPage";
 import Blog1 from "./Pages/Blogs/Blog1";
 import AllEvents from "./Pages/AllEvents";
+import { useState } from "react";
 
 function App() {
   const theme = createTheme({
@@ -25,7 +26,16 @@ function App() {
       },
     },
   });
-
+  const [active, setActive] = useState(false);
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 80) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
