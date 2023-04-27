@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import img1 from "../../../assets/images/MediaSB.jpg";
 import img2 from "../../../assets/images/LeadershipSB.jpg";
 import img3 from "../../../assets/images/LifecourseSB.jpg";
+import { Link } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,13 +58,23 @@ export default function CourseTabs() {
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
-          sx={{ borderRadius: "8px", background: "#111118", margin: "0 5px" }}
+          sx={{
+            borderRadius: "8px",
+            background: "#111118",
+            margin: "0 5px",
+          }}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
           <Tab sx={{ color: "#E0E0E0" }} label="মিডিয়া" {...a11yProps(0)} />
           <Tab sx={{ color: "#E0E0E0" }} label="লিডারশীপ" {...a11yProps(1)} />
           <Tab sx={{ color: "#E0E0E0" }} label="লাইফ কোর্স" {...a11yProps(2)} />
+          <Link
+            className="text-primary font-bold my-auto ml-auto mr-5"
+            to="/courses"
+          >
+            আরও দেখুন...
+          </Link>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
