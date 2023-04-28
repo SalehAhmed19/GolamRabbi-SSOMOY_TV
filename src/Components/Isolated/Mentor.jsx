@@ -3,6 +3,7 @@ import { Fade } from "react-reveal";
 import bg from "../../assets/images/mentor-bg.png";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
+import { toast } from "react-toastify";
 
 const Mentor = () => {
   const [show, setShow] = useState(false);
@@ -17,6 +18,18 @@ const Mentor = () => {
       email: email,
       mobile: mobile,
     };
+
+    fetch("http://localhost:4000/api/mentorship-booking", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Booking successful");
+      });
+
     console.log(form);
     setShow(false);
   };

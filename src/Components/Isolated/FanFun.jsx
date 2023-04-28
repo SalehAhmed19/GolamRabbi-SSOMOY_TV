@@ -9,6 +9,7 @@ import gr6 from "../../assets/images/gr5.jpg";
 import { Fade, Zoom } from "react-reveal";
 import { ImageList, ImageListItem } from "@mui/material";
 import Modal from "./Modals/Modal";
+import { toast } from "react-toastify";
 
 function FanFun() {
   const [show, setShow] = useState(false);
@@ -91,6 +92,18 @@ function FanFun() {
       email: email,
       mobile: mobile,
     };
+
+    fetch("http://localhost:4000/api/fun-with-fan-reg", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Registration successful");
+      });
+
     console.log(form);
     setShow(false);
   };

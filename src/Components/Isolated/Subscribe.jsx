@@ -1,5 +1,6 @@
 import React from "react";
 import { RiSendPlane2Fill } from "react-icons/ri";
+import { toast } from "react-toastify";
 
 function Subscribe() {
   const handleSubmit = (event) => {
@@ -8,6 +9,18 @@ function Subscribe() {
     const form = {
       email: email,
     };
+
+    fetch("http://localhost:4000/api/newsletter-subscription", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Subscription successful");
+      });
+
     console.log(form);
   };
   return (

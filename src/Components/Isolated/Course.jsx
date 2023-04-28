@@ -4,6 +4,7 @@ import bg from "../../assets/images/course-bg.png";
 import Modal from "./Modals/Modal";
 import { Link, Outlet } from "react-router-dom";
 import CourseTabs from "./Tabs/CourseTabs";
+import { toast } from "react-toastify";
 
 function Course() {
   const [show, setShow] = useState(false);
@@ -26,6 +27,17 @@ function Course() {
       mobile: mobile,
       course: course,
     };
+
+    fetch("http://localhost:4000/api/course-enrollment", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Enrollment successful");
+      });
     console.log(form);
     setShow(false);
     // toast("🦄 Wow so easy!", {

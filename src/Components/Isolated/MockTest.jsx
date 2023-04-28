@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Fade } from "react-reveal";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
+import { toast } from "react-toastify";
 
 function MockTest() {
   const [show, setShow] = useState(false);
@@ -18,6 +19,18 @@ function MockTest() {
       mobile: mobile,
       time: time,
     };
+
+    fetch("http://localhost:4000/api/mock-test-schedule", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Schedule setup successful");
+      });
+
     console.log(form);
     setShow(false);
   };

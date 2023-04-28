@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/depression.jpg";
 import Modal from "./Modals/Modal";
+import { toast } from "react-toastify";
 
 function Advertisement() {
   const [show, setShow] = useState(false);
@@ -18,6 +19,17 @@ function Advertisement() {
       mobile: mobile,
       description: description,
     };
+
+    fetch("http://localhost:4000/api/share-your-feeling", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Send successful");
+      });
     console.log(form);
     setShow(false);
     // toast("🦄 Wow so easy!", {
