@@ -9,7 +9,7 @@ import gr6 from "../../assets/images/gr5.jpg";
 import { Fade, Zoom } from "react-reveal";
 import { ImageList, ImageListItem } from "@mui/material";
 import Modal from "./Modals/Modal";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 function FanFun() {
   const [show, setShow] = useState(false);
@@ -101,7 +101,7 @@ function FanFun() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast("Registration successful");
+        toast.success("Registration successful");
       });
 
     console.log(form);

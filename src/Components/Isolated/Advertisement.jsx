@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/depression.jpg";
 import Modal from "./Modals/Modal";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 function Advertisement() {
   const [show, setShow] = useState(false);
@@ -28,11 +28,11 @@ function Advertisement() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast("Send successful");
+        toast.success("Send successful");
       });
     console.log(form);
     setShow(false);
-    // toast("🦄 Wow so easy!", {
+    // toast.success("🦄 Wow so easy!", {
     //   position: "top-right",
     //   autoClose: 3000,
     //   hideProgressBar: true,

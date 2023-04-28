@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 import bg from "../../assets/images/mentor-bg.png";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 const Mentor = () => {
   const [show, setShow] = useState(false);
@@ -27,7 +27,7 @@ const Mentor = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast("Booking successful");
+        toast.success("Booking successful");
       });
 
     console.log(form);

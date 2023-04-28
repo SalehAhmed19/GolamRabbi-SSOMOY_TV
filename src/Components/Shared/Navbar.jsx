@@ -114,27 +114,8 @@ function Navbar(props) {
                 <Box
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-                >
-                  {/* <div className="flex items-center lg:pl-14">
-                    <IconButton
-                      color="primary"
-                      aria-label="open drawer"
-                      edge="start"
-                      onClick={handleDrawerToggle}
-                      // sx={{ mr: 2 }}
-                      sx={{ marginRight: "20px" }}
-                    >
-                      <MenuIcon />
-                    </IconButton>
-                    <input
-                      className="bg-transparent py-1 px-5 rounded-full border-2 text-center text-[#fff]"
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      type="text"
-                      placeholder="সার্চ বার"
-                    />
-                  </div> */}
-                </Box>
-                <Box
+                ></Box>
+                {/* <Box
                   sx={{
                     display: { xs: "none", sm: "block", paddingRight: "28px" },
                   }}
@@ -151,7 +132,7 @@ function Navbar(props) {
                       {item}
                     </Button>
                   ))}
-                </Box>
+                </Box> */}
               </div>
               {/* Lower Menu */}
               <div className="w-full flex p-4 bg-[#000] lg:pl-14 lg:border-t border-t-[#222]">

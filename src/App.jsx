@@ -14,6 +14,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Courses from "./Pages/Courses/Courses";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const theme = createTheme({
@@ -52,8 +53,9 @@ function App() {
         </Routes>
       </div>
       <Footer />
-      <ToastContainer
-        position="top-right"
+      {/* <ToastContainer
+        style={{ borderRadius: "50%" }}
+        position="top-center"
         autoClose={3000}
         hideProgressBar
         newestOnTop={false}
@@ -62,7 +64,10 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        // theme="dark"
+      /> */}
+      <Toaster
+        toastOptions={{ style: { backgroundColor: "#222", color: "#fff" } }}
       />
       <ScrollToTop
         style={{

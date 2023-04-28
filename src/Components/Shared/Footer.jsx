@@ -23,7 +23,7 @@ const Footer = () => {
                 corporis rem pariatur accusantium ipsum dolore.
               </p>
             </div>
-            <div className="w-full lg:w-1/4 mb-4 lg:mb-0">
+            <div className="w-full lg:w-1/4 mb-4 lg:mb-0 text-[#222]">
               {/* <h3 className="text-lg font-bold mb-4"></h3> */}
               <p className="mb-2 cursor-pointer">মিডিয়া জব সার্কুলার</p>
               <p className="mb-2 cursor-pointer">অডিশন টিপস</p>
@@ -32,7 +32,7 @@ const Footer = () => {
               <p className="mb-2 cursor-pointer">মক টেস্ট</p>
               <p className="mb-2 cursor-pointer">মিট আপ</p>
             </div>
-            <div className="w-full lg:w-1/4 mb-4 lg:mb-0">
+            <div className="w-full lg:w-1/4 mb-4 lg:mb-0 text-[#222]">
               <h3 className="text-lg font-bold mb-4">সার্ভিস</h3>
               <ul className="list-none">
                 <li className="mb-2">
@@ -51,7 +51,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full lg:w-1/4">
+            <div className="w-full lg:w-1/4 text-[#222]">
               {/* <h3 className="text-lg font-bold mb-4">
                 Subscribe to Our Newsletter
               </h3>

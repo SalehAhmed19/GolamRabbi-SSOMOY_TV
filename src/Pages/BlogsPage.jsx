@@ -1,6 +1,7 @@
 import React from "react";
 import blog from "../assets/images/blogs.jpg";
 import { Link } from "react-router-dom";
+import { Fade } from "react-reveal";
 
 function BlogsPage() {
   const data = [
@@ -39,10 +40,12 @@ function BlogsPage() {
     },
   ];
   return (
-    <div className="lg:py-24 py-10 lg:mx-20 mx-5">
-      <h2 className="text-4xl font-bold text-center pt-20 pb-10 text-primary">
-        ব্লগ
-      </h2>
+    <div className="lg:py-20 py-10 lg:mx-20 mx-5">
+      <Fade down>
+        <h2 className="text-center text-4xl font-bold text-primary py-14 my-5">
+          ব্লগ
+        </h2>
+      </Fade>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
         {data.map((a) => (
           <Link to={`/blogs/${a?.id}`}>
@@ -53,9 +56,7 @@ function BlogsPage() {
                 alt=""
               />
               <div className="absolute bottom-[20px] mx-5">
-                <h3 className="text-2xl font-bold">
-                 {a.headline}
-                </h3>
+                <h3 className="text-2xl font-bold">{a.headline}</h3>
                 <p>
                   পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
                   আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...

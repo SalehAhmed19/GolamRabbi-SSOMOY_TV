@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Fade } from "react-reveal";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 function MockTest() {
   const [show, setShow] = useState(false);
@@ -28,7 +28,7 @@ function MockTest() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast("Schedule setup successful");
+        toast.success("Schedule setup successful");
       });
 
     console.log(form);

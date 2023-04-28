@@ -26,7 +26,6 @@ import Featured from "../Components/Isolated/Featured";
 function Home() {
   return (
     <div>
-      হি
       <Banner />
       <Statistics />
       <Features />
@@ -49,7 +48,7 @@ function Home() {
       <Invite />
       <About />
       {/* <BookSection /> */}
-      <BookSection/>
+      <BookSection />
       <SocialMedia />
     </div>
   );

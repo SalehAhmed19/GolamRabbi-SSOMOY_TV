@@ -4,7 +4,7 @@ import bg from "../../assets/images/course-bg.png";
 import Modal from "./Modals/Modal";
 import { Link, Outlet } from "react-router-dom";
 import CourseTabs from "./Tabs/CourseTabs";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 function Course() {
   const [show, setShow] = useState(false);
@@ -36,11 +36,11 @@ function Course() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast("Enrollment successful");
+        toast.success("Enrollment successful");
       });
     console.log(form);
     setShow(false);
-    // toast("🦄 Wow so easy!", {
+    // toast.success("🦄 Wow so easy!", {
     //   position: "top-right",
     //   autoClose: 3000,
     //   hideProgressBar: true,
