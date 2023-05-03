@@ -73,17 +73,19 @@ function Events() {
         </h1>
       </Fade>
       <Fade up>
-        <div className="navigation-wrapper">
+        <div className="navigation-wrapper px-10 py-14">
           <div ref={sliderRef} className="keen-slider">
             {events.map((event, idx) => (
               <div key={idx} className="keen-slider__slide">
                 <div className="-p-5 flex items-center">
-                  <div className="text-primary mr-5">
+                  <div className="text-primary mr-5 border-2 border-[#F6B30F] p-2  rounded-md">
                     <h2 className="text-6xl">{event.date}</h2>
                     <p className="text-center">{event.month}</p>
                   </div>
                   <div>
-                    <h4 className="my-3 font-bold text-2xl">{event.title}</h4>
+                    <h4 className="my-3 font-bold text-2xl text-primary">
+                      {event.title}
+                    </h4>
                     <hr />
                     <p className="my-3 flex items-center text-[#c5c5c5]">
                       <AiOutlineClockCircle className="mr-2" />
