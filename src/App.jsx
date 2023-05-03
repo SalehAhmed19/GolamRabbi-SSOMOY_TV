@@ -15,6 +15,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Courses from "./Pages/Courses/Courses";
 import { Toaster } from "react-hot-toast";
+import PersonalBlogs from "./Pages/Blogs/PersonalBlogs";
+import ProfessionalBlogs from "./Pages/Blogs/ProfessionalBlogs";
 
 function App() {
   const theme = createTheme({
@@ -50,6 +52,8 @@ function App() {
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:id" element={<Blog1 />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/professional-blogs" element={<ProfessionalBlogs />} />
+          <Route path="/personal-blogs" element={<PersonalBlogs />} />
         </Routes>
       </div>
       <Footer />
