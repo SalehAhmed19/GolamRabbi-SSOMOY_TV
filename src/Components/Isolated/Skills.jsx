@@ -24,7 +24,7 @@ function Skills() {
         slides: { perView: 2, spacing: 5 },
       },
       "(min-width: 1000px)": {
-        slides: { perView: 3, spacing: 10 },
+        slides: { perView: 4, spacing: 10 },
       },
     },
     renderMode: "performance",
@@ -40,7 +40,7 @@ function Skills() {
     },
   });
   return (
-    <div className="lg:px-24 pt-14 pb-64 text-[#fff]">
+    <div className="lg:px-24 py-14 text-[#fff]">
       <Fade down>
         <h2 className="text-center text-4xl font-bold mb-5 text-primary">
           স্কিল সমূহ
@@ -72,10 +72,13 @@ function Skills() {
           </Zoom>
         ))}
       </div> */}
-      <div ref={sliderRef} className="keen-slider">
+      <div
+        ref={sliderRef}
+        className="keen-slider border-2 border-[#222] bg-[#222]"
+      >
         {skills.map((skill, idx) => (
           <div key={idx} className="keen-slider__slide py-4">
-            <div className="flex flex-col justify-center lg:w-80 items-center p-5 shadow-lg shadow-[#0000005c] rounded-md">
+            <div className="flex flex-col justify-center lg:w-80 items-center p-5 border-2 border-[#222] rounded-md bg-[#16181D]">
               <h3 className="text-primary text-5xl my-5">{skill.icon}</h3>
               <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>
             </div>
