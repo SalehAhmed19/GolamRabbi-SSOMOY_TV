@@ -1,7 +1,8 @@
 import React from "react";
 import { Fade, Zoom } from "react-reveal";
 import { CgUserlane } from "react-icons/cg";
-import { FaQuoteRight, FaUserAlt } from "react-icons/fa";
+import img from "../../assets/images/user.jpeg";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 function Testimonals() {
   const data = [
@@ -29,31 +30,40 @@ function Testimonals() {
         </h1>
       </Fade>
 
-      <Zoom>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {data.map((d, idx) => (
-            <div
-              key={idx}
-              className="relative text-basic rounded-md cursor-pointer"
-            >
-              <div
-                id="particles-js"
-                className="absolute inset-0 rounded-md"
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#222] to-[#0E0F14] opacity-50 rounded-md"></div>
-              <div className="absolute inset-0 backdrop-blur-lg backdrop-filter bg-opacity-75"></div>
-              <div className="relative z-10 p-10 rounded-md">
-                <FaQuoteRight className="absolute top-6 right-2 text-[100px] opacity-5" />
-                <FaUserAlt className="mb-2 mx-auto text-3xl text-basic" />
-                <h3 className="text-xl font-bold mb-3 text-primary text-center">
-                  {d.name}
-                </h3>
-                <p>{d.review}</p>
-              </div>
-            </div>
-          ))}
+      <div className="p-5 lg:p-10 shadow-lg flex flex-col lg:flex-row lg:w-2/3 mx-auto bg-[#222] rounded-md">
+        <div>
+          <div className="bg-primary h-3 w-24 mx-auto rounded-t-md"></div>
+          <div className="lg:w-40 bg-[#fff] inline-block p-4">
+            <img
+              className="lg:w-36 shadow-lg rounded-md mx-auto"
+              src={img}
+              alt=""
+            />
+            <h2 className="text-center font-bold my-2 text-[#333]">
+              সাদিকুর রহমান
+            </h2>
+          </div>
+          <div className="bg-primary h-3 w-24 mx-auto rounded-b-md"></div>
         </div>
-      </Zoom>
+        <div>
+          <div className="bg-[#fff] h-2 w-40 mt-5"></div>
+          <h2 className="text-primary m-3 font-bold text-xl">অডিয়েন্স রিভিউ</h2>
+          <div className="lg:mx-5">
+            <FaQuoteLeft className="text-[#363636] text-3xl" />
+            <div className="lg:p-5 mt-5 lg:mt-0">
+              <p className="text-primary">
+                আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর
+                কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ
+                নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং
+                সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং
+                তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান
+                ও শুভেচ্ছা।
+              </p>
+            </div>
+            <FaQuoteRight className="text-[#363636] text-3xl ml-auto" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
