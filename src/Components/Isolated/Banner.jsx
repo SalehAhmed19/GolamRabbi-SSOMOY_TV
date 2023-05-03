@@ -1,5 +1,5 @@
 import React from "react";
-import reporter from "../../assets/Banner/reporter.jpg";
+import reporter from "../../assets/images/image.png";
 import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-reveal";

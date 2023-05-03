@@ -4,6 +4,7 @@ import bg from "../../assets/images/mentor-bg.png";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
+import news from "../../assets/images/news-presenter.jpeg";
 
 const Mentor = () => {
   const [show, setShow] = useState(false);
@@ -67,7 +68,7 @@ const Mentor = () => {
         </div>
         <div>
           <Fade right>
-            <img src={presenter} alt="" />
+            <img className="rounded-md" src={news} alt="" />
           </Fade>
         </div>
       </div>
