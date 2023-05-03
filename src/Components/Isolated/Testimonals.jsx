@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
-import { CgUserlane } from "react-icons/cg";
 import img from "../../assets/images/user.jpeg";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "../../Styles/Events.css";
+import ReviewCard from "./ReviewCard";
 
 function Testimonals() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    loop: true,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+  });
   const data = [
     {
+      img: img,
       name: "সাদিকুর রহমান",
       review:
         "আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান ও শুভেচ্ছা।",
     },
     {
+      img: img,
       name: "আলাউদ্দিন কায়কোবাদ",
       review:
         "আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান ও শুভেচ্ছা।",
     },
     {
+      img: img,
       name: "সাদেত্তিন কোপেক",
       review:
         "আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান ও শুভেচ্ছা।",
@@ -30,39 +48,35 @@ function Testimonals() {
         </h1>
       </Fade>
 
-      <div className="p-5 lg:p-10 shadow-lg flex flex-col lg:flex-row lg:w-2/3 mx-auto bg-[#222] rounded-md">
-        <div>
-          <div className="bg-primary h-3 w-24 mx-auto rounded-t-md"></div>
-          <div className="lg:w-40 bg-[#fff] inline-block p-4">
-            <img
-              className="lg:w-36 shadow-lg rounded-md mx-auto"
-              src={img}
-              alt=""
-            />
-            <h2 className="text-center font-bold my-2 text-[#333]">
-              সাদিকুর রহমান
-            </h2>
-          </div>
-          <div className="bg-primary h-3 w-24 mx-auto rounded-b-md"></div>
-        </div>
-        <div>
-          <div className="bg-[#fff] h-2 w-40 mt-5"></div>
-          <h2 className="text-primary m-3 font-bold text-xl">অডিয়েন্স রিভিউ</h2>
-          <div className="lg:mx-5">
-            <FaQuoteLeft className="text-[#363636] text-3xl" />
-            <div className="lg:p-5 mt-5 lg:mt-0">
-              <p className="text-primary">
-                আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর
-                কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ
-                নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং
-                সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং
-                তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান
-                ও শুভেচ্ছা।
-              </p>
+      <div className="navigation-wrapper lg:w-3/4 mx-auto my-14">
+        <div ref={sliderRef} className="keen-slider">
+          {data.map((d, idx) => (
+            <div className="keen-slider__slide">
+              <ReviewCard key={idx} d={d} />
             </div>
-            <FaQuoteRight className="text-[#363636] text-3xl ml-auto" />
-          </div>
+          ))}
         </div>
+        {loaded && instanceRef.current && (
+          <>
+            <Arrow
+              left
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.prev()
+              }
+              disabled={currentSlide === 0}
+            />
+
+            <Arrow
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.next()
+              }
+              disabled={
+                currentSlide ===
+                instanceRef.current.track.details.slides.length - 1
+              }
+            />
+          </>
+        )}
       </div>
     </div>
   );
@@ -90,3 +104,24 @@ export default Testimonals;
 //     </button> */}
 //   </div>
 // ))}
+
+function Arrow(props) {
+  const disabeld = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
+  );
+}
