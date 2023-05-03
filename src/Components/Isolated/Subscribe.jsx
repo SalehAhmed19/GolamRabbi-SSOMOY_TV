@@ -7,6 +7,7 @@ function Subscribe() {
     event.preventDefault();
     const email = event.target.email.value;
     const form = {
+      title: "Newsletter Subscription",
       email: email,
     };
 

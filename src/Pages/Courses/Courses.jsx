@@ -1,8 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import media from "../../assets/images/MediaSB.jpg";
-import leadership from "../../assets/images/LeadershipSB.jpg";
-import life from "../../assets/images/LifecourseSB.jpg";
+import media from "../../assets/images/media.jpg";
+import leadership from "../../assets/images/leadership.jpg";
+import life from "../../assets/images/life.jpg";
 import { FiClock } from "react-icons/fi";
 import CourseCard from "./CourseCard";
 

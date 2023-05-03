@@ -11,8 +11,6 @@ import BlogsPage from "./Pages/BlogsPage";
 import Blog1 from "./Pages/Blogs/Blog1";
 import AllEvents from "./Pages/AllEvents";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Courses from "./Pages/Courses/Courses";
 import { Toaster } from "react-hot-toast";
 
@@ -52,20 +50,8 @@ function App() {
           <Route path="/courses" element={<Courses />} />
         </Routes>
       </div>
+
       <Footer />
-      {/* <ToastContainer
-        style={{ borderRadius: "50%" }}
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        // theme="dark"
-      /> */}
       <Toaster
         toastOptions={{ style: { backgroundColor: "#222", color: "#fff" } }}
       />

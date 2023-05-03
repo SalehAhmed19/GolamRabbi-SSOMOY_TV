@@ -22,6 +22,7 @@ function Course() {
     const mobile = event.target.mobile.value;
     const course = event.target.course.value;
     const form = {
+      title: "Courses",
       name: name,
       email: email,
       mobile: mobile,

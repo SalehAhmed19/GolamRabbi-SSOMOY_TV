@@ -88,6 +88,7 @@ function FanFun() {
     const email = event.target.email.value;
     const mobile = event.target.mobile.value;
     const form = {
+      title: "Fun with Fan",
       name: name,
       email: email,
       mobile: mobile,

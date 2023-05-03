@@ -22,6 +22,7 @@ import About from "../Components/Isolated/About";
 import Invite from "../Components/Isolated/Invite";
 import BookSection from "../Components/Isolated/BookSection";
 import Featured from "../Components/Isolated/Featured";
+import "../App.css";
 
 function Home() {
   return (
@@ -45,6 +46,7 @@ function Home() {
       <Subscribe />
       <Testimonals />
       <Featured />
+
       <Invite />
       <About />
       {/* <BookSection /> */}

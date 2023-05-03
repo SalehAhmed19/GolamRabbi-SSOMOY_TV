@@ -14,6 +14,7 @@ const Mentor = () => {
     const email = event.target.email.value;
     const mobile = event.target.mobile.value;
     const form = {
+      title: "Mentorship",
       name: name,
       email: email,
       mobile: mobile,

@@ -14,6 +14,7 @@ function Advertisement() {
     const mobile = event.target.mobile.value;
     const description = event.target.description.value;
     const form = {
+      title: "Share your feelings and problems",
       name: name,
       email: email,
       mobile: mobile,
