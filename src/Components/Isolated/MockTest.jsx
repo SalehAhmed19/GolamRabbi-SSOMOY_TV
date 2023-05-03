@@ -57,7 +57,7 @@ function MockTest() {
               <br />
             </p>
             <p className="text-xl text-primary">এবার তাহলে চেক করে নাও-</p>
-            <ul className="text-xl list-disc mx-5">
+            <ul className="text-xl list-disc mx-5 ml-10">
               <li>তোমার ভয়েস ও উচ্চারণ</li>
               <li>তোমার স্কিল ও নলেজ</li>
               <li>তোমার প্রফেশনাল লুক</li>

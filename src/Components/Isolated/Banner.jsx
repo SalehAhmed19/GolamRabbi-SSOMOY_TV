@@ -138,7 +138,7 @@ function Banner() {
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative hidden lg:block">
             <div className="w-80 base p-5 cursor-pointer rounded-md absolute top-[250px] mx-5 duration-200">
               <h1 className="font-bold text-2xl text-center">
                 শেয়ার করে স্বপ্নকে জয় করো
