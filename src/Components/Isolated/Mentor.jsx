@@ -45,12 +45,14 @@ const Mentor = () => {
       className="lg:px-24 px-5 py-14 text-[#fff]"
     >
       <Fade down>
-        <h2 className="text-center text-4xl font-bold mb-5">পেইড মেন্টরশিপ</h2>
+        <h2 className="text-center text-4xl font-bold mb-5 text-primary">
+          পেইড মেন্টরশিপ
+        </h2>
       </Fade>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div className="flex flex-col justify-center">
           <Fade left>
-            <p className="text-xl">
+            <p className="text-xl font-bold text-primary">
               উপস্থাপনার ঝকঝকে ক্যারিয়ারে আসার টোটাল প্রস্তুতি নিয়ে নিতে চাও।
               থাকতে চাও অভিজ্ঞ কারো ছায়ায়। তাহলে দেরী কেনো?
             </p>
@@ -61,7 +63,7 @@ const Mentor = () => {
               <li>
                 মূলত: এটি একটি দীর্ঘদিনের প্রস্তুতি প্ল্যান। ধরতে পারো একটা
                 ইন্টার্নশিপ। যা তোমাকে দিবে সার্বিক প্রস্তুতি। এবং এ প্রোগ্রামে
-                থাকতে থাকেতেই মিলবে চাকরির সুযোগ….
+                থাকতে থাকেতেই মিলবে চাকরির সুযোগ…
               </li>
             </ul>
           </Fade>
