@@ -3,7 +3,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const ReviewCard = ({ d }) => {
   return (
-    <div className="p-5 lg:p-10 shadow-lg flex flex-col lg:flex-row lg:w-4/5 mx-auto bg-[#222] rounded-md">
+    <div className="p-5 lg:p-10 shadow-lg flex flex-col lg:flex-row lg:w-4/5 mx-auto bg-[#111118] rounded-md">
       <div>
         <div className="bg-primary h-3 w-24 mx-auto rounded-t-md"></div>
         <div className="lg:w-40 bg-[#fff] inline-block p-4 shadow-lg">
