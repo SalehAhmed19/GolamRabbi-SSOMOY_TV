@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "../../Styles/MediaJobCircular.css";
 
 function Blogs() {
   const [isModalOpen, setIsModalOpen] = useState(false);

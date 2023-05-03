@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../Styles/MediaJobCircular.css";
+import ProfessionalBlog from "./Blogs/ProfessionalBlog";
 
 function BlogsPage() {
   const data = [
@@ -86,17 +87,6 @@ function BlogsPage() {
       blogContent:
         " বিশ্বসেরা পরিবেশবান্ধব কারখানার স্বীকৃতি পেয়েছে বাংলাদেশের গ্রিনটেক্সটাইল লিমিটেড ইউনিট-৪। লিড সনদে সর্বোচ্চ নম্বর পেয়ে সবুজ কারখানা শীর্ষস্থান দখল করে নিয়েছে কারখানাটি। ১১০ নম্বরের মধ্যে প্রতিষ্ঠানটিপেয়েছে ১০৪। আর তাই বিশ্বের সবচেয়ে পরিবেশবান্ধব ১০টি কারখানার ৮টিইবাংলাদেশের। আর বিশ্বসেরা ১০০ কারখানার মধ্যে বাংলাদেশের ৫২টি। শনিবার লিড সনদের এই তালিকা প্রকাশিত হলে বিজিএমইএ এ খবর নিশ্চিত করে।",
     },
-    {
-      id: 8,
-      heading: "প্রথম সন্দেশ, সবচেয়ে সেরা 3",
-      headline: "বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 3",
-      editor: "গোলাম রাব্বী",
-      date: "12 এপ্রিল ২০২৩",
-      subHeading:
-        " লিড তালিকার শীর্ষ ১০০টি কোম্পানির মধ্যে ৫২টি বাংলাদেশের, অর্থাৎ তালিকায় থাকা সবচেয়ে বেশি কোম্পানি এখন বাংলাদেশের। এরপর সবচেয়ে বেশিবেশি কোম্পানি আছে চীনের। তাদের আছে ১০টি কারখানা। এরপর পাকিস্তানের আছে৯টি কারখানা। শ্রীলঙ্কা ও ভারতের আছে ৬টি করে কারখানা। ভিয়েতনাম ওতাইওয়ানের আছে ৪টি করে কারখানা।",
-      blogContent:
-        " বিশ্বসেরা পরিবেশবান্ধব কারখানার স্বীকৃতি পেয়েছে বাংলাদেশের গ্রিনটেক্সটাইল লিমিটেড ইউনিট-৪। লিড সনদে সর্বোচ্চ নম্বর পেয়ে সবুজ কারখানা শীর্ষস্থান দখল করে নিয়েছে কারখানাটি। ১১০ নম্বরের মধ্যে প্রতিষ্ঠানটিপেয়েছে ১০৪। আর তাই বিশ্বের সবচেয়ে পরিবেশবান্ধব ১০টি কারখানার ৮টিইবাংলাদেশের। আর বিশ্বসেরা ১০০ কারখানার মধ্যে বাংলাদেশের ৫২টি। শনিবার লিড সনদের এই তালিকা প্রকাশিত হলে বিজিএমইএ এ খবর নিশ্চিত করে।",
-    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -126,8 +116,8 @@ function BlogsPage() {
           ব্লগ
         </h2>
       </Fade>
-      <div className="">
-        {/* {data.map((a) => (
+
+      {/* {data.map((a) => (
           <Link to={`/blogs/${a?.id}`}>
             <div className="relative text-basic ">
               <img
@@ -146,6 +136,7 @@ function BlogsPage() {
           </Link>
         ))} */}
 
+      <div>
         <div ref={sliderRef} className="keen-slider">
           {data.map((a) => (
             <div key={a} className="keen-slider__slide rounded-lg bg-[#222]">
@@ -168,69 +159,29 @@ function BlogsPage() {
             </div>
           ))}
         </div>
-        {loaded && instanceRef.current && (
-          <>
-            <Arrow
-              left
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
 
-            <Arrow
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
-          </>
+        {loaded && instanceRef.current && (
+          <div className="dots mt-10">
+            {[
+              ...Array(
+                instanceRef.current.track.details.slides.length - 3
+              ).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={"dot" + (currentSlide === idx ? " active" : "")}
+                ></button>
+              );
+            })}
+          </div>
         )}
       </div>
-
-      {loaded && instanceRef.current && (
-        <div className="dots mt-10">
-          {[
-            ...Array(
-              instanceRef.current.track.details.slides.length - 3
-            ).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            );
-          })}
-        </div>
-      )}
+      <ProfessionalBlog />
     </div>
-  );
-}
-function Arrow(props) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
-  return (
-    <svg
-      onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabeld}`}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      {props.left && (
-        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-      )}
-      {!props.left && (
-        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-      )}
-    </svg>
   );
 }
 
