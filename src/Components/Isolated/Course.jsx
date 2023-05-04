@@ -5,6 +5,9 @@ import Modal from "./Modals/Modal";
 import { Link, Outlet } from "react-router-dom";
 import CourseTabs from "./Tabs/CourseTabs";
 import { toast } from "react-hot-toast";
+import img1 from "../../assets/images/media.jpg";
+import img2 from "../../assets/images/leadership.jpg";
+import img3 from "../../assets/images/life.jpg";
 
 function Course() {
   const [show, setShow] = useState(false);
@@ -66,7 +69,18 @@ function Course() {
           কোর্স
         </h2>
       </Fade>
-      <CourseTabs />
+      {/* <CourseTabs /> */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <Link to="/media-courses">
+          <img className="rounded-md" src={img1} alt="" />
+        </Link>
+        <Link to="/leadership-courses">
+          <img className="rounded-md" src={img2} alt="" />
+        </Link>
+        <Link to="/life-courses">
+          <img className="rounded-md" src={img3} alt="" />
+        </Link>
+      </div>
       <div className=" my-5 mx-5">
         <button
           className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"

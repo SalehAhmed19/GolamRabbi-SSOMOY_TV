@@ -1,9 +1,9 @@
 import React from "react";
 
-function CourseCard({ course }) {
+function CourseCard({ image }) {
   return (
     <div className="shadow-lg rounded-lg bg-[#ffffff0f] overflow-hidden">
-      <img className="w-full" src={course.img} alt="random image" />
+      <img className="w-full" src={image} alt="random image" />
       <div className="p-4">
         <p className="text-primary font-bold text-base mb-2">কোর্সের নাম</p>
         <p className="text-gray-500 text-sm mb-4">Course Description</p>

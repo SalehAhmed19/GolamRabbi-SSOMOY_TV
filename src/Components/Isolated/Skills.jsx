@@ -16,7 +16,7 @@ function Skills() {
     { _id: 6, skill: "ইন্সপায়রেশনাল স্পিকার", icon: <GiPublicSpeaker /> },
     { _id: 7, skill: "ওয়্যারফ্রেম ডিজাইন", icon: <HiNewspaper /> },
   ];
-  const animation = { duration: 10000, easing: (t) => t };
+  const animation = { duration: 15000, easing: (t) => t };
   const [sliderRef] = useKeenSlider({
     loop: true,
     breakpoints: {
