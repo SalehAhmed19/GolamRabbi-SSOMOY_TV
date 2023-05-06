@@ -1,13 +1,18 @@
 import React from "react";
-import logo from "../../assets/logo/footer-logo.png";
-import svg from "../../assets/SVGs/radiant-gradient-2.png";
+import logo from "../../assets/logo/logo.png";
+import bg from "../../assets/footer/12.jpg";
+import { Fade } from "react-reveal";
 
 const Footer = () => {
   return (
     <>
       <footer
-        style={{ background: `url(${svg})`, backgroundSize: "cover" }}
-        className="bg-primary text-[#222] py-8 "
+        style={{
+          background: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="bg-primary text-primary pt-8 border-t-2 border-[#f6b50f]"
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between">
@@ -23,7 +28,7 @@ const Footer = () => {
                 corporis rem pariatur accusantium ipsum dolore.
               </p>
             </div>
-            <div className="w-full lg:w-1/4 mb-4 lg:mb-0 text-[#222]">
+            <div className="w-full lg:w-1/4 mb-4 lg:mb-0">
               {/* <h3 className="text-lg font-bold mb-4"></h3> */}
               <p className="mb-2 cursor-pointer">মিডিয়া জব সার্কুলার</p>
               <p className="mb-2 cursor-pointer">অডিশন টিপস</p>
@@ -32,7 +37,7 @@ const Footer = () => {
               <p className="mb-2 cursor-pointer">মক টেস্ট</p>
               <p className="mb-2 cursor-pointer">মিট আপ</p>
             </div>
-            <div className="w-full lg:w-1/4 mb-4 lg:mb-0 text-[#222]">
+            <div className="w-full lg:w-1/4 mb-4 lg:mb-0 ">
               <h3 className="text-lg font-bold mb-4">সার্ভিস</h3>
               <ul className="list-none">
                 <li className="mb-2">
@@ -51,7 +56,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full lg:w-1/4 text-[#222]">
+            <div className="w-full lg:w-1/4">
               {/* <h3 className="text-lg font-bold mb-4">
                 Subscribe to Our Newsletter
               </h3>
@@ -87,11 +92,15 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="h-[1px] mx-5 lg:mx-20 bg-[#222] my-8"></div>
-          <p className="text-center text-sm">
-            &copy; {new Date().getFullYear()} Developed by Saleh Ahmed Mahin
-          </p>
+          {/* <div className="h-[1px] mx-5 lg:mx-20 bg-[#222] my-8"></div> */}
         </div>
+        <Fade up>
+          <div className="p-5 bg-secondary mt-5 lg:w-1/2 w-3/4 mx-auto rounded-t-3xl">
+            <p className="text-center text-sm text-[#fff] font-bold">
+              &copy; {new Date().getFullYear()} Developed by Saleh Ahmed Mahin
+            </p>
+          </div>
+        </Fade>
       </footer>
     </>
   );

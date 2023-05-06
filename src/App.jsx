@@ -11,12 +11,13 @@ import BlogsPage from "./Pages/BlogsPage";
 import Blog1 from "./Pages/Blogs/Blog1";
 import AllEvents from "./Pages/AllEvents";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Courses from "./Pages/Courses/Courses";
 import { Toaster } from "react-hot-toast";
 import PersonalBlogs from "./Pages/Blogs/PersonalBlogs";
 import ProfessionalBlogs from "./Pages/Blogs/ProfessionalBlogs";
+import MediaCourses from "./Pages/Courses/MediaCourses";
+import LeadershipCourses from "./Pages/Courses/LeadershipCourses";
+import LifeCourses from "./Pages/Courses/LifeCourses";
 
 function App() {
   const theme = createTheme({
@@ -54,22 +55,13 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/professional-blogs" element={<ProfessionalBlogs />} />
           <Route path="/personal-blogs" element={<PersonalBlogs />} />
+          <Route path="/media-courses" element={<MediaCourses />} />
+          <Route path="/leadership-courses" element={<LeadershipCourses />} />
+          <Route path="/life-courses" element={<LifeCourses />} />
         </Routes>
       </div>
+
       <Footer />
-      {/* <ToastContainer
-        style={{ borderRadius: "50%" }}
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        // theme="dark"
-      /> */}
       <Toaster
         toastOptions={{ style: { backgroundColor: "#222", color: "#fff" } }}
       />

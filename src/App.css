@@ -1,25 +1,45 @@
-:root{
-    font-family: 'Hind Siliguri', sans-serif;
+:root {
+  font-family: "Hind Siliguri", sans-serif;
 }
-.App{
-    background-color: #16181D;
-    font-family: 'Hind Siliguri', sans-serif;
+.App {
+  background-color: #16181d;
+  font-family: "Hind Siliguri", sans-serif;
 }
-.text-primary{
+.text-primary {
+  color: #f6b30f;
+}
+.text-secondary {
+  color: #f40a5c;
+}
+.text-basic {
+  color: #e0e0e0;
+}
+.text-accent {
+  color: #bbbbbb;
+}
+.bg-primary {
+  background-color: #f6b30f;
+}
+.bg-secondary {
+  background-color: #f40a5c;
+}
+
+.base{
     color: #F6B30F;
 }
-.text-secondary{
-    color:#F40A5C;
+
+.base .des {
+  display: none;
+  
 }
-.text-basic{
-    color: #E0E0E0;
+
+.base:hover .des {
+  display: block;
+  
 }
-.text-accent{
-    color: #BBBBBB;
-}
-.bg-primary{
-    background-color: #F6B30F;
-}
-.bg-secondary{
-    background-color:#F40A5C;
+
+.base:hover{
+    background: #F6B30F;
+    color: #222;
+    
 }

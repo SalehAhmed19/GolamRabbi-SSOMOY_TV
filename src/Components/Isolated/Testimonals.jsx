@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
-import { CgUserlane } from "react-icons/cg";
-import { FaQuoteRight, FaUserAlt } from "react-icons/fa";
+import img from "../../assets/images/user.jpeg";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "../../Styles/Events.css";
+import ReviewCard from "./ReviewCard";
 
 function Testimonals() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    loop: true,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+  });
   const data = [
     {
-      name: "সাদিকুর রহমান",
+      img: img,
+      name: "আমির ইলতেবার",
       review:
         "আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান ও শুভেচ্ছা।",
     },
     {
-      name: "আলাউদ্দিন কায়কোবাদ",
+      img: img,
+      name: "কমুতান নাইমান",
       review:
         "আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান ও শুভেচ্ছা।",
     },
     {
-      name: "সাদেত্তিন কোপেক",
+      img: img,
+      name: "হাসান সাব্বাহ",
       review:
         "আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে। সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান সব সময় আলোচনামূলক হয়। আমি তার কাজে জনাই সম্মান ও শুভেচ্ছা।",
     },
@@ -29,31 +48,38 @@ function Testimonals() {
         </h1>
       </Fade>
 
-      <Zoom>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="navigation-wrapper lg:w-3/4 mx-auto my-14">
+        <div ref={sliderRef} className="keen-slider">
           {data.map((d, idx) => (
-            <div
-              key={idx}
-              className="relative text-basic rounded-md cursor-pointer"
-            >
-              <div
-                id="particles-js"
-                className="absolute inset-0 rounded-md"
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#222] to-[#0E0F14] opacity-50 rounded-md"></div>
-              <div className="absolute inset-0 backdrop-blur-lg backdrop-filter bg-opacity-75"></div>
-              <div className="relative z-10 p-10 rounded-md">
-                <FaQuoteRight className="absolute top-6 right-2 text-[100px] opacity-5" />
-                <FaUserAlt className="mb-2 mx-auto text-3xl text-basic" />
-                <h3 className="text-xl font-bold mb-3 text-primary text-center">
-                  {d.name}
-                </h3>
-                <p>{d.review}</p>
-              </div>
+            <div className="keen-slider__slide">
+              <Zoom>
+                <ReviewCard key={idx} d={d} />
+              </Zoom>
             </div>
           ))}
         </div>
-      </Zoom>
+        {loaded && instanceRef.current && (
+          <>
+            <Arrow
+              left
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.prev()
+              }
+              disabled={currentSlide === 0}
+            />
+
+            <Arrow
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.next()
+              }
+              disabled={
+                currentSlide ===
+                instanceRef.current.track.details.slides.length - 1
+              }
+            />
+          </>
+        )}
+      </div>
     </div>
   );
 }
@@ -80,3 +106,24 @@ export default Testimonals;
 //     </button> */}
 //   </div>
 // ))}
+
+function Arrow(props) {
+  const disabeld = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
+  );
+}

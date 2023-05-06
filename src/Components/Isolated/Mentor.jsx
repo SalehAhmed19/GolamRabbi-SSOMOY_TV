@@ -4,6 +4,7 @@ import bg from "../../assets/images/mentor-bg.png";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
+import news from "../../assets/images/news-presenter.jpeg";
 
 const Mentor = () => {
   const [show, setShow] = useState(false);
@@ -14,6 +15,7 @@ const Mentor = () => {
     const email = event.target.email.value;
     const mobile = event.target.mobile.value;
     const form = {
+      title: "Mentorship",
       name: name,
       email: email,
       mobile: mobile,
@@ -43,30 +45,32 @@ const Mentor = () => {
       className="lg:px-24 px-5 py-14 text-[#fff]"
     >
       <Fade down>
-        <h2 className="text-center text-4xl font-bold mb-5">পেইড মেন্টরশিপ</h2>
+        <h2 className="text-center text-4xl font-bold mb-5 text-primary">
+          পেইড মেন্টরশিপ
+        </h2>
       </Fade>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div className="flex flex-col justify-center">
           <Fade left>
-            <p className="text-xl">
+            <p className="text-xl font-bold text-primary">
               উপস্থাপনার ঝকঝকে ক্যারিয়ারে আসার টোটাল প্রস্তুতি নিয়ে নিতে চাও।
               থাকতে চাও অভিজ্ঞ কারো ছায়ায়। তাহলে দেরী কেনো?
             </p>
-            <ul className="list-disc text-xl my-5">
+            <ul className="list-disc text-xl my-5 ml-10">
               <li>উপস্থাপনা কত ধরণের।</li>
               <li>দেশি-বিদেশি যেকোনো গণমাধ্যমের প্রস্তুতি।</li>
               <li>কোনটাতে তোমার আগ্রহ আর কিভাবে আসবে এ ক্যারিয়ারে।</li>
               <li>
                 মূলত: এটি একটি দীর্ঘদিনের প্রস্তুতি প্ল্যান। ধরতে পারো একটা
                 ইন্টার্নশিপ। যা তোমাকে দিবে সার্বিক প্রস্তুতি। এবং এ প্রোগ্রামে
-                থাকতে থাকেতেই মিলবে চাকরির সুযোগ….
+                থাকতে থাকেতেই মিলবে চাকরির সুযোগ…
               </li>
             </ul>
           </Fade>
         </div>
         <div>
           <Fade right>
-            <img src={presenter} alt="" />
+            <img className="rounded-md" src={news} alt="" />
           </Fade>
         </div>
       </div>

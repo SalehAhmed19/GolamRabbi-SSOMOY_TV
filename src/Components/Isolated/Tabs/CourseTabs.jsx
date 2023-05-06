@@ -4,9 +4,9 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import img1 from "../../../assets/images/MediaSB.jpg";
-import img2 from "../../../assets/images/LeadershipSB.jpg";
-import img3 from "../../../assets/images/LifecourseSB.jpg";
+import img1 from "../../../assets/images/media.jpg";
+import img2 from "../../../assets/images/leadership.jpg";
+import img3 from "../../../assets/images/life.jpg";
 import { Link } from "react-router-dom";
 
 function TabPanel(props) {

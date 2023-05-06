@@ -213,3 +213,87 @@ Navbar.propTypes = {
 };
 
 export default Navbar;
+// import React, { useState } from "react";
+
+// function Navbar() {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   function toggleMobileMenu() {
+//     setIsMenuOpen(!isMenuOpen);
+//   }
+//   return (
+//     <div>
+//       <nav class="bg-gray-800">
+//         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+//           <div class="relative flex items-center justify-between h-16">
+//             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+//               <button
+//                 type="button"
+//                 class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+//                 aria-label="Main menu"
+//                 aria-expanded="false"
+//                 onClick={toggleMobileMenu}
+//               >
+//                 <svg class="block h-6 w-6" viewBox="0 0 24 24">
+//                   <path
+//                     stroke="currentColor"
+//                     stroke-width="2"
+//                     stroke-linecap="round"
+//                     d="M4 6h16M4 12h16M4 18h16"
+//                   ></path>
+//                 </svg>
+
+//                 <svg class="hidden h-6 w-6" viewBox="0 0 24 24">
+//                   <path fill="currentColor" d="M18 6L6 18M6 6l12 12"></path>
+//                 </svg>
+//               </button>
+//             </div>
+//             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+//               <div class="flex-shrink-0">
+//                 <a href="/" class="text-white text-xl font-bold">
+//                   Logo
+//                 </a>
+//               </div>
+//               <div class="hidden sm:block sm:ml-6">
+//                 <div class="flex">
+//                   <a
+//                     href="#"
+//                     class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+//                   >
+//                     Link 1
+//                   </a>
+//                   <a
+//                     href="#"
+//                     class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+//                   >
+//                     Link 2
+//                   </a>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div
+//           className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}
+//           id="mobile-menu"
+//         >
+//           <div class="px-2 pt-2 pb-3">
+//             <a
+//               href="#"
+//               class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+//             >
+//               Link 1
+//             </a>
+//             <a
+//               href="#"
+//               class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+//             >
+//               Link 2
+//             </a>
+//           </div>
+//         </div>
+//       </nav>
+//     </div>
+//   );
+// }
+
+// export default Navbar;

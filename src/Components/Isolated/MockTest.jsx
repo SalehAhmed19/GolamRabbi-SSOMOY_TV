@@ -3,6 +3,7 @@ import { Fade } from "react-reveal";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
+import news from "../../assets/images/news-presenter-2.jpeg";
 
 function MockTest() {
   const [show, setShow] = useState(false);
@@ -14,6 +15,7 @@ function MockTest() {
     const mobile = event.target.mobile.value;
     const time = event.target.birthdaytime.value;
     const form = {
+      title: "Mock Test",
       name: name,
       email: email,
       mobile: mobile,
@@ -45,7 +47,7 @@ function MockTest() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div>
           <Fade left>
-            <img src={presenter} alt="" />
+            <img src={news} className="rounded-md" alt="" />
           </Fade>
         </div>
         <div className="flex flex-col justify-center lg:ml-10 mx-5">
@@ -56,7 +58,7 @@ function MockTest() {
               <br />
             </p>
             <p className="text-xl text-primary">এবার তাহলে চেক করে নাও-</p>
-            <ul className="text-xl list-disc mx-5">
+            <ul className="text-xl list-disc mx-5 ml-10">
               <li>তোমার ভয়েস ও উচ্চারণ</li>
               <li>তোমার স্কিল ও নলেজ</li>
               <li>তোমার প্রফেশনাল লুক</li>
