@@ -115,7 +115,7 @@ export default function InviteTabs() {
             <Fade up>
               <button
                 // onClick={() => setShow(true)}
-                className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+                className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] lg:w-[290px] w-[220px] mx-auto text-center rounded-full text-[#fff] font-bold text-xl"
               >
                 আমাকে ইনভাইট করতে
               </button>
@@ -165,7 +165,7 @@ export default function InviteTabs() {
             <Fade up>
               <button
                 // onClick={() => setShow(true)}
-                className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+                className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] lg:w-[290px] w-[220px] mx-auto text-center rounded-full text-[#fff] font-bold text-xl"
               >
                 আমাকে ইনভাইট করতে
               </button>
@@ -213,7 +213,7 @@ export default function InviteTabs() {
             <Fade up>
               <button
                 // onClick={() => setShow(true)}
-                className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+                className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] lg:w-[290px] w-[220px] mx-auto text-center rounded-full text-[#fff] font-bold text-xl"
               >
                 আমাকে ইনভাইট করতে
               </button>

@@ -52,7 +52,9 @@ function Testimonals() {
         <div ref={sliderRef} className="keen-slider">
           {data.map((d, idx) => (
             <div className="keen-slider__slide">
-              <ReviewCard key={idx} d={d} />
+              <Zoom>
+                <ReviewCard key={idx} d={d} />
+              </Zoom>
             </div>
           ))}
         </div>

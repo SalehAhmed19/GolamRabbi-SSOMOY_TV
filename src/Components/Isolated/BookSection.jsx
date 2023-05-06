@@ -114,8 +114,8 @@ function BookSection() {
               />
             </SwiperSlide>
           </Swiper> */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 text-primary bg-[#111118] w-3/4 mx-auto rounded-md">
-            <div className="pl-10 pt-10 flex flex-col justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 text-primary bg-[#111118] lg:w-3/4 mx-auto rounded-md">
+            <div className="lg:pl-10 pl-5 pr-5 pt-10 flex flex-col justify-center">
               <h2 className="font-bold text-3xl mb-3">কি যে করি</h2>
               <p>
                 জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ
@@ -133,7 +133,7 @@ function BookSection() {
                 বহুলতায় পরিণত। মহাকায় জন্তু ছিল প্রকাণ্ড একলা, মানুষ হল
                 দূরপ্রসারিত অনেক।
               </p>
-              <button className="block shadow-lg mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
+              <button className="block shadow-lg mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] lg:w-[290px] w-[190px] text-center rounded-full text-[#fff] font-bold text-xl">
                 কিনতে ক্লিক করো
               </button>
             </div>

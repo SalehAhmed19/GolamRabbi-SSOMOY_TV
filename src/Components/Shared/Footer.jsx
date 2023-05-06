@@ -95,7 +95,7 @@ const Footer = () => {
           {/* <div className="h-[1px] mx-5 lg:mx-20 bg-[#222] my-8"></div> */}
         </div>
         <Fade up>
-          <div className="p-5 bg-secondary mt-5 w-1/2 mx-auto rounded-t-3xl">
+          <div className="p-5 bg-secondary mt-5 lg:w-1/2 w-3/4 mx-auto rounded-t-3xl">
             <p className="text-center text-sm text-[#fff] font-bold">
               &copy; {new Date().getFullYear()} Developed by Saleh Ahmed Mahin
             </p>
