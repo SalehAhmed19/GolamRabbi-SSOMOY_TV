@@ -13,6 +13,8 @@ import AllEvents from "./Pages/AllEvents";
 import { useState } from "react";
 import Courses from "./Pages/Courses/Courses";
 import { Toaster } from "react-hot-toast";
+import PersonalBlogs from "./Pages/Blogs/PersonalBlogs";
+import ProfessionalBlogs from "./Pages/Blogs/ProfessionalBlogs";
 import MediaCourses from "./Pages/Courses/MediaCourses";
 import LeadershipCourses from "./Pages/Courses/LeadershipCourses";
 import LifeCourses from "./Pages/Courses/LifeCourses";
@@ -51,6 +53,8 @@ function App() {
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:id" element={<Blog1 />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/professional-blogs" element={<ProfessionalBlogs />} />
+          <Route path="/personal-blogs" element={<PersonalBlogs />} />
           <Route path="/media-courses" element={<MediaCourses />} />
           <Route path="/leadership-courses" element={<LeadershipCourses />} />
           <Route path="/life-courses" element={<LifeCourses />} />

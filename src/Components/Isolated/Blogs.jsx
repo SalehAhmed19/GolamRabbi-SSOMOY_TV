@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "../../Styles/MediaJobCircular.css";
 
 function Blogs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,7 +30,7 @@ function Blogs() {
       <Link to="/">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-5 mx-5">
           <Zoom>
-            <div>
+            <Link to={"/professional-blogs"}>
               <h3 className="text-primary my-6 font-bold text-2xl">
                 প্রফেশনাল ব্লগ
               </h3>
@@ -47,8 +50,8 @@ function Blogs() {
                   </p>
                 </div>
               </div>
-            </div>
-            <div>
+            </Link>
+            <Link to={"/personal-blogs"}>
               <h3 className="text-primary my-6 font-bold text-2xl">
                 পার্সোনাল ব্লগ
               </h3>
@@ -68,7 +71,7 @@ function Blogs() {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           </Zoom>
         </div>
       </Link>
