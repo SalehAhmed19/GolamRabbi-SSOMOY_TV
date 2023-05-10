@@ -10,6 +10,7 @@ import { Fade, Zoom } from "react-reveal";
 import { ImageList, ImageListItem } from "@mui/material";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 function FanFun() {
   const [show, setShow] = useState(false);
@@ -82,6 +83,12 @@ function FanFun() {
       }&fit=crop&auto=format&dpr=2 2x`,
     };
   }
+
+  const emailjsServiceId = import.meta.env.VITE_emailjs_service_id;
+  const emailjsTemplateId = import.meta.env
+    .VITE_emailjs_fan_with_fun_template_id;
+  const emailjsPublicKey = import.meta.env.VITE_emailjs_public_key;
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -104,6 +111,22 @@ function FanFun() {
         console.log(data);
         toast.success("Registration successful");
       });
+
+    emailjs
+      .sendForm(
+        emailjsServiceId,
+        emailjsTemplateId,
+        event.target,
+        emailjsPublicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
     console.log(form);
     setShow(false);
@@ -149,6 +172,13 @@ function FanFun() {
           className="lg:w-96"
           action=""
         >
+          <input
+            type="text"
+            name="title"
+            readOnly
+            value="Fun with Fan"
+            className="hidden"
+          />
           <input
             name="name"
             placeholder="তোমার নাম লিখো"

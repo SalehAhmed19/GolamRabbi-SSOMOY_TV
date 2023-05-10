@@ -18,6 +18,7 @@ import ProfessionalBlogs from "./Pages/Blogs/ProfessionalBlogs";
 import MediaCourses from "./Pages/Courses/MediaCourses";
 import LeadershipCourses from "./Pages/Courses/LeadershipCourses";
 import LifeCourses from "./Pages/Courses/LifeCourses";
+import IimageGalleryPage from "./Pages/IimageGalleryPage";
 
 function App() {
   const theme = createTheme({
@@ -58,6 +59,7 @@ function App() {
           <Route path="/media-courses" element={<MediaCourses />} />
           <Route path="/leadership-courses" element={<LeadershipCourses />} />
           <Route path="/life-courses" element={<LifeCourses />} />
+          <Route path="/gallery" element={<IimageGalleryPage />} />
         </Routes>
       </div>
 

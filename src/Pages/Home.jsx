@@ -23,6 +23,7 @@ import Invite from "../Components/Isolated/Invite";
 import BookSection from "../Components/Isolated/BookSection";
 import Featured from "../Components/Isolated/Featured";
 import "../App.css";
+import ImageGallery from "../Components/Isolated/ImageGallery";
 
 function Home() {
   return (
@@ -46,11 +47,11 @@ function Home() {
       <Subscribe />
       <Testimonals />
       <Featured />
-
       <Invite />
       <About />
       {/* <BookSection /> */}
       <BookSection />
+      <ImageGallery />
       <SocialMedia />
     </div>
   );

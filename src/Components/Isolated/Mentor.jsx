@@ -5,10 +5,17 @@ import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import news from "../../assets/images/news-presenter.jpeg";
+import emailjs from "emailjs-com";
 
 const Mentor = () => {
   const [show, setShow] = useState(false);
   const handleOnClose = () => setShow(false);
+
+  const emailjsServiceId = import.meta.env.VITE_emailjs_service_id;
+  const emailjsTemplateId = import.meta.env
+    .VITE_emailjs_fan_with_fun_template_id;
+  const emailjsPublicKey = import.meta.env.VITE_emailjs_public_key;
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -31,6 +38,22 @@ const Mentor = () => {
         console.log(data);
         toast.success("Booking successful");
       });
+
+    emailjs
+      .sendForm(
+        emailjsServiceId,
+        emailjsTemplateId,
+        event.target,
+        emailjsPublicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
     console.log(form);
     setShow(false);
@@ -91,6 +114,13 @@ const Mentor = () => {
           className="lg:w-96"
           action=""
         >
+          <input
+            type="text"
+            name="title"
+            readOnly
+            value="Paid Mentorship"
+            className="hidden"
+          />
           <input
             name="name"
             placeholder="তোমার নাম লিখো"

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import img from "../../assets/images/user.jpeg";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../../Styles/Events.css";

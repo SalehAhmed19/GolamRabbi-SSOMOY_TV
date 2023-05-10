@@ -3,10 +3,17 @@ import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/depression.jpg";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 function Advertisement() {
   const [show, setShow] = useState(false);
   const handleOnClose = () => setShow(false);
+
+  const emailjsServiceId = import.meta.env.VITE_emailjs_service_id;
+  const emailjsTemplateId = import.meta.env
+    .VITE_emailjs_share_feelings_template_id;
+  const emailjsPublicKey = import.meta.env.VITE_emailjs_public_key;
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -31,18 +38,23 @@ function Advertisement() {
         console.log(data);
         toast.success("Send successful");
       });
+    emailjs
+      .sendForm(
+        emailjsServiceId,
+        emailjsTemplateId,
+        event.target,
+        emailjsPublicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     console.log(form);
     setShow(false);
-    // toast.success("🦄 Wow so easy!", {
-    //   position: "top-right",
-    //   autoClose: 3000,
-    //   hideProgressBar: true,
-    //   closeOnClick: true,
-    //   pauseOnHover: true,
-    //   draggable: true,
-    //   progress: undefined,
-    //   theme: "dark",
-    // });
   };
   return (
     <div
@@ -82,6 +94,13 @@ function Advertisement() {
           className="lg:w-96"
           action=""
         >
+          <input
+            type="text"
+            name="title"
+            readOnly
+            value="Share your feelings and Problems"
+            className="hidden"
+          />
           <input
             name="name"
             placeholder="তোমার নাম লিখো"
