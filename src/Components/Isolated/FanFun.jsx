@@ -12,6 +12,8 @@ import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import emailjs from "emailjs-com";
 
+// https://v1.nocodeapi.com/golamrabbytest/google_sheets/ErpScSALkInmlYSY
+
 function FanFun() {
   const [show, setShow] = useState(false);
   const handleOnClose = () => setShow(false);
@@ -109,7 +111,6 @@ function FanFun() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast.success("Registration successful");
       });
 
     emailjs
@@ -127,6 +128,19 @@ function FanFun() {
           console.log(error.text);
         }
       );
+
+    fetch(
+      "https://v1.nocodeapi.com/golamrabbytest/google_sheets/TGtLFwjhaqmefuqy?tabId=Sheet1",
+      {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify([
+          [name, email, mobile, new Date().toLocaleString()],
+        ]),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => toast.success("Registration successful"));
 
     console.log(form);
     setShow(false);

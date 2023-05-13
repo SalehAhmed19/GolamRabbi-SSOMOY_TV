@@ -33,7 +33,7 @@ function IimageGalleryPage() {
       </Fade>
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {images.slice(0, 8).map((image) => (
+          {images.map((image) => (
             // <div
             //   key={image}
             //   className="bg-white rounded-lg overflow-hidden shadow-md"

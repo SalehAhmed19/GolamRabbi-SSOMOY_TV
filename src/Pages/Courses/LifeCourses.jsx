@@ -15,7 +15,7 @@ function LifeCourses() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
         {arr.map((a, idx) => (
           <div className="cursor-pointer" key={idx}>
-            <CourseCard image={a} />
+            <CourseCard course={a} />
           </div>
         ))}
       </div>

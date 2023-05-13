@@ -44,10 +44,10 @@ function CourseCard({ course }) {
   };
   return (
     <div className="shadow-lg rounded-lg bg-[#ffffff0f] overflow-hidden">
-      <img className="w-full" src={course.img} alt="random image" />
+      <img className="w-full" src={course} alt="random image" />
       <div className="p-4">
-        <p className="text-primary font-bold text-base mb-2">{course.name}</p>
-        <p className="text-gray-500 text-sm mb-4">{course.des}</p>
+        <p className="text-primary font-bold text-base mb-2">{"course.name"}</p>
+        <p className="text-gray-500 text-sm mb-4">{"course.des"}</p>
         <div className="flex items-center justify-between">
           <button
             onClick={() => setShow(true)}
@@ -95,7 +95,7 @@ function CourseCard({ course }) {
           <input
             name="course"
             type="text"
-            value={course.name}
+            value={"course.name"}
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
             readOnly
           />
