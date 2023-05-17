@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogContent = ({ blogContent }) => {
   const sentences = blogContent.split("। "); // Split the content into an array of sentences
-
+  console.log(sentences);
   const groupedSentences = sentences.reduce(
     (result, sentence, index) => {
       if (index % 5 === 0) {
@@ -17,7 +17,7 @@ const BlogContent = ({ blogContent }) => {
         // Check if this is not the last sentence in a group of five
         result[groupIndex] += "। "; // Add a full stop to the current sentence
       }
-
+      console.log(result);
       return result;
     },
     [""]
@@ -28,7 +28,8 @@ const BlogContent = ({ blogContent }) => {
       {groupedSentences.map((group, index) => (
         <React.Fragment key={index}>
           <p>{group}</p>
-          {index % 5 === 4 && <br />} {/* Add a line break after every group of five */}
+          {index % 5 === 4 && <br />}{" "}
+          {/* Add a line break after every group of five */}
         </React.Fragment>
       ))}
     </div>
