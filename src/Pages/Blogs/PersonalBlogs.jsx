@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import blog from "../../assets/images/blog.jpeg";
 
 const data = [
   {
@@ -101,11 +102,7 @@ const PersonalBlogs = () => {
         {data.map((a) => (
           <Link to={`/blogs/${a?.id}`}>
             <div className="relative text-basic ">
-              <img
-                className="opacity-50 rounded-md"
-                src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-                alt=""
-              />
+              <img className="opacity-50 rounded-md" src={blog} alt="" />
               <div className="absolute bottom-[20px] mx-5">
                 <h3 className="text-2xl font-bold">{a.headline}</h3>
                 <p>

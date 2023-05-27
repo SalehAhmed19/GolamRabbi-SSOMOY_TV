@@ -3,6 +3,7 @@ import reporter from "../../assets/images/image.png";
 import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-reveal";
+import { RiShareForwardFill } from "react-icons/ri";
 
 function Banner() {
   // const socialLinks = [
@@ -87,7 +88,7 @@ function Banner() {
             </div>
           </div>
         </Fade> */}
-        <div className="flex flex-col lg:flex-row h-[500px] relative">
+        <div className="flex flex-col lg:flex-row h-[600px] relative">
           <div className="mt-36">
             <h1 className="text-5xl font-bold text-[#fff]">
               ভয়, জড়তা, শঙ্কা আর
@@ -107,7 +108,20 @@ function Banner() {
                 }}
               />
             </h1>
-            <div className="mt-24">
+            <div className="scaling-div my-5">
+              <div className="flex justify-between">
+                <RiShareForwardFill className="text-3xl icon" />
+                <RiShareForwardFill className="text-3xl" />
+                <h1 className="text-xl font-bold">
+                  শেয়ার করে; <br /> স্বপ্নকে জয় করো
+                </h1>
+              </div>
+              <p className="text text-[#222]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Asperiores, ipsa.
+              </p>
+            </div>
+            <div>
               <div className="inline-block my-5">
                 <div className="flex text-[#8A8EA0] text-3xl">
                   <a
@@ -136,19 +150,6 @@ function Banner() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="relative hidden lg:block">
-            <div className="w-80 base p-5 cursor-pointer rounded-md absolute top-[250px] mx-5 duration-200">
-              <h1 className="font-bold text-2xl text-center">
-                শেয়ার করে স্বপ্নকে জয় করো
-              </h1>
-              <p className="des">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                necessitatibus itaque commodi aperiam error veritatis? Nobis,
-                tenetur dignissimos libero veniam autem quos cumque cupiditate
-                esse, repellendus, eligendi nemo asperiores magnam.
-              </p>
             </div>
           </div>
         </div>

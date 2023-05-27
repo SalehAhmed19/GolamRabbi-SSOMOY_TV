@@ -78,7 +78,7 @@ function Events() {
             {events.map((event, idx) => (
               <div key={idx} className="keen-slider__slide">
                 <div className="-p-5 flex items-center">
-                  <div className="text-primary mr-5 border-2 border-[#F6B30F] p-2  rounded-md">
+                  <div className="text-primary mr-5 border-2 border-[#F6B30F] p-5  rounded-md">
                     <h2 className="text-6xl">{event.date}</h2>
                     <p className="text-center">{event.month}</p>
                   </div>

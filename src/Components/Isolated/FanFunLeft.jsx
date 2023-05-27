@@ -15,7 +15,7 @@ const FanFunLeft = ({ setShow }) => {
           শিখতে চায়। হতে চায় সংবাদ উপস্থাপক।
         </p>
         <p className="my-5 text-basic text-xl text-primary">
-          সবার এমন ভালোবাসার সরাসরি উত্তর দিতে অয়ায়োজন ফান উইথ ফ্যান।
+          সবার এমন ভালোবাসার সরাসরি উত্তর দিতে আয়োজন ফান উইথ ফ্যান।
         </p>
         <ul className="list-disc text-basic text-xl ml-10">
           <li>অংশ নিতে পারবে যেকেউ।</li>

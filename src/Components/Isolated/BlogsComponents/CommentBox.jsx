@@ -12,6 +12,7 @@ function CommentBox() {
       email: email,
       mobile: mobile,
       comment: comment,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     console.log(form);

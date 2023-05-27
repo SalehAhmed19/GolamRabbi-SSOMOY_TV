@@ -10,6 +10,7 @@ function Subscribe() {
     const form = {
       title: "Newsletter Subscription",
       email: email,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/newsletter-subscription", {

@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
-import news from "../../assets/images/news-presenter-2.jpeg";
+import news from "../../assets/images/interview.png";
 
 function MockTest() {
   const [show, setShow] = useState(false);
@@ -20,6 +20,7 @@ function MockTest() {
       email: email,
       mobile: mobile,
       time: time,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/mock-test-schedule", {
@@ -38,7 +39,7 @@ function MockTest() {
   };
 
   return (
-    <div className="lg:px-24 py-14 text-[#fff]">
+    <div className="lg:px-24 py-14 text-[#fff] bg-[#14161C]">
       <Fade down>
         <h2 className="text-center text-4xl font-bold mb-5 text-primary">
           মক টেস্ট

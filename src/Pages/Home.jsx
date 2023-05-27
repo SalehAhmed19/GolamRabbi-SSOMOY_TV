@@ -24,35 +24,41 @@ import BookSection from "../Components/Isolated/BookSection";
 import Featured from "../Components/Isolated/Featured";
 import "../App.css";
 import ImageGallery from "../Components/Isolated/ImageGallery";
+import bg from "../assets/images/background.png";
 
 function Home() {
   return (
-    <div>
-      <Banner />
-      <Statistics />
-      <Features />
-      <FanFun />
-      <Advertisement />
-      <MediaJobCircular />
-      <Course />
-      <Mentor />
-      <MockTest />
-      <Blogs />
-      <Services />
-      <Skills />
-      <Advertisement2 />
-      <Events />
-      <MyAward />
-      <Quotes />
-      <Subscribe />
-      <Testimonals />
-      <Featured />
-      <Invite />
-      <About />
-      {/* <BookSection /> */}
-      <BookSection />
-      <ImageGallery />
-      <SocialMedia />
+    <div className="relative">
+      {/* <div className="absolute">
+        <img className="w-full object-cover blur-3xl" src={bg} alt="" />
+      </div> */}
+      <div className="relative bg-opacity-75 backdrop-filter backdrop-blur-3xl">
+        <Banner />
+        <Statistics />
+        <FanFun />
+        <Features />
+        <Advertisement />
+        <MediaJobCircular />
+        <Course />
+        <Mentor />
+        <MockTest />
+        <Blogs />
+        <Services />
+        <Skills />
+        <Advertisement2 />
+        <Events />
+        <MyAward />
+        <Quotes />
+        <Subscribe />
+        <Testimonals />
+        <Featured />
+        <Invite />
+        <About />
+        {/* <BookSection /> */}
+        <BookSection />
+        {/* <ImageGallery /> */}
+        <SocialMedia />
+      </div>
     </div>
   );
 }

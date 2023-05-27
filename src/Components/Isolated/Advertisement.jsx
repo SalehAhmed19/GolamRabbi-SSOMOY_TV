@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Zoom } from "react-reveal";
-import depressed from "../../assets/images/depression.jpg";
+import depressed from "../../assets/images/sky.jpg";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import emailjs from "emailjs-com";
@@ -26,6 +26,7 @@ function Advertisement() {
       email: email,
       mobile: mobile,
       description: description,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/share-your-feeling", {

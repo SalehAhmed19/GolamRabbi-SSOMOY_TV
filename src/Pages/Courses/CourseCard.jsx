@@ -17,6 +17,7 @@ function CourseCard({ course }) {
       email: email,
       mobile: mobile,
       course: course,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/course-enrollment", {

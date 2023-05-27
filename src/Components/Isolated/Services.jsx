@@ -8,59 +8,64 @@ import { RiMessage3Fill } from "react-icons/ri";
 import { FaHandsHelping } from "react-icons/fa";
 import { Fade, Zoom } from "react-reveal";
 import ServiceRow from "./ServiceRow";
+import cv from "../../assets/SVGs/cv-writting.png";
+import training from "../../assets/SVGs/training.png";
+import bio from "../../assets/SVGs/bio-interview.png";
+import feature from "../../assets/SVGs/feature-writting.png";
+import content from "../../assets/SVGs/content-writting.png";
+import goal from "../../assets/SVGs/set-goal.png";
+import pr from "../../assets/SVGs/pr.png";
+import volanteer from "../../assets/SVGs/volanteer.png";
 
 function Services() {
   const data = [
     {
       _id: 1,
       title: "সিভি রাইটিং",
-      list: ["০১. মিডিয়া সিভি", "০২. অন্যান্য জবের সিভি"],
-      icon: <TfiWrite />,
+      list: [],
+      icon: cv,
     },
     {
       _id: 2,
       title: "ট্রেনিং",
-      list: ["০১. মিডিয়া জবের ট্রেনিং", "০২. লিডারশিপ ট্রেনিং"],
-      icon: <GiTeacher />,
+      list: [],
+      icon: training,
     },
     {
       _id: 3,
       title: "বায়ো ইন্টার্ভিউ মেকিং",
       list: [],
-      icon: <GiTeacher />,
+      icon: bio,
     },
     {
       _id: 4,
       title: "ফিচার রাইটিং",
-      list: [
-        "০১. গণমাধ্যমের জন্য",
-        "০২. ব্যক্তি বা কর্পোরেট প্রতিষ্ঠানের জন্য",
-      ],
-      icon: <MdOutlineFeaturedVideo />,
+      list: [],
+      icon: feature,
     },
     {
       _id: 5,
       title: "কন্টেন্ট রাইটিং",
-      list: ["গণমাধ্যমের জন্য"],
-      icon: <TfiWrite />,
+      list: [],
+      icon: content,
     },
     {
       _id: 6,
       title: "গোল সেটিং",
-      list: ["০১. ওয়ান-টু-ওয়ান কোচিং", "০২. প্রতিষ্ঠানের স্ট্যাটেজিক গোল"],
-      icon: <GiTeacher />,
+      list: [],
+      icon: goal,
     },
     {
       _id: 7,
       title: "পিআর, কম্পিউনিকেশন্স এন্ড ব্র্যান্ডিং",
       list: [],
-      icon: <RiMessage3Fill />,
+      icon: pr,
     },
     {
       _id: 8,
       title: "ভলেন্টিয়ারিং",
       list: [],
-      icon: <FaHandsHelping />,
+      icon: volanteer,
     },
   ];
   return (
@@ -99,9 +104,7 @@ function Services() {
                   key={d._id}
                   className="p-5 shadow-lg shadow-[#0000005c] rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5 lg:mx-0"
                 >
-                  <h4 className="text-primary text-3xl mb-5 flex justify-center">
-                    {d.icon}
-                  </h4>
+                  <img className="w-10 mb-3" src={d.icon} alt="" />
                   <h3
                     className={
                       d.list.length === 0
@@ -127,9 +130,7 @@ function Services() {
                   key={d._id}
                   className="p-5 shadow-lg shadow-[#0000005c] rounded-lg lg:w-48 flex flex-col justify-center items-center bg-[#14161C] mx-5 lg:mx-0"
                 >
-                  <h4 className="text-primary text-3xl mb-5 flex justify-center">
-                    {d.icon}
-                  </h4>
+                  <img className="w-10 mb-3" src={d.icon} alt="" />
                   <h3
                     className={
                       d.list.length === 0
@@ -155,7 +156,7 @@ function Services() {
                   key={d._id}
                   className="p-5 shadow-lg shadow-[#0000005c] rounded-lg lg:w-48 flex flex-col justify-center items-center bg-secondary bg-[#14161C] mx-5 lg:mx-0"
                 >
-                  <h4 className="text-primary text-3xl mb-5 ">{d.icon}</h4>
+                  <img className="w-10 mb-3" src={d.icon} alt="" />
                   <h3
                     className={
                       d.list.length === 0
@@ -181,3 +182,4 @@ function Services() {
 }
 
 export default Services;
+// "০১. মিডিয়া জবের ট্রেনিং", "০২. লিডারশিপ ট্রেনিং"

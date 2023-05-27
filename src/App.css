@@ -41,5 +41,50 @@
 .base:hover{
     background: #F6B30F;
     color: #222;
-    
+    padding: 15px;
+}
+
+/* @keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+} */
+
+.scaling-div {
+  width: 200px;
+  background: #F6B30F;
+  transition: transform 0.8s ease-in-out;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.text {
+  display: none;
+}
+
+.scaling-div:hover {
+  height: 200px;
+  transition: transform 0.8s ease-in-out;
+}
+.scaling-div:hover .text {
+  display: block;
+}
+.icon{
+  display: none;
+}
+.scaling-div:hover .icon{
+  display: block;
+  transform: scale(3.4);
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  opacity: 0.2;
+  z-index: 0;
+  /* animation: spin 1s linear infinite; */
 }

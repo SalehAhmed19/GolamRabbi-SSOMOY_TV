@@ -101,6 +101,7 @@ function FanFun() {
       name: name,
       email: email,
       mobile: mobile,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/fun-with-fan-reg", {

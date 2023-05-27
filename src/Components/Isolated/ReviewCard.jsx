@@ -17,14 +17,14 @@ const ReviewCard = ({ d }) => {
         <div className="bg-primary h-3 w-24 mx-auto rounded-b-md"></div>
       </div>
       <div>
-        <div className="bg-[#fff] h-2 w-40 mt-5"></div>
-        <h2 className="text-primary m-3 font-bold text-xl">অডিয়েন্স রিভিউ</h2>
+        {/* <div className="bg-[#fff] h-2 w-40 mt-5"></div> */}
+        {/* <h2 className="text-primary m-3 font-bold text-xl">অডিয়েন্স রিভিউ</h2> */}
         <div className="lg:mx-5">
           <FaQuoteLeft className="text-[#363636] text-3xl" />
           <div className="lg:p-5 mt-5 lg:mt-0">
             <p className="text-primary">{d.review}</p>
           </div>
-          <FaQuoteRight className="text-[#363636] text-3xl ml-auto" />
+          {/* <FaQuoteRight className="text-[#363636] text-3xl ml-auto" /> */}
         </div>
       </div>
     </div>

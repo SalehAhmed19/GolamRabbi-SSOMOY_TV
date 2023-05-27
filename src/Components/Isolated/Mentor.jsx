@@ -4,7 +4,7 @@ import bg from "../../assets/images/mentor-bg.png";
 import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
-import news from "../../assets/images/news-presenter.jpeg";
+import news from "../../assets/images/mentorship.png";
 import emailjs from "emailjs-com";
 
 const Mentor = () => {
@@ -26,6 +26,7 @@ const Mentor = () => {
       name: name,
       email: email,
       mobile: mobile,
+      dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/mentorship-booking", {
@@ -60,11 +61,11 @@ const Mentor = () => {
   };
   return (
     <div
-      style={{
-        background: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      // style={{
+      //   background: `url(${bg})`,
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      // }}
       className="lg:px-24 px-5 py-14 text-[#fff]"
     >
       <Fade down>

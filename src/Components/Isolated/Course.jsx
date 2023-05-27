@@ -18,15 +18,15 @@ function Course() {
 
   return (
     <div
-      style={{
-        background: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="lg:px-24 py-10"
+      // style={{
+      //   background: `url(${bg})`,
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+      className="lg:px-24 py-10 bg-[#14161C]"
     >
       <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
+        <h2 className="text-center text-4xl font-bold text-primary my-5">
           কোর্স
         </h2>
       </Fade>

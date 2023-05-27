@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
 import { useKeenSlider } from "keen-slider/react";
+import blog from "../../assets/images/blog.jpeg";
 import "keen-slider/keen-slider.min.css";
 import "../../Styles/MediaJobCircular.css";
 
@@ -35,12 +36,8 @@ function Blogs() {
                 প্রফেশনাল ব্লগ
               </h3>
               <div className="relative">
-                <img
-                  className="opacity-50 rounded-md"
-                  src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-                  alt=""
-                />
-                <div className="absolute bottom-[20px] mx-10">
+                <img className="opacity-50 rounded-md" src={blog} alt="" />
+                <div className="absolute bottom-[50px] mx-10">
                   <h3 className="text-2xl text-basic font-bold">
                     আবহাওয়া - আজকের আবহাওয়া কেমন থাকবে
                   </h3>
@@ -56,12 +53,8 @@ function Blogs() {
                 পার্সোনাল ব্লগ
               </h3>
               <div className="relative">
-                <img
-                  className="opacity-50 rounded-md"
-                  src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-                  alt=""
-                />
-                <div className="absolute bottom-[20px] mx-10">
+                <img className="opacity-50 rounded-md" src={blog} alt="" />
+                <div className="absolute bottom-[50px] mx-10">
                   <h3 className="text-2xl text-basic font-bold">
                     আবহাওয়া - আজকের আবহাওয়া কেমন থাকবে
                   </h3>

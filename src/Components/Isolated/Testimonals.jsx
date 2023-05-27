@@ -7,16 +7,27 @@ import "../../Styles/Events.css";
 import ReviewCard from "./ReviewCard";
 
 function Testimonals() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
+  const animation = { duration: 75000, easing: (t) => t };
+  const [sliderRef] = useKeenSlider({
     loop: true,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
+    breakpoints: {
+      "(min-width: 400px)": {
+        slides: { perView: 1, spacing: 5 },
+      },
+      "(min-width: 1000px)": {
+        slides: { perView: 2, spacing: 5 },
+      },
     },
-    created() {
-      setLoaded(true);
+    renderMode: "performance",
+    drag: false,
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
   });
   const data = [
@@ -47,37 +58,12 @@ function Testimonals() {
         </h1>
       </Fade>
 
-      <div className="navigation-wrapper lg:w-3/4 mx-auto my-14">
-        <div ref={sliderRef} className="keen-slider">
-          {data.map((d, idx) => (
-            <div className="keen-slider__slide">
-              <Zoom>
-                <ReviewCard key={idx} d={d} />
-              </Zoom>
-            </div>
-          ))}
-        </div>
-        {loaded && instanceRef.current && (
-          <>
-            <Arrow
-              left
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
-
-            <Arrow
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
-          </>
-        )}
+      <div ref={sliderRef} className="keen-slider bg-[#16181D]">
+        {data.map((d, idx) => (
+          <div key={idx} className="keen-slider__slide py-4">
+            <ReviewCard d={d} />
+          </div>
+        ))}
       </div>
     </div>
   );
