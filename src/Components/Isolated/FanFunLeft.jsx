@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "./Modals/Modal";
 import { Fade } from "react-reveal";
 
-const FanFunLeft = ({ setShow }) => {
+const FanFunLeft = ({ setOpen }) => {
   return (
     <>
       <div className="flex flex-col justify-center">
@@ -25,7 +25,7 @@ const FanFunLeft = ({ setShow }) => {
         </ul>
         <Fade up>
           <button
-            onClick={() => setShow(true)}
+            onClick={() => setOpen(true)}
             className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
           >
             অংশ নিতে ক্লিক করো

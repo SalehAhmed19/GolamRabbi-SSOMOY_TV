@@ -4,10 +4,12 @@ import depressed from "../../assets/images/sky.jpg";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import emailjs from "emailjs-com";
+import MuiModal from "./Modals/MuiModal";
 
 function Advertisement() {
-  const [show, setShow] = useState(false);
-  const handleOnClose = () => setShow(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const emailjsServiceId = import.meta.env.VITE_emailjs_service_id;
   const emailjsTemplateId = import.meta.env
@@ -37,7 +39,6 @@ function Advertisement() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast.success("Send successful");
       });
     emailjs
       .sendForm(
@@ -49,13 +50,17 @@ function Advertisement() {
       .then(
         (result) => {
           console.log(result.text);
+          if (result) {
+            setOpen(false);
+            toast.success("Send successful");
+          }
         },
         (error) => {
           console.log(error.text);
         }
       );
     console.log(form);
-    setShow(false);
+    // setShow(false);
   };
   return (
     <div
@@ -80,21 +85,17 @@ function Advertisement() {
           সমাধান।
         </p>
         <button
-          onClick={() => setShow(true)}
+          onClick={() => setOpen(true)}
           className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[250px] text-center rounded-full text-[#fff] font-bold text-xl"
         >
           সমাধান পেতে; লিখে জানাও
         </button>
       </Zoom>
-      <Modal visible={show} onClose={handleOnClose}>
+      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
         <h4 className="text-primary font-bold text-xl">
           সমাধান পেতে; লিখো এখানে
         </h4>
-        <form
-          onSubmit={() => handleSubmit(event)}
-          className="lg:w-96"
-          action=""
-        >
+        <form onSubmit={() => handleSubmit(event)} action="">
           <input
             type="text"
             name="title"
@@ -130,7 +131,7 @@ function Advertisement() {
             সাবমিট করো
           </button>
         </form>
-      </Modal>
+      </MuiModal>
     </div>
   );
 }

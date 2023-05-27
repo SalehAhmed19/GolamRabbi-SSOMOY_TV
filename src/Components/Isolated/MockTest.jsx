@@ -4,10 +4,13 @@ import presenter from "../../assets/images/presenter.png";
 import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import news from "../../assets/images/interview.png";
+import MuiModal from "./Modals/MuiModal";
 
 function MockTest() {
-  const [show, setShow] = useState(false);
-  const handleOnClose = () => setShow(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -32,10 +35,12 @@ function MockTest() {
       .then((data) => {
         console.log(data);
         toast.success("Schedule setup successful");
+        if (data) {
+          setOpen(false);
+        }
       });
 
     console.log(form);
-    setShow(false);
   };
 
   return (
@@ -73,18 +78,14 @@ function MockTest() {
       </div>
       <Fade up>
         <button
-          onClick={() => setShow(true)}
+          onClick={() => setOpen(true)}
           className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
         >
           টেস্ট দিতে সেট করে নাও টাইম
         </button>
       </Fade>
-      <Modal visible={show} onClose={handleOnClose}>
-        <form
-          onSubmit={() => handleSubmit(event)}
-          className="lg:w-96"
-          action=""
-        >
+      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
+        <form onSubmit={() => handleSubmit(event)} action="">
           <h4 className="text-primary font-bold text-xl">মক টেস্ট দিতে চাও?</h4>
           <input
             className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
@@ -115,7 +116,7 @@ function MockTest() {
             সাবমিট করো
           </button>
         </form>
-      </Modal>
+      </MuiModal>
     </div>
   );
 }

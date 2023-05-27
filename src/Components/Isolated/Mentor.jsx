@@ -6,10 +6,12 @@ import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import news from "../../assets/images/mentorship.png";
 import emailjs from "emailjs-com";
+import MuiModal from "./Modals/MuiModal";
 
 const Mentor = () => {
-  const [show, setShow] = useState(false);
-  const handleOnClose = () => setShow(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const emailjsServiceId = import.meta.env.VITE_emailjs_service_id;
   const emailjsTemplateId = import.meta.env
@@ -37,7 +39,6 @@ const Mentor = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast.success("Booking successful");
       });
 
     emailjs
@@ -50,6 +51,10 @@ const Mentor = () => {
       .then(
         (result) => {
           console.log(result.text);
+          if (result) {
+            toast.success("Booking successful");
+            setOpen(false);
+          }
         },
         (error) => {
           console.log(error.text);
@@ -100,21 +105,17 @@ const Mentor = () => {
       </div>
       <Fade up>
         <button
-          onClick={() => setShow(true)}
+          onClick={() => setOpen(true)}
           className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl"
         >
           আমাকে বুক করতে
         </button>
       </Fade>
-      <Modal visible={show} onClose={handleOnClose}>
+      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
         <h4 className="text-primary font-bold text-xl">
           আমাকে মেন্টর হিসেবে চাও?
         </h4>
-        <form
-          onSubmit={() => handleSubmit(event)}
-          className="lg:w-96"
-          action=""
-        >
+        <form onSubmit={() => handleSubmit(event)} action="">
           <input
             type="text"
             name="title"
@@ -145,7 +146,7 @@ const Mentor = () => {
             সাবমিট করো
           </button>
         </form>
-      </Modal>
+      </MuiModal>
     </div>
   );
 };

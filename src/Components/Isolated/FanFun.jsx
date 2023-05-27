@@ -9,14 +9,16 @@ import gr6 from "../../assets/images/gr5.jpg";
 import { Fade, Zoom } from "react-reveal";
 import { ImageList, ImageListItem } from "@mui/material";
 import Modal from "./Modals/Modal";
+import MuiModal from "./Modals/MuiModal";
 import { toast } from "react-hot-toast";
 import emailjs from "emailjs-com";
 
 // https://v1.nocodeapi.com/golamrabbytest/google_sheets/ErpScSALkInmlYSY
 
 function FanFun() {
-  const [show, setShow] = useState(false);
-  const handleOnClose = () => setShow(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const itemData = [
     {
       img: gr3,
@@ -57,25 +59,6 @@ function FanFun() {
       img: gr4,
       title: "Fern",
     },
-    // {
-    //   img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    //   title: "Mushrooms",
-    //   rows: 2,
-    //   cols: 2,
-    // },
-    // {
-    //   img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-    //   title: "Tomato basil",
-    // },
-    // {
-    //   img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    //   title: "Sea star",
-    // },
-    // {
-    //   img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    //   title: "Bike",
-    //   cols: 2,
-    // },
   ];
   function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -141,10 +124,14 @@ function FanFun() {
       }
     )
       .then((res) => res.json())
-      .then((data) => toast.success("Registration successful"));
+      .then((data) => {
+        toast.success("Registration successful");
+        if (data) {
+          setOpen(false);
+        }
+      });
 
     console.log(form);
-    setShow(false);
   };
   return (
     <div className="py-14 lg:px-24">
@@ -155,7 +142,7 @@ function FanFun() {
       </Fade>
       <div className="flex flex-col lg:flex-row my-20 mx-5">
         <Fade left>
-          <FanFunLeft setShow={setShow} />
+          <FanFunLeft setOpen={setOpen} />
         </Fade>
         <div className="flex justify-end w-full">
           <ImageList
@@ -180,13 +167,9 @@ function FanFun() {
           </ImageList>
         </div>
       </div>
-      <Modal visible={show} onClose={handleOnClose}>
+      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
         <h4 className="text-primary font-bold text-xl">ফান উইথ ফ্যান</h4>
-        <form
-          onSubmit={() => handleSubmit(event)}
-          className="lg:w-96"
-          action=""
-        >
+        <form onSubmit={() => handleSubmit(event)} action="">
           <input
             type="text"
             name="title"
@@ -217,7 +200,7 @@ function FanFun() {
             সাবমিট করো
           </button>
         </form>
-      </Modal>
+      </MuiModal>
     </div>
   );
 }
