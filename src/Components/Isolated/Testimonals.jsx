@@ -7,7 +7,7 @@ import "../../Styles/Events.css";
 import ReviewCard from "./ReviewCard";
 
 function Testimonals() {
-  const animation = { duration: 75000, easing: (t) => t };
+  const animation = { duration: 105000, easing: (t) => t };
   const [sliderRef] = useKeenSlider({
     loop: true,
     breakpoints: {
@@ -15,7 +15,7 @@ function Testimonals() {
         slides: { perView: 1, spacing: 5 },
       },
       "(min-width: 1000px)": {
-        slides: { perView: 2, spacing: 5 },
+        slides: { perView: 1, spacing: 5 },
       },
     },
     renderMode: "performance",
