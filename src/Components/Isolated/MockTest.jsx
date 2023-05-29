@@ -5,6 +5,8 @@ import Modal from "./Modals/Modal";
 import { toast } from "react-hot-toast";
 import news from "../../assets/images/interview.png";
 import MuiModal from "./Modals/MuiModal";
+import box from "../../assets/SVGs/box.png";
+import { Zoom } from "react-reveal";
 
 function MockTest() {
   const [open, setOpen] = React.useState(false);
@@ -44,7 +46,12 @@ function MockTest() {
   };
 
   return (
-    <div className="lg:px-24 py-14 text-[#fff] bg-[#14161C]">
+    <div className="lg:px-24 py-14 text-[#fff] bg-[#14161C] relative">
+      <img
+        src={box}
+        className="absolute top-5 left-0 blur-lg rounded w-24"
+        alt=""
+      />
       <Fade down>
         <h2 className="text-center text-4xl font-bold mb-5 text-primary">
           মক টেস্ট
@@ -117,6 +124,11 @@ function MockTest() {
           </button>
         </form>
       </MuiModal>
+      <img
+        src={box}
+        className="absolute bottom-5 right-0 blur-lg w-36"
+        alt=""
+      />
     </div>
   );
 }

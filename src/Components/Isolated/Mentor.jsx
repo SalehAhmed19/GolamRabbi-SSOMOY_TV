@@ -7,6 +7,7 @@ import { toast } from "react-hot-toast";
 import news from "../../assets/images/mentorship.png";
 import emailjs from "emailjs-com";
 import MuiModal from "./Modals/MuiModal";
+import box from "../../assets/SVGs/box.png";
 
 const Mentor = () => {
   const [open, setOpen] = React.useState(false);
@@ -71,7 +72,7 @@ const Mentor = () => {
       //   backgroundSize: "cover",
       //   backgroundRepeat: "no-repeat",
       // }}
-      className="lg:px-24 px-5 py-14 text-[#fff]"
+      className="lg:px-24 px-5 py-14 text-[#fff] relative"
     >
       <Fade down>
         <h2 className="text-center text-4xl font-bold mb-5 text-primary">

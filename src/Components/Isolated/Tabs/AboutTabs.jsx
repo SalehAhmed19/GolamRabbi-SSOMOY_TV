@@ -77,7 +77,7 @@ export default function AboutTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
+        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md relative">
           <div className="p-5">
             <img className="rounded-md w-96" src={img} alt="" />
           </div>
