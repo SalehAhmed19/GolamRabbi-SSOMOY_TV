@@ -64,7 +64,9 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Box variant="h6" sx={{ my: 2 }}>
-        <img className="w-20 p-5 mx-auto block" src={logo} alt="" />
+        <Link to="/">
+          <img className="w-20 p-5 mx-auto block" src={logo} alt="" />
+        </Link>
       </Box>
       <Divider />
       <List>
@@ -140,12 +142,14 @@ function Navbar(props) {
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                 >
-                  <div className="flex items-center">
-                    <img className="w-10" src={logo} alt="" />{" "}
-                    <p className="text-[#fff] font-bold text-xl ml-2">
-                      Golam Rabby
-                    </p>
-                  </div>
+                  <Link to="/">
+                    <div className="flex items-center">
+                      <img className="w-10" src={logo} alt="" />{" "}
+                      <p className="text-[#fff] font-bold text-xl ml-2">
+                        Golam Rabby
+                      </p>
+                    </div>
+                  </Link>
                 </Box>
                 <Box
                   sx={{

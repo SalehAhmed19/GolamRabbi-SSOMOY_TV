@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../../../Styles/FeaturedTabs.css";
+import NewsCards from "../Cards/NewsCards";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -82,10 +83,26 @@ export default function FeaturedTabs() {
           aria-label="basic tabs example"
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
-          <Tab sx={{ color: "#E0E0E0" }} label="টিভি" {...a11yProps(0)} />
-          <Tab sx={{ color: "#E0E0E0" }} label="নিউজ পেপার" {...a11yProps(1)} />
-          <Tab sx={{ color: "#E0E0E0" }} label="রেডিও" {...a11yProps(2)} />
-          <Tab sx={{ color: "#E0E0E0" }} label="অন্যান্য" {...a11yProps(3)} />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="টিভি"
+            {...a11yProps(0)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="নিউজ পেপার"
+            {...a11yProps(1)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="রেডিও"
+            {...a11yProps(2)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="অন্যান্য"
+            {...a11yProps(3)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -177,7 +194,12 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <p className="text-basic">নিউজ পেপার</p>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+          <NewsCards />
+          <NewsCards />
+          <NewsCards />
+          <NewsCards />
+        </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <p className="text-basic">রেডিও</p>

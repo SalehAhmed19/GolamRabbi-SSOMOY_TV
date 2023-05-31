@@ -3,7 +3,7 @@ import reporter from "../../assets/images/image.png";
 import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-reveal";
-import { RiShareForwardFill } from "react-icons/ri";
+import { AiOutlineShareAlt } from "react-icons/ai";
 
 function Banner() {
   // const socialLinks = [
@@ -108,15 +108,17 @@ function Banner() {
                 }}
               />
             </h1>
-            <div className="scaling-div my-5">
-              <div className="flex justify-between">
-                <RiShareForwardFill className="text-3xl icon" />
-                <RiShareForwardFill className="text-3xl" />
-                <h1 className="text-xl font-bold">
-                  শেয়ার করে; <br /> স্বপ্নকে জয় করো
-                </h1>
+            <div className="scaling-div2 my-5 relative">
+              <div className="">
+                <AiOutlineShareAlt className="text-3xl icon" />
+                <div className="flex justify-between">
+                  <AiOutlineShareAlt className="text-3xl icon2" />
+                  <h1 className="text-xl font-bold">
+                    শেয়ার করে; <br /> স্বপ্নকে জয় করো
+                  </h1>
+                </div>
               </div>
-              <p className="text text-[#222]">
+              <p className="text text-[#222] mx-2 mt-3">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Asperiores, ipsa.
               </p>

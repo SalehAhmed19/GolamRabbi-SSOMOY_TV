@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import bg from "../../assets/images/features.jpg";
+import bg from "../../assets/images/feature-bg.jpg";
 import "../../Styles/Features.css";
 
 function Features() {

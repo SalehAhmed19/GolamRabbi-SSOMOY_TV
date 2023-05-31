@@ -45,10 +45,10 @@ function CourseCard({ course }) {
   };
   return (
     <div className="shadow-lg rounded-lg bg-[#ffffff0f] overflow-hidden">
-      <img className="w-full" src={course} alt="random image" />
+      <img className="w-full" src={course.img} alt="random image" />
       <div className="p-4">
-        <p className="text-primary font-bold text-base mb-2">{"course.name"}</p>
-        <p className="text-gray-500 text-sm mb-4">{"course.des"}</p>
+        <p className="text-primary font-bold text-base mb-2">{course.name}</p>
+        <p className="text-gray-500 text-sm mb-4">{course.des}</p>
         <div className="flex items-center justify-between">
           <button
             onClick={() => setShow(true)}
@@ -57,7 +57,7 @@ function CourseCard({ course }) {
           >
             এনরোল করো
           </button>
-          <button className="text-primary hover:text-yellow-600 flex">
+          {/* <button className="text-primary hover:text-yellow-600 flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -73,7 +73,8 @@ function CourseCard({ course }) {
               />
             </svg>
             উইশ লিস্ট
-          </button>
+          </button> */}
+          <h4 className="text-primary font-bold text-xl">১২০০ &#2547;</h4>
         </div>
       </div>
       <Modal onClose={handleOnClose} visible={show}>

@@ -33,67 +33,67 @@ function Courses() {
   });
   const mediaCourse = [
     {
+      name: "Media Mastery: Unleashing the Power of Communication",
       img: media,
-      name: "মিডিয়া কোর্স ১",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Digital Storytelling: Crafting Compelling Media Narratives",
       img: media,
-      name: "মিডিয়া কোর্স ২",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Media Evolution: Adapting to the Digital Landscape",
       img: media,
-      name: "মিডিয়া কোর্স ৩",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Media Magic: The Art and Science of Engaging Audiences",
       img: media,
-      name: "মিডিয়া কোর্স ৪",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
   ];
   const leadershipCourse = [
     {
+      name: "Leadership Mastery: Unlocking Your Full Potential",
       img: leadership,
-      name: "লিডারশীপ কোর্স ১",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "The Art of Effective Leadership: Inspire, Influence, and Impact",
       img: leadership,
-      name: "লিডারশীপ কোর্স ২",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Leading with Purpose: Guiding Others Towards Success",
       img: leadership,
-      name: "লিডারশীপ কোর্স ৩",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Strategic Leadership: Navigating Complexity and Driving Results",
       img: leadership,
-      name: "লিডারশীপ কোর্স ৪",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
   ];
   const lifeCourse = [
     {
+      name: "Life Mastery: Unlocking Your Full Potential",
       img: life,
-      name: "লাইফ কোর্স ১",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "The Art of Living: Cultivating a Fulfilling and Balanced Life",
       img: life,
-      name: "লাইফ কোর্স ২",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Personal Growth and Development: Nurturing Your Best Self",
       img: life,
-      name: "লাইফ কোর্স ৩",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
+      name: "Discovering Your Life's Purpose: Aligning Passion and Meaning",
       img: life,
-      name: "লাইফ কোর্স ৪",
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
   ];

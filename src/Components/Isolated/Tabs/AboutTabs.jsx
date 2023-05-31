@@ -61,16 +61,28 @@ export default function AboutTabs() {
           aria-label="basic tabs example"
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
-          <Tab sx={{ color: "#E0E0E0" }} label="শর্ট বায়ো" {...a11yProps(0)} />
           <Tab
-            sx={{ color: "#E0E0E0" }}
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="শর্ট বায়ো"
+            {...a11yProps(0)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="প্রেজেন্টেশন ক্যারিয়ার"
             {...a11yProps(1)}
           />
-          <Tab sx={{ color: "#E0E0E0" }} label="RJ" {...a11yProps(2)} />
-          <Tab sx={{ color: "#E0E0E0" }} label="রাইটার" {...a11yProps(3)} />
           <Tab
-            sx={{ color: "#E0E0E0" }}
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="RJ"
+            {...a11yProps(2)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="রাইটার"
+            {...a11yProps(3)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="ইনফ্লুয়েন্সার"
             {...a11yProps(4)}
           />

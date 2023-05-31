@@ -59,12 +59,20 @@ export default function InviteTabs() {
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab
-            sx={{ color: "#E0E0E0" }}
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="অ্যাংকর / MC"
             {...a11yProps(0)}
           />
-          <Tab sx={{ color: "#E0E0E0" }} label="কনসালটেন্ট" {...a11yProps(1)} />
-          <Tab sx={{ color: "#E0E0E0" }} label="ওয়েবিনার" {...a11yProps(2)} />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="কনসালটেন্ট"
+            {...a11yProps(1)}
+          />
+          <Tab
+            sx={{ color: "#E0E0E0", fontSize: "16px" }}
+            label="ওয়েবিনার"
+            {...a11yProps(2)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -76,7 +84,7 @@ export default function InviteTabs() {
             <h3 className="font-bold text-2xl mb-5 text-primary">
               Anchor / MC
             </h3>
-            <div className="overflow-y-auto max-h-[250px]">
+            <div className="overflow-y-auto max-h-[100px]">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
@@ -130,7 +138,7 @@ export default function InviteTabs() {
           </div>
           <div className="w-full rounded-md py-5 lg:pr-5 px-5">
             <h3 className="font-bold text-2xl mb-5 text-primary">Consultant</h3>
-            <div className="overflow-y-auto max-h-[250px]">
+            <div className="overflow-y-auto max-h-[100px]">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
                 magni repellendus? Atque optio neque dignissimos tempora, facere
@@ -180,7 +188,7 @@ export default function InviteTabs() {
           </div>
           <div className="w-full rounded-md py-5 lg:pr-5 px-5">
             <h3 className="font-bold text-2xl mb-5 text-primary">Webinar</h3>
-            <div className="overflow-y-auto max-h-[250px]">
+            <div className="overflow-y-auto max-h-[100px]">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
                 libero dolor, dolore exercitationem, ex totam mollitia facere
