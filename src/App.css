@@ -100,19 +100,28 @@
   overflow: hidden;
 }
 .scaling-div2:hover{
-  height: 200px;
+  height: 280px; background-color: #F80262; color: #fff;
 }
 .scaling-div2:hover .text{
   display: block;
+  color: #fff;
+}
+
+.scaling-div2:hover .input{
+  display: block;
+  color: #333;
 }
 .text {
+  display: none;
+}
+.input{
   display: none;
 }
 .icon{
   /* overflow-clip-margin: content-box;
     overflow: clip; */
   position: absolute;
-  top: 13%;
+  top: 25%;
   left: 3%;
   width: 40px;
   -webkit-transition: left .3s ease-out,width .3s ease-out,-webkit-transform .3s ease-in-out;
@@ -131,7 +140,7 @@
     font-size: 72px;
     /* -webkit-filter: invert(100%); */
     /* filter: invert(100%); */
-    opacity: .2;
+    opacity: .3;
 }
 .icon2{
   opacity: 0;

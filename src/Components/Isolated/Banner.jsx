@@ -4,6 +4,7 @@ import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-reveal";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import BannerCard from "./Cards/BannerCard";
 
 function Banner() {
   // const socialLinks = [
@@ -88,7 +89,7 @@ function Banner() {
             </div>
           </div>
         </Fade> */}
-        <div className="flex flex-col lg:flex-row h-[600px] relative">
+        <div className="flex justify-between items-center flex-col lg:flex-row h-[600px] relative">
           <div className="mt-36">
             <h1 className="text-5xl font-bold text-[#fff]">
               ভয়, জড়তা, শঙ্কা আর
@@ -108,21 +109,6 @@ function Banner() {
                 }}
               />
             </h1>
-            <div className="scaling-div2 my-5 relative">
-              <div className="">
-                <AiOutlineShareAlt className="text-3xl icon" />
-                <div className="flex justify-between">
-                  <AiOutlineShareAlt className="text-3xl icon2" />
-                  <h1 className="text-xl font-bold">
-                    শেয়ার করে; <br /> স্বপ্নকে জয় করো
-                  </h1>
-                </div>
-              </div>
-              <p className="text text-[#222] mx-2 mt-3">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Asperiores, ipsa.
-              </p>
-            </div>
             <div>
               <div className="inline-block my-5">
                 <div className="flex text-[#8A8EA0] text-3xl">
@@ -153,6 +139,9 @@ function Banner() {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <BannerCard />
           </div>
         </div>
       </div>
