@@ -1,13 +1,12 @@
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
-import media from "../../assets/images/media.jpg";
+import "../../Styles/Events.css";
 import leadership from "../../assets/images/leadership.jpg";
 import life from "../../assets/images/life.jpg";
-import { FiClock } from "react-icons/fi";
+import media from "../../assets/images/media.jpg";
 import CourseCard from "./CourseCard";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import "../../Styles/Events.css";
 
 function Courses() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,70 +30,84 @@ function Courses() {
       setLoaded(true);
     },
   });
-  const mediaCourse = [
+  const allCoursesData = [
     {
-      name: "Media Mastery: Unleashing the Power of Communication",
-      img: media,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+      _id: 1,
+      title: "মিডিয়া কোর্স",
+      mediaCourse: [
+        {
+          name: "Media Mastery: Unleashing the Power of Communication",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Digital Storytelling: Crafting Compelling Media Narratives",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Media Evolution: Adapting to the Digital Landscape",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Media Magic: The Art and Science of Engaging Audiences",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+      ],
     },
     {
-      name: "Digital Storytelling: Crafting Compelling Media Narratives",
-      img: media,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+      _id: 2,
+      title: "লিডারশীপ কোর্স",
+      leadershipCourse: [
+        {
+          name: "Leadership Mastery: Unlocking Your Full Potential",
+          img: leadership,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "The Art of Effective Leadership: Inspire, Influence, and Impact",
+          img: leadership,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Leading with Purpose: Guiding Others Towards Success",
+          img: leadership,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Strategic Leadership: Navigating Complexity and Driving Results",
+          img: leadership,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+      ],
     },
     {
-      name: "Media Evolution: Adapting to the Digital Landscape",
-      img: media,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "Media Magic: The Art and Science of Engaging Audiences",
-      img: media,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-  ];
-  const leadershipCourse = [
-    {
-      name: "Leadership Mastery: Unlocking Your Full Potential",
-      img: leadership,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "The Art of Effective Leadership: Inspire, Influence, and Impact",
-      img: leadership,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "Leading with Purpose: Guiding Others Towards Success",
-      img: leadership,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "Strategic Leadership: Navigating Complexity and Driving Results",
-      img: leadership,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-  ];
-  const lifeCourse = [
-    {
-      name: "Life Mastery: Unlocking Your Full Potential",
-      img: life,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "The Art of Living: Cultivating a Fulfilling and Balanced Life",
-      img: life,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "Personal Growth and Development: Nurturing Your Best Self",
-      img: life,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-    },
-    {
-      name: "Discovering Your Life's Purpose: Aligning Passion and Meaning",
-      img: life,
-      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+      _id: 3,
+      title: "লাইফ কোর্স",
+      lifeCourse: [
+        {
+          name: "Life Mastery: Unlocking Your Full Potential",
+          img: life,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "The Art of Living: Cultivating a Fulfilling and Balanced Life",
+          img: life,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Personal Growth and Development: Nurturing Your Best Self",
+          img: life,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Discovering Your Life's Purpose: Aligning Passion and Meaning",
+          img: life,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+      ],
     },
   ];
   return (
@@ -104,111 +117,37 @@ function Courses() {
           কোর্স সমূহ
         </h2>
       </Fade>
-      <div className="mt-10 mx-5 lg:mx-0">
-        <h3 className="text-primary text-2xl font-bold my-5">মিডিয়া কোর্স</h3>
-        <div className="navigation-wrapper ">
-          <div ref={sliderRef} className="keen-slider">
-            {mediaCourse.map((course, idx) => (
-              <div className="keen-slider__slide">
-                <div className="cursor-pointer" key={idx}>
-                  <CourseCard course={course} />
-                </div>
-              </div>
+
+      {allCoursesData.map((courses) => (
+        <div className="mt-10 mx-5 lg:mx-0" key={courses._id}>
+          <h3 className="text-primary text-2xl font-bold my-5">
+            {courses.title}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* this map for mediaCourses  */}
+            {courses?.mediaCourse?.map((course, index) => (
+              <CourseCard
+                key={index}
+                course={course}
+              />
+            ))}
+            {/* this map for leadershipCourses  */}
+            {courses?.leadershipCourse?.map((course,index) => (
+              <CourseCard
+                key={index}
+                course={course}
+              />
+            ))}
+            {/* this map for lifeCourses  */}
+            {courses?.lifeCourse?.map((course,index) => (
+              <CourseCard
+                key={index}
+                course={course}
+              />
             ))}
           </div>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
-
-              <Arrow
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
         </div>
-      </div>
-      <div className="mt-10">
-        <h3 className="text-primary text-2xl font-bold my-5">লিডারশীপ কোর্স</h3>
-        <div className="navigation-wrapper ">
-          <div ref={sliderRef} className="keen-slider">
-            {leadershipCourse.map((course, idx) => (
-              <div className="keen-slider__slide">
-                <div className="cursor-pointer" key={idx}>
-                  <CourseCard course={course} />
-                </div>
-              </div>
-            ))}
-          </div>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
-
-              <Arrow
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
-        </div>
-      </div>
-      <div className="mt-10">
-        <h3 className="text-primary text-2xl font-bold my-5">লাইফ কোর্স</h3>{" "}
-        <div className="navigation-wrapper ">
-          <div ref={sliderRef} className="keen-slider">
-            {lifeCourse.map((course, idx) => (
-              <div className="keen-slider__slide">
-                <div className="cursor-pointer" key={idx}>
-                  <CourseCard course={course} />
-                </div>
-              </div>
-            ))}
-          </div>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
-
-              <Arrow
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
