@@ -109,6 +109,7 @@ function Banner() {
                 }}
               />
             </h1>
+
             <div>
               <div className="inline-block my-5">
                 <div className="flex text-[#8A8EA0] text-3xl">
