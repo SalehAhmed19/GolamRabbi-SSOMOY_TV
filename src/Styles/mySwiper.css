@@ -1,0 +1,12 @@
+.swiper-pagination-bullet {
+  background: #f3b004;
+  width: 10px;
+  height: 10px;
+  transition: all 0.9s ease-in-out;
+}
+.swiper-pagination-bullet-active {
+  background: #f3b004;
+  padding-right: 15px;
+  padding-left: 15px;
+  transition: all 0.9s ease-in-out;
+}

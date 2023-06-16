@@ -1,10 +1,16 @@
-import React, { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import "../../Styles/MediaJobCircular.css";
-import bg from "../../assets/images/job-bg.jpg";
+import { useKeenSlider } from "keen-slider/react";
+import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
+import { FreeMode, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "../../Styles/MediaJobCircular.css";
+import mySwiper from "../../Styles/mySwiper.css";
 import job from "../../assets/images/Job.png";
+import bg from "../../assets/images/job-bg.jpg";
 
 function MediaJobCircular() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -43,51 +49,57 @@ function MediaJobCircular() {
         </h2>
       </Fade>
       <div className="lg:mx-24 mx-5">
-        <div className="navigation-wrapper">
+        <div>
           <Zoom>
-            <div ref={sliderRef} className="keen-slider">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={10}
+              freeMode={true}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                "@0.75": {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                "@1.00": {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                "@1.50": {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
+              modules={[FreeMode, Pagination]}
+              className={mySwiper}
+            >
               {arr.map((a) => (
-                <div
-                  key={a}
-                  className="keen-slider__slide rounded-lg bg-[#222]"
-                >
-                  <img src={job} alt="" />
-                  <div className="text-basic p-5">
-                    <h3 className="text-xl">
-                      <span className="font-bold">পদবিঃ </span> সাংবাদিক
-                    </h3>
-                    <p>
-                      <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
-                      সাংবাদিক
-                    </p>
-                    <p>
-                      <span className="font-bold">প্রতিষ্ঠানঃ </span> সময় টিভি
-                    </p>
+                <SwiperSlide className="mb-14">
+                  <div
+                    key={a}
+                    className="keen-slider__slide rounded-lg bg-[#222]"
+                  >
+                    <img src={job} alt="" />
+                    <div className="text-basic p-5">
+                      <h3 className="text-xl">
+                        <span className="font-bold">পদবিঃ </span> সাংবাদিক
+                      </h3>
+                      <p>
+                        <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
+                        সাংবাদিক
+                      </p>
+                      <p>
+                        <span className="font-bold">প্রতিষ্ঠানঃ </span> সময় টিভি
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </Zoom>
         </div>
-        {loaded && instanceRef.current && (
-          <div className="dots mt-10">
-            {[
-              ...Array(
-                instanceRef.current.track.details.slides.length - 3
-              ).keys(),
-            ].map((idx) => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx);
-                  }}
-                  className={"dot" + (currentSlide === idx ? " active" : "")}
-                ></button>
-              );
-            })}
-          </div>
-        )}
       </div>
     </div>
   );

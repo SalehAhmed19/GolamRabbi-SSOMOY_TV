@@ -205,13 +205,13 @@ export default function FeaturedTabs() {
             </Swiper>
             {/* previous btn */}
             <div className="btn-prev cursor-pointer absolute top-24 lg:top-20 -left-10 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-              <span className="text-white  font-bold text-xl">
+              <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowLeft />
               </span>
             </div>
             {/* next btn */}
             <div className="btn-next cursor-pointer absolute top-24 lg:top-20 -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-              <span className="text-white font-bold lg:text-xl">
+              <span className="font-bold lg:text-xl">
                 <MdOutlineKeyboardArrowRight />
               </span>
             </div>
