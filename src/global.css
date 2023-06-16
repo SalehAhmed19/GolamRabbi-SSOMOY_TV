@@ -18,20 +18,20 @@ audio::-webkit-media-controls-play-button {
   border-radius: 50%;
 }
 /* audio::-webkit-media-controls-current-time-display {
-  color: #b1d4e0;
+  color: rgba(201, 221, 221, 0.572);
 }
 audio::-webkit-media-controls-time-remaining-display {
-  color: #b1d4e0;
+  color: rgba(201, 221, 221, 0.572);
 } */
 /* audio::-webkit-media-controls-timeline {
-  background-color: #b1d4e0;
+  background-color: rgba(201, 221, 221, 0.572);
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
 } */
-/* audio::-webkit-media-controls-volume-slider {
-  background-color: #b1d4e0;
+audio::-webkit-media-controls-volume-slider {
+  background-color: rgba(201, 221, 221, 0.572);
   border-radius: 25px;
   padding-left: 8px;
   padding-right: 8px;
-} */
+}
