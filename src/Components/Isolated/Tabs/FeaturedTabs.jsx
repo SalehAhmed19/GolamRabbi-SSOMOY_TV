@@ -1,13 +1,15 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { useKeenSlider } from "keen-slider/react";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import PropTypes from "prop-types";
+import * as React from "react";
 import "../../../Styles/FeaturedTabs.css";
+import AudioCard from "../Cards/AudioCard";
 import NewsCards from "../Cards/NewsCards";
+import OnnanoCard from "../Cards/OnnanoCard";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -194,7 +196,7 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           <NewsCards />
           <NewsCards />
           <NewsCards />
@@ -202,10 +204,20 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <p className="text-basic">রেডিও</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <AudioCard />
+          <AudioCard />
+          <AudioCard />
+          <AudioCard />
+        </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <p className="text-basic">অন্যান্য</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <OnnanoCard />
+          <OnnanoCard />
+          <OnnanoCard />
+          <OnnanoCard />
+        </div>
       </TabPanel>
     </Box>
   );

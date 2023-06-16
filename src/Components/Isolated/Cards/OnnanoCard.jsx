@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-function NewsCards() {
+const OnnanoCard = () => {
   return (
     <div className="bg-[#16181D]  shadow-lg rounded-xl">
       <div className="flex items-center px-5 mb-5">
@@ -35,6 +35,6 @@ function NewsCards() {
       </div>
     </div>
   );
-}
+};
 
-export default NewsCards;
+export default OnnanoCard;
