@@ -52,6 +52,13 @@ function MediaJobCircular() {
         <div>
           <Zoom>
             <Swiper
+              style={{
+                "--swiper-pagination-color": "#FFBA08",
+                "--swiper-pagination-bullet-inactive-color": "#999999",
+                "--swiper-pagination-bullet-inactive-opacity": "1",
+                "--swiper-pagination-bullet-size": "20spx",
+                "--swiper-pagination-bullet-horizontal-gap": "6px",
+              }}
               slidesPerView={1}
               spaceBetween={10}
               freeMode={true}
@@ -59,15 +66,11 @@ function MediaJobCircular() {
                 clickable: true,
               }}
               breakpoints={{
-                "@0.75": {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                "@1.00": {
+                668: {
                   slidesPerView: 2,
                   spaceBetween: 20,
                 },
-                "@1.50": {
+                1280: {
                   slidesPerView: 4,
                   spaceBetween: 20,
                 },

@@ -116,106 +116,102 @@ export default function FeaturedTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-          <div className="relative mt-10 cursor-pointer">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={20}
-              // loop={true}
-              navigation={{
-                prevEl: ".btn-prev",
-                nextEl: ".btn-next",
-              }}
-              modules={[Navigation]}
-              breakpoints={{
-                "@0.75": {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                "@1.00": {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                "@1.50": {
-                  slidesPerView: 4,
-                  spaceBetween: 20,
-                },
-              }}
-              className=""
-            >
-              <SwiperSlide>
-                <div>
-                  <iframe
-                    className="w-full h-56 rounded-md"
-                    src="https://www.youtube.com/embed/Lq5yXrYSVzg"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <iframe
-                    className="w-full h-56 rounded-md"
-                    src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <iframe
-                    className="w-full h-56 rounded-md"
-                    src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <iframe
-                    className="w-full h-56 rounded-md"
-                    src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <iframe
-                    className="w-full h-56 rounded-md"
-                    src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-            {/* previous btn */}
-            <div className="btn-prev cursor-pointer absolute top-24 lg:top-20 -left-10 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-              <span className="font-bold text-xl">
-                <MdOutlineKeyboardArrowLeft />
-              </span>
-            </div>
-            {/* next btn */}
-            <div className="btn-next cursor-pointer absolute top-24 lg:top-20 -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-              <span className="font-bold lg:text-xl">
-                <MdOutlineKeyboardArrowRight />
-              </span>
-            </div>
+        <div className="relative mt-10 cursor-pointer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
+            navigation={{
+              prevEl: ".btn-prev",
+              nextEl: ".btn-next",
+            }}
+            modules={[Navigation]}
+            breakpoints={{
+              668: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/Lq5yXrYSVzg"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          {/* previous btn */}
+          <div className="btn-prev cursor-pointer absolute top-24 lg:top-20 -left-10 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
           </div>
+          {/* next btn */}
+          <div className="btn-next cursor-pointer absolute top-24 lg:top-20 -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
