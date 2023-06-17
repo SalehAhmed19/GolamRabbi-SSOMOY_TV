@@ -81,12 +81,15 @@ function Events() {
       <Fade up>
         <div className="relative mt-10 cursor-pointer">
           <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
             navigation={{
-              prevEl: ".btn-prev",
-              nextEl: ".btn-next",
+              prevEl: ".previous-btn",
+              nextEl: ".next-btn",
             }}
             modules={[Navigation]}
-            className="mySwiper"
+            className=""
           >
             {events.map((event, idx) => (
               <SwiperSlide key={idx}>
@@ -116,14 +119,14 @@ function Events() {
             ))}
           </Swiper>
           {/* previous btn */}
-          <div className="btn-prev cursor-pointer absolute top-16 -left-4 lg:top-20  lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-            <span className="text-black font-bold text-xl">
+          <div className="previous-btn cursor-pointer absolute top-24 lg:top-20 -left-10 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
           </div>
           {/* next btn */}
-          <div className="btn-prev cursor-pointer absolute top-16 -right-4 lg:top-20  lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-            <span className="text-black font-bold text-xl">
+          <div className="next-btn cursor-pointer absolute top-24 lg:top-20 -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowRight />
             </span>
           </div>
