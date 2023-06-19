@@ -9,9 +9,10 @@ import {
 } from "react-icons/md";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
 import bg from "../../assets/images/event-bg.jpg";
@@ -84,16 +85,19 @@ function Events() {
             slidesPerView={1}
             spaceBetween={20}
             // loop={true}
+            pagination={{
+              clickable: true,
+            }}
             navigation={{
               prevEl: ".previous-btn",
               nextEl: ".next-btn",
             }}
-            modules={[Navigation]}
+            modules={[Navigation, Pagination]}
             className=""
           >
             {events.map((event, idx) => (
               <SwiperSlide key={idx}>
-                <div>
+                <div className="mb-10">
                   <div className="-p-5 flex items-center">
                     <div className="text-primary mr-5 border-2 border-[#F6B30F] p-5  rounded-md">
                       <h2 className="text-6xl">{event.date}</h2>
@@ -119,13 +123,15 @@ function Events() {
             ))}
           </Swiper>
           {/* previous btn */}
-          <div className="previous-btn cursor-pointer absolute top-24 lg:top-20 -left-10 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+          <div
+            className={` previous-btn cursor-pointer absolute top-14  -left-4 lg:-left-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] `}
+          >
             <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
           </div>
           {/* next btn */}
-          <div className="next-btn cursor-pointer absolute top-24 lg:top-20 -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+          <div className=" next-btn cursor-pointer absolute top-14  -right-4 lg:-right-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
             <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowRight />
             </span>

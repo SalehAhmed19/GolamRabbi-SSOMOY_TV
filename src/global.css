@@ -17,18 +17,18 @@ audio::-webkit-media-controls-play-button {
   background-color: rgba(201, 221, 221, 0.572);
   border-radius: 50%;
 }
-/* audio::-webkit-media-controls-current-time-display {
-  color: rgba(201, 221, 221, 0.572);
+audio::-webkit-media-controls-current-time-display {
+  color: white;
 }
 audio::-webkit-media-controls-time-remaining-display {
-  color: rgba(201, 221, 221, 0.572);
-} */
-/* audio::-webkit-media-controls-timeline {
+  color: white;
+}
+audio::-webkit-media-controls-timeline {
   background-color: rgba(201, 221, 221, 0.572);
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
-} */
+}
 audio::-webkit-media-controls-volume-slider {
   background-color: rgba(201, 221, 221, 0.572);
   border-radius: 25px;

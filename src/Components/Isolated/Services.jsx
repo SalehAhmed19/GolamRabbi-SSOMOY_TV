@@ -84,6 +84,7 @@ function Services() {
               className="border-4 border-[#fff] w-[500px]"
               src={image}
               alt=""
+              className="p-5"
             />
           </Fade>
         </div>

@@ -116,7 +116,7 @@ export default function FeaturedTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="relative mt-10 cursor-pointer">
+        <div className="-mx-5 relative  cursor-pointer">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
@@ -200,7 +200,7 @@ export default function FeaturedTabs() {
             </SwiperSlide>
           </Swiper>
           {/* previous btn */}
-          <div className="btn-prev cursor-pointer absolute top-24 lg:top-20 -left-10 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+          <div className="btn-prev cursor-pointer absolute top-24 lg:top-20 -left-9 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
             <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
@@ -214,7 +214,7 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           <NewsCards />
           <NewsCards />
           <NewsCards />
@@ -222,7 +222,7 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           <AudioCard />
           <AudioCard />
           <AudioCard />
@@ -230,7 +230,7 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           <OnnanoCard />
           <OnnanoCard />
           <OnnanoCard />

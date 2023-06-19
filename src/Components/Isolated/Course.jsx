@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import { Fade, Zoom } from "react-reveal";
-import bg from "../../assets/images/course-bg.png";
-import Modal from "./Modals/Modal";
-import { Link, Outlet } from "react-router-dom";
-import CourseTabs from "./Tabs/CourseTabs";
-import { toast } from "react-hot-toast";
-import img1 from "../../assets/images/media.jpg";
+import React from "react";
+import { Fade } from "react-reveal";
+import { Link } from "react-router-dom";
 import img2 from "../../assets/images/leadership.jpg";
 import img3 from "../../assets/images/life.jpg";
+import img1 from "../../assets/images/media.jpg";
 
 function Course() {
   const data = [
@@ -31,7 +27,7 @@ function Course() {
         </h2>
       </Fade>
       {/* <CourseTabs /> */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <Link to="/media-courses">
           <img className="rounded-md" src={img1} alt="" />
         </Link>

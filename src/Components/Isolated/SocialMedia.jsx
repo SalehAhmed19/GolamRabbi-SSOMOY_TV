@@ -36,7 +36,7 @@ function SocialMedia() {
         </h1>
       </Fade>
       <div className="flex justify-center mb-14">
-        <div className="mt-10 flex flex-col lg:flex-row gap-5">
+        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 place-items-center gap-5">
           {arr.map((a, idx) => (
             <Fade up>
               <a href={a.href} target="_blank">

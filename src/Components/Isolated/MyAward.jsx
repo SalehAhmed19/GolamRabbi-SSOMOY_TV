@@ -1,7 +1,6 @@
 import React from "react";
-import { Fade } from "react-reveal";
-import award from "../../assets/images/award.png";
 import { FaAward } from "react-icons/fa";
+import { Fade } from "react-reveal";
 
 function MyAward() {
   const arr = [1, 2, 3, 4, 5, 6];
@@ -13,7 +12,7 @@ function MyAward() {
         </h1>
       </Fade>
       <div className="flex flex-col items-center mb-14">
-        <div className="mt-10 flex flex-col lg:flex-row gap-7">
+        <div className="mt-10 grid grid-cols-3 md:flex  md:flex-row gap-7">
           {arr.map((a) => (
             <div className="p-5 shadow-lg shadow-[#0000005c] rounded-md">
               {/* <img src={award} alt="" /> */}

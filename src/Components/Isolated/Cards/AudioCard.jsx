@@ -22,7 +22,7 @@ const AudioCard = () => {
           className="rounded-t-xl"
         />
         <div className="p-5 text-white text-sm">
-          <p>শুনুন প্রাণ খুলে</p>
+          <p className='mb-5'>শুনুন প্রাণ খুলে</p>
           <audio controls src={audio} ></audio>
         </div>
       </div>
