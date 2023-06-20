@@ -1,12 +1,11 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import DatePicker from "../Invite/DatePicker";
-import img from "../../../assets/images/golamrabby.jpeg";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import * as React from "react";
 import { Fade } from "react-reveal";
+import img from "../../../assets/images/golamrabby.jpeg";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -76,7 +75,7 @@ export default function InviteTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="flex flex-col lg:flex-row-reverse items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row-reverse items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-[500px]" src={img} alt="" />
           </div>
@@ -132,7 +131,7 @@ export default function InviteTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="flex flex-col lg:flex-row-reverse items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row-reverse items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-[500px]" src={img} alt="" />
           </div>
@@ -182,7 +181,7 @@ export default function InviteTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="flex flex-col lg:flex-row-reverse items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row-reverse items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-[500px]" src={img} alt="" />
           </div>

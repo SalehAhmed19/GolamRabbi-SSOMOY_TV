@@ -3,24 +3,60 @@ import { Fade } from "react-reveal";
 import media from "../../assets/images/media.jpg";
 import CourseCard from "./CourseCard";
 
-function MediaCourses() {
-  const arr = [media, media, media, media, media, media, media, media];
-  return (
-    <div className="lg:px-24 py-10">
-      <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
-          মিডিয়া কোর্স
-        </h2>
-      </Fade>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
-        {arr.map((a, idx) => (
-          <div className="cursor-pointer" key={idx}>
-            <CourseCard course={a} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+const MediaCourses = () => {
+  const allMediaCoursesData = [
+    {
+      _id: 1,
+      title: "মিডিয়া কোর্স",
+      mediaCourse: [
+        {
+          name: "Media Mastery: Unleashing the Power of Communication",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Digital Storytelling: Crafting Compelling Media Narratives",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Media Evolution: Adapting to the Digital Landscape",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+        {
+          name: "Media Magic: The Art and Science of Engaging Audiences",
+          img: media,
+          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+        },
+      ],
+    }
+  ];
+
+ return (
+   <div className="lg:px-24 py-10">
+     <Fade down>
+       <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
+         মিডিয়া কোর্স
+       </h2>
+     </Fade>
+     <div className="">
+       {allMediaCoursesData.map((courses) => (
+         <div className="mt-10 mx-5 lg:mx-0" key={courses._id}>
+           <h3 className="text-primary text-2xl font-bold my-5">
+             {courses.title}
+           </h3>
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+             {/* this map for mediaCourses  */}
+             {courses?.mediaCourse?.map((course, index) => (
+               <CourseCard key={index} course={course} />
+             ))}
+           </div>
+         </div>
+       ))}
+     </div>
+   </div>
+ );
+};
 
 export default MediaCourses;

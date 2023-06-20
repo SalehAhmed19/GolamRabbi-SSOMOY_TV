@@ -1,11 +1,10 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import * as React from "react";
 import img from "../../../assets/images/golamrabby.jpeg";
-import ShortBio from "../ShortBio";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,7 +88,7 @@ export default function AboutTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md relative">
+        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md relative">
           <div className="p-5">
             <img className="rounded-md w-96" src={img} alt="" />
           </div>
@@ -108,7 +107,7 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-96" src={img} alt="" />
           </div>
@@ -149,7 +148,7 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-96" src={img} alt="" />
           </div>
@@ -193,7 +192,7 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-96" src={img} alt="" />
           </div>
@@ -235,7 +234,7 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <div className="flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
+        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
           <div className="p-5">
             <img className="rounded-md w-96" src={img} alt="" />
           </div>

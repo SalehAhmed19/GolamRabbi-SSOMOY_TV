@@ -1,8 +1,37 @@
 @font-face {
-    font-family: 'MyBanglaFont';
-    src: url('./Fonts/Unicode/Li\ MAK\ Akhlima\ Unicode.ttf') format('truetype');
-         /* url('./fonts/MyBanglaFont-Regular.woff') format('ttf'),
+  font-family: "MyBanglaFont";
+  src: url("./Fonts/Unicode/Li\ MAK\ Akhlima\ Unicode.ttf") format("truetype");
+  /* url('./fonts/MyBanglaFont-Regular.woff') format('ttf'),
          url('./fonts/MyBanglaFont-Regular.ttf') format('truetype'); */
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-weight: normal;
+  font-style: normal;
+}
+audio::-webkit-media-controls-panel {
+  background-color: rgba(0, 8, 8, 0.572);
+}
+audio::-webkit-media-controls-mute-button {
+  background-color: rgba(201, 221, 221, 0.572);
+  border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+  background-color: rgba(201, 221, 221, 0.572);
+  border-radius: 50%;
+}
+audio::-webkit-media-controls-current-time-display {
+  color: white;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+audio::-webkit-media-controls-timeline {
+  background-color: rgba(201, 221, 221, 0.572);
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+audio::-webkit-media-controls-volume-slider {
+  background-color: rgba(201, 221, 221, 0.572);
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+}

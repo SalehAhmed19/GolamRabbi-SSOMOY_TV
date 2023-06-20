@@ -1,0 +1,26 @@
+.swiper-pagination-bullet {
+  background: #f3b004;
+  width: 10px;
+  height: 10px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet:hover {
+  background: #f3b004;
+  width: 25px;
+  height: 9px;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #f3b004;
+  width: 25px;
+  height: 9px;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.swiper-button-disabled{
+  display: none;
+}

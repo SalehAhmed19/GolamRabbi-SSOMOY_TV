@@ -1,14 +1,21 @@
-import React, { useState } from "react";
-import bg from "../../assets/images/event-bg.jpg";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { MdLocationOn } from "react-icons/md";
-import { Fade, Zoom } from "react-reveal";
-import Advertisement2 from "./Advertisement2";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import "../../Styles/Events.css";
+import { useKeenSlider } from "keen-slider/react";
+import React, { useState } from "react";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import {
+  MdLocationOn,
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
-
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "../../Styles/Events.css";
+import bg from "../../assets/images/event-bg.jpg";
 function Events() {
   const arr = [1, 2, 3, 4, 5, 6];
   const events = [
@@ -73,56 +80,65 @@ function Events() {
         </h1>
       </Fade>
       <Fade up>
-        <div className="navigation-wrapper px-10 py-14">
-          <div ref={sliderRef} className="keen-slider">
+        <div className="relative mt-10 cursor-pointer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={{
+              prevEl: ".previous-btn",
+              nextEl: ".next-btn",
+            }}
+            modules={[Navigation, Pagination]}
+            className=""
+          >
             {events.map((event, idx) => (
-              <div key={idx} className="keen-slider__slide">
-                <div className="-p-5 flex items-center">
-                  <div className="text-primary mr-5 border-2 border-[#F6B30F] p-5  rounded-md">
-                    <h2 className="text-6xl">{event.date}</h2>
-                    <p className="text-center">{event.month}</p>
-                  </div>
-                  <div>
-                    <h4 className="my-3 font-bold text-2xl text-primary">
-                      {event.title}
-                    </h4>
-                    <hr />
-                    <p className="my-3 flex items-center text-[#c5c5c5]">
-                      <AiOutlineClockCircle className="mr-2" />
-                      {event.startingTime} ঘটিকা - {event.endingTime} ঘটিকা
-                    </p>
-                    <p className="my-3 flex items-center text-[#c5c5c5]">
-                      <MdLocationOn className="mr-2" />
-                      {event.location}
-                    </p>
+              <SwiperSlide key={idx}>
+                <div className="mb-10">
+                  <div className="-p-5 flex items-center">
+                    <div className="text-primary mr-5 border-2 border-[#F6B30F] p-5  rounded-md">
+                      <h2 className="text-6xl">{event.date}</h2>
+                      <p className="text-center">{event.month}</p>
+                    </div>
+                    <div>
+                      <h4 className="my-3 font-bold text-2xl text-primary">
+                        {event.title}
+                      </h4>
+                      <hr />
+                      <p className="my-3 flex items-center text-[#c5c5c5]">
+                        <AiOutlineClockCircle className="mr-2" />
+                        {event.startingTime} ঘটিকা - {event.endingTime} ঘটিকা
+                      </p>
+                      <p className="my-3 flex items-center text-[#c5c5c5]">
+                        <MdLocationOn className="mr-2" />
+                        {event.location}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
+          </Swiper>
+          {/* previous btn */}
+          <div
+            className={` previous-btn cursor-pointer absolute top-14  -left-4 lg:-left-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] `}
+          >
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
           </div>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
-
-              <Arrow
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
+          {/* next btn */}
+          <div className=" next-btn cursor-pointer absolute top-14  -right-4 lg:-right-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
         </div>
-        <div className="my-5">
+
+        <div className="my-5 select-none">
           <p className="font-bold">
             জীবনের এক রাস অনুভূতি ও অভিজ্ঞতা নিয়ে কিছু কথা হবে তোমাদের সাথে...
           </p>

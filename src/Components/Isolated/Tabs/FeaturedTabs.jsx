@@ -1,13 +1,23 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { useKeenSlider } from "keen-slider/react";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import PropTypes from "prop-types";
+import * as React from "react";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "../../../Styles/FeaturedTabs.css";
+import AudioCard from "../Cards/AudioCard";
 import NewsCards from "../Cards/NewsCards";
+import OnnanoCard from "../Cards/OnnanoCard";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -106,95 +116,105 @@ export default function FeaturedTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="navigation-wrapper">
-          <div ref={sliderRef} className="keen-slider">
-            <div className="keen-slider__slide">
-              {" "}
-              <iframe
-                className="w-full h-56 rounded-md"
-                src="https://www.youtube.com/embed/8h2qL-ChlIs"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="keen-slider__slide">
-              <iframe
-                className="w-full h-56 rounded-md"
-                src="https://www.youtube.com/embed/Lq5yXrYSVzg"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="keen-slider__slide">
-              <iframe
-                className="w-full h-56 rounded-md"
-                src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="keen-slider__slide">
-              <iframe
-                className="w-full h-56 rounded-md"
-                src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="keen-slider__slide">
-              <iframe
-                className="w-full h-56 rounded-md"
-                src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="keen-slider__slide">
-              <iframe
-                className="w-full h-56 rounded-md"
-                src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
+        <div className="-mx-5 relative  cursor-pointer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
+            navigation={{
+              prevEl: ".btn-prev",
+              nextEl: ".btn-next",
+            }}
+            modules={[Navigation]}
+            breakpoints={{
+              668: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/Lq5yXrYSVzg"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <iframe
+                  className="w-full h-56 rounded-md"
+                  src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          {/* previous btn */}
+          <div className="btn-prev cursor-pointer absolute top-24 lg:top-20 -left-9 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
           </div>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
-
-              <Arrow
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
+          {/* next btn */}
+          <div className="btn-next cursor-pointer absolute top-24 lg:top-20 -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           <NewsCards />
           <NewsCards />
           <NewsCards />
@@ -202,10 +222,20 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <p className="text-basic">রেডিও</p>
+        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <AudioCard />
+          <AudioCard />
+          <AudioCard />
+          <AudioCard />
+        </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <p className="text-basic">অন্যান্য</p>
+        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <OnnanoCard />
+          <OnnanoCard />
+          <OnnanoCard />
+          <OnnanoCard />
+        </div>
       </TabPanel>
     </Box>
   );
