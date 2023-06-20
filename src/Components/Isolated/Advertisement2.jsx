@@ -40,9 +40,9 @@
 
 // export default Advertisement2;
 import React, { useState } from "react";
+import { Zoom } from "react-reveal";
 import box from "../../assets/SVGs/box.png";
 import mailing from "../../assets/SVGs/mailing.png";
-import { Zoom } from "react-reveal";
 
 function Advertisement2() {
   const [email, setEmail] = useState("");
@@ -66,7 +66,7 @@ function Advertisement2() {
         <div className="mt-5 flex justify-between items-center flex-col lg:flex-row">
           <Zoom>
             <img
-              className="w-4/6 lg:w-80 hidden lg:block md:block"
+              className="w-80 hidden lg:block md:block"
               src={mailing}
               alt=""
             />
