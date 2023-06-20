@@ -12,7 +12,7 @@ function MyAward() {
         </h1>
       </Fade>
       <div className="flex flex-col items-center mb-14">
-        <div className="mt-10 grid grid-cols-3 md:flex  md:flex-row gap-7">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-3  gap-5">
           {arr.map((a) => (
             <div className="p-5 shadow-lg shadow-[#0000005c] rounded-md">
               {/* <img src={award} alt="" /> */}

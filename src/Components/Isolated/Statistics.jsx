@@ -14,7 +14,7 @@ function Statistics() {
   ];
   return (
     <div className="my-14 lg:mx-24">
-      <div className="grid lg:grid-cols-8 grid-cols-1 gap-2 mx-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8  gap-5 mx-5">
         {statistics.map((statistic) => (
           <Zoom>
             <div

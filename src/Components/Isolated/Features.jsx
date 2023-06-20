@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import bg from "../../assets/images/feature-bg.jpg";
 import "../../Styles/Features.css";
+import bg from "../../assets/images/feature-bg.jpg";
 
 function Features() {
   const features = [
@@ -18,7 +18,7 @@ function Features() {
       }}
       className="py-24 lg:px-24"
     >
-      <div className="flex flex-col lg:flex-row justify-center gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {features.map((feature) => (
           <Fade up>
             <div

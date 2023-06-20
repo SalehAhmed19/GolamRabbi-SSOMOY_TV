@@ -35,30 +35,28 @@ function SocialMedia() {
           সোশ্যাল মিডিয়াতে সংযুক্ত হোন
         </h1>
       </Fade>
-      <div className="flex justify-center mb-14">
-        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 place-items-center gap-5">
-          {arr.map((a, idx) => (
-            <Fade up>
-              <a href={a.href} target="_blank">
-                <div
-                  key={idx}
-                  className="w-56 h-56 shadow-lg shadow-[#282828] rounded-md flex items-end justify-center cursor-pointer"
-                  style={{
-                    background: `url(${a.img})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
-                  <Fade up>
-                    <h3 className="text-center my-3 font-bold text-xl">
-                      {a.social}
-                    </h3>
-                  </Fade>
-                </div>
-              </a>
-            </Fade>
-          ))}
-        </div>
+      <div className="mt-10 grid md:grid-cols-2 gap-5 place-items-center lg:flex lg:justify-center lg:items-center">
+        {arr.map((a, idx) => (
+          <Fade up>
+            <a href={a.href} target="_blank">
+              <div
+                key={idx}
+                className="w-56 h-56 shadow-lg shadow-[#282828] rounded-md flex items-end justify-center cursor-pointer"
+                style={{
+                  background: `url(${a.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <Fade up>
+                  <h3 className="text-center my-3 font-bold text-xl">
+                    {a.social}
+                  </h3>
+                </Fade>
+              </div>
+            </a>
+          </Fade>
+        ))}
       </div>
     </div>
   );

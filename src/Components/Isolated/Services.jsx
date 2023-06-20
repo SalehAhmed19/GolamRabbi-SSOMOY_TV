@@ -1,21 +1,15 @@
 import React from "react";
-import bg from "../../assets/images/service-bg.png";
-import image from "../../assets/images/gr2.png";
-import { TfiWrite } from "react-icons/tfi";
-import { GiTeacher } from "react-icons/gi";
-import { MdOutlineFeaturedVideo } from "react-icons/md";
-import { RiMessage3Fill } from "react-icons/ri";
-import { FaHandsHelping } from "react-icons/fa";
 import { Fade, Zoom } from "react-reveal";
-import ServiceRow from "./ServiceRow";
-import cv from "../../assets/SVGs/cv-writting.png";
-import training from "../../assets/SVGs/training.png";
 import bio from "../../assets/SVGs/bio-interview.png";
-import feature from "../../assets/SVGs/feature-writting.png";
 import content from "../../assets/SVGs/content-writting.png";
-import goal from "../../assets/SVGs/set-goal.png";
+import cv from "../../assets/SVGs/cv-writting.png";
+import feature from "../../assets/SVGs/feature-writting.png";
 import pr from "../../assets/SVGs/pr.png";
+import goal from "../../assets/SVGs/set-goal.png";
+import training from "../../assets/SVGs/training.png";
 import volanteer from "../../assets/SVGs/volanteer.png";
+import image from "../../assets/images/gr2.png";
+import bg from "../../assets/images/service-bg.png";
 
 function Services() {
   const data = [
@@ -98,7 +92,7 @@ function Services() {
             </Fade>
             <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
           </div>
-          <div className="flex flex-col lg:flex-row justify-center gap-5 mt-10 mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-center gap-5 mt-10 mb-5">
             {data.slice(0, 2).map((d) => (
               <Zoom>
                 <div
@@ -124,7 +118,7 @@ function Services() {
               </Zoom>
             ))}
           </div>
-          <div className="flex flex-col lg:flex-row justify-center gap-5 my-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-center gap-5 my-5">
             {data.slice(2, 6).map((d) => (
               <Zoom>
                 <div
@@ -150,7 +144,7 @@ function Services() {
               </Zoom>
             ))}
           </div>
-          <div className="flex flex-col lg:flex-row justify-center gap-5 my-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-center gap-5 my-5">
             {data.slice(6, 9).map((d) => (
               <Zoom>
                 <div

@@ -64,26 +64,31 @@ export default function AboutTabs() {
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="শর্ট বায়ো"
             {...a11yProps(0)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="প্রেজেন্টেশন ক্যারিয়ার"
             {...a11yProps(1)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="RJ"
             {...a11yProps(2)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="রাইটার"
             {...a11yProps(3)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="ইনফ্লুয়েন্সার"
             {...a11yProps(4)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
         </Tabs>
       </Box>
