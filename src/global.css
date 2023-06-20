@@ -10,21 +10,23 @@ audio::-webkit-media-controls-panel {
   background-color: rgba(0, 8, 8, 0.572);
 }
 audio::-webkit-media-controls-mute-button {
-  background-color: rgba(201, 221, 221, 0.572);
+  background-color: #d89f17;
   border-radius: 50%;
 }
 audio::-webkit-media-controls-play-button {
-  background-color: rgba(201, 221, 221, 0.572);
+  background-color: #d89f17;
   border-radius: 50%;
 }
 audio::-webkit-media-controls-current-time-display {
-  color: white;
+  color: black;
+  font-weight: 700;
 }
 audio::-webkit-media-controls-time-remaining-display {
-  color: white;
+  color: black;
+  font-weight: 700;
 }
 audio::-webkit-media-controls-timeline {
-  background-color: rgba(201, 221, 221, 0.572);
+  background-color: #d89f17;
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;

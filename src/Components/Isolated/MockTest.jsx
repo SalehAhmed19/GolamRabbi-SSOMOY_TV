@@ -46,7 +46,7 @@ function MockTest() {
   };
 
   return (
-    <div className="lg:px-24 py-14 text-[#fff] bg-[#14161C] relative">
+    <div className="p-5 lg:px-24 py-14 text-[#fff] bg-[#14161C] relative">
       <img
         src={box}
         className="absolute top-5 left-0 blur-lg rounded w-24"

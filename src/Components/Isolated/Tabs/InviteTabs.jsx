@@ -55,22 +55,26 @@ export default function InviteTabs() {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="অ্যাংকর / MC"
             {...a11yProps(0)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="কনসালটেন্ট"
             {...a11yProps(1)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="ওয়েবিনার"
             {...a11yProps(2)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
         </Tabs>
       </Box>

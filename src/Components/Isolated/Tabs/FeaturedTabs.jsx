@@ -97,21 +97,25 @@ export default function FeaturedTabs() {
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="টিভি"
             {...a11yProps(0)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="নিউজ পেপার"
             {...a11yProps(1)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="রেডিও"
             {...a11yProps(2)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
             sx={{ color: "#E0E0E0", fontSize: "16px" }}
             label="অন্যান্য"
             {...a11yProps(3)}
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
         </Tabs>
       </Box>
