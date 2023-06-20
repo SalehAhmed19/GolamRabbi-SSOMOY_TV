@@ -29,7 +29,7 @@ const AudioCard = () => {
           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
         >
           <p className="mb-5">শুনুন প্রাণ খুলে</p>
-          <audio controls src={audio}></audio>
+          <audio controls src={audio} style={{width:"90%",margin:"10px"}}></audio>
         </div>
       </div>
     </div>

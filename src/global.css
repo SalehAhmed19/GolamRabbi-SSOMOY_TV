@@ -32,7 +32,7 @@ audio::-webkit-media-controls-timeline {
   margin-right: 10px;
 }
 audio::-webkit-media-controls-volume-slider {
-  background-color: rgba(201, 221, 221, 0.572);
+  background-color: #d89f17;
   border-radius: 25px;
   padding-left: 8px;
   padding-right: 8px;
