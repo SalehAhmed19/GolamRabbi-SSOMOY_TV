@@ -87,11 +87,12 @@ export default function FeaturedTabs() {
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
-          sx={{ borderRadius: "8px", background: "#111118", margin: "0 5px" }}
+          sx={{ borderRadius: "8px", background: "#111118", margin: "0 5px", color: "#D89F17"  }}
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
-          className="relative  cursor-pointer"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab
