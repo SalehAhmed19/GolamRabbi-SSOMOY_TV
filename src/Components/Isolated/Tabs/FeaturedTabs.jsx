@@ -91,6 +91,7 @@ export default function FeaturedTabs() {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          className="relative  cursor-pointer"
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab
@@ -218,27 +219,162 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <NewsCards />
-          <NewsCards />
-          <NewsCards />
-          <NewsCards />
+        <div className="-mx-5 relative  cursor-pointer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
+            navigation={{
+              prevEl: ".btn-prev",
+              nextEl: ".btn-next",
+            }}
+            modules={[Navigation]}
+            breakpoints={{
+              668: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide>
+              <NewsCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCards />
+            </SwiperSlide>
+          </Swiper>
+          {/* previous btn */}
+          <div className="btn-prev cursor-pointer absolute top-1/2  -left-9 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
+          </div>
+          {/* next btn */}
+          <div className="btn-next cursor-pointer absolute top-1/2  -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <AudioCard />
-          <AudioCard />
-          <AudioCard />
-          <AudioCard />
+        <div className="-mx-5 relative  cursor-pointer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
+            navigation={{
+              prevEl: ".btn-prev",
+              nextEl: ".btn-next",
+            }}
+            modules={[Navigation]}
+            breakpoints={{
+              668: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide>
+              <AudioCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AudioCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AudioCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AudioCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AudioCard />
+            </SwiperSlide>
+          </Swiper>
+          {/* previous btn */}
+          <div className="btn-prev cursor-pointer absolute top-1/2  -left-9 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
+          </div>
+          {/* next btn */}
+          <div className="btn-next cursor-pointer absolute top-1/2  -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <div className="-mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <OnnanoCard />
-          <OnnanoCard />
-          <OnnanoCard />
-          <OnnanoCard />
+        <div className="-mx-5 relative  cursor-pointer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            // loop={true}
+            navigation={{
+              prevEl: ".btn-prev",
+              nextEl: ".btn-next",
+            }}
+            modules={[Navigation]}
+            breakpoints={{
+              668: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide>
+              <OnnanoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <OnnanoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <OnnanoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <OnnanoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <OnnanoCard />
+            </SwiperSlide>
+          </Swiper>
+          {/* previous btn */}
+          <div className="btn-prev cursor-pointer absolute top-1/2  -left-9 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
+          </div>
+          {/* next btn */}
+          <div className="btn-next cursor-pointer absolute top-1/2  -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
         </div>
       </TabPanel>
     </Box>

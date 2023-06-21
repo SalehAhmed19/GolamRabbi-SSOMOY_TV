@@ -4,7 +4,7 @@ const AudioCard = () => {
  
   return (
     <div className="bg-[#111118]  shadow-lg rounded-xl">
-      <div className="flex items-center px-5 mb-5">
+      <div className="flex items-center p-5">
         <img
           src="https://icon2.cleanpng.com/20180526/wpl/kisspng-prothom-alo-newspaper-dhaka-bengali-the-daily-star-5b0a1ae0c72e71.7298795815273888968159.jpg"
           alt=""
