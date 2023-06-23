@@ -2,11 +2,12 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
+import CourseCard from "../../Components/Isolated/Cards/CourseCard";
 import "../../Styles/Events.css";
 import leadership from "../../assets/images/leadership.jpg";
 import life from "../../assets/images/life.jpg";
 import media from "../../assets/images/media.jpg";
-import CourseCard from "./CourseCard";
+
 
 function Courses() {
   const [currentSlide, setCurrentSlide] = useState(0);

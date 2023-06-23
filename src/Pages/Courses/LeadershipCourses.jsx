@@ -1,7 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import leadership from "../../assets/images/leadership.jpg";
-import CourseCard from "./CourseCard";
+import CourseCard from "../../Components/Isolated/Cards/CourseCard";
+
 
 const LeadershipCourses = () => {
    const allLeaderShipCoursesData = [

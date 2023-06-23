@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "../../Components/Isolated/Modals/Modal";
-import CoursesModal from "../../Components/Isolated/Modals/CoursesModal";
+import Modal from "../Modals/Modal";
+import CoursesModal from "../Modals/CoursesModal";
 function CourseCard({ course }) {
   const [openModal, setOpenModal] = useState(false);
   return (

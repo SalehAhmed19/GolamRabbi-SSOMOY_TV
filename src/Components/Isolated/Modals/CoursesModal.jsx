@@ -42,6 +42,7 @@ const CoursesModal = ({ course, openModal, setOpenModal }) => {
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{ fontFamily: "Hind Siliguri" }}
       >
         <Box>
           <div
