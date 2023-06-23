@@ -1,7 +1,8 @@
-import * as React from "react";
-import PropTypes from "prop-types";
+import MenuIcon from "@mui/icons-material/Menu";
+import { createTheme, ThemeProvider } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -10,13 +11,11 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import logo from "../../assets/logo/logo.png";
-import { createTheme, ThemeProvider } from "@mui/material";
+import PropTypes from "prop-types";
+import * as React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo/logo.png";
 
 const drawerWidth = 240;
 const upperNavItems = ["লগইন", "সাবস্ক্রাইব"];
@@ -62,7 +61,7 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", }}>
       <Box variant="h6" sx={{ my: 2 }}>
         <Link to="/">
           <img className="w-20 p-5 mx-auto block" src={logo} alt="" />
