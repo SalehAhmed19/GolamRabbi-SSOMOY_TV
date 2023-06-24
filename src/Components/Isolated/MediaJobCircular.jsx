@@ -75,7 +75,7 @@ function MediaJobCircular() {
                 <SwiperSlide className="mb-14">
                   <div
                     key={a}
-                    className="keen-slider__slide rounded-lg bg-[#222]"
+                    className="rounded-lg bg-[#222]"
                   >
                     <img src={job} alt="" />
                     <div className="text-basic p-5">

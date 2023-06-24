@@ -141,90 +141,136 @@ function FanFun() {
         <Fade left>
           <FanFunLeft setOpen={setOpen} />
         </Fade>
-        <div className="mx-auto">
+        <div className="hidden md:block">
           {/* row 1 */}
-          <div className="grid grid-cols-1 gap-5  md:gap-0 p-8 md:flex md:space-x-[80px] lg:space-x-[70px]">
+          <div className="p-8 md:flex md:space-x-[80px] lg:space-x-[70px]">
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
           </div>
           {/* row 2 */}
-          <div className="grid grid-cols-1 gap-5 md:gap-0 md:mx-[150px] md:-mt-[65px] lg:mx-[140px] lg:-mt-[60px]  md:flex md:space-x-[80px]">
+          <div className="md:mx-[150px] md:-mt-[65px] lg:mx-[140px] lg:-mt-[60px]  md:flex md:space-x-[80px]">
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
           </div>
           {/* row 3   */}
-          <div className="grid grid-cols-1 gap-5 md:gap-0  md:mx-[32px] md:-mt-[33px] md:flex md:space-x-[80px]">
+          <div className="md:mx-[32px] md:-mt-[33px] md:flex md:space-x-[80px]">
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
+                className="md:w-40 md:-rotate-45 rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="md:hidden p-5 flex flex-col justify-center items-center">
+          {/* row 1 */}
+          <div className="mb-[40px]">
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[90px] rounded-md -rotate-45"
+              />
+            </div>
+          </div>
+          {/* row 2 */}
+          <div className="flex space-x-9">
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[100px] rounded-md -rotate-45"
+              />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[100px] rounded-md -rotate-45"
+              />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[100px] rounded-md -rotate-45"
+              />
+            </div>
+          </div>
+          {/* row 3 */}
+          <div className="mt-[40px]">
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[90px] rounded-md -rotate-45"
               />
             </div>
           </div>
