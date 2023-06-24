@@ -1,13 +1,20 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { Fade } from "react-reveal";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 import CourseCard from "../../Components/Isolated/Cards/CourseCard";
 import "../../Styles/Events.css";
 import leadership from "../../assets/images/leadership.jpg";
 import life from "../../assets/images/life.jpg";
 import media from "../../assets/images/media.jpg";
-
 
 function Courses() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,124 +38,272 @@ function Courses() {
       setLoaded(true);
     },
   });
-  const allCoursesData = [
+
+  const mediaCourse = [
     {
-      _id: 1,
-      title: "মিডিয়া কোর্স",
-      mediaCourse: [
-        {
-          name: "Media Mastery: Unleashing the Power of Communication",
-          img: media,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Digital Storytelling: Crafting Compelling Media Narratives",
-          img: media,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Media Evolution: Adapting to the Digital Landscape",
-          img: media,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Media Magic: The Art and Science of Engaging Audiences",
-          img: media,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-      ],
+      name: "Media Mastery: Unleashing the Power of Communication",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
-      _id: 2,
-      title: "লিডারশীপ কোর্স",
-      leadershipCourse: [
-        {
-          name: "Leadership Mastery: Unlocking Your Full Potential",
-          img: leadership,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "The Art of Effective Leadership: Inspire, Influence, and Impact",
-          img: leadership,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Leading with Purpose: Guiding Others Towards Success",
-          img: leadership,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Strategic Leadership: Navigating Complexity and Driving Results",
-          img: leadership,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-      ],
+      name: "Media Mastery: Unleashing the Power of Communication",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
-      _id: 3,
-      title: "লাইফ কোর্স",
-      lifeCourse: [
-        {
-          name: "Life Mastery: Unlocking Your Full Potential",
-          img: life,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "The Art of Living: Cultivating a Fulfilling and Balanced Life",
-          img: life,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Personal Growth and Development: Nurturing Your Best Self",
-          img: life,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-        {
-          name: "Discovering Your Life's Purpose: Aligning Passion and Meaning",
-          img: life,
-          des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
-        },
-      ],
+      name: "Media Mastery: Unleashing the Power of Communication",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Digital Storytelling: Crafting Compelling Media Narratives",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Media Evolution: Adapting to the Digital Landscape",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Media Magic: The Art and Science of Engaging Audiences",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Media Magic: The Art and Science of Engaging Audiences",
+      img: media,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
   ];
+  const leadershipCourse = [
+    {
+      name: "Leadership Mastery: Unlocking Your Full Potential",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Leadership Mastery: Unlocking Your Full Potential",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Leadership Mastery: Unlocking Your Full Potential",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "The Art of Effective Leadership: Inspire, Influence, and Impact",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Leading with Purpose: Guiding Others Towards Success",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Strategic Leadership: Navigating Complexity and Driving Results",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Strategic Leadership: Navigating Complexity and Driving Results",
+      img: leadership,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+  ];
+  const lifeCourse = [
+    {
+      name: "Life Mastery: Unlocking Your Full Potential",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Life Mastery: Unlocking Your Full Potential",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Life Mastery: Unlocking Your Full Potential",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "The Art of Living: Cultivating a Fulfilling and Balanced Life",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Personal Growth and Development: Nurturing Your Best Self",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Discovering Your Life's Purpose: Aligning Passion and Meaning",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+    {
+      name: "Discovering Your Life's Purpose: Aligning Passion and Meaning",
+      img: life,
+      des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
+    },
+  ];
+
   return (
-    <div className="lg:px-24 py-20">
+    <div className="lg:px-24 py-20 p-5">
       <Fade down>
         <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
           কোর্স সমূহ
         </h2>
       </Fade>
-
-      {allCoursesData.map((courses) => (
-        <div className="mt-10 mx-5 lg:mx-0" key={courses._id}>
-          <h3 className="text-primary text-2xl font-bold my-5">
-            {courses.title}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {/* this map for mediaCourses  */}
-            {courses?.mediaCourse?.map((course, index) => (
-              <CourseCard
-                key={index}
-                course={course}
-              />
-            ))}
-            {/* this map for leadershipCourses  */}
-            {courses?.leadershipCourse?.map((course,index) => (
-              <CourseCard
-                key={index}
-                course={course}
-              />
-            ))}
-            {/* this map for lifeCourses  */}
-            {courses?.lifeCourse?.map((course,index) => (
-              <CourseCard
-                key={index}
-                course={course}
-              />
-            ))}
+      {/* mediaCourse */}
+      <div className="my-10">
+        {/* title and arrows */}
+        <div className="flex justify-between items-center">
+          <h3 className="text-primary text-2xl font-bold my-5">মিডিয়া কোর্স</h3>
+          <div className="flex space-x-5">
+            {/* prev btn */}
+            <div className="media-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowLeft />
+              </span>
+            </div>
+            {/* next btn */}
+            <div className="media-btn-next cursor-pointer  bg-primary rounded-full w-[20px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowRight />
+              </span>
+            </div>
           </div>
         </div>
-      ))}
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          // loop={true}
+          navigation={{
+            prevEl: ".media-btn-prev",
+            nextEl: ".media-btn-next",
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            668: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          className=""
+        >
+          {mediaCourse?.map((course, index) => (
+            <SwiperSlide key={index}>
+              <CourseCard course={course} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      {/* leadershipCourse */}
+      <div className="my-10">
+        {/* title and arrows */}
+        <div className="flex justify-between items-center">
+          <h3 className="text-primary text-2xl font-bold my-5">
+            লিডারশীপ কোর্স
+          </h3>
+          <div className="flex space-x-5">
+            {/* prev btn */}
+            <div className="leadership-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowLeft />
+              </span>
+            </div>
+            {/* next btn */}
+            <div className="leadership-btn-next cursor-pointer  bg-primary rounded-full w-[20px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowRight />
+              </span>
+            </div>
+          </div>
+        </div>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          // loop={true}
+          navigation={{
+            prevEl: ".leadership-btn-prev",
+            nextEl: ".leadership-btn-next",
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            668: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          className=""
+        >
+          {leadershipCourse?.map((course, index) => (
+            <SwiperSlide key={index}>
+              <CourseCard course={course} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      {/* lifeCourse */}
+      <div className="my-10">
+        {/* title and arrows */}
+        <div className="flex justify-between items-center">
+          <h3 className="text-primary text-2xl font-bold my-5">লাইফ কোর্স</h3>
+          <div className="flex space-x-5">
+            {/* prev btn */}
+            <div className="life-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowLeft />
+              </span>
+            </div>
+            {/* next btn */}
+            <div className="life-btn-next cursor-pointer  bg-primary rounded-full w-[20px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowRight />
+              </span>
+            </div>
+          </div>
+        </div>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          // loop={true}
+          navigation={{
+            prevEl: ".life-btn-prev",
+            nextEl: ".life-btn-next",
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            668: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          className=""
+        >
+          {lifeCourse?.map((course, index) => (
+            <SwiperSlide key={index}>
+              <CourseCard course={course} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }

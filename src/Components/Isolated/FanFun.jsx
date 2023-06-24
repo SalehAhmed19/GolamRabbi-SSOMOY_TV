@@ -142,89 +142,89 @@ function FanFun() {
           <FanFunLeft setOpen={setOpen} />
         </Fade>
         <div className="mx-auto">
-          {/* 1 */}
+          {/* row 1 */}
           <div className="grid grid-cols-1 gap-5  md:gap-0 p-8 md:flex md:space-x-[80px] lg:space-x-[70px]">
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
           </div>
-          {/* 2 */}
+          {/* row 2 */}
           <div className="grid grid-cols-1 gap-5 md:gap-0 md:mx-[150px] md:-mt-[65px] lg:mx-[140px] lg:-mt-[60px]  md:flex md:space-x-[80px]">
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
           </div>
-          {/* 3   */}
+          {/* row 3   */}
           <div className="grid grid-cols-1 gap-5 md:gap-0  md:mx-[32px] md:-mt-[33px] md:flex md:space-x-[80px]">
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
             <div className="">
               <img
                 src={gr2}
                 alt=""
-                className="md:w-40 rotate-12 md:-rotate-45"
+                className="md:w-40 rotate-12 md:-rotate-45 rounded-md"
               />
             </div>
           </div>
