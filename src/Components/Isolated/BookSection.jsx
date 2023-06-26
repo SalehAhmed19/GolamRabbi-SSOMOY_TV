@@ -3,9 +3,8 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import { Autoplay, EffectFade, Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import book2 from "../../assets/images/book-2.png";
@@ -23,17 +22,16 @@ function BookSection() {
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
-            effect={"fade"}
             loop={true}
             navigation={{
               prevEl: ".book-btn-prev",
               nextEl: ".book-btn-next",
             }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Navigation, Autoplay, EffectFade]}
+            // autoplay={{
+            //   delay: 3500,
+            //   disableOnInteraction: false,
+            // }}
+            modules={[Navigation, Autoplay]}
             className=""
           >
             <SwiperSlide>
@@ -54,11 +52,14 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="float-right mt-8 w-[302px] h-[83px]">
-                  <button className="bg-primary font-bold p-5 text-base md:text-2xl">
+                <div className="relative w-full h-[83px]">
+                  <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
+                  <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
                     মূল্যঃ ২০৬ টাকা
                   </button>
                 </div>
+                </div>
+                
               </div>
             </SwiperSlide>
             <SwiperSlide>
