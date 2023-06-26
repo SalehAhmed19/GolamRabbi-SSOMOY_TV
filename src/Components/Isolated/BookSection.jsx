@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import book2 from "../../assets/images/book-2.png";
 import book1 from "../../assets/images/book1.jpg";
+import hafCircle from "../../assets/images/half-circle.png";
 function BookSection() {
   return (
     <>
@@ -16,8 +17,8 @@ function BookSection() {
         <div className="absolute  md:left-[240px] lg:left-[650px]  border-4 border-[#D89F17] border-dashed  opacity-[0.5] md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full">
           {/* <img src={hafCircle} alt="hafCircle" className="" /> */}
         </div>
-        <div className="absolute md:-top-[80px] md:right-1  border-b-4  border-[#D89F17] border-dashed   md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div>
-        <div className="absolute md:-bottom-[80px] md:left-1 border-t-4  border-[#D89F17] border-dashed   md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div>
+        {/* <div className="absolute md:-top-[80px] md:right-1  border-b-4  border-[#D89F17] border-dashed   md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div> */}
+        {/* <div className="absolute md:-bottom-[80px] md:left-1 border-t-4  border-[#D89F17] border-dashed   md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div> */}
         <div className="relative">
           <Swiper
             slidesPerView={1}
@@ -189,6 +190,14 @@ function BookSection() {
           <div className="absolute -top-[480px] w-full bg-primary h-[40px]"></div>
           <div className="absolute -top-[420px] w-full bg-primary h-[40px]"></div>
           <div className="absolute -top-[360px] w-full bg-primary h-[10px]"></div>
+        </div>
+        {/* right top shape */}
+        <div className="absolute -top-[40px] right-14 md:w-[100px] md:h-[100] -rotate-[90deg]">
+          <img src={hafCircle} alt="" />
+        </div>
+        {/* left bottom shape */}
+        <div className="absolute -bottom-[47px] left-14 md:w-[100px] md:h-[100] rotate-[92deg]">
+          <img src={hafCircle} alt="" />
         </div>
       </div>
     </>

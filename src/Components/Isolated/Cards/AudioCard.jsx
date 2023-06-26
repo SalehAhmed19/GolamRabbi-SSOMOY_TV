@@ -1,9 +1,8 @@
 import React from 'react';
 import audio from "../../../../public/paper-flutter-.mp3";
 const AudioCard = () => {
- 
   return (
-    <div className="bg-[#111118]  shadow-lg rounded-xl">
+    <div className="md:w-[600px] lg:w-[1100px]  bg-[#111118] border-[#D89F17] border-[3px]  shadow-lg rounded-xl ">
       <div className="flex items-center p-5">
         <img
           src="https://icon2.cleanpng.com/20180526/wpl/kisspng-prothom-alo-newspaper-dhaka-bengali-the-daily-star-5b0a1ae0c72e71.7298795815273888968159.jpg"
@@ -22,14 +21,18 @@ const AudioCard = () => {
         <img
           src="https://img.freepik.com/free-vector/hand-drawn-old-newspaper-pattern-design_23-2149614908.jpg?w=2000"
           alt=""
-          className="rounded-t-xl"
+          className="w-full h-[250px] rounded-t-xl"
         />
         <div
           className="p-5 text-white text-base"
           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
         >
           <p className="mb-5">শুনুন প্রাণ খুলে</p>
-          <audio controls src={audio} style={{width:"90%",margin:"10px"}}></audio>
+          <audio
+            controls
+            src={audio}
+            style={{ width: "90%", margin: "10px" }}
+          ></audio>
         </div>
       </div>
     </div>

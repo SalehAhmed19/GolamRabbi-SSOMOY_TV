@@ -129,7 +129,7 @@ export default function FeaturedTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="-mx-5 relative rounded-xl bg-[#111118] cursor-pointer p-5">
-          {/* slider container */}
+          {/* tv slider container */}
           <div className="select-none">
             <Swiper
               slidesPerView={1}
@@ -148,7 +148,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
                     src="https://www.youtube.com/embed/Lq5yXrYSVzg"
                     title="YouTube video player"
                     frameborder="0"
@@ -284,56 +284,61 @@ export default function FeaturedTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="-mx-5 relative  cursor-pointer">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            // loop={true}
-            navigation={{
-              prevEl: ".btn-prev",
-              nextEl: ".btn-next",
-            }}
-            modules={[Navigation]}
-            breakpoints={{
-              668: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-              },
-            }}
-            className=""
-          >
-            <SwiperSlide>
-              <AudioCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AudioCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AudioCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AudioCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AudioCard />
-            </SwiperSlide>
-          </Swiper>
-          {/* previous btn */}
-          <div className="btn-prev cursor-pointer absolute top-1/2  -left-9 lg:-left-16  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-            <span className="font-bold text-xl">
-              <MdOutlineKeyboardArrowLeft />
-            </span>
+        <div className="-mx-5 relative rounded-xl bg-[#111118] cursor-pointer p-5">
+          {/* audio slider container */}
+          <div className="select-none">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={20}
+              // loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={{
+                prevEl: ".btn-prev",
+                nextEl: ".btn-next",
+              }}
+              modules={[Navigation, Pagination]}
+              className="w-full md:w-4/5"
+            >
+              <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
+                  <AudioCard />
+              </SwiperSlide>
+              <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
+                  <AudioCard />
+              </SwiperSlide>
+              <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
+                  <AudioCard />
+              </SwiperSlide>
+              <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
+                  <AudioCard />
+              </SwiperSlide>
+              <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
+                  <AudioCard />
+              </SwiperSlide>
+            </Swiper>
+            {/* previous btn */}
+            <div className="hidden md:block btn-prev cursor-pointer absolute top-16 md:top-[240px]  md:left-6 lg:top-1/2 lg:left-[150px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowLeft />
+              </span>
+            </div>
+            {/* next btn */}
+            <div className="hidden md:block btn-next cursor-pointer absolute  top-16 md:top-[240px] md:right-6 lg:top-1/2 lg:right-[150px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowRight />
+              </span>
+            </div>
           </div>
-          {/* next btn */}
-          <div className="btn-next cursor-pointer absolute top-1/2  -right-9 lg:-right-16 bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-            <span className="font-bold text-xl">
-              <MdOutlineKeyboardArrowRight />
-            </span>
-          </div>
+          {/* shapes */}
+          {/* shape 1 */}
+          <div className="absolute top-0 left-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-dashed border-[#D89F17] rounded-tl-[500px] rounded-br-full"></div>
+          {/* shape 2 */}
+          <div className="absolute top-5 right-1 md:top-12 md:right-12 lg:top-8 lg:right-[200px]  md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] rounded-full bg-[#D89F17]"></div>
+          {/* shape 3 */}
+          <div className="absolute bottom-[40px] left-1 md:bottom-[90px] md:left-8 lg:bottom-8 lg:left-[200px]   md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] border-2 border-dashed border-[#D89F17] rounded-full"></div>
+          {/* shape 4 */}
+          <div className="absolute bottom-0 right-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] bg-[#D89F17] rounded-tl-full rounded-br-[500px]"></div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
