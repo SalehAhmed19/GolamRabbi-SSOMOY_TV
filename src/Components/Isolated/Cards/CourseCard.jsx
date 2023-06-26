@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import CoursesModal from "../../Components/Isolated/Modals/CoursesModal";
-function CourseCard({course}) {
+import Modal from "../Modals/Modal";
+import CoursesModal from "../Modals/CoursesModal";
+function CourseCard({ course }) {
   const [openModal, setOpenModal] = useState(false);
   return (
     <div className={`shadow-lg rounded-lg bg-[#ffffff0f] overflow-hidden`}>
@@ -13,7 +14,7 @@ function CourseCard({course}) {
             onClick={() => setOpenModal(!openModal)}
             className="font-bold py-2 px-4 rounded-full border-2 border-[#AF1453] hover:bg-[#AF1453] text-center text-[#fff]"
           >
-            এনরোল করো 
+            এনরোল করো
           </button>
           <h4 className="text-primary font-bold text-xl">১২০০ &#2547;</h4>
         </div>

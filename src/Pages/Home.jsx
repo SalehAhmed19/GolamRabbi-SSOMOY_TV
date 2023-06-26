@@ -54,7 +54,6 @@ function Home() {
         <Featured />
         <Invite />
         <About />
-        {/* <BookSection /> */}
         <BookSection />
         {/* <ImageGallery /> */}
         <SocialMedia />

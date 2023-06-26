@@ -1,7 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
+import CourseCard from "../../Components/Isolated/Cards/CourseCard";
 import media from "../../assets/images/media.jpg";
-import CourseCard from "./CourseCard";
+
 
 const MediaCourses = () => {
   const allMediaCoursesData = [

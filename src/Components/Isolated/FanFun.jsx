@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import FanFunLeft from "./FanFunLeft";
-import gr1 from "../../assets/images/people.png";
+import emailjs from "emailjs-com";
+import React from "react";
+import { toast } from "react-hot-toast";
+import { Fade } from "react-reveal";
 import gr2 from "../../assets/images/gr1.jpg";
 import gr3 from "../../assets/images/gr2.jpg";
 import gr4 from "../../assets/images/gr3.jpg";
 import gr5 from "../../assets/images/gr4.jpg";
 import gr6 from "../../assets/images/gr5.jpg";
-import { Fade, Zoom } from "react-reveal";
-import { ImageList, ImageListItem } from "@mui/material";
-import Modal from "./Modals/Modal";
+import FanFunLeft from "./FanFunLeft";
 import MuiModal from "./Modals/MuiModal";
-import { toast } from "react-hot-toast";
-import emailjs from "emailjs-com";
 
 // https://v1.nocodeapi.com/golamrabbytest/google_sheets/ErpScSALkInmlYSY
 
@@ -134,37 +131,104 @@ function FanFun() {
     console.log(form);
   };
   return (
-    <div className="py-14 lg:px-24">
+    <div className="py-14 lg:px-24 p-5">
       <Fade down>
-        <h1 className="text-primary text-center text-4xl font-bold">
+        <h1 className="mb-5 text-primary text-center text-4xl font-bold">
           ফান উইথ ফ্যান
         </h1>
       </Fade>
-      <div className="flex flex-col lg:flex-row my-20 mx-5">
+      <div className="grid gird-cols-1 lg:grid-cols-2 gap-5">
         <Fade left>
           <FanFunLeft setOpen={setOpen} />
         </Fade>
-        <div className="flex justify-end w-full">
-          <ImageList
-            sx={{ width: 500, height: 450 }}
-            variant="quilted"
-            cols={4}
-            rowHeight={121}
-          >
-            {itemData.map((item) => (
-              <ImageListItem
-                key={item.img}
-                cols={item.cols || 1}
-                rows={item.rows || 1}
-              >
-                <img
-                  {...srcset(item.img, 121, item.rows, item.cols)}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
+        {/* tablet and desktop */}
+        <div className="hidden md:block">
+          {/* row 1 */}
+          <div className="mx-[124px] p-8 flex space-x-[80px]">
+            <div className="overflow-hidden md:w-40 h-40 bg-secondary md:-rotate-45 rounded-md">
+              <img src={gr2} alt="" className="rotate-45" />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="md:w-40 md:-rotate-45 rounded-md"
+              />
+            </div>
+          </div>
+          {/* row 2 */}
+          <div className="mx-[30px] -mt-[64px] flex space-x-[80px]">
+            <div className="overflow-hidden md:w-40 h-40 bg-secondary md:-rotate-45 rounded-md">
+              <img src={gr2} alt="" className="rotate-45" />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="md:w-40 md:-rotate-45 rounded-md"
+              />
+            </div>
+          </div>
+          {/* row 3   */}
+          <div className="mx-[150px] -mt-[35px] flex space-x-[80px]">
+            <div className="overflow-hidden md:w-40 h-40 bg-secondary md:-rotate-45 rounded-md">
+              <img src={gr2} alt="" className="rotate-45" />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="md:w-40 md:-rotate-45 rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+        {/* mobile */}
+        <div className="md:hidden mx-auto">
+          {/* row 1 */}
+          <div className="flex space-x-[40px]">
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[90px] rounded-md -rotate-45"
+              />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[90px] rounded-md -rotate-45"
+              />
+            </div>
+          </div>
+          {/* row 2 */}
+          <div className="mx-[68px] -mt-[15px]">
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[85px] rounded-md -rotate-45"
+              />
+            </div>
+          </div>
+          {/* row 3 */}
+          <div className="flex mx-[3px] -mt-[15px] space-x-[40px]">
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[88px] rounded-md -rotate-45"
+              />
+            </div>
+            <div className="">
+              <img
+                src={gr2}
+                alt=""
+                className="w-[88px] rounded-md -rotate-45"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
