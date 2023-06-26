@@ -1,5 +1,5 @@
 import React from "react";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const ReviewCard = ({ d }) => {
   return (

@@ -54,61 +54,10 @@ function BookSection() {
                 </div>
                 <div className="relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
-                  <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
-                    মূল্যঃ ২০৬ টাকা
-                  </button>
-                </div>
-                </div>
-                
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full mb-5">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
-                      src={book1}
-                      alt=""
-                    />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
-                      কিনতে চাও?
+                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                      মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
-                </div>
-                <div className="float-right mt-8 w-[302px] h-[83px]">
-                  <button className="bg-primary font-bold p-5 text-base md:text-2xl">
-                    মূল্যঃ ২০৬ টাকা
-                  </button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full mb-5">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
-                      src={book2}
-                      alt=""
-                    />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
-                      কিনতে চাও?
-                    </button>
-                  </div>
-                </div>
-                <div className="float-right mt-8 w-[302px] h-[83px]">
-                  <button className="bg-primary font-bold p-5 text-base md:text-2xl">
-                    মূল্যঃ ২০৬ টাকা
-                  </button>
                 </div>
               </div>
             </SwiperSlide>
@@ -130,10 +79,12 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="float-right mt-8 w-[302px] h-[83px]">
-                  <button className="bg-primary font-bold p-5 text-base md:text-2xl">
-                    মূল্যঃ ২০৬ টাকা
-                  </button>
+                <div className="relative w-full h-[83px]">
+                  <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
+                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                      মূল্যঃ ২০৬ টাকা
+                    </button>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -155,22 +106,78 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="float-right mt-8 w-[302px] h-[83px]">
-                  <button className="bg-primary font-bold p-5 text-base md:text-2xl">
-                    মূল্যঃ ২০৬ টাকা
-                  </button>
+                <div className="relative w-full h-[83px]">
+                  <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
+                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                      মূল্যঃ ২০৬ টাকা
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full mb-5">
+                <div className="text-primary font-bold mx-16 lg:mx-20">
+                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
+                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <div className="">
+                    <img
+                      className="w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      src={book1}
+                      alt=""
+                    />
+                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                      কিনতে চাও?
+                    </button>
+                  </div>
+                </div>
+                <div className="relative w-full h-[83px]">
+                  <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
+                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                      মূল্যঃ ২০৬ টাকা
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full mb-5">
+                <div className="text-primary font-bold mx-16 lg:mx-20">
+                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
+                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <div className="">
+                    <img
+                      className="w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      src={book2}
+                      alt=""
+                    />
+                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                      কিনতে চাও?
+                    </button>
+                  </div>
+                </div>
+                <div className="relative w-full h-[83px]">
+                  <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
+                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                      মূল্যঃ ২০৬ টাকা
+                    </button>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
           {/* previous btn */}
-          <div className="book-btn-prev z-10 cursor-pointer absolute top-[240px] left-[10px] md:top-[242px] lg:top-[425px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
+          <div className="book-btn-prev z-10 cursor-pointer absolute top-[230px] left-[10px]  lg:top-[415px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
             <span className="text-primary font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
           </div>
           {/* next btn */}
-          <div className="book-btn-next z-10 cursor-pointer absolute top-[240px] right-[10px] md:top-[242px] lg:top-[425px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
+          <div className="book-btn-next z-10 cursor-pointer absolute top-[230px] right-[10px]  lg:top-[415px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
             <span className="text-primary font-bold text-xl">
               <MdOutlineKeyboardArrowRight />
             </span>
