@@ -24,8 +24,8 @@ function BookSection() {
             spaceBetween={20}
             loop={true}
             navigation={{
-              prevEl: ".btn-prev",
-              nextEl: ".btn-next",
+              prevEl: ".book-btn-prev",
+              nextEl: ".book-btn-next",
             }}
             autoplay={{
               delay: 2500,
@@ -161,13 +161,13 @@ function BookSection() {
             </SwiperSlide>
           </Swiper>
           {/* previous btn */}
-          <div className="btn-prev z-10 cursor-pointer absolute top-[240px] left-[10px] md:top-[242px] lg:top-[425px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
+          <div className="book-btn-prev z-10 cursor-pointer absolute top-[240px] left-[10px] md:top-[242px] lg:top-[425px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
             <span className="text-primary font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
           </div>
           {/* next btn */}
-          <div className="btn-next z-10 cursor-pointer absolute top-[240px] right-[10px] md:top-[242px] lg:top-[425px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
+          <div className="book-btn-next z-10 cursor-pointer absolute top-[240px] right-[10px] md:top-[242px] lg:top-[425px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
             <span className="text-primary font-bold text-xl">
               <MdOutlineKeyboardArrowRight />
             </span>
