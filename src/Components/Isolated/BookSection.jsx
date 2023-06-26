@@ -3,8 +3,9 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay, EffectFade, Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import book2 from "../../assets/images/book-2.png";
@@ -22,6 +23,7 @@ function BookSection() {
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
+            effect={"fade"}
             loop={true}
             navigation={{
               prevEl: ".book-btn-prev",
@@ -31,7 +33,7 @@ function BookSection() {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, EffectFade]}
             className=""
           >
             <SwiperSlide>
