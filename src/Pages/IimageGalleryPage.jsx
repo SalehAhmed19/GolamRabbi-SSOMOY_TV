@@ -1,10 +1,10 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import img1 from "../assets/images/gr1.jpg";
 import img2 from "../assets/images/gr2.jpg";
 import img3 from "../assets/images/gr3.jpg";
 import img4 from "../assets/images/gr4.jpg";
 import img5 from "../assets/images/gr5.jpg";
-import { Fade } from "react-reveal";
 
 function IimageGalleryPage() {
   const images = [
@@ -32,262 +32,263 @@ function IimageGalleryPage() {
         </h2>
       </Fade>
       <div className="container mx-auto p-4">
-      
-          {/* container  */}
-          <div className="container mx-auto p-4">
-            {/* first content */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-              {/* left site  */}
-              <div className="">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <img
-                    src={img1}
-                    alt=""
-                    className="w-full h-60 md:h-auto object-cover rounded-md"
-                  />
-                  <img
-                    src={img1}
-                    alt=""
-                    className="w-full h-60 md:h-auto object-cover rounded-md"
-                  />
-                </div>
-                <div className="mt-3">
-                  <img
-                    src={img3}
-                    alt=""
-                    className="w-full h-60 md:h-auto object-cover rounded-md"
-                  />
-                </div>
-              </div>
-              {/* right site */}
-              <div className="md:col-span-3">
+        {/* container  */}
+        <div className="container mx-auto p-4">
+          {/* first content */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+            {/* left site  */}
+            <div className="">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <img
-                  src={img5}
+                  src={img1}
                   alt=""
-                  className="w-full h-60 md:h-[268px] lg:h-[560px]  object-cover rounded-md"
+                  className="w-full h-60 md:h-auto object-cover rounded-md"
+                />
+                <img
+                  src={img1}
+                  alt=""
+                  className="w-full h-60 md:h-auto object-cover rounded-md"
+                />
+              </div>
+              <div className="mt-3">
+                <img
+                  src={img3}
+                  alt=""
+                  className="w-full h-60 md:h-auto object-cover rounded-md"
                 />
               </div>
             </div>
-            {/* second content */}
-            <div className="mt-5 grid grid-cols-1 md:grid-cols-5 gap-3">
-              {/* first items  */}
-              <div className="md:col-span-2">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {/* item 1 left  */}
-                  <div className="">
-                    <img
-                      src={img2}
-                      alt=""
-                      className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
-                    />
-                  </div>
-                  {/* right */}
-                  <div className="space-y-3">
-                    <img
-                      src={img1}
-                      alt=""
-                      className="w-full h-60 md:h-[180px] lg:h-[280px] object-cover rounded-md"
-                    />
-                    <img
-                      src={img3}
-                      alt=""
-                      className="w-full h-60 md:h-[113px] lg:h-[149px] object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-                {/* item 2 */}
-                <div className="mt-3">
+            {/* right site */}
+            <div className="md:col-span-3">
+              <img
+                src={img5}
+                alt=""
+                className="w-full h-60 md:h-[268px] lg:h-[560px]  object-cover rounded-md"
+              />
+            </div>
+          </div>
+          {/* second content */}
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-5 gap-3">
+            {/* first items  */}
+            <div className="md:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {/* item 1 left  */}
+                <div className="">
                   <img
-                    src={img4}
+                    src={img2}
                     alt=""
-                    className="w-full h-60 md:h-[100px] lg:h-[200px] object-cover rounded-md"
+                    className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
                   />
                 </div>
-              </div>
-              {/* second items */}
-              <div className="md:col-span-2">
-                {/* top  */}
-                <div className="mb-3">
+                {/* right */}
+                <div className="space-y-3">
                   <img
-                    src={img4}
+                    src={img1}
                     alt=""
                     className="w-full h-60 md:h-[180px] lg:h-[280px] object-cover rounded-md"
                   />
+                  <img
+                    src={img3}
+                    alt=""
+                    className="w-full h-60 md:h-[113px] lg:h-[149px] object-cover rounded-md"
+                  />
+                </div>
+              </div>
+              {/* item 2 */}
+              <div className="mt-3">
+                <img
+                  src={img4}
+                  alt=""
+                  className="w-full h-60 md:h-[100px] lg:h-[200px] object-cover rounded-md"
+                />
+              </div>
+            </div>
+            {/* second items */}
+            <div className="md:col-span-2">
+              {/* top  */}
+              <div className="mb-3">
+                <img
+                  src={img4}
+                  alt=""
+                  className="w-full h-60 md:h-[180px] lg:h-[280px] object-cover rounded-md"
+                />
+              </div>
+              {/* center */}
+              <div className="mb-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+                {/* left */}
+                <div className="md:col-span-2">
+                  <img
+                    src={img4}
+                    alt=""
+                    className="w-full h-60 md:h-[80px] object-cover rounded-md"
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src={img3}
+                    alt=""
+                    className="w-full h-60 md:h-[80px] object-cover rounded-md"
+                  />
+                </div>
+              </div>
+              {/* bottom */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+                <div className="">
+                  <img
+                    src={img2}
+                    alt=""
+                    className="w-full h-60 md:h-[133px] lg:h-[268px] object-cover rounded-md"
+                  />
+                </div>
+                <div className="md:col-span-3">
+                  <img
+                    src={img5}
+                    alt=""
+                    className="w-full h-60 md:h-[135px] lg:h-[269px] object-cover rounded-md"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* third items */}
+            <div className="">
+              <div className="mb-3">
+                <img
+                  src={img5}
+                  alt=""
+                  className="w-full h-60 md:h-[130px] object-cover rounded-md"
+                />
+              </div>
+              <div className="mb-3">
+                <img
+                  src={img4}
+                  alt=""
+                  className="w-full h-60 md:h-[130px] lg:h-[230px] object-cover rounded-md"
+                />
+              </div>
+              <div className="">
+                <img
+                  src={img4}
+                  alt=""
+                  className="w-full h-60 md:h-[135px] lg:h-[270px] object-cover rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+          {/* third content */}
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-5 gap-3">
+            {/* first items  */}
+            <div className="">
+              <div className="">
+                {/* item 1 left  */}
+                <div className="mb-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <img
+                    src={img2}
+                    alt=""
+                    className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
+                  />
+                  <img
+                    src={img2}
+                    alt=""
+                    className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
+                  />
                 </div>
                 {/* center */}
-                <div className="mb-3 grid grid-cols-1 md:grid-cols-3 gap-3">
-                  {/* left */}
-                  <div className="md:col-span-2">
-                    <img
-                      src={img4}
-                      alt=""
-                      className="w-full h-60 md:h-[80px] object-cover rounded-md"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src={img3}
-                      alt=""
-                      className="w-full h-60 md:h-[80px] object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-                {/* bottom */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-                  <div className="">
-                    <img
-                      src={img2}
-                      alt=""
-                      className="w-full h-60 md:h-[133px] lg:h-[268px] object-cover rounded-md"
-                    />
-                  </div>
-                  <div className="md:col-span-3">
-                    <img
-                      src={img5}
-                      alt=""
-                      className="w-full h-60 md:h-[135px] lg:h-[269px] object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* third items */}
-              <div className="">
-                <div className="mb-3">
-                  <img
-                    src={img5}
-                    alt=""
-                    className="w-full h-60 md:h-[130px] object-cover rounded-md"
-                  />
-                </div>
                 <div className="mb-3">
                   <img
                     src={img4}
                     alt=""
-                    className="w-full h-60 md:h-[130px] lg:h-[230px] object-cover rounded-md"
+                    className="w-full h-60 md:h-[100px] lg:h-[150px] object-cover rounded-md"
+                  />
+                </div>
+              </div>
+              {/* bottom */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <img
+                  src={img2}
+                  alt=""
+                  className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
+                />
+                <img
+                  src={img2}
+                  alt=""
+                  className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
+                />
+              </div>
+            </div>
+            {/* second items */}
+            <div className="md:col-span-2">
+              {/* top*/}
+              <div className="mb-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="">
+                  <img
+                    src={img1}
+                    alt=""
+                    className="w-full h-60 md:h-[260px] object-cover rounded-md"
                   />
                 </div>
                 <div className="">
                   <img
-                    src={img4}
+                    src={img3}
                     alt=""
-                    className="w-full h-60 md:h-[135px] lg:h-[270px] object-cover rounded-md"
+                    className="w-full h-60 md:h-[260px] object-cover rounded-md"
+                  />
+                </div>
+              </div>
+              {/*center    */}
+              <div className="mb-3">
+                <img
+                  src={img5}
+                  alt=""
+                  className="w-full h-60 md:h-[350px] lg:h-[480px] object-cover rounded-md"
+                />
+              </div>
+              {/* bottom */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+                <div className="">
+                  <img
+                    src={img1}
+                    alt=""
+                    className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src={img3}
+                    alt=""
+                    className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src={img1}
+                    alt=""
+                    className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src={img3}
+                    alt=""
+                    className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
                   />
                 </div>
               </div>
             </div>
-             {/* third content */}
-            <div className="mt-5 grid grid-cols-1 md:grid-cols-5 gap-3">
-              {/* first items  */}
+            {/* third items */}
+            <div className="md:col-span-2 relative">
               <div className="">
-                <div className="">
-                  {/* item 1 left  */}
-                  <div className="mb-3 grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <img
-                      src={img2}
-                      alt=""
-                      className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
-                    />
-                    <img
-                      src={img2}
-                      alt=""
-                      className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
-                    />
-                  </div>
-                  {/* center */}
-                  <div className="mb-3">
-                    <img
-                      src={img4}
-                      alt=""
-                      className="w-full h-60 md:h-[100px] lg:h-[150px] object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-                {/* bottom */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <img
-                    src={img2}
-                    alt=""
-                    className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
-                  />
-                  <img
-                    src={img2}
-                    alt=""
-                    className="w-full h-60 md:h-[305px] lg:h-[440px] object-cover rounded-md"
-                  />
-                </div>
+                <img
+                  src={img2}
+                  alt=""
+                  className="w-full h-60 md:h-[735px] lg:h-[1055px] object-cover rounded-md"
+                />
               </div>
-              {/* second items */}
-              <div className="md:col-span-2">
-                {/* top*/}
-                <div className="mb-3 grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div className="">
-                    <img
-                      src={img1}
-                      alt=""
-                      className="w-full h-60 md:h-[260px] object-cover rounded-md"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src={img3}
-                      alt=""
-                      className="w-full h-60 md:h-[260px] object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-                {/*center    */}
-                <div className="mb-3">
-                  <img
-                    src={img5}
-                    alt=""
-                    className="w-full h-60 md:h-[350px] lg:h-[480px] object-cover rounded-md"
-                  />
-                </div>
-                {/* bottom */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-                  <div className="">
-                    <img
-                      src={img1}
-                      alt=""
-                      className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src={img3}
-                      alt=""
-                      className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src={img1}
-                      alt=""
-                      className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src={img3}
-                      alt=""
-                      className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
-                    />
-                  </div>
-                </div>
+              <div className="absolute top-0  transition-all duration-300 delay-75 hover:transition-all hover:duration-300 hover:delay-75 hover:bg-black/50 w-full h-60 md:h-[735px] lg:h-[1055px] rounded-md">
               </div>
-              {/* third items */}
-              <div className="md:col-span-2">
-                <div className="">
-                  <img
-                    src={img2}
-                    alt=""
-                    className="w-full h-60 md:h-[735px] lg:h-[1055px] object-cover rounded-md"
-                  />
-                </div>
-              </div>
+              <h1 className="text-primary text-3xl hidden hover:block">faysal</h1>
             </div>
-             
           </div>
+        </div>
       </div>
     </div>
   );

@@ -174,47 +174,27 @@ function FanFun() {
         {/* mobile */}
         <div className="md:hidden mx-auto">
           {/* row 1 */}
-          <div className="flex space-x-[40px] ">
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[90px] rounded-md -rotate-45"
-              />
+          <div className="flex space-x-[45px]">
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[90px] rounded-md -rotate-45"
-              />
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
           </div>
           {/* row 2 */}
-          <div className="mx-[68px] -mt-[15px]">
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[85px] rounded-md -rotate-45"
-              />
+          <div className="mx-[70px] -mt-[10px]">
+            <div className="border border-[#F80264] rounded-md w-[90px] -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
           </div>
           {/* row 3 */}
-          <div className="flex mx-[3px] -mt-[15px] space-x-[40px]">
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[88px] rounded-md -rotate-45"
-              />
+          <div className="mx-[2px] -mt-[10px] flex space-x-[45px]">
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[88px] rounded-md -rotate-45"
-              />
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
           </div>
         </div>

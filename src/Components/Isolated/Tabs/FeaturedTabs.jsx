@@ -160,7 +160,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -172,7 +172,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -184,7 +184,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -196,7 +196,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -302,19 +302,19 @@ export default function FeaturedTabs() {
               className="w-full md:w-4/5"
             >
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
-                  <AudioCard />
+                <AudioCard />
               </SwiperSlide>
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
-                  <AudioCard />
+                <AudioCard />
               </SwiperSlide>
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
-                  <AudioCard />
+                <AudioCard />
               </SwiperSlide>
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
-                  <AudioCard />
+                <AudioCard />
               </SwiperSlide>
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
-                  <AudioCard />
+                <AudioCard />
               </SwiperSlide>
             </Swiper>
             {/* previous btn */}
