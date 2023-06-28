@@ -1,9 +1,9 @@
 import React from "react";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-
+import { FaQuoteLeft } from "react-icons/fa";
+// 
 const ReviewCard = ({ d }) => {
   return (
-    <div className="py-10 px-5 shadow-lg flex flex-col items-center lg:flex-row  mx-auto bg-[#111118] rounded-md">
+    <div className="p-5 lg:p-10 shadow-lg flex flex-col lg:flex-row mx-auto bg-[#111118] rounded-md">
       <div>
         <div className="bg-primary h-3 w-14 mx-auto rounded-t-md"></div>
         <div className="lg:w-20 bg-[#fff] inline-block p-2 shadow-lg">

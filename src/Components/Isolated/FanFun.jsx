@@ -2,7 +2,7 @@ import emailjs from "emailjs-com";
 import React from "react";
 import { toast } from "react-hot-toast";
 import { Fade } from "react-reveal";
-import gr2 from "../../assets/images/gr1.jpg";
+import gr2 from "../../assets/images/golamrabby.png";
 import gr3 from "../../assets/images/gr2.jpg";
 import gr4 from "../../assets/images/gr3.jpg";
 import gr5 from "../../assets/images/gr4.jpg";
@@ -144,89 +144,57 @@ function FanFun() {
         {/* tablet and desktop */}
         <div className="hidden md:block">
           {/* row 1 */}
-          <div className="mx-[124px] p-8 flex space-x-[80px]">
-            <div className="overflow-hidden md:w-40 h-40 bg-secondary md:-rotate-45 rounded-md">
+          <div className="md:mx-[124px] md:p-8 md:flex md:space-x-[80px]">
+            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
               <img src={gr2} alt="" className="rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="md:w-40 md:-rotate-45 rounded-md"
-              />
+            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
+              <img src={gr2} alt="" className="rotate-45" />
             </div>
           </div>
           {/* row 2 */}
-          <div className="mx-[30px] -mt-[64px] flex space-x-[80px]">
-            <div className="overflow-hidden md:w-40 h-40 bg-secondary md:-rotate-45 rounded-md">
+          <div className="md:mx-[35px] md:-mt-[66px] md:flex md:space-x-[80px]">
+            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
               <img src={gr2} alt="" className="rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="md:w-40 md:-rotate-45 rounded-md"
-              />
+            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
+              <img src={gr2} alt="" className="rotate-45" />
             </div>
           </div>
           {/* row 3   */}
-          <div className="mx-[150px] -mt-[35px] flex space-x-[80px]">
-            <div className="overflow-hidden md:w-40 h-40 bg-secondary md:-rotate-45 rounded-md">
+          <div className="md:mx-[155px] md:-mt-[36px] md:flex md:space-x-[80px] ">
+            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
               <img src={gr2} alt="" className="rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="md:w-40 md:-rotate-45 rounded-md"
-              />
+            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
+              <img src={gr2} alt="" className="rotate-45" />
             </div>
           </div>
         </div>
         {/* mobile */}
         <div className="md:hidden mx-auto">
           {/* row 1 */}
-          <div className="flex space-x-[40px]">
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[90px] rounded-md -rotate-45"
-              />
+          <div className="flex space-x-[45px]">
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[90px] rounded-md -rotate-45"
-              />
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
           </div>
           {/* row 2 */}
-          <div className="mx-[68px] -mt-[15px]">
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[85px] rounded-md -rotate-45"
-              />
+          <div className="mx-[70px] -mt-[10px]">
+            <div className="border border-[#F80264] rounded-md w-[90px] -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
           </div>
           {/* row 3 */}
-          <div className="flex mx-[3px] -mt-[15px] space-x-[40px]">
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[88px] rounded-md -rotate-45"
-              />
+          <div className="mx-[2px] -mt-[10px] flex space-x-[45px]">
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
-            <div className="">
-              <img
-                src={gr2}
-                alt=""
-                className="w-[88px] rounded-md -rotate-45"
-              />
+            <div className="border border-[#F80264] rounded-md -rotate-45">
+              <img src={gr2} alt="" className="w-[90px] rotate-45" />
             </div>
           </div>
         </div>

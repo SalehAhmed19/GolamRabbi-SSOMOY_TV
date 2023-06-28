@@ -1,11 +1,18 @@
-import React, { useState } from "react";
-import { Fade, Zoom } from "react-reveal";
-import img from "../../assets/images/user.jpeg";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import React from "react";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { Fade } from "react-reveal";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
+import img from "../../assets/images/user.jpeg";
 import ReviewCard from "./ReviewCard";
-
 function Testimonals() {
   const animation = { duration: 105000, easing: (t) => t };
   const [sliderRef] = useKeenSlider({
@@ -57,13 +64,72 @@ function Testimonals() {
           টেস্টিমনিয়ালস
         </h1>
       </Fade>
-      <div className="grid grid-cols-3 gap-5">
-        {/* <div ref={sliderRef} className="keen-slider bg-[#16181D]"> */}
-        {data.map((d, idx) => (
-          // <div key={idx} className="keen-slider__slide py-4">
-          <ReviewCard d={d} />
-          // </div>
-        ))}
+      <div className="relative">
+        <Swiper
+          navigation={{
+            prevEl: ".btn-prev",
+            nextEl: ".btn-next",
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div
+              ref={sliderRef}
+              className="grid grid-cols-2 gap-5 bg-[#16181D]"
+            >
+              {data.map((d, idx) => (
+                <ReviewCard d={d} key={idx} />
+              ))}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              ref={sliderRef}
+              className="grid grid-cols-2 gap-5 bg-[#16181D]"
+            >
+              {data.map((d, idx) => (
+                <ReviewCard d={d} key={idx} />
+              ))}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              ref={sliderRef}
+              className="grid grid-cols-2 gap-5 bg-[#16181D]"
+            >
+              {data.map((d, idx) => (
+                <ReviewCard d={d} key={idx} />
+              ))}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              ref={sliderRef}
+              className="grid grid-cols-2 gap-5 bg-[#16181D]"
+            >
+              {data.map((d, idx) => (
+                <ReviewCard d={d} key={idx} />
+              ))}
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <div className="relative">
+          <div className="z-10 absolute -top-[180px] right-[300px] flex space-x-10">
+            {/* previous btn */}
+            <div className="hidden md:block btn-prev cursor-pointer  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowLeft />
+              </span>
+            </div>
+            {/* next btn */}
+            <div className="hidden md:block btn-next cursor-pointer  bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowRight />
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     // </div>
