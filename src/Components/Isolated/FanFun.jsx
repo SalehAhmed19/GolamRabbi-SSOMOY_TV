@@ -142,7 +142,7 @@ function FanFun() {
           <FanFunLeft setOpen={setOpen} />
         </Fade>
         {/* tablet and desktop */}
-        <div className="hidden md:block">
+        <div className="hidden md:block mx-auto">
           {/* row 1 */}
           <div className="md:mx-[124px] md:p-8 md:flex md:space-x-[80px]">
             <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">

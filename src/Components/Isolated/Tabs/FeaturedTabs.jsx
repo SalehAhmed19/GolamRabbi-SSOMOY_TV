@@ -139,8 +139,8 @@ export default function FeaturedTabs() {
                 clickable: true,
               }}
               navigation={{
-                prevEl: ".btn-prev",
-                nextEl: ".btn-next",
+                prevEl: ".tv-btn-prev",
+                nextEl: ".tv-btn-next",
               }}
               modules={[Navigation, Pagination]}
               className="w-full md:w-4/5"
@@ -207,13 +207,13 @@ export default function FeaturedTabs() {
               </SwiperSlide>
             </Swiper>
             {/* previous btn */}
-            <div className="hidden md:block btn-prev cursor-pointer absolute top-16 md:top-[240px]  md:left-6 lg:left-[150px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <div className="hidden md:block tv-btn-prev cursor-pointer absolute top-16 md:top-[240px]  md:left-6 lg:left-[150px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
               <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowLeft />
               </span>
             </div>
             {/* next btn */}
-            <div className="hidden md:block btn-next cursor-pointer absolute  top-16 md:top-[240px] md:right-6 lg:right-[150px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <div className="hidden md:block tv-btn-next cursor-pointer absolute  top-16 md:top-[240px] md:right-6 lg:right-[150px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
               <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowRight />
               </span>
@@ -295,8 +295,8 @@ export default function FeaturedTabs() {
                 clickable: true,
               }}
               navigation={{
-                prevEl: ".btn-prev",
-                nextEl: ".btn-next",
+                prevEl: ".audio-btn-prev",
+                nextEl: ".audio-btn-next",
               }}
               modules={[Navigation, Pagination]}
               className="w-full md:w-4/5"
@@ -318,13 +318,13 @@ export default function FeaturedTabs() {
               </SwiperSlide>
             </Swiper>
             {/* previous btn */}
-            <div className="hidden md:block btn-prev cursor-pointer absolute top-16 md:top-[240px]  md:left-6 lg:top-1/2 lg:left-[150px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <div className="hidden md:block audio-btn-prev cursor-pointer absolute top-16 md:top-[240px]  md:left-6 lg:top-1/2 lg:left-[150px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
               <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowLeft />
               </span>
             </div>
             {/* next btn */}
-            <div className="hidden md:block btn-next cursor-pointer absolute  top-16 md:top-[240px] md:right-6 lg:top-1/2 lg:right-[150px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <div className="hidden md:block audio-btn-next cursor-pointer absolute  top-16 md:top-[240px] md:right-6 lg:top-1/2 lg:right-[150px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
               <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowRight />
               </span>

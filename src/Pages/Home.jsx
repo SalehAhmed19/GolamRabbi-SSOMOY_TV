@@ -1,30 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
+import "../App.css";
+import About from "../Components/Isolated/About";
 import Advertisement from "../Components/Isolated/Advertisement";
 import Advertisement2 from "../Components/Isolated/Advertisement2";
 import Banner from "../Components/Isolated/Banner";
 import Blogs from "../Components/Isolated/Blogs";
+import BookSection from "../Components/Isolated/BookSection";
 import Course from "../Components/Isolated/Course";
 import Events from "../Components/Isolated/Events";
 import FanFun from "../Components/Isolated/FanFun";
+import Featured from "../Components/Isolated/Featured";
 import Features from "../Components/Isolated/Features";
+import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
+import Invite from "../Components/Isolated/Invite";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
 import MockTest from "../Components/Isolated/MockTest";
 import MyAward from "../Components/Isolated/MyAward";
+import Quotes from "../Components/Isolated/Quotes";
 import Services from "../Components/Isolated/Services";
 import Skills from "../Components/Isolated/Skills";
 import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
-import Quotes from "../Components/Isolated/Quotes";
 import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
-import About from "../Components/Isolated/About";
-import Invite from "../Components/Isolated/Invite";
-import BookSection from "../Components/Isolated/BookSection";
-import Featured from "../Components/Isolated/Featured";
-import "../App.css";
-import ImageGallery from "../Components/Isolated/ImageGallery";
-import bg from "../assets/images/background.png";
 
 function Home() {
   return (
@@ -55,7 +54,7 @@ function Home() {
         <Invite />
         <About />
         <BookSection />
-        {/* <ImageGallery /> */}
+        <HomeImageGallery />
         <SocialMedia />
       </div>
     </div>

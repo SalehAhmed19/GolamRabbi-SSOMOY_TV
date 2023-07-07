@@ -5,7 +5,6 @@ import img2 from "../assets/images/gr2.jpg";
 import img3 from "../assets/images/gr3.jpg";
 import img4 from "../assets/images/gr4.jpg";
 import img5 from "../assets/images/gr5.jpg";
-
 function IimageGalleryPage() {
   const images = [
     img1,
@@ -284,12 +283,13 @@ function IimageGalleryPage() {
                 />
               </div>
               <div className="absolute top-0  transition-all duration-300 delay-75 hover:transition-all hover:duration-300 hover:delay-75 hover:bg-black/50 w-full h-60 md:h-[735px] lg:h-[1055px] rounded-md">
+                <h1 className="text-primary text-3xl">faysal</h1>
               </div>
-              <h1 className="text-primary text-3xl hidden hover:block">faysal</h1>
             </div>
           </div>
         </div>
       </div>
+   
     </div>
   );
 }
