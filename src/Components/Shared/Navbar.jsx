@@ -27,6 +27,7 @@ const lowerNavItems = [
   { menu: "ইনভাইট", route: "/invitation" },
   { menu: "হোয়াটস নিউ", route: "/invitation" },
   { menu: "গ্যালারি", route: "/gallery" },
+  { menu: "ড্যাশবোর্ড", route: "/dashboard" },
 ];
 
 const theme = createTheme({
