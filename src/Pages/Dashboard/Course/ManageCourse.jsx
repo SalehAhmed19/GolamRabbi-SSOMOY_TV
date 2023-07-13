@@ -10,7 +10,8 @@ import AddCoursesModal from "../../../Components/Isolated/Modals/AddCoursesModal
 import Leadership from "./Leadership";
 import Life from "./Life";
 import Media from "./Media";
-const Course = () => {
+
+const ManageCourse = () => {
   const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
@@ -22,7 +23,6 @@ const Course = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   return (
     <Box sx={{ marginX: "20px" }}>
       <Button
@@ -127,4 +127,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default ManageCourse;

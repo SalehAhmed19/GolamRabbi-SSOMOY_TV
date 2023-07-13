@@ -20,7 +20,8 @@ import MediaCourses from "./Pages/Courses/MediaCourses";
 import About from "./Pages/Dashboard/About";
 import Books from "./Pages/Dashboard/Books";
 import Circular from "./Pages/Dashboard/Circular";
-import Course from "./Pages/Dashboard/Course/Course";
+import CourseEnrolment from "./Pages/Dashboard/Course/CourseEnrolment";
+import ManageCourse from "./Pages/Dashboard/Course/ManageCourse";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardHome from "./Pages/Dashboard/DashboardHome";
 import Events from "./Pages/Dashboard/Events";
@@ -76,7 +77,8 @@ function App() {
           {/* dashboard */}
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardHome />} />
-            <Route path="course" element={<Course />} />
+            <Route path="manage-course" element={<ManageCourse />} />
+            <Route path="course-enrollment" element={<CourseEnrolment />} />
             <Route path="events" element={<Events />} />
             <Route path="circular" element={<Circular />} />
             <Route path="testimonials" element={<Testimonials />} />
