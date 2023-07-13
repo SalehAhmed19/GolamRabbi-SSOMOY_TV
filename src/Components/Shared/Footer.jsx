@@ -89,7 +89,7 @@ const Footer = () => {
       </div>
       {/* bottom part */}
       <div className="relative">
-        <div className="absolute top-0 left-[30px] md:left-[18%] lg:left-[40%] w-[350px] md:w-[413px] h-[50px] bg-[#f6b93f] rounded-tl-full rounded-tr-full">
+        <div className="absolute top-0 left-[30px] md:left-[24%] lg:left-[40%] w-[350px] md:w-[413px] h-[50px] bg-[#f6b93f] rounded-tl-full rounded-tr-full">
           <h2 className="absolute top-[10px] left-[25%] md:left-[19%] lg:left-[10%] font-bold  text-center text-xl md:text-2xl lg:text-3xl">
             Developed by CodeVexa
           </h2>
