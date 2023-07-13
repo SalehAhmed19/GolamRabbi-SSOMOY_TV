@@ -21,9 +21,9 @@ const Dashboard = () => {
           onClick={() => setSideNavBarOpen(!sideNavBarOpen)}
         >
           {sideNavBarOpen ? (
-            <AiOutlineClose className="absolute top-2 right-2 mt-[80px] text-[#F6B30F] text-xl" />
+            <AiOutlineClose className="absolute top-2 right-2 mt-[100px] text-[#F6B30F] text-xl" />
           ) : (
-            <HiMenuAlt1 className="absolute top-2 right-2 mt-[80px] text-[#F6B30F] text-3xl" />
+            <HiMenuAlt1 className="absolute top-2 right-2 mt-[100px] text-[#F6B30F] text-3xl" />
           )}
         </div>
         <ul
@@ -39,7 +39,7 @@ const Dashboard = () => {
                 }`}
               >
                 <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                  className={`text-3xl mt-2 mx-2 ${
                     sideNavBarOpen
                       ? ""
                       : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
