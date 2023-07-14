@@ -62,7 +62,7 @@ function IimageGalleryPage() {
               <img
                 src={img5}
                 alt=""
-                className="w-full h-60 md:h-[268px] lg:h-[560px]  object-cover rounded-md"
+                className="w-full h-60 md:h-[258px] lg:h-[545px]  object-cover rounded-md"
               />
             </div>
           </div>
@@ -112,38 +112,20 @@ function IimageGalleryPage() {
                   className="w-full h-60 md:h-[180px] lg:h-[280px] object-cover rounded-md"
                 />
               </div>
-              {/* center */}
-              <div className="mb-3 grid grid-cols-1 md:grid-cols-3 gap-3">
-                {/* left */}
-                <div className="md:col-span-2">
-                  <img
-                    src={img4}
-                    alt=""
-                    className="w-full h-60 md:h-[80px] object-cover rounded-md"
-                  />
-                </div>
-                <div className="">
-                  <img
-                    src={img3}
-                    alt=""
-                    className="w-full h-60 md:h-[80px] object-cover rounded-md"
-                  />
-                </div>
-              </div>
               {/* bottom */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                 <div className="">
                   <img
                     src={img2}
                     alt=""
-                    className="w-full h-60 md:h-[133px] lg:h-[268px] object-cover rounded-md"
+                    className="w-full h-60 md:h-[226px] lg:h-[360px] object-cover rounded-md"
                   />
                 </div>
                 <div className="md:col-span-3">
                   <img
                     src={img5}
                     alt=""
-                    className="w-full h-60 md:h-[135px] lg:h-[269px] object-cover rounded-md"
+                    className="w-full h-60 md:h-[226px] lg:h-[362px] object-cover rounded-md"
                   />
                 </div>
               </div>
@@ -242,7 +224,7 @@ function IimageGalleryPage() {
                 />
               </div>
               {/* bottom */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+              <div className="relative grid grid-cols-1 md:grid-cols-4 gap-3">
                 <div className="">
                   <img
                     src={img1}
@@ -265,11 +247,20 @@ function IimageGalleryPage() {
                   />
                 </div>
                 <div className="">
-                  <img
-                    src={img3}
-                    alt=""
-                    className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
-                  />
+                  <div className="">
+                    <img
+                      src={img3}
+                      alt=""
+                      className="w-full h-60 md:h-[101px] lg:h-[289px] object-cover rounded-md"
+                    />
+                  </div>
+                  {/* hover */}
+                  <div className="group bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-[24%] h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                    <div className="before:opacity-0 group-hover:before:opacity-50  before:absolute before:top-0 before:left-0 md:before:top-.2 md:before:left-[6px] before:w-[90%]  before:h-[50%] md:before:h-[28%] md:hover:before:top-[14.6px] before:bg-[#f40a5c] before:rounded-t-md hover:before:top-[12px]  hover:before:transition-all hover:before:duration-500 hover:before:delay-200 after:absolute after:bottom-2 after:left-2.5 md:after:left-1.5 after:w-[95%] after:h-[45%] md:after:h-[48%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 after:rounded-b-md hover:after:transition-all hover:after:duration-500 hover:after:delay-200 hover:after:bottom-[12px] md:hover:after:bottom-[14.8px]"></div>
+                    <h1 className="absolute top-[45%] left-[55%] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                     Golam Rabbi
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>
@@ -282,14 +273,17 @@ function IimageGalleryPage() {
                   className="w-full h-60 md:h-[735px] lg:h-[1055px] object-cover rounded-md"
                 />
               </div>
-              <div className="absolute top-0  transition-all duration-300 delay-75 hover:transition-all hover:duration-300 hover:delay-75 hover:bg-black/50 w-full h-60 md:h-[735px] lg:h-[1055px] rounded-md">
-                <h1 className="text-primary text-3xl">faysal</h1>
+              {/* hover info */}
+              <div className="group bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50  before:absolute before:top-2 before:left-2.5 md:before:top-2 md:before:left-1.5 lg:before:top-2 lg:before:left-4 before:w-[95%] before:h-[45%] md:before:h-[48%] md:hover:before:top-[14.6px] lg:hover:before:top-[22px] lg:hover:after:bottom-[21px] before:bg-[#f40a5c] before:rounded-t-md hover:before:top-[12px]  hover:before:transition-all hover:before:duration-500 hover:before:delay-200 after:absolute after:bottom-2 after:left-2.5 md:after:left-1.5 after:w-[95%] after:h-[45%] md:after:h-[48%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 after:rounded-b-md hover:after:transition-all hover:after:duration-500 hover:after:delay-200 hover:after:bottom-[12px] md:hover:after:bottom-[14.8px] lg:after:bottom-2 lg:after:left-4"></div>
+                <h1 className="absolute top-[45%] left-[35%] md:top-[48%] lg:top-[48.8%] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                 Golam Rabbi
+                </h1>
               </div>
             </div>
           </div>
         </div>
       </div>
-   
     </div>
   );
 }

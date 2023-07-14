@@ -1,23 +1,35 @@
 import { createTheme, ThemeProvider } from "@mui/material";
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import "./global.css";
-import Navbar from "./Components/Shared/Navbar";
-import Home from "./Pages/Home";
-import Footer from "./Components/Shared/Footer";
-import ScrollToTop from "react-scroll-to-top";
-import { TbArrowBigUpLinesFilled } from "react-icons/tb";
-import BlogsPage from "./Pages/BlogsPage";
-import Blog1 from "./Pages/Blogs/Blog1";
-import AllEvents from "./Pages/AllEvents";
 import { useState } from "react";
-import Courses from "./Pages/Courses/Courses";
 import { Toaster } from "react-hot-toast";
+import { TbArrowBigUpLinesFilled } from "react-icons/tb";
+import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
+import "./App.css";
+import Footer from "./Components/Shared/Footer";
+import Navbar from "./Components/Shared/Navbar";
+import "./global.css";
+import AllEvents from "./Pages/AllEvents";
+import Blog1 from "./Pages/Blogs/Blog1";
 import PersonalBlogs from "./Pages/Blogs/PersonalBlogs";
 import ProfessionalBlogs from "./Pages/Blogs/ProfessionalBlogs";
-import MediaCourses from "./Pages/Courses/MediaCourses";
+import BlogsPage from "./Pages/BlogsPage";
+import Courses from "./Pages/Courses/Courses";
 import LeadershipCourses from "./Pages/Courses/LeadershipCourses";
 import LifeCourses from "./Pages/Courses/LifeCourses";
+import MediaCourses from "./Pages/Courses/MediaCourses";
+import About from "./Pages/Dashboard/About";
+import Books from "./Pages/Dashboard/Books";
+import Circular from "./Pages/Dashboard/Circular";
+import CourseEnrolment from "./Pages/Dashboard/Course/CourseEnrolment";
+import ManageCourse from "./Pages/Dashboard/Course/ManageCourse";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import DashboardHome from "./Pages/Dashboard/DashboardHome";
+import Events from "./Pages/Dashboard/Events";
+import FeaturedIn from "./Pages/Dashboard/FeaturedIn";
+import Invite from "./Pages/Dashboard/Invite";
+import Quotes from "./Pages/Dashboard/Quotes";
+import Testimonials from "./Pages/Dashboard/Testimonials";
+import Home from "./Pages/Home";
 import IimageGalleryPage from "./Pages/IimageGalleryPage";
 import Jobs from "./Pages/Jobs";
 
@@ -62,6 +74,20 @@ function App() {
           <Route path="/leadership-courses" element={<LeadershipCourses />} />
           <Route path="/life-courses" element={<LifeCourses />} />
           <Route path="/gallery" element={<IimageGalleryPage />} />
+          {/* dashboard */}
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<DashboardHome />} />
+            <Route path="manage-course" element={<ManageCourse />} />
+            <Route path="course-enrollment" element={<CourseEnrolment />} />
+            <Route path="events" element={<Events />} />
+            <Route path="circular" element={<Circular />} />
+            <Route path="testimonials" element={<Testimonials />} />
+            <Route path="featured-in" element={<FeaturedIn />} />
+            <Route path="invite" element={<Invite />} />
+            <Route path="about" element={<About />} />
+            <Route path="books" element={<Books />} />
+            <Route path="quotes" element={<Quotes />} />
+          </Route>
         </Routes>
       </div>
 
