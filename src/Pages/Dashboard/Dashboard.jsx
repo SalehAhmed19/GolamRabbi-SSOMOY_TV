@@ -54,7 +54,7 @@ const Dashboard = () => {
                     className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
                     <div
