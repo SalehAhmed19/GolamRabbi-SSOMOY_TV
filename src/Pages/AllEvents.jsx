@@ -79,7 +79,7 @@ function AllEvents() {
     },
   ];
   return (
-    <div className="lg:pt-40 py-10 lg:mx-20 mx-5">
+    <div className="lg:pt-40 py-10 lg:mx-20 mx-5 pb-36">
       <Fade down>
         <h1 className="mt-14 text-primary text-center text-4xl font-bold">
           আসন্ন ইভেন্টস

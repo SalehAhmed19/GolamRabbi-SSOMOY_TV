@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [sideNavBarOpen, setSideNavBarOpen] = useState(true);
   const [subMenuBarOpen, setSubMenuBarOpen] = useState(false);
   return (
-    <div className="flex">
+    <div className="flex pb-36">
       {/* left site */}
       <div
         className={`bg-[#14161C] border-r-2 border-[#f6b30f] ${

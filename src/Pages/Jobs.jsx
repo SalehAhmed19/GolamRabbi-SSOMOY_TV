@@ -5,7 +5,7 @@ import job from "../assets/images/Job.png";
 function Jobs() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <div>
+    <div className="pb-36">
       <div className="lg:py-20 py-10 lg:mx-20 mx-5">
         <Fade down>
           <h2 className="text-center text-4xl font-bold text-primary py-14 my-5">

@@ -152,7 +152,7 @@ function Courses() {
   ];
 
   return (
-    <div className="lg:px-24 py-20 p-5">
+    <div className="lg:px-24 py-20 p-5 pb-36">
       <Fade down>
         <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
           কোর্স সমূহ
