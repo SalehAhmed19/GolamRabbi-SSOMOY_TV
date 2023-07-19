@@ -35,45 +35,132 @@ const IimageGalleryPage = () => {
         </h2>
       </Fade>
       {/* mobile */}
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper w-1/2 block md:hidden"
-      >
-        <SwiperSlide className="bg-primary ">
-          <img src={img1} alt="" className="w-full h-[200px]" />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary ">
-          <img src={img2} alt="" className="w-full h-[200px] " />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img3} alt="" className="w-full h-[200px] " />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img4} alt="" className="w-full h-[200px] " />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img5} alt="" className="w-full h-[200px] " />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img1} alt="" className="w-full h-[200px] " />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img2} alt="" className="w-full h-[200px] " />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img3} alt="" className="w-full h-[200px]" />
-        </SwiperSlide>
-        <SwiperSlide className="bg-primary">
-          <img src={img4} alt="" className="w-full h-[200px]" />
-        </SwiperSlide>
-      </Swiper>
+      <div className="">
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="w-[300px] md:hidden"
+        >
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img1}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img2}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img3}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img4}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img5}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img1}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+              <img
+                src={img2}
+                alt="image"
+                className="rounded-xl object-cover w-[300px] h-[300px]"
+              />
+              {/* hover info */}
+              <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
+                <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full hover:before:top-[15px] before:h-[45%] before:bg-[#f40a5c] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 hover:after:bottom-[15px]  hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+                <h1 className="absolute top-[138px] left-[110px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+                  Golam Rabbi
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
       {/* first section tablet and desktop*/}
       <div className="hidden md:block lg:w-full relative">
         {/* top  */}
         <div className="md:flex">
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[650px] lg:h-[400px] overflow-hidden">
             <img
               src={img1}
               alt="image"
@@ -81,8 +168,8 @@ const IimageGalleryPage = () => {
             />
             {/* hover info */}
             <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
-              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[28px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[20px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
-              <h1 className="absolute top-[130px] left-[76px] lg:top-[233px] lg:left-[160px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[20px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[18px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+              <h1 className="absolute top-[130px] left-[76px] lg:top-[180px] lg:left-[180px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
                 Golam Rabbi
               </h1>
             </div>
@@ -101,16 +188,16 @@ const IimageGalleryPage = () => {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[650px] lg:h-[400px] overflow-hidden">
             <img
-              src={img2}
+              src={img3}
               alt="image"
               className="object-cover w-full h-full"
             />
             {/* hover info */}
             <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
-              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[28px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[20px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
-              <h1 className="absolute top-[130px] left-[75px] lg:top-[233px] lg:left-[180px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[20px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[18px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+              <h1 className="absolute top-[130px] left-[76px] lg:top-[180px] lg:left-[180px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
                 Golam Rabbi
               </h1>
             </div>
@@ -118,16 +205,16 @@ const IimageGalleryPage = () => {
         </div>
         {/* bottom */}
         <div className="md:flex md:justify-center md:items-end">
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[650px] lg:h-[400px] overflow-hidden">
             <img
-              src={img2}
+              src={img3}
               alt="image"
               className="object-cover w-full h-full"
             />
             {/* hover info */}
             <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
-              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[28px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[20px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
-              <h1 className="absolute top-[130px] left-[74px] lg:top-[233px] lg:left-[170px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[20px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[18px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+              <h1 className="absolute top-[130px] left-[76px] lg:top-[180px] lg:left-[180px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
                 Golam Rabbi
               </h1>
             </div>
@@ -141,33 +228,33 @@ const IimageGalleryPage = () => {
             {/* hover info */}
             <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
               <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[12px] lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[15px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 hover:after:bottom-[12px] after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[13px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200 "></div>
-              <h1 className="absolute top-[105px] left-[72px] lg:top-[130px] lg:left-[310px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+              <h1 className="absolute top-[105px] left-[75px] lg:top-[132px] lg:left-[310px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
                 Golam Rabbi
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[650px] lg:h-[400px] overflow-hidden">
             <img
-              src={img3}
+              src={img1}
               alt="image"
               className="object-cover w-full h-full"
             />
             {/* hover info */}
             <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
-              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[28px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[20px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
-              <h1 className="absolute top-[130px] left-[72px] lg:top-[233px] lg:left-[180px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+              <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-2 before:rounded-t-full lg:before:top-2 lg:before:left-2 hover:before:top-[14px] hover:after:bottom-[14px]  lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[20px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-2 after:rounded-b-full lg:after:bottom-1 lg:after:left-2 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[18px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+              <h1 className="absolute top-[130px] left-[76px] lg:top-[180px] lg:left-[180px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
                 Golam Rabbi
               </h1>
             </div>
           </div>
         </div>
         {/* center border-[#f40a5c] border-[#f6b30f] */}
-        <div className="overflow-hidden md:w-[500px] md:h-[200px] md:absolute md:top-[190px] md:left-[130px] lg:top-[300px] lg:left-[400px] lg:w-[900px] lg:h-[440px] md:border-8  md:rounded-full lg:rounded-none">
+        <div className="overflow-hidden md:w-[500px] md:h-[200px] md:absolute md:top-[190px] md:left-[130px] lg:top-[220px] lg:left-[425px] lg:w-[900px] lg:h-[340px] md:border-8 lg:rounded-none">
           <img src={img4} alt="" className="object-cover w-full h-full" />
           {/* hover info */}
           <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
-            <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-3 before:rounded-t-full lg:before:top-2 hover:before:top-[10px] hover:after:bottom-[8px] lg:before:left-4 lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[21px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-3 after:rounded-b-full lg:after:bottom-1 lg:after:left-4 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[21px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
-            <h1 className="absolute top-[80px] left-[200px] lg:top-[200px] lg:left-[400px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
+            <div className="before:opacity-0 group-hover:before:opacity-50 before:absolute before:w-[95%] before:top-2 before:left-3 before:rounded-t-full lg:before:top-2 hover:before:top-[10px] hover:after:bottom-[8px] lg:before:left-4 lg:before:w-[96%] before:h-[45%] before:bg-[#f40a5c] lg:before:rounded-t-md lg:hover:before:top-[16px] hover:before:transition-all hover:before:duration-1000 hover:before:delay-200  after:absolute after:bottom-0 after:w-[95%] after:left-3 after:rounded-b-full lg:after:bottom-1 lg:after:left-4 lg:after:w-[96%] after:h-[45%] after:bg-[#f6b30f] after:opacity-0 group-hover:after:opacity-50 lg:after:rounded-b-md lg:hover:after:bottom-[16px] hover:after:transition-all hover:after:duration-1000 hover:after:delay-200"></div>
+            <h1 className="absolute top-[80px] left-[200px] lg:top-[150px] lg:left-[400px] rotate-90 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-400">
               Golam Rabbi
             </h1>
           </div>
@@ -177,7 +264,7 @@ const IimageGalleryPage = () => {
       <div className="hidden md:block lg:w-full relative">
         {/* top  */}
         <div className="md:flex">
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[450px] overflow-hidden">
             <img
               src={img1}
               alt="image"
@@ -191,7 +278,7 @@ const IimageGalleryPage = () => {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[450px] overflow-hidden">
             <img
               src={img2}
               alt="image"
@@ -208,7 +295,7 @@ const IimageGalleryPage = () => {
         </div>
         {/* bottom */}
         <div className="md:flex">
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[450px] overflow-hidden">
             <img
               src={img2}
               alt="image"
@@ -222,7 +309,7 @@ const IimageGalleryPage = () => {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[450px] overflow-hidden">
             <img
               src={img3}
               alt="image"
@@ -238,7 +325,7 @@ const IimageGalleryPage = () => {
           </div>
         </div>
         {/* center border-[#f40a5c] border-[#f6b30f] */}
-        <div className="rounded-full overflow-hidden md:w-[300px] md:h-[300px] md:absolute md:top-[150px] md:left-[240px] lg:top-[150px] lg:left-[520px] lg:w-[700px] lg:h-[700px] md:border-8">
+        <div className="rounded-full overflow-hidden md:w-[300px] md:h-[300px] md:absolute md:top-[150px] md:left-[240px] lg:top-[170px] lg:left-[550px] lg:w-[600px] lg:h-[600px] md:border-8">
           <img src={img4} alt="" className="object-cover w-full h-full" />
           {/* hover info */}
           <div className="group hover:bg-black/25 hover:backdrop-blur-sm absolute bottom-0 w-full h-full rounded-md overflow-hidden transition-all duration-500 delay-200">
