@@ -1,11 +1,15 @@
 import React from "react";
 import { Fade } from "react-reveal";
+import { EffectCards } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { Swiper, SwiperSlide } from "swiper/react";
 import img1 from "../assets/images/gr1.jpg";
 import img2 from "../assets/images/gr2.jpg";
 import img3 from "../assets/images/gr3.jpg";
 import img4 from "../assets/images/gr4.jpg";
 import img5 from "../assets/images/gr5.jpg";
-function IimageGalleryPage() {
+const IimageGalleryPage = () => {
   const images = [
     img1,
     img2,
@@ -30,12 +34,46 @@ function IimageGalleryPage() {
           ইমেজ গ্যালারি
         </h2>
       </Fade>
-      <div className="container mx-auto p-4"></div>
-      {/* first section */}
+      {/* mobile */}
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper w-1/2 block md:hidden"
+      >
+        <SwiperSlide className="bg-primary ">
+          <img src={img1} alt="" className="w-full h-[200px]" />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary ">
+          <img src={img2} alt="" className="w-full h-[200px] " />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img3} alt="" className="w-full h-[200px] " />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img4} alt="" className="w-full h-[200px] " />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img5} alt="" className="w-full h-[200px] " />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img1} alt="" className="w-full h-[200px] " />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img2} alt="" className="w-full h-[200px] " />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img3} alt="" className="w-full h-[200px]" />
+        </SwiperSlide>
+        <SwiperSlide className="bg-primary">
+          <img src={img4} alt="" className="w-full h-[200px]" />
+        </SwiperSlide>
+      </Swiper>
+      {/* first section tablet and desktop*/}
       <div className="hidden md:block lg:w-full relative">
         {/* top  */}
         <div className="md:flex">
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
             <img
               src={img1}
               alt="image"
@@ -63,7 +101,7 @@ function IimageGalleryPage() {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
             <img
               src={img2}
               alt="image"
@@ -80,7 +118,7 @@ function IimageGalleryPage() {
         </div>
         {/* bottom */}
         <div className="md:flex md:justify-center md:items-end">
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
             <img
               src={img2}
               alt="image"
@@ -108,7 +146,7 @@ function IimageGalleryPage() {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
             <img
               src={img3}
               alt="image"
@@ -135,11 +173,11 @@ function IimageGalleryPage() {
           </div>
         </div>
       </div>
-      {/* section section */}
+      {/* section section tablet and desktop*/}
       <div className="hidden md:block lg:w-full relative">
         {/* top  */}
         <div className="md:flex">
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
             <img
               src={img1}
               alt="image"
@@ -153,7 +191,7 @@ function IimageGalleryPage() {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
             <img
               src={img2}
               alt="image"
@@ -170,7 +208,7 @@ function IimageGalleryPage() {
         </div>
         {/* bottom */}
         <div className="md:flex">
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
             <img
               src={img2}
               alt="image"
@@ -184,7 +222,7 @@ function IimageGalleryPage() {
               </h1>
             </div>
           </div>
-          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg:h-[500px] overflow-hidden">
+          <div className="relative md:m-2  md:w-[370px] md:h-[300px] md:border-8 lg:w-[900px] lg: overflow-hidden">
             <img
               src={img3}
               alt="image"
@@ -213,9 +251,10 @@ function IimageGalleryPage() {
       </div>
     </div>
   );
-}
+};
 
 export default IimageGalleryPage;
+
 {
   /* container  */
 }

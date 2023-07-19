@@ -58,9 +58,9 @@ function Testimonals() {
     },
   ];
   return (
-    <div className="lg:mx-20 mx-5 my-14">
+    <div className="lg:mx-20 mx-5 my-14 relative">
       <Fade down>
-        <h1 className="text-primary text-center text-4xl font-bold my-5">
+        <h1 className="mb-14 text-primary text-center text-4xl font-bold my-5">
           টেস্টিমনিয়ালস
         </h1>
       </Fade>
@@ -114,25 +114,37 @@ function Testimonals() {
             </div>
           </SwiperSlide>
         </Swiper>
+        {/* slider buttons */}
         <div className="relative">
-          <div className="z-10 absolute -top-[180px] right-[300px] flex space-x-10">
+          <div className="z-10 absolute -top-[150px] md:right-[110px] lg:right-[300px] flex space-x-10">
             {/* previous btn */}
-            <div className="hidden md:block btn-prev cursor-pointer  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
-              <span className="font-bold text-xl">
+            <div className="hidden md:block btn-prev cursor-pointer  bg-primary rounded-full lg:w-[90px] lg:h-[90px]">
+              <span className="font-bold text-6xl lg:absolute top-[15px] left-[12px]">
                 <MdOutlineKeyboardArrowLeft />
               </span>
             </div>
             {/* next btn */}
-            <div className="hidden md:block btn-next cursor-pointer  bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
-              <span className="font-bold text-xl">
+            <div className="hidden md:block btn-next cursor-pointer  bg-primary  rounded-full lg:w-[90px] lg:h-[90px]">
+              <span className="font-bold text-6xl lg:absolute top-[15px] right-[12px]">
                 <MdOutlineKeyboardArrowRight />
               </span>
             </div>
           </div>
         </div>
       </div>
+      {/* right desing */}
+      <div className="hidden lg:block absolute top-[400px] -right-[292px] z-20 -rotate-[90deg] bg-primary w-[484px] h-[60px] rounded-t-md">
+        <h2 className=" absolute inset-0 top-[15px] text-2xl text-center font-bold">
+          টেস্টিমনিয়াল
+        </h2>
+      </div>
+      {/* bottom desing */}
+      <div className="flex justify-center items-center mt-16 space-x-5">
+        <div className="w-[34px] h-[35px] bg-primary rounded-full"></div>
+        <div className="border-b-[3px] border-[#f6b30f] border-dashed w-[204px]"></div>
+        <div className="w-[34px] h-[35px] bg-primary rounded-full"></div>
+      </div>
     </div>
-    // </div>
   );
 }
 
