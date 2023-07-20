@@ -29,7 +29,7 @@ function SocialMedia() {
     },
   ];
   return (
-    <div className="lg:px-24 py-14 text-[#fff] px-5">
+    <div className="pb-36 lg:px-24 py-14 text-[#fff] px-5">
       <Fade down>
         <h1 className="text-primary text-center text-4xl font-bold">
           সোশ্যাল মিডিয়াতে সংযুক্ত হোন

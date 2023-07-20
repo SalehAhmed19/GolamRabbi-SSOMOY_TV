@@ -21,12 +21,12 @@ function CommentBox() {
     <div className="my-5 text-basic">
       <div className="flex items-center justify-between border-b-2 border-[#333] py-3">
         <h3 className="text-xl font-bold">মন্তব্য করুন</h3>
-        <button className="bg-[#222] border-2 border-[#333] px-5 py-2 rounded-full">
+        {/* <button className="bg-[#222] border-2 border-[#333] px-5 py-2 rounded-full">
           সাইন ইন করুন
-        </button>
+        </button> */}
       </div>
-      <div className="my-10 flex flex-col lg:flex-row">
-        <div className="h-10 w-10 bg-[#333] rounded-full mx-auto mb-5"></div>
+      <div className="my-10 flex flex-col items-end">
+        {/* <div className="h-10 w-10 bg-[#333] rounded-full mx-auto mb-5"></div> */}
         <form
           onSubmit={() => handleSubmit(event)}
           className="flex flex-col lg:w-1/2 w-full lg:mx-5"

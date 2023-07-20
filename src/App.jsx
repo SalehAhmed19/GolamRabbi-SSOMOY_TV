@@ -103,6 +103,7 @@ function App() {
           alignItems: "center",
           color: "#333",
           backgroundColor: "#D89F17",
+          zIndex:9999
         }}
         component={<TbArrowBigUpLinesFilled />}
         smooth
