@@ -1,10 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useKeenSlider } from "keen-slider/react";
-import blog from "../../assets/images/blog.jpeg";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import React, { useState } from "react";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { Link } from "react-router-dom";
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/MediaJobCircular.css";
-
+import blog from "../../assets/images/blog.jpeg";
 const data = [
   {
     id: 1,
@@ -106,45 +114,68 @@ const ProfessionalBlog = () => {
     slides: { perView: 1 },
   });
   return (
-    <div>
-      <div ref={sliderRef} className="keen-slider">
-        {data.map((a) => (
-          <div key={a} className="keen-slider__slide rounded-lg bg-[#222]">
-            <Link to={`/blogs/${a?.id}`}>
-              <div className="relative text-basic ">
-                <img className="opacity-50 rounded-md" src={blog} alt="" />
-                <div className="absolute bottom-[20px] mx-5">
-                  <h3 className="text-2xl font-bold">{a.headline}</h3>
-                  <p>
-                    পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
-                    আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
-                  </p>
-                </div>
-              </div>
-            </Link>
+    <div className="my-10">
+      {/* title and arrows */}
+      <div className="flex justify-between items-center">
+        <h2 className="text-primary text-2xl font-bold my-5">প্রফেশনাল ব্লগ</h2>
+        <div className="flex space-x-5">
+          {/* prev btn */}
+          <div className="professional-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowLeft />
+            </span>
           </div>
-        ))}
-      </div>
-
-      {loaded && instanceRef.current && (
-        <div className="dots mt-10">
-          {[
-            ...Array(
-              instanceRef.current.track.details.slides.length - 3
-            ).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            );
-          })}
+          {/* next btn */}
+          <div className="professional-btn-next cursor-pointer  bg-primary rounded-full w-[20px] ">
+            <span className="font-bold text-xl">
+              <MdOutlineKeyboardArrowRight />
+            </span>
+          </div>
         </div>
-      )}
+      </div>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={20}
+        // loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={{
+          prevEl: ".professional-btn-prev",
+          nextEl: ".professional-btn-next",
+        }}
+        modules={[Navigation, Pagination]}
+        breakpoints={{
+          668: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
+        className=""
+      >
+        {data?.map((a, index) => (
+          <SwiperSlide key={index} className="mb-10">
+            <div key={a} className="rounded-lg bg-[#222]">
+              <Link to={`/blogs/${a?.id}`}>
+                <div className="relative text-basic ">
+                  <img className="opacity-50 rounded-md" src={blog} alt="" />
+                  <div className="absolute bottom-[20px] mx-5">
+                    <h3 className="text-2xl font-bold">{a.headline}</h3>
+                    <p>
+                      পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
+                      আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

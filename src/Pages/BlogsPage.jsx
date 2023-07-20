@@ -1,13 +1,19 @@
-import React from "react";
-import blog from "../assets/images/blogs.jpg";
-import { Link } from "react-router-dom";
-import { Fade } from "react-reveal";
-import { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import React, { useState } from "react";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { Fade } from "react-reveal";
+import { Link } from "react-router-dom";
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "../Styles/MediaJobCircular.css";
 import ProfessionalBlog from "./Blogs/ProfessionalBlog";
-
 function BlogsPage() {
   const data = [
     {
@@ -135,50 +141,75 @@ function BlogsPage() {
             </div>
           </Link>
         ))} */}
-
-      <div>
-        <div ref={sliderRef} className="keen-slider">
-          {data.map((a) => (
-            <div key={a} className="keen-slider__slide rounded-lg bg-[#222]">
-              <Link to={`/blogs/${a?.id}`}>
-                <div className="relative text-basic ">
-                  <img
-                    className="opacity-50 rounded-md"
-                    src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-                    alt=""
-                  />
-                  <div className="absolute bottom-[20px] mx-5">
-                    <h3 className="text-2xl font-bold">{a.headline}</h3>
-                    <p>
-                      পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
-                      আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
-                    </p>
-                  </div>
-                </div>
-              </Link>
+      <div className="my-10">
+        {/* title and arrows */}
+        <div className="flex justify-between items-center">
+          <h2 className="text-primary text-2xl font-bold my-5">
+            পার্সোনাল ব্লগ
+          </h2>
+          <div className="flex space-x-5">
+            {/* prev btn */}
+            <div className="personal-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowLeft />
+              </span>
             </div>
-          ))}
-        </div>
-
-        {loaded && instanceRef.current && (
-          <div className="dots mt-10">
-            {[
-              ...Array(
-                instanceRef.current.track.details.slides.length - 3
-              ).keys(),
-            ].map((idx) => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx);
-                  }}
-                  className={"dot" + (currentSlide === idx ? " active" : "")}
-                ></button>
-              );
-            })}
+            {/* next btn */}
+            <div className="personal-btn-next cursor-pointer  bg-primary rounded-full w-[20px] ">
+              <span className="font-bold text-xl">
+                <MdOutlineKeyboardArrowRight />
+              </span>
+            </div>
           </div>
-        )}
+        </div>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          // loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            prevEl: ".personal-btn-prev",
+            nextEl: ".personal-btn-next",
+          }}
+          modules={[Navigation, Pagination]}
+          breakpoints={{
+            668: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          className=""
+        >
+          {data?.map((a, index) => (
+            <SwiperSlide key={index} className="mb-10">
+              <div className="rounded-lg bg-[#222]">
+                <Link to={`/blogs/${a?.id}`}>
+                  <div className="relative text-basic ">
+                    <img
+                      className="opacity-50 rounded-md"
+                      src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                      alt=""
+                    />
+                    <div className="absolute bottom-[20px] mx-5">
+                      <h3 className="text-2xl font-bold">{a.headline}</h3>
+                      <p>
+                        পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের
+                        বাংলাদেশের আবহাওয়ার খবর। জেনে নিন আবহাওয়ার
+                        পূর্বাভাস...
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <ProfessionalBlog />
     </div>

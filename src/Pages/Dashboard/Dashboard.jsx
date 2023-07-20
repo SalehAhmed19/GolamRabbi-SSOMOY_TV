@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineUsergroupAdd } from "react-icons/ai";
-import { HiMenuAlt1 } from "react-icons/hi";
+import { AiOutlineClose, AiOutlineFileSearch } from "react-icons/ai";
+import { BiBookReader } from "react-icons/bi";
+import { BsCheck2Circle, BsFillInfoCircleFill } from "react-icons/bs";
+import { FaCalendarAlt, FaPlaneArrival } from "react-icons/fa";
+import { HiMenuAlt1, HiPencilAlt } from "react-icons/hi";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { MdCastConnected } from "react-icons/md";
+import { RiChatQuoteLine } from "react-icons/ri";
 import { Link, NavLink, Outlet } from "react-router-dom";
 const Dashboard = () => {
   const [sideNavBarOpen, setSideNavBarOpen] = useState(true);
   const [subMenuBarOpen, setSubMenuBarOpen] = useState(false);
   return (
-    <div className="flex">
+    <div className="flex pb-36">
       {/* left site */}
       <div
         className={`bg-[#14161C] border-r-2 border-[#f6b30f] ${
@@ -26,23 +31,21 @@ const Dashboard = () => {
             <HiMenuAlt1 className="absolute top-2 right-2 mt-[100px] text-[#F6B30F] text-3xl" />
           )}
         </div>
-        <ul
-          className={`text-[#F6B30F] space-y-5 mt-[100px] p-[20px] font-bold text-lg`}
-        >
+        <ul className={`text-[#F6B30F] space-y-6 mt-[100px] p-[20px] text-lg font-bold`}>
           <li>
             <Link to="/dashboard/manage-course">
               <div
                 className={`group relative z-10 ${
                   sideNavBarOpen
-                    ? "flex items-center before:-z-10  w-[175px] h-[35px] before:absolute before:w-[175px] before:h-[35px] before:rounded-md before:hover:bg-[#f40a5c]  hover:text-white before:transition-all before:duration-500 before:delay-100 before:left-[-120%] hover:before:left-0 rounded-md"
+                    ? "flex  items-center before:-z-10  w-[175px] h-[35px] before:absolute before:w-[175px] before:h-[35px] before:rounded-md before:hover:bg-[#f40a5c]  hover:text-white before:transition-all before:duration-500 before:delay-100 before:left-[-120%] hover:before:left-0 rounded-md"
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mt-2 mx-2 ${
+                <MdCastConnected
+                  className={`mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
                 <div
@@ -54,7 +57,7 @@ const Dashboard = () => {
                     className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
                     <div
@@ -64,7 +67,7 @@ const Dashboard = () => {
                           : ""
                       }`}
                     >
-                      <span>Course</span>
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>Course</h2>
                       <IoMdArrowDropdown
                         onClick={() => setSubMenuBarOpen(!subMenuBarOpen)}
                         className={`${sideNavBarOpen ? "block" : "hidden"}`}
@@ -87,12 +90,12 @@ const Dashboard = () => {
                   <ul className={`space-y-3 `}>
                     <li>
                       <NavLink to="/dashboard/manage-course">
-                        Manage Course
+                        <MdCastConnected /> Manage Course
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/dashboard/course-enrollment">
-                        Course Enrolement
+                        <MdCastConnected /> Course Enrolement
                       </NavLink>
                     </li>
                   </ul>
@@ -109,28 +112,36 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <FaCalendarAlt
+                  className={` mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Events
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>Event</h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -143,28 +154,36 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <BsCheck2Circle
+                  className={` mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Circular
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>Circular</h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -177,28 +196,38 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <HiPencilAlt
+                  className={` mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Testimonials
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>
+                        Testimonials
+                      </h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -211,28 +240,38 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <AiOutlineFileSearch
+                  className={`mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl "
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Featured in
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>
+                        Featured in
+                      </h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -245,28 +284,36 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <FaPlaneArrival
+                  className={`mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl "
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Invite
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>Invite</h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -279,28 +326,36 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <BsFillInfoCircleFill
+                  className={` mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    About
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>About</h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -313,28 +368,36 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <BiBookReader
+                  className={` mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Books
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>Books</h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
@@ -347,28 +410,36 @@ const Dashboard = () => {
                     : "-mx-5"
                 }`}
               >
-                <AiOutlineUsergroupAdd
-                  className={`text-3xl mx-2 ${
+                <RiChatQuoteLine
+                  className={` mt-2 mx-2 ${
                     sideNavBarOpen
-                      ? ""
-                      : "  group-hover:bg-[#f40a5c] group-hover:text-black rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
+                      ? "text-xl"
+                      : "  group-hover:bg-[#fff] group-hover:text-[#f40a5c] group-hover:border-[1px] group-hover:border-[#f40a5c] rounded-md w-[45px] h-[40px] p-1 transition-all duration-200 delay-100 -mx-3"
                   }`}
                 />
-                <span
+                <div
                   className={`${
-                    sideNavBarOpen ? "" : "absolute top-1.5 left-[60px] z-10"
+                    sideNavBarOpen ? "" : "absolute top-0 left-[60px] z-10"
                   }`}
                 >
-                  <span
-                    className={`${
+                  <div
+                    className={` ${
                       sideNavBarOpen
                         ? ""
-                        : "whitespace-nowrap group-hover:bg-[#f40a5c] group-hover:text-black group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
+                        : "whitespace-nowrap group-hover:bg-[#fff] group-hover:border-[#f40a5c] group-hover:border-[1px] group-hover:text-[#f40a5c] group-hover:opacity-100 px-3 py-1.5 rounded-md opacity-0 transition-all duration-200 delay-100"
                     }`}
                   >
-                    Quotes
-                  </span>
-                </span>
+                    <div
+                      className={`${
+                        sideNavBarOpen
+                          ? "flex items-center justify-between w-[120px]"
+                          : ""
+                      }`}
+                    >
+                      <h2 className={sideNavBarOpen ? "mt-2" : ""}>Quotes</h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </li>
