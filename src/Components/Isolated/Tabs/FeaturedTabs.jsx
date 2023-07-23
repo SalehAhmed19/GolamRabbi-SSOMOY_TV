@@ -128,12 +128,12 @@ export default function FeaturedTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="-mx-5 relative rounded-xl bg-[#111118] cursor-pointer p-5">
+        <div className="-mx-5 relative rounded-xl bg-[] cursor-pointer p-5">
           {/* tv slider container */}
           <div className="select-none">
             <Swiper
               slidesPerView={1}
-              spaceBetween={20}
+              spaceBetween={60}
               // loop={true}
               pagination={{
                 clickable: true,
@@ -143,12 +143,12 @@ export default function FeaturedTabs() {
                 nextEl: ".tv-btn-next",
               }}
               modules={[Navigation, Pagination]}
-              className="w-full md:w-4/5"
+              className="w-full"
             >
               <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
                     src="https://www.youtube.com/embed/Lq5yXrYSVzg"
                     title="YouTube video player"
                     frameborder="0"
@@ -160,7 +160,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -172,7 +172,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -184,7 +184,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -196,7 +196,7 @@ export default function FeaturedTabs() {
               <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
                 <div>
                   <iframe
-                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[450px] rounded-md"
+                    className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
                     src="https://www.youtube.com/embed/gYOlzeTsgAE"
                     title="YouTube video player"
                     frameborder="0"
@@ -207,13 +207,13 @@ export default function FeaturedTabs() {
               </SwiperSlide>
             </Swiper>
             {/* previous btn */}
-            <div className="hidden md:block tv-btn-prev cursor-pointer absolute top-16 md:top-[240px]  md:left-6 lg:left-[150px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <div className="hidden md:block tv-btn-prev cursor-pointer absolute top-16 md:top-[260px]  md:-left-[10px] lg:top-[340px] lg:left-[180px]  bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
               <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowLeft />
               </span>
             </div>
             {/* next btn */}
-            <div className="hidden md:block tv-btn-next cursor-pointer absolute  top-16 md:top-[240px] md:right-6 lg:right-[150px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
+            <div className="hidden md:block tv-btn-next cursor-pointer absolute  top-16 md:top-[260px] md:-right-[10px] lg:top-[340px] lg:right-[180px] bg-primary  rounded-full p-1 lg:p-3 lg:w-[45px] ">
               <span className="font-bold text-xl">
                 <MdOutlineKeyboardArrowRight />
               </span>
@@ -223,9 +223,9 @@ export default function FeaturedTabs() {
           {/* shape 1 */}
           <div className="absolute top-0 left-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-dashed border-[#D89F17] rounded-tl-[500px] rounded-br-full"></div>
           {/* shape 2 */}
-          <div className="absolute top-5 right-1 md:top-12 md:right-6 lg:top-8 lg:right-[200px]  md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] rounded-full bg-[#D89F17]"></div>
+          <div className="absolute top-5 right-1 md:top-8 md:right-1 lg:top-8 lg:right-[200px]  md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] rounded-full bg-[#D89F17]"></div>
           {/* shape 3 */}
-          <div className="absolute bottom-[40px] left-1 md:bottom-[90px] md:left-8 lg:bottom-8 lg:left-[200px]   md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] border-2 border-dashed border-[#D89F17] rounded-full"></div>
+          <div className="absolute bottom-[40px] left-1 md:bottom-[60px] md:left-0 lg:bottom-8 lg:left-[200px]   md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] border-2 border-dashed border-[#D89F17] rounded-full"></div>
           {/* shape 4 */}
           <div className="absolute bottom-0 right-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] bg-[#D89F17] rounded-tl-full rounded-br-[500px]"></div>
         </div>

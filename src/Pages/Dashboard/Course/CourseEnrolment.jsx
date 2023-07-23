@@ -17,7 +17,7 @@ const CourseEnrolment = () => {
           sx={{
             borderBottom: 1,
             borderColor: "divider",
-            background: "#F6B30F",
+            background: "black",
             borderRadius: "5px",
           }}
         >
@@ -31,7 +31,7 @@ const CourseEnrolment = () => {
           >
             <Tab
               sx={{
-                color: "black",
+                color: "#F6B30F",
                 fontWeight: 700,
                 fontFamily: "Hind Siliguri",
               }}
@@ -40,7 +40,7 @@ const CourseEnrolment = () => {
             />
             <Tab
               sx={{
-                color: "black",
+                color: "#F6B30F",
                 fontWeight: 700,
                 fontFamily: "Hind Siliguri",
               }}
@@ -49,7 +49,7 @@ const CourseEnrolment = () => {
             />
             <Tab
               sx={{
-                color: "black",
+                color: "#F6B30F",
                 fontWeight: 700,
                 fontFamily: "Hind Siliguri",
               }}

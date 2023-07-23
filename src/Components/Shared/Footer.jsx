@@ -15,16 +15,16 @@ const Footer = () => {
           <div className="w-[80%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 opacity-[.5]"></div>
           <div className="w-[70%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 opacity-[.3]"></div>
           {/* logo */}
-          <div className="absolute -top-[77px] left-[30%] md:left-[40%] lg:left-[45%]">
-            <div className="bg-black w-[184px] h-[184px] p-[20px] border-[8px] border-[#f6b30f] rounded-full">
+          <div className="absolute -top-[50px] left-[30%] md:left-[40%] lg:left-[45%]">
+            <div className="bg-black w-[155px] h-[155px] border-[8px] border-[#f6b30f] rounded-full ">
               <img
                 src={logo}
                 alt=""
-                className="w-[92px] h-[76px] mt-7 mx-[18px]"
+                className="w-[92px] h-[76px] mt-[35px] mx-[24px]"
               />
             </div>
             <div className="">
-              <h2 className="text-white text-center mt-2 font-bold text-2xl">
+              <h2 className="text-white text-center font-bold text-2xl">
                 GOLAM RABBY
               </h2>
             </div>

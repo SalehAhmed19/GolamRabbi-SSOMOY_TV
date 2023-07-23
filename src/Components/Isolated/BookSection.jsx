@@ -51,7 +51,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="h-[565px]">
+                  <div className="lg:h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book2}
@@ -78,7 +78,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="h-[565px]">
+                  <div className="lg:h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book1}
@@ -105,7 +105,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="h-[565px]">
+                  <div className="lg:h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book2}
@@ -132,7 +132,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="h-[565px]">
+                  <div className="lg:h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book1}
@@ -159,7 +159,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="h-[565px]">
+                  <div className="lg:h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book2}
@@ -181,19 +181,19 @@ function BookSection() {
             </SwiperSlide>
           </Swiper>
           {/* previous btn */}
-          <div className="book-btn-prev z-10 cursor-pointer absolute top-[230px] left-[10px]  lg:top-[415px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
+          <div className="book-btn-prev z-10 cursor-pointer absolute top-[230px] left-[10px]  lg:top-[325px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
             <span className="text-primary font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
           </div>
           {/* next btn */}
-          <div className="book-btn-next z-10 cursor-pointer absolute top-[230px] right-[10px]  lg:top-[415px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
+          <div className="book-btn-next z-10 cursor-pointer absolute top-[230px] right-[10px] lg:top-[325px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
             <span className="text-primary font-bold text-xl">
               <MdOutlineKeyboardArrowRight />
             </span>
           </div>
         </div>
-
+            {/* background shape*/}
         <div className="relative space-y-5 top-0">
           <div className="absolute -top-[490px] w-full text-white text-4xl bg-primary h-[10px]"></div>
           <div className="absolute -top-[480px] w-full bg-primary h-[40px]"></div>

@@ -31,7 +31,9 @@ const Dashboard = () => {
             <HiMenuAlt1 className="absolute top-2 right-2 mt-[100px] text-[#F6B30F] text-3xl" />
           )}
         </div>
-        <ul className={`text-[#F6B30F] space-y-6 mt-[100px] p-[20px] text-lg font-bold`}>
+        <ul
+          className={`text-[#F6B30F] space-y-6 mt-[100px] p-[20px] text-lg font-bold`}
+        >
           <li>
             <Link to="/dashboard/manage-course">
               <div
@@ -87,18 +89,24 @@ const Dashboard = () => {
                       : "absolute  h-0 transition-all duration-1000 delay-150"
                   }`}
                 >
-                  <ul className={`space-y-3 `}>
-                    <li>
-                      <NavLink to="/dashboard/manage-course">
-                        <MdCastConnected /> Manage Course
+                  <div className={`space-y-3 `}>
+                    <div className="">
+                      <NavLink
+                        to="/dashboard/manage-course"
+                        className="flex items-center"
+                      >
+                        <MdCastConnected className="mr-2"/> Manage Course
                       </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/dashboard/course-enrollment">
-                        <MdCastConnected /> Course Enrolement
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/dashboard/course-enrollment"
+                        className="flex items-center"
+                      >
+                        <MdCastConnected className="mr-2"/> Course Enrolement
                       </NavLink>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Link>
