@@ -37,21 +37,21 @@ function BookSection() {
               prevEl: ".book-btn-prev",
               nextEl: ".book-btn-next",
             }}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 3500,
+            //   disableOnInteraction: false,
+            // }}
             modules={[EffectCoverflow, Navigation, Autoplay]}
             className=""
           >
-            <SwiperSlide className="">
-              <div className="w-full mb-5">
+            <SwiperSlide>
+              <div className="w-full mb-5 ">
                 <div className="text-primary font-bold mx-16 lg:mx-20">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="">
+                  <div className="h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book2}
@@ -78,7 +78,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="">
+                  <div className="h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book1}
@@ -105,7 +105,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="">
+                  <div className="h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book2}
@@ -132,7 +132,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="">
+                  <div className="h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book1}
@@ -159,7 +159,7 @@ function BookSection() {
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="">
+                  <div className="h-[565px]">
                     <img
                       className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
                       src={book2}
