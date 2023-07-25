@@ -42,3 +42,12 @@ audio::-webkit-media-controls-volume-slider {
   color: white;
   border-radius: 8px;
 }
+.custom-text-stroke {
+  color: #f40a5c;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+  opacity: 0.5;
+}
