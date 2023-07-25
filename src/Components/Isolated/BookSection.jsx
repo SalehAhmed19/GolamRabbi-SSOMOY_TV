@@ -46,7 +46,7 @@ function BookSection() {
           >
             <SwiperSlide>
               <div className="w-full mb-5 ">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
+                <div className="text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -62,9 +62,9 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="relative w-full h-[83px]">
+                <div className="invisible relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -73,7 +73,7 @@ function BookSection() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full mb-5">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
+                <div className="text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -89,9 +89,9 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="relative w-full h-[83px]">
+                <div className="invisible relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -100,7 +100,7 @@ function BookSection() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full mb-5">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
+                <div className="text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -116,9 +116,9 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="relative w-full h-[83px]">
+                <div className="invisible relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -127,7 +127,7 @@ function BookSection() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full mb-5">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
+                <div className="text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -143,9 +143,9 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="relative w-full h-[83px]">
+                <div className="invisible relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -154,7 +154,7 @@ function BookSection() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full mb-5">
-                <div className="text-primary font-bold mx-16 lg:mx-20">
+                <div className="text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -170,9 +170,9 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="relative w-full h-[83px]">
+                <div className="invisible relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full bg-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -193,8 +193,8 @@ function BookSection() {
             </span>
           </div>
         </div>
-            {/* background shape*/}
-        <div className="relative space-y-5 top-0">
+        {/* background shape*/}
+        <div className="relative space-y-5 ">
           <div className="absolute -top-[490px] w-full text-white text-4xl bg-primary h-[10px]"></div>
           <div className="absolute -top-[480px] w-full bg-primary h-[40px]"></div>
           <div className="absolute -top-[420px] w-full bg-primary h-[40px]"></div>

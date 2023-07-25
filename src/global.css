@@ -37,8 +37,8 @@ audio::-webkit-media-controls-volume-slider {
   padding-left: 8px;
   padding-right: 8px;
 }
-::-webkit-file-upload-button{
-  background: #1E1E20;
-  color:white;
+::-webkit-file-upload-button {
+  background: #1e1e20;
+  color: white;
   border-radius: 8px;
 }

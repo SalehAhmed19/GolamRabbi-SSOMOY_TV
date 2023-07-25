@@ -12,7 +12,7 @@ import FanFun from "../Components/Isolated/FanFun";
 import Featured from "../Components/Isolated/Featured";
 import Features from "../Components/Isolated/Features";
 import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
-import Invite from "../Components/Isolated/Invite";
+import Invite from "../Components/Isolated/Invite/Invite";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
 import MockTest from "../Components/Isolated/MockTest";
@@ -24,7 +24,6 @@ import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
 import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
-
 function Home() {
   return (
     <div className="relative">

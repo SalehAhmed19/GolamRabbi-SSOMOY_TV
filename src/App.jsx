@@ -26,7 +26,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardHome from "./Pages/Dashboard/DashboardHome";
 import Events from "./Pages/Dashboard/Events";
 import FeaturedIn from "./Pages/Dashboard/FeaturedIn";
-import Invite from "./Pages/Dashboard/Invite";
+import Invite from "./Pages/Dashboard/Course/Invite";
 import Quotes from "./Pages/Dashboard/Quotes";
 import Testimonials from "./Pages/Dashboard/Testimonials";
 import Home from "./Pages/Home";

@@ -32,12 +32,14 @@ function Jobs() {
                   <span className="font-bold">প্রতিষ্ঠানঃ </span> সময় টিভি
                 </p>
               </div>
-              <button
+              <div className="flex justify-center items-center pb-3">
+                <button
                 onClick={handleModalOpen}
-                className="absolute bottom-3 right-3 py-1 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[190px] text-center rounded-full text-[#fff] font-bold"
+                className=" py-1 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[190px] text-center rounded-full text-[#fff] font-bold"
               >
                 আবেদন করো এখনি
-              </button>
+              </button> 
+              </div>
             </div>
           ))}
         </div>

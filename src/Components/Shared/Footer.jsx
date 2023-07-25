@@ -9,13 +9,13 @@ const Footer = () => {
       <div className="relative z-50  bg-[#14161C]">
         {/* top part */}
         <div className="relative">
-          <div className="w-full h-[35px] bg-[#f6b30f] opacity-[.5] "></div>
+          {/* <div className="w-full h-[35px] bg-[#f6b30f] opacity-[.5] "></div> */}
           <div className="w-full h-[3px] bg-[#f6b30f]"></div>
-          <div className="w-[90%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 "></div>
-          <div className="w-[80%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 opacity-[.5]"></div>
-          <div className="w-[70%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 opacity-[.3]"></div>
+          {/* <div className="w-[90%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 "></div> */}
+          {/* <div className="w-[80%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 opacity-[.5]"></div> */}
+          {/* <div className="w-[70%] border-[#f6b30f] border-[2px] border-dashed mx-auto mt-5 opacity-[.3]"></div> */}
           {/* logo */}
-          <div className="absolute -top-[50px] left-[30%] md:left-[40%] lg:left-[45%]">
+          <div className="absolute -top-[80px] left-[30%] md:left-[40%] lg:left-[45%]">
             <div className="bg-black w-[155px] h-[155px] border-[8px] border-[#f6b30f] rounded-full ">
               <img
                 src={logo}
@@ -23,17 +23,12 @@ const Footer = () => {
                 className="w-[92px] h-[76px] mt-[35px] mx-[24px]"
               />
             </div>
-            <div className="">
-              <h2 className="text-white text-center font-bold text-2xl">
-                GOLAM RABBY
-              </h2>
-            </div>
           </div>
         </div>
         {/* left shape */}
-        <div className="before:opacity-[.5] before:-z-50 before:absolute before:top-[500px] before:-left-[45px]  before:w-[200px] before:h-[100px] before:bg-[#f6b30f] before:rounded-t-full before:rotate-90 before:blur-xl"></div>
+        <div className="before:opacity-[.5] before:-z-50 before:absolute before:bottom-12 before:-left-[50px]  before:w-[200px] before:h-[100px] before:bg-[#f6b30f] before:rounded-t-full before:rotate-90 before:blur-xl"></div>
         {/* right shape */}
-        <div className="before:absolute before:top-[270px] before:-right-[50px]  before:w-[200px] before:h-[100px] before:bg-[#f40a5c] before:rounded-t-full before:-rotate-90 before:blur-xl"></div>
+        <div className="before:opacity-[.5] before:absolute before:top-[98px] before:-right-[50px]  before:w-[200px] before:h-[100px] before:bg-[#f40a5c] before:rounded-t-full before:-rotate-90 before:blur-xl"></div>
         {/* second part */}
         <div className="cursor-pointer max-w-7xl mx-auto mt-[150px] p-20">
           <div className=" grid gird-cl md:grid-cols-2 lg:grid-cols-3">
