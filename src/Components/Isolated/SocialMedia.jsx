@@ -18,7 +18,7 @@ function SocialMedia() {
       href: "https://www.instagram.com/golam.rabby.739326",
     },
     {
-      img: img3,
+      img: img3,       
       social: "ইউটিউব",
       href: "#",
     },

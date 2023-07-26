@@ -49,20 +49,23 @@ export default function InviteTabs() {
     <Box sx={{ width: "100%" }}>
       <Box
         // sx={{ borderBottom: 1, borderColor: "divider" }}
-        className="relative flex justify-start"
+        className="relative flex justify-start -mb-5 mx-5"
       >
         <Tabs
           sx={{
             borderRadius: "8px",
-            background: "#f6b30f",
+            background: "#f6b30",
             margin: "0px 5px",
             color: "black",
           }}
-          // indicatorColor="black"
+          // indicatorColor="fblack"
           textColor="black"
           TabIndicatorProps={{
             style: {
               backgroundColor: "black",
+              height: "5px",
+              border: "1px solid #fff",
+              borderRadius: "10%",
             },
           }}
           value={value}

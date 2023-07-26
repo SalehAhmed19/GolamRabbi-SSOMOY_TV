@@ -37,10 +37,10 @@ function BookSection() {
               prevEl: ".book-btn-prev",
               nextEl: ".book-btn-next",
             }}
-            // autoplay={{
-            //   delay: 3500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
             modules={[EffectCoverflow, Navigation, Autoplay]}
             className=""
           >
@@ -62,7 +62,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="invisible relative w-full h-[83px]">
+                <div className="relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -89,7 +89,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="invisible relative w-full h-[83px]">
+                <div className="relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -116,7 +116,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="invisible relative w-full h-[83px]">
+                <div className="relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -143,7 +143,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="invisible relative w-full h-[83px]">
+                <div className="relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -170,7 +170,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="invisible relative w-full h-[83px]">
+                <div className="relative w-full h-[83px]">
                   <div className="mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
