@@ -2,34 +2,61 @@ import React from "react";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 const ReviewCard = ({ d }) => {
   return (
-    <div className="md:flex w-1/2 relative">
-      <div className="flex justify-center items-center  w-[200px] h-[200px] rounded-lg bg-secondary">
-        <div className="text-white mx-8">
-          <h2 className="text-3xl font-bold">আহনাফ</h2>
-          <h2 className="text-3xl font-bold">শাহারিয়ার</h2>
-          <p className="text-lg">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
-          <div className="flex space-x-1">
-            <BsStarFill/>
-            <BsStarFill/>
-            <BsStarFill/>
-            <BsStarFill/>
-            <BsStarHalf/>
+    <>
+      <div
+        className="md:flex relative"
+        // style={{ fontFamily: "Hind Siliguri"}}
+      >
+        {/* desktop rating info */}
+        <div className="hidden md:block">
+          <div className="flex justify-center items-center  w-[200px] h-[200px] rounded-lg bg-secondary">
+            <div className="text-white mx-8">
+              <h2 className="text-3xl font-bold">আহনাফ</h2>
+              <h2 className="text-3xl font-bold">শাহারিয়ার</h2>
+              <p className="text-lg">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
+              <div className="flex space-x-1">
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarHalf />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:w-[504px] md:h-[784px] md:flex md:absolute md:left-[180px] md:top-[45px]">
+          <img
+            src={d.img}
+            alt="image"
+            className="w-[90px] h-[90px] rounded-lg"
+          />
+          {/* mobile rating info */}
+          <div className="absolute top-0 left-24 w-[350px] h-[90px] bg-secondary md:hidden rounded-lg">
+            <div className="text-white mx-8">
+              <h2 className="text-3xl font-bold">আহনাফ শাহারিয়ার</h2>
+              <p className="text-lg">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
+              <div className="flex space-x-1">
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarHalf />
+              </div>
+            </div>
+          </div>
+          <div className="md:mx-6 mt-5 md:mt-0">
+            <p>
+              আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে
+              সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি
+              সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে।
+              সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ
+              প্রদান সব সময় আলোচনামূলক হয়।
+            </p>
           </div>
         </div>
       </div>
-      <div className="md:w-[504px] md:h-[784px] md:flex md:absolute md:left-[180px] md:top-[45px]">
-        <img src={d.img} alt="image" className="w-[90px] h-[90px] rounded-lg" />
-        <div className="mx-6">
-          <p>
-            আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর কাজে
-            সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ নিয়ে আমি
-            সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং সরল হয়ে থাকে।
-            সংবাদের জগতে তাঁর প্রতিভার স্তর অত্যন্ত উন্নত এবং তাঁর সংবাদ প্রদান
-            সব সময় আলোচনামূলক হয়।
-          </p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

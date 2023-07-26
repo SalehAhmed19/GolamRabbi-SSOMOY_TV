@@ -99,7 +99,7 @@ export default function InviteTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
-          <div className="mx-20 p-5 order-2 lg:order-none">
+          <div className="p-20 order-2 lg:order-none">
             <h1 className="text-4xl font-bold my-5 text-white">অ্যাংকর/MC 1</h1>
             <p className=" text-white text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -136,7 +136,7 @@ export default function InviteTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
-          <div className="mx-20 p-5 order-2 lg:order-none">
+          <div className="p-20 order-2 lg:order-none">
             <h1 className="text-4xl font-bold my-5 text-white">অ্যাংকর/MC 1</h1>
             <p className=" text-white text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -173,7 +173,7 @@ export default function InviteTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
-          <div className="mx-20 p-5 order-2 lg:order-none">
+          <div className="p-20 order-2 lg:order-none">
             <h1 className="text-4xl font-bold my-5 text-white">অ্যাংকর/MC 1</h1>
             <p className=" text-white text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
