@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-import { Fade } from "react-reveal";
-import presenter from "../../assets/images/presenter.png";
-import Modal from "./Modals/Modal";
+import React from "react";
 import { toast } from "react-hot-toast";
+import { Fade } from "react-reveal";
+import box from "../../assets/SVGs/box.png";
 import news from "../../assets/images/interview.png";
 import MuiModal from "./Modals/MuiModal";
-import box from "../../assets/SVGs/box.png";
-import { Zoom } from "react-reveal";
 
 function MockTest() {
   const [open, setOpen] = React.useState(false);
@@ -46,16 +43,19 @@ function MockTest() {
   };
 
   return (
-    <div className="p-5 lg:px-24 py-14 text-[#fff] bg-[#14161C] relative">
+    <div className="px-5 pb-5 lg:px-24  text-[#fff] bg-[#14161C] relative">
       <img
         src={box}
         className="absolute top-5 left-0 blur-lg rounded w-24"
         alt=""
       />
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+        মক টেস্ট
+      </h1>
       <Fade down>
-        <h2 className="text-center text-4xl font-bold mb-5 text-primary">
+        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           মক টেস্ট
-        </h2>
+        </h1>
       </Fade>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div>
@@ -65,13 +65,13 @@ function MockTest() {
         </div>
         <div className="flex flex-col justify-center lg:ml-10 mx-5">
           <Fade right>
-            <p className="text-xl">
+            <p className="md:text-[25px] lg:text-[29px]">
               অল্প সময়ে টিভি স্ক্রিনে আসার প্রস্তুতি ঝালাই করে নিতে চাও। আবার
               এটাও ভাবছো শিখছো অনেক জায়গায়। কিন্তু এখনো কনফিডেন্ট পাচ্ছো না।{" "}
               <br />
             </p>
-            <p className="text-xl text-primary">এবার তাহলে চেক করে নাও-</p>
-            <ul className="text-xl list-disc mx-5 ml-10">
+            <p className="text-xl text-primary mt-2">এবার তাহলে চেক করে নাও-</p>
+            <ul className="mt-2 list-disc mx-5 ml-[70px]">
               <li>তোমার ভয়েস ও উচ্চারণ</li>
               <li>তোমার স্কিল ও নলেজ</li>
               <li>তোমার প্রফেশনাল লুক</li>

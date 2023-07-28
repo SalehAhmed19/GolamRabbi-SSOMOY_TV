@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import { Fade } from "react-reveal";
-import bg from "../../assets/images/mentor-bg.png";
-import presenter from "../../assets/images/presenter.png";
-import Modal from "./Modals/Modal";
-import { toast } from "react-hot-toast";
-import news from "../../assets/images/mentorship.png";
 import emailjs from "emailjs-com";
+import React from "react";
+import { toast } from "react-hot-toast";
+import { Fade } from "react-reveal";
+import news from "../../assets/images/mentorship.png";
 import MuiModal from "./Modals/MuiModal";
-import box from "../../assets/SVGs/box.png";
 
 const Mentor = () => {
   const [open, setOpen] = React.useState(false);
@@ -72,21 +68,24 @@ const Mentor = () => {
       //   backgroundSize: "cover",
       //   backgroundRepeat: "no-repeat",
       // }}
-      className="lg:px-24 px-5 py-14 text-[#fff] relative"
+      className="lg:px-24 px-5 pb-5  bg-[#fff] relative"
     >
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-2 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+        পেইড মেন্টরশিপ
+      </h1>
       <Fade down>
-        <h2 className="text-center text-4xl font-bold mb-5 text-primary">
+        <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           পেইড মেন্টরশিপ
-        </h2>
+        </h1>
       </Fade>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div className="flex flex-col justify-center">
           <Fade left>
-            <p className="text-xl font-bold text-primary">
+            <p className="md:text-[25px] lg:text-[29px] font-bold text-secondary">
               উপস্থাপনার ঝকঝকে ক্যারিয়ারে আসার টোটাল প্রস্তুতি নিয়ে নিতে চাও।
               থাকতে চাও অভিজ্ঞ কারো ছায়ায়। তাহলে দেরী কেনো?
             </p>
-            <ul className="list-disc text-xl my-5 ml-10">
+            <ul className="list-disc md:text-xl my-5 ml-5 md:ml-20 lg:ml-24">
               <li>উপস্থাপনা কত ধরণের।</li>
               <li>দেশি-বিদেশি যেকোনো গণমাধ্যমের প্রস্তুতি।</li>
               <li>কোনটাতে তোমার আগ্রহ আর কিভাবে আসবে এ ক্যারিয়ারে।</li>
@@ -107,7 +106,7 @@ const Mentor = () => {
       <Fade up>
         <button
           onClick={() => setOpen(true)}
-          className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[230px] text-center rounded-full text-[#fff] font-bold text-xl"
+          className="block mx-auto my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] hover:text-white w-[230px] text-center rounded-full  font-bold text-xl"
         >
           আমাকে বুক করতে
         </button>

@@ -53,7 +53,7 @@ function Home() {
         <Invite />
         <About />
         <BookSection />
-        <HomeImageGallery />
+        {/* <HomeImageGallery /> */}
         <SocialMedia />
       </div>
     </div>

@@ -73,11 +73,22 @@ function Testimonals() {
     },
   ];
   return (
-    <div className="bg-white">
-      <div className="lg:mx-20 mx-5 my-14 relative ">
+    <div className="bg-white pb-[1px]">
+      <div className="lg:mx-20 mx-5 my-14 relative">
+        {/* <h1 className="pt-[26px] -mb-20 custom-text-stroke-2 text-center text-[100px] my-5">
+          টেস্টিমোনিয়ালস
+        </h1>
         <Fade down>
-          <h1 className="pt-16 pb-5 text-secondary text-center text-4xl font-bold my-5">
-            টেস্টিমনিয়ালস
+          <h1 className="mb-10 text-secondary text-center text-[41px] font-bold">
+            টেস্টিমোনিয়ালস
+          </h1>
+        </Fade> */}
+        <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-2 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+          টেস্টিমোনিয়ালস
+        </h1>
+        <Fade down>
+          <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+            টেস্টিমোনিয়ালস
           </h1>
         </Fade>
         <div>

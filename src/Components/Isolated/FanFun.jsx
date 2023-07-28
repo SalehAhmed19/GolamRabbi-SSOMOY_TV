@@ -131,9 +131,14 @@ function FanFun() {
     console.log(form);
   };
   return (
-    <div className="py-14 lg:px-24 p-5">
+    <div
+      className="pb-[80px] bg-[#0E0F15] lg:px-24 px-5"
+    >
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+        ফান উইথ ফ্যান
+      </h1>
       <Fade down>
-        <h1 className="mb-5 text-primary text-center text-4xl font-bold">
+        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           ফান উইথ ফ্যান
         </h1>
       </Fade>

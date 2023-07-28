@@ -53,7 +53,7 @@ export default function AboutTabs() {
     <Box sx={{ width: "100%" }}>
       <Box
         // sx={{ borderBottom: 1, borderColor: "divider" }}
-        className="relative flex justify-end -mb-5 mx-5"
+        className="relative flex justify-end -mb-6 -mx-3"
       >
         <Tabs
           sx={{
@@ -121,9 +121,7 @@ export default function AboutTabs() {
               className="lg:-mt-32 w-[413px] h-[656px]"
             />
           </div>
-          <div
-            className="p-20"
-          >
+          <div className="px-20">
             <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
             <p className="text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -160,7 +158,7 @@ export default function AboutTabs() {
               className="lg:-mt-32 w-[413px] h-[656px]"
             />
           </div>
-          <div className="p-5">
+          <div className="px-20">
             <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
             <p className="text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -197,7 +195,7 @@ export default function AboutTabs() {
               className="lg:-mt-32 w-[413px] h-[656px]"
             />
           </div>
-          <div className="p-5" style={{ marginRight: "80px" }}>
+          <div className="px-20">
             <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
             <p className="text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -234,7 +232,7 @@ export default function AboutTabs() {
               className="lg:-mt-32 w-[413px] h-[656px]"
             />
           </div>
-          <div className="p-5" style={{ marginRight: "80px" }}>
+          <div className="px-20">
             <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
             <p className="text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -271,7 +269,7 @@ export default function AboutTabs() {
               className="lg:-mt-32 w-[413px] h-[656px]"
             />
           </div>
-          <div className="p-5" style={{ marginRight: "80px" }}>
+          <div className="px-20">
             <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
             <p className="text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

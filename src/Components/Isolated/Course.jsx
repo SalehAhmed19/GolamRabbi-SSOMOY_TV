@@ -19,13 +19,17 @@ function Course() {
       //   backgroundSize: "cover",
       //   backgroundRepeat: "no-repeat",
       // }}
-      className="lg:px-24 py-10 bg-[#14161C]"
+      className="lg:px-24 bg-[#14161C]"
     >
-      <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary my-5">
-          কোর্স
-        </h2>
-      </Fade>
+        <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+          কোর্স সমূহ
+        </h1>
+        <Fade down>
+          <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+            কোর্স সমূহ
+          </h1>
+        </Fade>
+      
       {/* <CourseTabs /> */}
       <div className="p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <Link to="/media-courses">

@@ -17,7 +17,7 @@ const FanFunLeft = ({ setOpen }) => {
         <p className="my-5 text-basic text-xl text-primary">
           সবার এমন ভালোবাসার সরাসরি উত্তর দিতে আয়োজন ফান উইথ ফ্যান।
         </p>
-        <ul className="list-disc text-basic text-xl ml-10">
+        <ul className="list-disc text-basic text-xl ml-16">
           <li>অংশ নিতে পারবে যেকেউ।</li>
           <li>অংশ নিতে পারো তুমিও।</li>
           <li>শিখতে পারো। থাকবে মজাও।</li>

@@ -48,13 +48,13 @@ export default function InviteTabs() {
   return (
     <Box sx={{ width: "100%" }}>
       <Box
-        // sx={{ borderBottom: 1, borderColor: "divider" }}
-        className="relative flex justify-start -mb-5 mx-5"
+        // sx={{#f6b30f borderBottom: 1, borderColor: "divider" }}
+        className="relative flex justify-start -mb-6 -mx-3"
       >
         <Tabs
           sx={{
             borderRadius: "8px",
-            background: "#f6b30",
+            background: "#f6b30f",
             margin: "0px 5px",
             color: "black",
           }}
@@ -64,8 +64,6 @@ export default function InviteTabs() {
             style: {
               backgroundColor: "black",
               height: "5px",
-              border: "1px solid #fff",
-              borderRadius: "10%",
             },
           }}
           value={value}
@@ -99,7 +97,7 @@ export default function InviteTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
-          <div className="p-20 order-2 lg:order-none">
+          <div className="mx-20 order-2 lg:order-none">
             <h1 className="text-4xl font-bold my-5 text-white">অ্যাংকর/MC 1</h1>
             <p className=" text-white text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -136,7 +134,7 @@ export default function InviteTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
-          <div className="p-20 order-2 lg:order-none">
+          <div className="mx-20 order-2 lg:order-none">
             <h1 className="text-4xl font-bold my-5 text-white">অ্যাংকর/MC 1</h1>
             <p className=" text-white text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -173,7 +171,7 @@ export default function InviteTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
-          <div className="p-20 order-2 lg:order-none">
+          <div className="mx-20 order-2 lg:order-none">
             <h1 className="text-4xl font-bold my-5 text-white">অ্যাংকর/MC 1</h1>
             <p className=" text-white text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -5,15 +5,13 @@ const ReviewCard = ({ d }) => {
     <>
       <div
         className="md:flex relative"
-        // style={{ fontFamily: "Hind Siliguri"}}
       >
         {/* desktop rating info */}
         <div className="hidden md:block">
           <div className="flex justify-center items-center  w-[200px] h-[200px] rounded-lg bg-secondary">
             <div className="text-white mx-8">
-              <h2 className="text-3xl font-bold">আহনাফ</h2>
-              <h2 className="text-3xl font-bold">শাহারিয়ার</h2>
-              <p className="text-lg">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
+              <h2 className="text-3xl font-bold">আহনাফ শাহারিয়ার</h2>
+              <p>সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
               <div className="flex space-x-1">
                 <BsStarFill />
                 <BsStarFill />
@@ -32,10 +30,10 @@ const ReviewCard = ({ d }) => {
             className="w-[90px] h-[90px] rounded-lg"
           />
           {/* mobile rating info */}
-          <div className="absolute top-0 left-24 w-[350px] h-[90px] bg-secondary md:hidden rounded-lg">
-            <div className="text-white mx-8">
-              <h2 className="text-3xl font-bold">আহনাফ শাহারিয়ার</h2>
-              <p className="text-lg">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
+          <div className="absolute top-0 left-24 h-[90px] bg-secondary md:hidden rounded-lg">
+            <div className="mt-2 text-white mx-8">
+              <h2 className="text-xl font-bold">আহনাফ শাহারিয়ার</h2>
+              <p>সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
               <div className="flex space-x-1">
                 <BsStarFill />
                 <BsStarFill />

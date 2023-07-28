@@ -16,7 +16,7 @@ function Features() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="py-24 lg:px-24"
+      className="py-24 lg:px-24 rounded-lg"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {features.map((feature) => (
