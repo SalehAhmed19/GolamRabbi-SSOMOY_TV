@@ -1,10 +1,9 @@
+import "keen-slider/keen-slider.min.css";
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
-import { useKeenSlider } from "keen-slider/react";
-import blog from "../../assets/images/blog.jpeg";
-import "keen-slider/keen-slider.min.css";
 import "../../Styles/MediaJobCircular.css";
+import blog from "../../assets/images/blogh.png";
 
 function Blogs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,64 +17,70 @@ function Blogs() {
     setIsModalOpen(false);
   };
   return (
-    <div className="lg:px-24 py-14 text-[#fff]">
-      <div className="flex items-center justify-center">
-        <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
-        <Fade down>
-          <h2 className="text-center text-4xl font-bold mb-5 text-primary mx-10">
-            ব্লগ
-          </h2>
-        </Fade>
-        <div className="h-[2px] w-20 bg-[#fff] rounded-2xl"></div>
-      </div>
-      <Link to="/">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-5 mx-5">
-          <Zoom>
-            <Link to={"/professional-blogs"}>
-              <h3 className="text-primary my-6 font-bold text-2xl">
-                প্রফেশনাল ব্লগ
-              </h3>
-              <div className="relative">
-                <img className="opacity-50 rounded-md" src={blog} alt="" />
-                <div className="absolute bottom-[50px] mx-10">
-                  <h3 className="text-2xl text-basic font-bold">
-                    আবহাওয়া - আজকের আবহাওয়া কেমন থাকবে
-                  </h3>
-                  <p>
-                    পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
-                    আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
-                  </p>
-                </div>
-              </div>
-            </Link>
-            <Link to={"/personal-blogs"}>
-              <h3 className="text-primary my-6 font-bold text-2xl">
-                পার্সোনাল ব্লগ
-              </h3>
-              <div className="relative">
-                <img className="opacity-50 rounded-md" src={blog} alt="" />
-                <div className="absolute bottom-[50px] mx-10">
-                  <h3 className="text-2xl text-basic font-bold">
-                    আবহাওয়া - আজকের আবহাওয়া কেমন থাকবে
-                  </h3>
-                  <p>
-                    পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
-                    আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </Zoom>
-        </div>
-      </Link>
-      <Fade up>
-        <Link to="/blogs">
-          <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
-            সব ব্লগ দেখতে
-          </button>
-        </Link>
+    <>
+      <h1 className="-mb-20 custom-text-stroke-3 text-center text-[100px] my-5">
+        ব্লগ সমূহ
+      </h1>
+      <Fade down>
+        <h1
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="text-primary text-center text-[41px] font-bold"
+        >
+          ব্লগ সমূহ
+        </h1>
       </Fade>
-    </div>
+      <div className="lg:px-24 py-14 ">
+        
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-5 mx-5">
+            <Zoom>
+              <Link to={"/blogs"}>
+                <div className="bg-white rounded-lg flex">
+                  <img className="w-[200px]  rounded-l-lg" src={blog} alt="" />
+                  <div className="p-5">
+                    <h3 className="text-2xl text-secondary font-bold">
+                      বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে
+                    </h3>
+                    <p className="text-[#7B7B7B]">বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে</p>
+                  </div>
+                </div>
+              </Link>
+            </Zoom>
+            <Zoom>
+              <Link to={"/blogs"}>
+                <div className="bg-white rounded-lg flex">
+                  <img className="w-[200px]  rounded-l-lg" src={blog} alt="" />
+                  <div className="p-5">
+                    <h3 className="text-2xl text-secondary font-bold">
+                      বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে
+                    </h3>
+                    <p className="text-[#7B7B7B]">বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে</p>
+                  </div>
+                </div>
+              </Link>
+            </Zoom>
+            <Zoom>
+              <Link to={"/blogs"}>
+                <div className="bg-white rounded-lg flex">
+                  <img className="w-[200px]  rounded-l-lg" src={blog} alt="" />
+                  <div className="p-5">
+                    <h3 className="text-2xl text-secondary font-bold">
+                      বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে
+                    </h3>
+                    <p className="text-[#7B7B7B]">বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে</p>
+                  </div>
+                </div>
+              </Link>
+            </Zoom>
+          </div>
+        <Fade up>
+          <Link to="/blogs">
+            <button className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl">
+              আরও ব্লগ দেখতে
+            </button>
+          </Link>
+        </Fade>
+      </div>
+    </>
   );
 }
 

@@ -1,19 +1,72 @@
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
 import emailjs from "emailjs-com";
-import React from "react";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { Fade } from "react-reveal";
-import gr2 from "../../assets/images/golamrabby.png";
+import bg from "../../assets/images/deepak-kumar-r4ZEUFKZPJM-unsplash.jpg";
+import gr2 from "../../assets/images/golamrabby.jpeg";
 import gr3 from "../../assets/images/gr2.jpg";
 import gr4 from "../../assets/images/gr3.jpg";
 import gr5 from "../../assets/images/gr4.jpg";
 import gr6 from "../../assets/images/gr5.jpg";
+import Advertisement from "./Advertisement";
 import FanFunLeft from "./FanFunLeft";
+import Invite from "./Invite/Invite";
 import MuiModal from "./Modals/MuiModal";
-
 // https://v1.nocodeapi.com/golamrabbytest/google_sheets/ErpScSALkInmlYSY
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
-function FanFun() {
-  const [open, setOpen] = React.useState(false);
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+const FanFun = () => {
+  const statistics = [
+    { _id: 1, qty: "১৩", activity: "সংবাদ উপস্থাপনের অভিজ্ঞতা" },
+    { _id: 2, qty: "১০০", activity: "গণমাধ্যমকর্মী প্রস্তুত করা" },
+    { _id: 3, qty: "২১০", activity: "প্রজেক্ট কমপ্লিট" },
+    { _id: 4, qty: "২৭", activity: "অ্যাওয়ার্ড উইনার" },
+    { _id: 5, qty: "১১০", activity: "সার্টিফিকেট কোর্স সম্পন্ন" },
+    { _id: 6, qty: "২", activity: "তরুণকে ইন্সপায়ার করা" },
+    { _id: 7, qty: "৫", activity: "ফ্যান ফলোয়ার্স" },
+    { _id: 8, qty: "১১০", activity: "বায়ো ইন্টার্ভিউ রাইটিং" },
+  ];
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const itemData = [
@@ -132,114 +185,171 @@ function FanFun() {
   };
   return (
     <div
-      className="pb-[80px] bg-[#0E0F15] lg:px-24 px-5"
+      style={{
+        background: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        // backgroundAttachment: "fixed",
+        backgroundPosition: "10% 40%",
+        // boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.3)",
+      }}
+      className="p-14"
     >
-      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
-        ফান উইথ ফ্যান
-      </h1>
-      <Fade down>
-        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
-          ফান উইথ ফ্যান
-        </h1>
-      </Fade>
-      <div className="grid gird-cols-1 lg:grid-cols-2 gap-5">
-        <Fade left>
-          <FanFunLeft setOpen={setOpen} />
-        </Fade>
-        {/* tablet and desktop */}
-        <div className="hidden md:block mx-auto">
-          {/* row 1 */}
-          <div className="md:mx-[124px] md:p-8 md:flex md:space-x-[80px]">
-            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
-              <img src={gr2} alt="" className="rotate-45" />
+      <Box
+        sx={{ width: "100%" }}
+        className="px-2 -py-[100px] z-20 max-w-full md:max-w-[90%] mx-auto"
+      >
+        <Box className=" bg-white  md:w-[549px] md:h-[52px] mx-auto rounded-tl-full rounded-tr-full mb-2 lg:mb-0">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons
+            allowScrollButtonsMobile
+            aria-label="basic tabs example"
+            indicatorColor="#f40a5c"
+            textColor="#f40a5c"
+            TabIndicatorProps={{
+              style: {
+                backgroundColor: "#f40a5c",
+                height: "5px",
+                border: "1px solid #f40a5c",
+                borderTopLeftRadius: "10px",
+                borderTopRightRadius: "10px",
+              },
+            }}
+            className="lg:space-x-[55px]"
+          >
+            <Tab
+              label="ফান উইথ ফ্যান"
+              {...a11yProps(0)}
+              sx={{
+                fontFamily: "Hind Siliguri",
+                fontWeight: 700,
+                fontSize: "18px",
+              }}
+            />
+            <Tab
+              label="ইনভাইট"
+              {...a11yProps(1)}
+              sx={{
+                fontFamily: "Hind Siliguri",
+                fontWeight: 700,
+                fontSize: "18px",
+              }}
+            />
+            <Tab
+              label="শেয়ার করো"
+              {...a11yProps(2)}
+              sx={{
+                fontFamily: "Hind Siliguri",
+                fontWeight: 700,
+                fontSize: "18px",
+              }}
+            />
+          </Tabs>
+        </Box>
+        <TabPanel
+          value={value}
+          index={0}
+          className="w-full bg-white rounded-lg"
+        >
+          <div className="pb-[80px] lg:px-24 px-5 ">
+            <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+              ফান উইথ ফ্যান
+            </h1>
+            <Fade down>
+              <h1
+                style={{ fontFamily: "Hind Siliguri" }}
+                className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold"
+              >
+                ফান উইথ ফ্যান
+              </h1>
+            </Fade>
+            <div className="grid gird-cols-1 lg:grid-cols-2 gap-5">
+              <Fade left>
+                <FanFunLeft setOpen={setOpen} />
+              </Fade>
+              {/* tablet and desktop */}
+              <div className="lg:mx-[200px] mt-[15px] flex items-end w-[270px] md:w-[80%] lg:w-full">
+                {/* column 1 */}
+                <div>
+                  <div className="ml-2 mb-2">
+                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+                  </div>
+                </div>
+                {/* column 2 */}
+                <div>
+                  <div className="m-2">
+                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+                  </div>
+                  <div className="m-2">
+                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+                  </div>
+                </div>
+                {/* column 3 */}
+                <div>
+                  <div className="my-2">
+                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+                  </div>
+                  <div className="my-2">
+                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+                  </div>
+                  <div className="my-2">
+                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
-              <img src={gr2} alt="" className="rotate-45" />
-            </div>
-          </div>
-          {/* row 2 */}
-          <div className="md:mx-[35px] md:-mt-[66px] md:flex md:space-x-[80px]">
-            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
-              <img src={gr2} alt="" className="rotate-45" />
-            </div>
-            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
-              <img src={gr2} alt="" className="rotate-45" />
-            </div>
-          </div>
-          {/* row 3   */}
-          <div className="md:mx-[155px] md:-mt-[36px] md:flex md:space-x-[80px] ">
-            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
-              <img src={gr2} alt="" className="rotate-45" />
-            </div>
-            <div className="md:w-40 h-40 border  border-[#F80264] md:-rotate-45 rounded-md">
-              <img src={gr2} alt="" className="rotate-45" />
-            </div>
-          </div>
-        </div>
-        {/* mobile */}
-        <div className="md:hidden mx-auto">
-          {/* row 1 */}
-          <div className="flex space-x-[45px]">
-            <div className="border border-[#F80264] rounded-md -rotate-45">
-              <img src={gr2} alt="" className="w-[90px] rotate-45" />
-            </div>
-            <div className="border border-[#F80264] rounded-md -rotate-45">
-              <img src={gr2} alt="" className="w-[90px] rotate-45" />
-            </div>
-          </div>
-          {/* row 2 */}
-          <div className="mx-[70px] -mt-[10px]">
-            <div className="border border-[#F80264] rounded-md w-[90px] -rotate-45">
-              <img src={gr2} alt="" className="w-[90px] rotate-45" />
-            </div>
-          </div>
-          {/* row 3 */}
-          <div className="mx-[2px] -mt-[10px] flex space-x-[45px]">
-            <div className="border border-[#F80264] rounded-md -rotate-45">
-              <img src={gr2} alt="" className="w-[90px] rotate-45" />
-            </div>
-            <div className="border border-[#F80264] rounded-md -rotate-45">
-              <img src={gr2} alt="" className="w-[90px] rotate-45" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
-        <h4 className="text-primary font-bold text-xl">ফান উইথ ফ্যান</h4>
-        <form onSubmit={() => handleSubmit(event)} action="">
-          <input
-            type="text"
-            name="title"
-            readOnly
-            value="Fun with Fan"
-            className="hidden"
-          />
-          <input
-            name="name"
-            placeholder="তোমার নাম লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-          <input
-            name="email"
-            placeholder="তোমার ইমেইল লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="email"
-          />
-          <input
-            name="mobile"
-            placeholder="তোমার মোবাইল নাম্বার লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="number"
-          />
+            <MuiModal
+              open={open}
+              handleOpen={handleOpen}
+              handleClose={handleClose}
+            >
+              <h4 className="text-primary font-bold text-xl">ফান উইথ ফ্যান</h4>
+              <form onSubmit={() => handleSubmit(event)} action="">
+                <input
+                  type="text"
+                  name="title"
+                  readOnly
+                  value="Fun with Fan"
+                  className="hidden"
+                />
+                <input
+                  name="name"
+                  placeholder="তোমার নাম লিখো"
+                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+                  type="text"
+                />
+                <input
+                  name="email"
+                  placeholder="তোমার ইমেইল লিখো"
+                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+                  type="email"
+                />
+                <input
+                  name="mobile"
+                  placeholder="তোমার মোবাইল নাম্বার লিখো"
+                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
+                  type="number"
+                />
 
-          <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-            সাবমিট করো
-          </button>
-        </form>
-      </MuiModal>
+                <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
+                  সাবমিট করো
+                </button>
+              </form>
+            </MuiModal>
+          </div>
+        </TabPanel>
+        <TabPanel value={value} index={1} className="bg-primary rounded-lg">
+          <Invite />
+        </TabPanel>
+        <TabPanel value={value} index={2} className="-mt-[23px] rounded-lg">
+          <Advertisement/>
+        </TabPanel>
+      </Box>
     </div>
   );
-}
+};
 
 export default FanFun;

@@ -69,7 +69,7 @@ function Advertisement() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="lg:px-24 px-5 flex flex-col items-center justify-center h-[70vh]"
+      className="rounded-lg lg:px-24 px-5 flex flex-col items-center justify-center h-[70vh]"
     >
       <Zoom>
         <h2 className="text-primary text-center text-4xl font-bold mb-5">

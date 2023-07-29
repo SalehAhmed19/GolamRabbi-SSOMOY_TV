@@ -1,23 +1,22 @@
-import React, { useState } from "react";
-import Modal from "./Modals/Modal";
+import React from "react";
 import { Fade } from "react-reveal";
 
 const FanFunLeft = ({ setOpen }) => {
   return (
     <>
-      <div className="flex flex-col justify-center">
+      <div className="mt-10 flex flex-col justify-center font-semibold">
         <h2 className="text-secondary text-3xl font-bold mb-5">
           এমন দাবির এবার হবে অবসান:
         </h2>
-        <p className="text-[#fff] text-xl">
+        <p className="text-xl">
           <span className="text-2xl font-bold text-primary">ফ্যানরা </span>{" "}
           নানাকিছু লিখে। ইউটিউবে কমেন্ট। করে সেলফি তুলতে চায়। দেখা করতে চায়।
           শিখতে চায়। হতে চায় সংবাদ উপস্থাপক।
         </p>
-        <p className="my-5 text-basic text-xl text-primary">
+        <p className="my-5 text-xl">
           সবার এমন ভালোবাসার সরাসরি উত্তর দিতে আয়োজন ফান উইথ ফ্যান।
         </p>
-        <ul className="list-disc text-basic text-xl ml-16">
+        <ul className="list-disc text-xl ml-16">
           <li>অংশ নিতে পারবে যেকেউ।</li>
           <li>অংশ নিতে পারো তুমিও।</li>
           <li>শিখতে পারো। থাকবে মজাও।</li>
@@ -26,7 +25,7 @@ const FanFunLeft = ({ setOpen }) => {
         <Fade up>
           <button
             onClick={() => setOpen(true)}
-            className="block my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+            className="block my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] w-[290px] text-center rounded-full hover:text-white font-bold text-xl"
           >
             অংশ নিতে ক্লিক করো
           </button>

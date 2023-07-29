@@ -3,7 +3,7 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { Zoom } from "react-reveal";
 import bg from "../../assets/images/pexels-jahangeer-bm-1619299.jpg";
 import Features from "./Features";
@@ -39,7 +39,7 @@ function a11yProps(index) {
 }
 
 const Statistics = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -61,8 +61,9 @@ const Statistics = () => {
         background: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        // backgroundAttachment: "fixed",
         backgroundPosition: "10% 40%",
+        boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.3)",
       }}
       className="relative"
     >
@@ -70,7 +71,7 @@ const Statistics = () => {
         sx={{ width: "100%" }}
         className="py-[100px] z-20 max-w-[90%] mx-auto"
       >
-        <Box className="mt-20 bg-white w-[365px] mx-auto rounded-tl-full rounded-tr-full p-2">
+        <Box className="mt-20 bg-white w-[365px] h-[52px] mx-auto rounded-tl-full rounded-tr-full ">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -111,7 +112,7 @@ const Statistics = () => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0} className="bg-white  rounded-lg">
-          <div className="p-10">
+          <div className="p-14">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8  gap-5 mx-5">
               {statistics.map((statistic) => (
                 <Zoom>
@@ -119,7 +120,9 @@ const Statistics = () => {
                     key={statistic._id}
                     className="px-5 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
                   >
-                    <h3 className="text-2xl">{statistic.qty}</h3>
+                    <h3 className="text-2xl">
+                      {statistic.qty}
+                    </h3>
                     <h3 className="text-center text-xl">
                       {statistic.activity}
                     </h3>
@@ -129,7 +132,7 @@ const Statistics = () => {
             </div>
           </div>
         </TabPanel>
-        <TabPanel value={value} index={1} className="">
+        <TabPanel value={value} index={1} className="-mt-6">
           <Features />
         </TabPanel>
       </Box>

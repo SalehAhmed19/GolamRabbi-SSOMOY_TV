@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import About from "../Components/Isolated/About";
-import Advertisement from "../Components/Isolated/Advertisement";
 import Advertisement2 from "../Components/Isolated/Advertisement2";
 import Banner from "../Components/Isolated/Banner";
 import Blogs from "../Components/Isolated/Blogs";
@@ -10,8 +9,6 @@ import Course from "../Components/Isolated/Course";
 import Events from "../Components/Isolated/Events";
 import FanFun from "../Components/Isolated/FanFun";
 import Featured from "../Components/Isolated/Featured";
-import Features from "../Components/Isolated/Features";
-import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
 import Invite from "../Components/Isolated/Invite/Invite";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
@@ -33,14 +30,12 @@ function Home() {
       <div className="relative bg-opacity-75 backdrop-filter backdrop-blur-3xl">
         <Banner />
         <Statistics />
-        <FanFun />
-        <Features />
-        <Advertisement />
         <MediaJobCircular />
+        <FanFun />
+        <Blogs />
         <Course />
         <Mentor />
         <MockTest />
-        <Blogs />
         <Services />
         <Skills />
         <Advertisement2 />

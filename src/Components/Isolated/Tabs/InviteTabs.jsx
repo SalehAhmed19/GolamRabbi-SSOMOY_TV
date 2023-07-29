@@ -127,7 +127,7 @@ export default function InviteTabs() {
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="lg:-mt-32 w-[450px] h-[750px]"
             />
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function InviteTabs() {
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="lg:-mt-44 w-[413px] h-[656px]"
             />
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function InviteTabs() {
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="lg:-mt-44 w-[413px] h-[656px]"
             />
           </div>
         </div>
