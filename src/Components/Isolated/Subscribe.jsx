@@ -35,7 +35,7 @@ function Subscribe() {
       }}
       className="p-7 lg:mx-20 mx-5 rounded-md text-primary mt-20 mb-10 flex flex-col lg:flex-row items-center justify-between"
     >
-      <h3 className="font-bold text-3xl">
+      <h3 className="font-bold text-xl md:text-2xl">
         জীবনকে এগিয়ে নিতে। সময়কে উপভোগ্য করতে। <br /> এখনই সাবস্ক্রাইব করো।
       </h3>
       <form

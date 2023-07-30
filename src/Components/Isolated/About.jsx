@@ -12,11 +12,19 @@ function About() {
   return (
     <div className="bg-primary pb-[55px] -mt-[56px]">
       <div className="lg:mx-20  mx-5 my-14">
-        <h1 className="pt-[26px] -mb-20 custom-text-stroke-4 text-center text-[100px] my-5">
+        {/* <h1 className="pt-[26px] -mb-20 custom-text-stroke-4 text-center text-[100px] my-5">
           আমার সম্পর্কে
         </h1>
         <Fade down>
           <h1 className="text- text-center text-[41px] font-bold">
+            আমার সম্পর্কে
+          </h1>
+        </Fade> */}
+        <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-4 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
+          আমার সম্পর্কে
+        </h1>
+        <Fade down>
+          <h1 className="text-black text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
             আমার সম্পর্কে
           </h1>
         </Fade>

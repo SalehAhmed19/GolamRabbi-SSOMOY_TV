@@ -73,14 +73,11 @@ function Events() {
       className=" lg:px-24 py-14 text-[#fff] px-5"
     >
       <Zoom>{/* <Advertisement2 /> */}</Zoom>
-      <h1 className="-mb-20 custom-text-stroke-2 text-center text-[100px] my-5">
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-2 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
         আসন্ন ইভেন্টস
       </h1>
       <Fade down>
-        <h1
-          style={{ fontFamily: "Hind Siliguri" }}
-          className="text-white text-center text-[41px] font-bold"
-        >
+        <h1 className="text-white text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           আসন্ন ইভেন্টস
         </h1>
       </Fade>
@@ -103,8 +100,8 @@ function Events() {
             {events.map((event, idx) => (
               <SwiperSlide key={idx}>
                 <div className="mb-10">
-                  <div className="-p-5 flex items-center">
-                    <div className="text-primary mr-5 border-2 bg-white text-secondary shadow-xl p-5  rounded-md">
+                  <div className="-p-5 flex items-center flex-col md:flex-row">
+                    <div className="mb-8 md:mb-0 text-primary mr-5 border-2 bg-white text-secondary shadow-xl p-5  rounded-md">
                       <h2
                         className="text-6xl font-bold drop-shadow-xl"
                         style={{ fontFamily: "Hind Siliguri" }}
@@ -152,13 +149,13 @@ function Events() {
             </span>
           </div> */}
           <div className="my-5 select-none">
-            <p className="font-bold">
+            <p className="font-bold text-xl md:text-2xl">
               জীবনের এক রাস অনুভূতি ও অভিজ্ঞতা নিয়ে কিছু কথা হবে তোমাদের সাথে...
             </p>
             <Fade up>
               <Link
                 to="/events"
-                className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+                className="block mx-auto my-10 py-2 border-2 hover:border-[#f40a5c] w-[290px] text-center rounded-full text-[#f40a5c] bg-[#fff] font-bold text-xl"
               >
                 আরও দেখুন
               </Link>

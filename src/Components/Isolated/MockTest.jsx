@@ -49,7 +49,7 @@ function MockTest() {
         className="absolute top-5 left-0 blur-lg rounded w-24"
         alt=""
       />
-      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+      {/* <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
         মক টেস্ট
       </h1>
       <Fade down>
@@ -59,7 +59,7 @@ function MockTest() {
         >
           মক টেস্ট
         </h1>
-      </Fade>
+      </Fade> */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div>
           <Fade left>

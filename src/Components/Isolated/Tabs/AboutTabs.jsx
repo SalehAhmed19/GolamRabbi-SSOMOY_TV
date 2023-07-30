@@ -296,13 +296,15 @@ export default function AboutTabs() {
     //     </div>
     //   </TabPanel>
     // </Box>
-    <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
+    <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg mt-10">
       <div className="">
         <img src={demoImage} alt="" className="lg:-mt-32 w-[413px] h-[656px]" />
       </div>
       <div className="px-20 text-primary">
-        <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-        <p className="text-lg text-justify">
+        <h1 className="text-4xl text-center lg:text-left font-bold my-5">
+          অ্যাংকর/MC 1
+        </h1>
+        <p className="text-lg text-center lg:text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
           vitae obcaecati aspernatur accusamus odio numquam perspiciatis
           deleniti eaque illum voluptatibus cumque incidunt ratione, impedit
@@ -318,12 +320,14 @@ export default function AboutTabs() {
           voluptate quos corrupti adipisci sed repudiandae distinctio eius vel
           repellat sequi aliquam consectetur, numquam
         </p>
-        <button
-          style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          className="m-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] hover:text-black w-[258px] h-[49px] rounded-full font-bold"
-        >
-          আরও পড়ুন
-        </button>
+        <div className="flex justify-center items-center ">
+          <button
+            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+            className="m-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] hover:text-black w-[258px] h-[49px] rounded-full font-bold"
+          >
+            আরও পড়ুন
+          </button>
+        </div>
       </div>
     </div>
   );

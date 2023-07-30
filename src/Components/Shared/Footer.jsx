@@ -34,7 +34,7 @@ const Footer = () => {
       }}
       className=""
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[90%] mx-auto p-20 text-white gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:max-w-[90%] mx-auto p-8 md:p-16 lg:p-20 text-white ">
         <div className="">
           <div className="space-y-7 text-[16px]">
             <img src={logo} alt="footer-logo" className="w-[80px] h-[65px]" />
@@ -42,7 +42,7 @@ const Footer = () => {
             <p>hello.shopnershandesh@gmail.com</p>
             <div className="flex space-x-3">
               {icons?.map((icon) => (
-                <img src={icon.icon} alt="social-icon" className="w-[38px]" />
+                <img src={icon.icon} alt="social-icon" className="w-[25px] lg:w-[38px]" />
               ))}
             </div>
           </div>

@@ -139,7 +139,7 @@ function Services() {
                 borderTopRightRadius: "10px",
               },
             }}
-            className="lg:space-x-[125px]"
+            className="space-x-7 md:space-x-[125px]"
           >
             <Tab
               label="সার্ভিস সমূহ"
@@ -168,7 +168,7 @@ function Services() {
         >
           <div
             style={{ fontFamily: "Hind Siliguri" }}
-            className="grid grid-cols-1 lg:grid-cols-2 px-20"
+            className="grid grid-cols-1 lg:grid-cols-2 px-20 place-items-center"
           >
             <div className="">
               <img
@@ -179,7 +179,7 @@ function Services() {
             </div>
             <div className="flex flex-col lg:flex-row">
               <div className="w-full lg:mx-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-center gap-5 mt-10 mb-5">
+                <div className="grid lg:flex lg:flex-row lg:justify-center gap-5 mt-10 mb-5">
                   {data.slice(0, 2).map((d) => (
                     <Zoom>
                       <div
@@ -205,7 +205,7 @@ function Services() {
                     </Zoom>
                   ))}
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-center gap-5 my-5">
+                <div className="lg:flex lg:flex-row justify-center gap-5 my-5">
                   {data.slice(2, 6).map((d) => (
                     <Zoom>
                       <div
@@ -231,7 +231,7 @@ function Services() {
                     </Zoom>
                   ))}
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-center gap-5 my-5">
+                <div className="lg:flex lg:flex-row justify-center gap-5 my-5">
                   {data.slice(6, 9).map((d) => (
                     <Zoom>
                       <div

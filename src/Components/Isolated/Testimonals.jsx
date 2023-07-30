@@ -87,7 +87,7 @@ function Testimonals() {
           টেস্টিমোনিয়ালস
         </h1>
         <Fade down>
-          <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+          <h1 className="mb-10 text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
             টেস্টিমোনিয়ালস
           </h1>
         </Fade>

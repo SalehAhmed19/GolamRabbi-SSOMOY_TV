@@ -17,6 +17,7 @@ import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
 import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
+import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
 function Home() {
   return (
     <div className="relative">
@@ -40,8 +41,8 @@ function Home() {
         <Featured />
         <About />
         <BookSection />
-        {/* <HomeImageGallery /> */}
         <SocialMedia />
+        <HomeImageGallery />
       </div>
     </div>
   );

@@ -37,10 +37,10 @@ function BookSection() {
               prevEl: ".book-btn-prev",
               nextEl: ".book-btn-next",
             }}
-            // autoplay={{
-            //   delay: 3500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
             modules={[EffectCoverflow, Navigation, Autoplay]}
             className=""
           >
@@ -72,8 +72,8 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 ">
-                <div className="text-primary font-bold mx-16 lg:mx-64">
+              <div className="w-full mb-5 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -89,7 +89,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="group-hover:visible invisible  group-hover:transition-all group-hover:duration-1000 group-hover:delay-300 transition-all duration-200  delay-75 relative w-full h-[83px]">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -99,8 +99,8 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 ">
-                <div className="text-primary font-bold mx-16 lg:mx-64">
+              <div className="w-full mb-5 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -116,7 +116,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="group-hover:visible invisible  group-hover:transition-all group-hover:duration-1000 group-hover:delay-300 transition-all duration-200  delay-75 relative w-full h-[83px]">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -126,8 +126,8 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 ">
-                <div className="text-primary font-bold mx-16 lg:mx-64">
+              <div className="w-full mb-5 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -143,7 +143,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="group-hover:visible invisible  group-hover:transition-all group-hover:duration-1000 group-hover:delay-300 transition-all duration-200  delay-75 relative w-full h-[83px]">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
@@ -153,8 +153,8 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 ">
-                <div className="text-primary font-bold mx-16 lg:mx-64">
+              <div className="w-full mb-5 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
                   <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
                   <p className="text-xl mb-3">এপ্রিল ১৪</p>
                 </div>
@@ -170,7 +170,7 @@ function BookSection() {
                     </button>
                   </div>
                 </div>
-                <div className="group-hover:visible invisible  group-hover:transition-all group-hover:duration-1000 group-hover:delay-300 transition-all duration-200  delay-75 relative w-full h-[83px]">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
                     <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
                       মূল্যঃ ২০৬ টাকা
