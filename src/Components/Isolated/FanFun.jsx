@@ -51,16 +51,6 @@ function a11yProps(index) {
   };
 }
 const FanFun = () => {
-  const statistics = [
-    { _id: 1, qty: "১৩", activity: "সংবাদ উপস্থাপনের অভিজ্ঞতা" },
-    { _id: 2, qty: "১০০", activity: "গণমাধ্যমকর্মী প্রস্তুত করা" },
-    { _id: 3, qty: "২১০", activity: "প্রজেক্ট কমপ্লিট" },
-    { _id: 4, qty: "২৭", activity: "অ্যাওয়ার্ড উইনার" },
-    { _id: 5, qty: "১১০", activity: "সার্টিফিকেট কোর্স সম্পন্ন" },
-    { _id: 6, qty: "২", activity: "তরুণকে ইন্সপায়ার করা" },
-    { _id: 7, qty: "৫", activity: "ফ্যান ফলোয়ার্স" },
-    { _id: 8, qty: "১১০", activity: "বায়ো ইন্টার্ভিউ রাইটিং" },
-  ];
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -199,7 +189,7 @@ const FanFun = () => {
         sx={{ width: "100%" }}
         className="px-2 -py-[100px] z-20 max-w-full md:max-w-[90%] mx-auto"
       >
-        <Box className=" bg-white  md:w-[549px] md:h-[52px] mx-auto rounded-tl-full rounded-tr-full mb-2 lg:mb-0">
+        <Box className="bg-white  md:w-[549px] md:h-[48px] mx-auto rounded-tl-full rounded-tr-full mb-2 lg:mb-0">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -255,7 +245,7 @@ const FanFun = () => {
           className="w-full bg-white rounded-lg"
         >
           <div className="pb-[80px] lg:px-24 px-5 ">
-            <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+            {/* <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
               ফান উইথ ফ্যান
             </h1>
             <Fade down>
@@ -265,8 +255,11 @@ const FanFun = () => {
               >
                 ফান উইথ ফ্যান
               </h1>
-            </Fade>
-            <div className="grid gird-cols-1 lg:grid-cols-2 gap-5">
+            </Fade> */}
+            <div
+              style={{ fontFamily: "Hind Siliguri" }}
+              className="grid gird-cols-1 lg:grid-cols-2 gap-5"
+            >
               <Fade left>
                 <FanFunLeft setOpen={setOpen} />
               </Fade>
@@ -345,7 +338,7 @@ const FanFun = () => {
           <Invite />
         </TabPanel>
         <TabPanel value={value} index={2} className="-mt-[23px] rounded-lg">
-          <Advertisement/>
+          <Advertisement />
         </TabPanel>
       </Box>
     </div>

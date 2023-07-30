@@ -18,7 +18,7 @@ function Blogs() {
   };
   return (
     <>
-      <h1 className="-mb-20 custom-text-stroke-3 text-center text-[100px] my-5">
+      <h1 className="-mb-20 custom-text-stroke-1 text-center text-[100px] my-5">
         ব্লগ সমূহ
       </h1>
       <Fade down>

@@ -71,7 +71,7 @@ const Statistics = () => {
         sx={{ width: "100%" }}
         className="py-[100px] z-20 max-w-[90%] mx-auto"
       >
-        <Box className="mt-20 bg-white w-[365px] h-[52px] mx-auto rounded-tl-full rounded-tr-full ">
+        <Box className="mt-20 bg-white w-[365px] h-[48px] mx-auto rounded-tl-full rounded-tr-full ">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -120,9 +120,7 @@ const Statistics = () => {
                     key={statistic._id}
                     className="px-5 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
                   >
-                    <h3 className="text-2xl">
-                      {statistic.qty}
-                    </h3>
+                    <h3 className="text-2xl">{statistic.qty}</h3>
                     <h3 className="text-center text-xl">
                       {statistic.activity}
                     </h3>
@@ -132,7 +130,7 @@ const Statistics = () => {
             </div>
           </div>
         </TabPanel>
-        <TabPanel value={value} index={1} className="-mt-6">
+        <TabPanel value={value} index={1} className="-mt-6 rounded-lg">
           <Features />
         </TabPanel>
       </Box>

@@ -41,7 +41,6 @@
 // export default Advertisement2;
 import React, { useState } from "react";
 import { Zoom } from "react-reveal";
-import box from "../../assets/SVGs/box.png";
 import mailing from "../../assets/SVGs/mailing.png";
 
 function Advertisement2() {
@@ -55,10 +54,10 @@ function Advertisement2() {
   };
 
   return (
-    <div className="relative bg-[#14161C]">
-      <img className="w-20 absolute top-5 blur-lg" src={box} alt="" />
+    <div className="relative bg-white">
+      {/* <img className="w-20 absolute top-5 blur-lg" src={box} alt="" /> */}
       <div className="lg:px-20 px-5 py-14">
-        <h1 className="lg:text-right text-primary font-bold lg:text-3xl">
+        <h1 className="lg:text-right font-bold lg:text-3xl">
           মিডিয়া জব। বিশেষ করে সংবাদ উপস্থাপনা। তাও আবার টিভিতে। এ চাকরি নিয়ে
           জানতে চাও? <br /> তাহলে দেরী না করে এখনই ওয়াটস্ অ্যাপ করো অথবা মেইল
           করো।
@@ -74,21 +73,21 @@ function Advertisement2() {
           <div className="lg:w-1/3">
             <form onSubmit={handleSubmit}>
               <input
-                className="bg-[#ffffff0d] rounded-full my-2 py-4 px-5 border-2 text-primary outline-none border-[#B8084F] w-full"
+                className="placeholder:text-black rounded-full my-2 py-4 px-5 border-2 outline-none border-[#f40a5c] w-full"
                 placeholder="তোমার ইমেইল লিখো"
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <div className="my-2 pl-5 pr-2 border-2 border-[#B8084F] rounded-full bg-[#ffffff0d] w-full flex justify-between">
+              <div className="my-2 pl-5 pr-2 border-2 border-[#f40a5c] rounded-full w-full flex justify-between">
                 <input
-                  className="rounded-full py-3 outline-none bg-transparent text-primary w-full"
+                  className="placeholder:text-black rounded-full  py-3 outline-none bg-transparent w-full"
                   placeholder="তোমার কথা লিখো"
                   type="text"
                   onChange={(e) => setMessage(e.target.value)}
                 />
                 <button
                   type="submit"
-                  className="bg-[#B8084F] rounded-full py-2 w-36 text-[#fff] my-2"
+                  className="bg-[#f40a5c] rounded-full py-2 w-36 text-[#fff] my-2"
                 >
                   মেইল করো
                 </button>
@@ -97,11 +96,11 @@ function Advertisement2() {
           </div>
         </div>
       </div>
-      <img
+      {/* <img
         className="w-24 absolute right-0 bottom-0 blur-lg"
         src={box}
         alt=""
-      />
+      /> */}
     </div>
   );
 }

@@ -58,24 +58,6 @@ audio::-webkit-media-controls-volume-slider {
   background-color: #f6b30f;
 }
 .custom-text-stroke-1 {
-  color: white;
-  font-family: "Hind Siliguri", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: -1px -1px 0 #f40a5c, 1px -1px 0 #f40a5c, -1px 1px 0 #f40a5c,
-    1px 1px 0 #f40a5c;
-  opacity: 0.5;
-}
-.custom-text-stroke-2 {
-  color: #f6b30f;
-  font-family: "Hind Siliguri", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  opacity: 0.5;
-}
-.custom-text-stroke-3 {
   color: #14161c;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 700;
@@ -84,13 +66,31 @@ audio::-webkit-media-controls-volume-slider {
     1px 1px 0 #f6b30f;
   opacity: 0.5;
 }
-
-.custom-text-stroke-4 {
-  color: #f40a5c;
+.custom-text-stroke-2 {
+  color: #57253f;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white;
+  opacity: 0.5;
+}
+.custom-text-stroke-3 {
+  color: white;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 #f40a5c, 1px -1px 0 #f40a5c, -1px 1px 0 #f40a5c,
+    1px 1px 0 #f40a5c;
+  opacity: 0.5;
+}
+
+.custom-text-stroke-4 {
+  color: #f6b30f;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   opacity: 0.5;
 }

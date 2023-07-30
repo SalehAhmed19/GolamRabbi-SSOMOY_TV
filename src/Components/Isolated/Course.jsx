@@ -19,17 +19,19 @@ function Course() {
       //   backgroundSize: "cover",
       //   backgroundRepeat: "no-repeat",
       // }}
-      className="lg:px-24 bg-[#14161C]"
+      className="lg:px-24"
     >
-        <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+      {/* <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+        কোর্স সমূহ
+      </h1>
+      <Fade down>
+        <h1
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold"
+        >
           কোর্স সমূহ
         </h1>
-        <Fade down>
-          <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
-            কোর্স সমূহ
-          </h1>
-        </Fade>
-      
+      </Fade> */}
       {/* <CourseTabs /> */}
       <div className="p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <Link to="/media-courses">
@@ -45,7 +47,7 @@ function Course() {
       <div className=" my-5 mx-5">
         <Link to="/courses">
           <button
-            className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+            className="block mx-auto my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
             // onClick={() => setShow(true)}
           >
             আরও দেখুন

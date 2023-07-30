@@ -48,12 +48,12 @@ function Skills() {
     },
   });
   return (
-    <div className="lg:px-24 py-14 text-[#fff]">
-      <Fade down>
+    <div style={{ fontFamily: "Hind Siliguri" }} className="lg:px-24 py-14 text-[#fff]">
+      {/* <Fade down>
         <h2 className="text-center text-4xl font-bold mb-5 text-primary">
           স্কিল সমূহ
         </h2>
-      </Fade>
+      </Fade> */}
       {/* <div className="flex flex-col lg:flex-row items-center gap-5 mx-5">
         {skills.slice(0, 4).map((skill) => (
           <Zoom>
@@ -86,7 +86,7 @@ function Skills() {
             <div className="flex flex-col justify-center lg:w-80 h-36 items-center p-5 border-2 border-[#111110] rounded-md bg-[#111118]">
               {/* <h3 className="text-primary text-5xl my-5">{skill.icon}</h3> */}
               <img className="w-14 mb-3" src={skill.icon} alt="" />
-              <h2 className="text-[#fff] text-2xl">{skill.skill}</h2>
+              <h2 className="text-secondary text-2xl">{skill.skill}</h2>
             </div>
           </div>
         ))}

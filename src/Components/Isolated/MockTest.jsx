@@ -43,17 +43,20 @@ function MockTest() {
   };
 
   return (
-    <div className="px-5 pb-5 lg:px-24  text-[#fff] bg-[#14161C] relative">
+    <div className="px-5 pb-5 lg:px-24  text-white relative ">
       <img
         src={box}
         className="absolute top-5 left-0 blur-lg rounded w-24"
         alt=""
       />
-      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
         মক টেস্ট
       </h1>
       <Fade down>
-        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+        <h1
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold"
+        >
           মক টেস্ট
         </h1>
       </Fade>
@@ -63,7 +66,10 @@ function MockTest() {
             <img src={news} className="rounded-md" alt="" />
           </Fade>
         </div>
-        <div className="flex flex-col justify-center lg:ml-10 mx-5">
+        <div
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="flex flex-col justify-center lg:ml-10 mx-5"
+        >
           <Fade right>
             <p className="md:text-[25px] lg:text-[29px]">
               অল্প সময়ে টিভি স্ক্রিনে আসার প্রস্তুতি ঝালাই করে নিতে চাও। আবার
@@ -86,7 +92,8 @@ function MockTest() {
       <Fade up>
         <button
           onClick={() => setOpen(true)}
-          className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+          className="block mx-auto my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
+          style={{ fontFamily: "Hind Siliguri" }}
         >
           টেস্ট দিতে সেট করে নাও টাইম
         </button>

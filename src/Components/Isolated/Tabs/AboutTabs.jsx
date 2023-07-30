@@ -1,6 +1,4 @@
 import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
@@ -50,253 +48,283 @@ export default function AboutTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box
-        // sx={{ borderBottom: 1, borderColor: "divider" }}
-        className="relative flex justify-end -mb-6 -mx-3"
-      >
-        <Tabs
-          sx={{
-            borderRadius: "8px",
-            background: "#f40a5c",
-            margin: "0px 5px",
-            color: "#fff",
-          }}
-          // indicatorColor="#fff"
-          textColor="#fff"
-          TabIndicatorProps={{
-            style: {
-              backgroundColor: "#fff",
-              height: "5px",
-              border: "1px solid #fff",
-              borderRadius: "10%",
-            },
-          }}
-          value={value}
-          onChange={handleChange}
-          variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
-          aria-label="scrollable force tabs example"
+    // <Box sx={{ width: "100%" }}>
+    //   <Box
+    //     // sx={{ borderBottom: 1, borderColor: "divider" }}
+    //     className="relative flex justify-end -mb-6 -mx-3"
+    //   >
+    //     <Tabs
+    //       sx={{
+    //         borderRadius: "8px",
+    //         background: "#f40a5c",
+    //         margin: "0px 5px",
+    //         color: "#fff",
+    //       }}
+    //       // indicatorColor="#fff"
+    //       textColor="#fff"
+    //       TabIndicatorProps={{
+    //         style: {
+    //           backgroundColor: "#fff",
+    //           height: "5px",
+    //           border: "1px solid #fff",
+    //           borderRadius: "10%",
+    //         },
+    //       }}
+    //       value={value}
+    //       onChange={handleChange}
+    //       variant="scrollable"
+    //       scrollButtons
+    //       allowScrollButtonsMobile
+    //       aria-label="scrollable force tabs example"
+    //     >
+    //       {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="শর্ট বায়ো"
+    //         {...a11yProps(0)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="প্রেজেন্টেশন ক্যারিয়ার"
+    //         {...a11yProps(1)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="RJ"
+    //         {...a11yProps(2)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="রাইটার"
+    //         {...a11yProps(3)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="ইনফ্লুয়েন্সার"
+    //         {...a11yProps(4)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //     </Tabs>
+    //   </Box>
+    //   <TabPanel value={value} index={0}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={1}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={2}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={3}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={4}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    // </Box>
+    <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg">
+      <div className="">
+        <img src={demoImage} alt="" className="lg:-mt-32 w-[413px] h-[656px]" />
+      </div>
+      <div className="px-20 text-primary">
+        <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+        <p className="text-lg text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+          vitae obcaecati aspernatur accusamus odio numquam perspiciatis
+          deleniti eaque illum voluptatibus cumque incidunt ratione, impedit
+          corrupti sint ad pariatur animi quibusdam, dolores adipisci quas
+          laboriosam accusantium assumenda ab. Iusto incidunt inventore
+          perferendis voluptate quos corrupti adipisci sed repudiandae
+          distinctio eius vel repellat sequi aliquam consectetur, numquam Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, vitae
+          obcaecati aspernatur accusamus odio numquam perspiciatis deleniti
+          eaque illum voluptatibus cumque incidunt ratione, impedit corrupti
+          sint ad pariatur animi quibusdam, dolores adipisci quas laboriosam
+          accusantium assumenda ab. Iusto incidunt inventore perferendis
+          voluptate quos corrupti adipisci sed repudiandae distinctio eius vel
+          repellat sequi aliquam consectetur, numquam
+        </p>
+        <button
+          style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+          className="m-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] hover:text-black w-[258px] h-[49px] rounded-full font-bold"
         >
-          {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
-          <Tab
-            sx={{ fontSize: "16px" }}
-            label="শর্ট বায়ো"
-            {...a11yProps(0)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ fontSize: "16px" }}
-            label="প্রেজেন্টেশন ক্যারিয়ার"
-            {...a11yProps(1)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ fontSize: "16px" }}
-            label="RJ"
-            {...a11yProps(2)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ fontSize: "16px" }}
-            label="রাইটার"
-            {...a11yProps(3)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ fontSize: "16px" }}
-            label="ইনফ্লুয়েন্সার"
-            {...a11yProps(4)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
-            <img
-              src={demoImage}
-              alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
-            />
-          </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-              perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-              ratione, impedit corrupti sint ad pariatur animi quibusdam,
-              dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
-            </p>
-            <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
-            >
-              আরও পড়ুন
-            </button>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
-            <img
-              src={demoImage}
-              alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
-            />
-          </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-              perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-              ratione, impedit corrupti sint ad pariatur animi quibusdam,
-              dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
-            </p>
-            <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
-            >
-              আরও পড়ুন
-            </button>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
-            <img
-              src={demoImage}
-              alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
-            />
-          </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-              perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-              ratione, impedit corrupti sint ad pariatur animi quibusdam,
-              dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
-            </p>
-            <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
-            >
-              আরও পড়ুন
-            </button>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
-            <img
-              src={demoImage}
-              alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
-            />
-          </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-              perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-              ratione, impedit corrupti sint ad pariatur animi quibusdam,
-              dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
-            </p>
-            <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
-            >
-              আরও পড়ুন
-            </button>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
-            <img
-              src={demoImage}
-              alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
-            />
-          </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-              perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-              ratione, impedit corrupti sint ad pariatur animi quibusdam,
-              dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
-            </p>
-            <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
-            >
-              আরও পড়ুন
-            </button>
-          </div>
-        </div>
-      </TabPanel>
-    </Box>
+          আরও পড়ুন
+        </button>
+      </div>
+    </div>
   );
 }

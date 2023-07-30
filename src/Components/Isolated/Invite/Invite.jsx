@@ -8,7 +8,7 @@ function Invite() {
   return (
     <div className="bg-primary pb-[55px]">
       <div className={` lg:mx-20 mx-5`}>
-        <h1 className="-mb-20 custom-text-stroke-2 text-center text-[100px] my-5">
+        {/* <h1 className="-mb-20 custom-text-stroke-2 text-center text-[100px] my-5">
           ইনভাইট
         </h1>
         <Fade down>
@@ -18,7 +18,7 @@ function Invite() {
           >
             ইনভাইট
           </h1>
-        </Fade>
+        </Fade> */}
         <InviteTabs />
       </div>
     </div>

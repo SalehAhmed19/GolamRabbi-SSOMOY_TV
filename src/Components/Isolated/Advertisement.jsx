@@ -68,6 +68,7 @@ function Advertisement() {
         background: `url(${depressed})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        fontFamily: "Hind Siliguri",
       }}
       className="rounded-lg lg:px-24 px-5 flex flex-col items-center justify-center h-[70vh]"
     >
