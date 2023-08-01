@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
-import { Fade } from "react-reveal";
+import { Zoom } from "react-reveal";
 import bg from "../../assets/images/deepak-kumar-r4ZEUFKZPJM-unsplash.jpg";
 import gr2 from "../../assets/images/golamrabby.jpeg";
 import gr3 from "../../assets/images/gr2.jpg";
@@ -244,54 +244,75 @@ const FanFun = () => {
           index={0}
           className="w-full bg-white rounded-lg"
         >
-          <div className="pb-[80px] lg:px-24 px-5 ">
-            {/* <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
-              ফান উইথ ফ্যান
-            </h1>
-            <Fade down>
-              <h1
-                style={{ fontFamily: "Hind Siliguri" }}
-                className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold"
-              >
-                ফান উইথ ফ্যান
-              </h1>
-            </Fade> */}
+          <div className="md:pb-[80px] lg:px-24 px-5">
             <div
               style={{ fontFamily: "Hind Siliguri" }}
-              className="grid gird-cols-1 lg:grid-cols-2 gap-5"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10"
             >
-              <Fade left>
-                <FanFunLeft setOpen={setOpen} />
-              </Fade>
-              {/* tablet and desktop */}
-              <div className="lg:mx-[200px] mt-[15px] flex items-end w-[270px] md:w-[80%] lg:w-full">
-                {/* column 1 */}
-                <div>
-                  <div className="ml-2 mb-2">
-                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
+              {/* left */}
+              <div className="order-2 lg:order-none">
+                <Zoom>
+                  <FanFunLeft setOpen={setOpen} />
+                </Zoom>
+              </div>
+              {/* rigth  */}
+              <div className="">
+                <Zoom>
+                  {/* tablet and desktop */}
+                  <div className="md:mx-auto  mt-[15px]  w-[270px] md:w-[80%] lg:w-full">
+                    {/* column 1 */}
+                    <div className="flex md:justify-center">
+                      <div className="ml-2 mb-2 hidden lg:block lg:ml-[310px]">
+                        <img
+                          src={gr2}
+                          alt=""
+                          className="w-[80px] md:w-[120px] lg:w-36"
+                        />
+                      </div>
+                    </div>
+                    {/* column 2 */}
+                    <div className="flex md:justify-center">
+                      <div className="m-2 lg:mx-[85px]">
+                        <img
+                          src={gr2}
+                          alt=""
+                          className="w-[80px] md:w-[120px] lg:w-36"
+                        />
+                      </div>
+                      <div className="m-2 lg:-mx-[70px]">
+                        <img
+                          src={gr2}
+                          alt=""
+                          className="w-[80px] md:w-[120px] lg:w-36"
+                        />
+                      </div>
+                    </div>
+                    {/* column 3 */}
+                    <div className="flex md:justify-center">
+                      <div className="m-2 hidden md:block">
+                        <img
+                          src={gr2}
+                          alt=""
+                          className="w-[80px] md:w-[120px] lg:w-36"
+                        />
+                      </div>
+                      <div className="m-2">
+                        <img
+                          src={gr2}
+                          alt=""
+                          className="w-[80px] md:w-[120px] lg:w-36 "
+                        />
+                      </div>
+                      <div className="m-2">
+                        <img
+                          src={gr2}
+                          alt=""
+                          className="w-[80px] md:w-[120px] lg:w-36 rounded-br-xl"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                {/* column 2 */}
-                <div>
-                  <div className="m-2">
-                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
-                  </div>
-                  <div className="m-2">
-                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
-                  </div>
-                </div>
-                {/* column 3 */}
-                <div>
-                  <div className="my-2">
-                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
-                  </div>
-                  <div className="my-2">
-                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
-                  </div>
-                  <div className="my-2">
-                    <img src={gr2} alt="" className="w-[120px] lg:w-36" />
-                  </div>
-                </div>
+                </Zoom>
               </div>
             </div>
             <MuiModal

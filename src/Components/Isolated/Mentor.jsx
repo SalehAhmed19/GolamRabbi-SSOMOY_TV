@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
-import { Fade } from "react-reveal";
+import { Zoom } from "react-reveal";
 import news from "../../assets/images/mentorship.png";
 import bg from "../../assets/images/pexels-klaus-nielsen-6287295.jpg";
 import Course from "./Course";
@@ -176,29 +176,29 @@ const Mentor = () => {
           index={0}
           className="w-full bg-white rounded-lg"
         >
-          <div className="pb-[80px] lg:px-24 px-5">
+          <div className="md:pb-[80px] lg:px-24 px-5">
             {/* <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
               পেইড মেন্টরশিপ
             </h1>
-            <Fade down>
+            <Zoom down>
               <h1
                 style={{ fontFamily: "Hind Siliguri" }}
                 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold"
               >
                 পেইড মেন্টরশিপ
               </h1>
-            </Fade> */}
+            </Zoom> */}
             <div
               style={{ fontFamily: "Hind Siliguri" }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10"
             >
-              <div className="flex flex-col justify-center">
-                <Fade left>
-                  <p className="md:text-[25px] lg:text-[29px] font-bold text-secondary">
+              <div className="order-2 lg:order-none flex flex-col justify-center font-semibold">
+                <Zoom>
+                  <p className="text-[15px] md:text-[25px] lg:text-[29px] font-bold text-secondary">
                     উপস্থাপনার ঝকঝকে ক্যারিয়ারে আসার টোটাল প্রস্তুতি নিয়ে নিতে
                     চাও। থাকতে চাও অভিজ্ঞ কারো ছায়ায়। তাহলে দেরী কেনো?
                   </p>
-                  <ul className="list-disc md:text-xl my-5 ml-5 md:ml-20 lg:ml-24">
+                  <ul className="list-disc text-sm md:text-xl my-5 ml-5 md:ml-20 lg:ml-24">
                     <li>উপস্থাপনা কত ধরণের।</li>
                     <li>দেশি-বিদেশি যেকোনো গণমাধ্যমের প্রস্তুতি।</li>
                     <li>কোনটাতে তোমার আগ্রহ আর কিভাবে আসবে এ ক্যারিয়ারে।</li>
@@ -208,12 +208,12 @@ const Mentor = () => {
                       প্রোগ্রামে থাকতে থাকেতেই মিলবে চাকরির সুযোগ…
                     </li>
                   </ul>
-                </Fade>
+                </Zoom>
               </div>
-              <div>
-                <Fade right>
+              <div className="">
+                <Zoom>
                   <img className="rounded-md" src={news} alt="" />
-                </Fade>
+                </Zoom>
 
                 <MuiModal
                   open={open}
@@ -257,15 +257,15 @@ const Mentor = () => {
                 </MuiModal>
               </div>
             </div>
-            <Fade up>
+            <Zoom>
               <button
                 onClick={() => setOpen(true)}
-                className="block mx-auto my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] hover:text-white w-[230px] text-center rounded-full  font-bold text-xl"
+                className="block mx-auto md:my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] hover:text-white  w-[180px] md:w-[230px] text-center rounded-full  font-bold text-sm md:text-xl"
                 style={{ fontFamily: "Hind Siliguri" }}
               >
                 আমাকে বুক করতে
               </button>
-            </Fade>
+            </Zoom>
             <MuiModal
               open={open}
               handleOpen={handleOpen}

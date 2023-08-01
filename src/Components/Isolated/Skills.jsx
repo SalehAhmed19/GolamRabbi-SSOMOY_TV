@@ -80,13 +80,13 @@ function Skills() {
           </Zoom>
         ))}
       </div> */}
-      <div ref={sliderRef} className="keen-slider bg-[#16181D]">
+      <div ref={sliderRef} className="keen-slider bg-[#1618D]">
         {skills.map((skill, idx) => (
           <div key={idx} className="keen-slider__slide">
-            <div className="flex flex-col justify-center lg:w-80 h-36 items-center p-5 border-2 border-[#111110] rounded-md bg-[#111118]">
+            <div className="flex flex-col justify-center lg:w-80 h-36 items-center p-5 border-2 border-[#111110] rounded-lg bg-[#111118]">
               {/* <h3 className="text-primary text-5xl my-5">{skill.icon}</h3> */}
-              <img className="w-14 mb-3" src={skill.icon} alt="" />
-              <h2 className="text-secondary text-2xl">{skill.skill}</h2>
+              <img className="w-12 md:w-14 mb-3" src={skill.icon} alt="" />
+              <h2 className="text-secondary text-sm lg:text-2xl">{skill.skill}</h2>
             </div>
           </div>
         ))}

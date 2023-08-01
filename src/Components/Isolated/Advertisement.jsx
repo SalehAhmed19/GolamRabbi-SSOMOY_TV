@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import React from "react";
+import { toast } from "react-hot-toast";
 import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/sky.jpg";
-import Modal from "./Modals/Modal";
-import { toast } from "react-hot-toast";
-import emailjs from "emailjs-com";
 import MuiModal from "./Modals/MuiModal";
 
 function Advertisement() {
@@ -73,13 +72,13 @@ function Advertisement() {
       className="rounded-lg lg:px-24 px-5 flex flex-col items-center justify-center h-[70vh]"
     >
       <Zoom>
-        <h2 className="text-primary text-center text-4xl font-bold mb-5">
+        <h2 className="text-[15px] md:text-[25px] lg:text-[29px] text-primary text-center font-bold mb-5">
           শেয়ার করো; সমাধান পাও
         </h2>
-        <h4 className="text-primary font-bold text-xl">
+        <h4 className="text-[15px] md:text-[25px] lg:text-[29px] text-primary font-bold">
           মনে হচ্ছে - জীবনটা সঠিকভাবে এগুচ্ছে না!
         </h4>
-        <p className="text-[#fff] text-center text-2xl">
+        <p className="text-[#fff] text-center text-[15px] md:text-[25px] lg:text-[29px]">
           পরিশ্রম করছো অনেক; কিন্তু সফলতার পাগলা ঘোড়া সেভাবে ধরা দিচ্ছে না। হতাশ
           হয়ে যাচ্ছো। <br /> সমাধান পেতে; লিখো এখানে চাচ্ছো- অভিজ্ঞ করো পরামর্শ।
           তাহলে দেরী কেনো? এখনই লিখে ফেলো তোমার কথা। আর পেয়ে যাও <br /> সুন্দর
@@ -87,7 +86,7 @@ function Advertisement() {
         </p>
         <button
           onClick={() => setOpen(true)}
-          className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[250px] text-center rounded-full text-[#fff] font-bold text-xl"
+          className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[180px] md:w-[250px] text-center rounded-full text-[#fff] font-bold text-sm md:text-xl"
         >
           সমাধান পেতে; লিখে জানাও
         </button>
