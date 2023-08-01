@@ -24,7 +24,7 @@ const Footer = () => {
               />
             </div>
             <div className="">
-              <h2 className="text-white text-center mt-2 font-bold text-2xl">
+              <h2 className="text-white text-center mt-2 font-bold text-2xl py-5">
                 GOLAM RABBY
               </h2>
             </div>
@@ -42,10 +42,8 @@ const Footer = () => {
               className=" text-white mb-6"
               style={{ fontFamily: "Hind Siliguri" }}
             >
-              <h2 className="font-bold mb-5 text-primary text-xl md:text-2xl lg:text-3xl">
-                কুইক লিংক
-              </h2>
-              <ul className="space-y-4 md:text-xl">
+              <h2 className="font-bold mb-5 text-primary text-xl">কুইক লিংক</h2>
+              <ul className="space-y-4">
                 <li>আপকামিং লাইভ ব্যাচ</li>
                 <li>ফ্রী লাইভ ক্লাস</li>
                 <li>লাইভ ওয়ার্কশপ</li>
@@ -57,10 +55,8 @@ const Footer = () => {
               className=" text-white mb-6"
               style={{ fontFamily: "Hind Siliguri" }}
             >
-              <h2 className="font-bold mb-5 text-primary text-xl md:text-2xl lg:text-3xl">
-                যোগাযোগ
-              </h2>
-              <ul className="space-y-4 md:text-xl">
+              <h2 className="font-bold mb-5 text-primary text-xl">যোগাযোগ</h2>
+              <ul className="space-y-4">
                 <li className="flex items-center">
                   <AiOutlinePhone />
                   <span className="mx-2">+880 1777 777777</span>
@@ -80,10 +76,8 @@ const Footer = () => {
               className="text-white mb-6"
               style={{ fontFamily: "Hind Siliguri" }}
             >
-              <h2 className="font-bold mb-5 text-primary text-xl md:text-2xl lg:text-3xl">
-                কোম্পানি
-              </h2>
-              <ul className="space-y-4 md:text-xl">
+              <h2 className="font-bold mb-5 text-primary text-xl">কোম্পানি</h2>
+              <ul className="space-y-4">
                 <li>আমাদের সম্পর্কে</li>
                 <li>রিফান্ড পলিসি</li>
                 <li>প্রাইভেসি পলিসি</li>
@@ -97,7 +91,8 @@ const Footer = () => {
           <a href="https://www.codevexa.com/" target="_black">
             <div className="absolute bottom-0 left-[30px] md:left-[22%] lg:left-[35%] w-[350px] md:w-[413px] h-[50px] bg-[#f6b30f] hover:transition-all hover:duration-500 hover:delay-100 rounded-tl-full rounded-tr-full">
               <h2 className="absolute inset-0 top-[20px] left-[135px] flex  text-center text-sm">
-                Developed by &nbsp; <span style={{fontWeight:700}}>CodeVexa</span> 
+                Developed by &nbsp;{" "}
+                <span style={{ fontWeight: 700 }}>CodeVexa</span>
               </h2>
             </div>
           </a>
