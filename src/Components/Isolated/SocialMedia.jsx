@@ -18,7 +18,7 @@ function SocialMedia() {
       href: "https://www.instagram.com/golam.rabby.739326",
     },
     {
-      img: img3,
+      img: img3,       
       social: "ইউটিউব",
       href: "#",
     },
@@ -29,9 +29,12 @@ function SocialMedia() {
     },
   ];
   return (
-    <div className="pb-36 lg:px-24 py-14 text-[#fff] px-5">
+    <div className="pb-36 lg:px-24 text-[#fff] px-5">
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
+        সোশ্যাল মিডিয়াতে সংযুক্ত হোন
+      </h1>
       <Fade down>
-        <h1 className="text-primary text-center text-4xl font-bold">
+        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           সোশ্যাল মিডিয়াতে সংযুক্ত হোন
         </h1>
       </Fade>

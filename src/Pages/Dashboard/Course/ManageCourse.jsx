@@ -42,7 +42,7 @@ const ManageCourse = () => {
           sx={{
             borderBottom: 1,
             borderColor: "divider",
-            background: "#F6B30F",
+            bgcolor: "black",
             borderRadius: "5px",
           }}
         >
@@ -56,7 +56,7 @@ const ManageCourse = () => {
           >
             <Tab
               sx={{
-                color: "black",
+                color: "#f6b30f",
                 fontWeight: 700,
                 fontFamily: "Hind Siliguri",
               }}
@@ -65,7 +65,7 @@ const ManageCourse = () => {
             />
             <Tab
               sx={{
-                color: "black",
+                color: "#f6b30f",
                 fontWeight: 700,
                 fontFamily: "Hind Siliguri",
               }}
@@ -74,7 +74,7 @@ const ManageCourse = () => {
             />
             <Tab
               sx={{
-                color: "black",
+                color: "#f6b30f",
                 fontWeight: 700,
                 fontFamily: "Hind Siliguri",
               }}

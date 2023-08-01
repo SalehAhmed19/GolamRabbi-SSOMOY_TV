@@ -3,9 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import {
-  MdLocationOn,
-  MdOutlineKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight,
+  MdLocationOn
 } from "react-icons/md";
 import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
@@ -70,17 +68,21 @@ function Events() {
         background: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.1)",
       }}
-      className="lg:px-24 py-14 text-[#fff] px-5"
+      className=" lg:px-24 py-14 text-[#fff] px-5"
     >
       <Zoom>{/* <Advertisement2 /> */}</Zoom>
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-2 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
+        আসন্ন ইভেন্টস
+      </h1>
       <Fade down>
-        <h1 className="text-primary text-center text-4xl font-bold">
+        <h1 className="text-white text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           আসন্ন ইভেন্টস
         </h1>
       </Fade>
       <Fade up>
-        <div className="relative mt-10 cursor-pointer">
+        <div className="relative mt-10 cursor-pointer max-w-7xl mx-auto">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
@@ -98,13 +100,23 @@ function Events() {
             {events.map((event, idx) => (
               <SwiperSlide key={idx}>
                 <div className="mb-10">
-                  <div className="-p-5 flex items-center">
-                    <div className="text-primary mr-5 border-2 border-[#F6B30F] p-5  rounded-md">
-                      <h2 className="text-6xl">{event.date}</h2>
-                      <p className="text-center">{event.month}</p>
+                  <div className="-p-5 flex items-center flex-col md:flex-row">
+                    <div className="mb-8 md:mb-0 text-primary mr-5 border-2 bg-white text-secondary shadow-xl p-5  rounded-md">
+                      <h2
+                        className="text-6xl font-bold drop-shadow-xl"
+                        style={{ fontFamily: "Hind Siliguri" }}
+                      >
+                        {event.date}
+                      </h2>
+                      <p
+                        className="text-center text-black font-bold"
+                        style={{ fontFamily: "Hind Siliguri" }}
+                      >
+                        {event.month}
+                      </p>
                     </div>
                     <div>
-                      <h4 className="my-3 font-bold text-2xl text-primary">
+                      <h4 className="my-3 font-bold text-2xl text-white">
                         {event.title}
                       </h4>
                       <hr />
@@ -123,33 +135,32 @@ function Events() {
             ))}
           </Swiper>
           {/* previous btn */}
-          <div
+          {/* <div
             className={`hidden md:block previous-btn cursor-pointer absolute top-14  -left-4 lg:-left-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] `}
           >
             <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowLeft />
             </span>
-          </div>
+          </div> */}
           {/* next btn */}
-          <div className="hidden md:block next-btn cursor-pointer absolute top-14  -right-4 lg:-right-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
+          {/* <div className="hidden md:block next-btn cursor-pointer absolute top-14  -right-4 lg:-right-16 text-black bg-primary rounded-full p-1 lg:p-3 lg:w-[45px] ">
             <span className="font-bold text-xl">
               <MdOutlineKeyboardArrowRight />
             </span>
+          </div> */}
+          <div className="my-5 select-none">
+            <p className="font-bold text-xl md:text-2xl">
+              জীবনের এক রাস অনুভূতি ও অভিজ্ঞতা নিয়ে কিছু কথা হবে তোমাদের সাথে...
+            </p>
+            <Fade up>
+              <Link
+                to="/events"
+                className="block mx-auto my-10 py-2 border-2 hover:border-[#f40a5c] w-[290px] text-center rounded-full text-[#f40a5c] bg-[#fff] font-bold text-xl"
+              >
+                আরও দেখুন
+              </Link>
+            </Fade>
           </div>
-        </div>
-
-        <div className="my-5 select-none">
-          <p className="font-bold">
-            জীবনের এক রাস অনুভূতি ও অভিজ্ঞতা নিয়ে কিছু কথা হবে তোমাদের সাথে...
-          </p>
-          <Fade up>
-            <Link
-              to="/events"
-              className="block mx-auto my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[290px] text-center rounded-full text-[#fff] font-bold text-xl"
-            >
-              আরও দেখুন
-            </Link>
-          </Fade>
         </div>
       </Fade>
     </div>

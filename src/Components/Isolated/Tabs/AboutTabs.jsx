@@ -1,11 +1,8 @@
 import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
-import img from "../../../assets/images/golamrabby.jpeg";
-
+import demoImage from "../../../assets/images/instructor-3.png";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -51,243 +48,287 @@ export default function AboutTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          sx={{
-            borderRadius: "8px",
-            background: "#111118",
-            margin: "0 5px",
-            color: "#D89F17",
-          }}
-          value={value}
-          onChange={handleChange}
-          variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
-        >
-          {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
-          <Tab
-            sx={{ color: "#E0E0E0", fontSize: "16px" }}
-            label="শর্ট বায়ো"
-            {...a11yProps(0)}
+    // <Box sx={{ width: "100%" }}>
+    //   <Box
+    //     // sx={{ borderBottom: 1, borderColor: "divider" }}
+    //     className="relative flex justify-end -mb-6 -mx-3"
+    //   >
+    //     <Tabs
+    //       sx={{
+    //         borderRadius: "8px",
+    //         background: "#f40a5c",
+    //         margin: "0px 5px",
+    //         color: "#fff",
+    //       }}
+    //       // indicatorColor="#fff"
+    //       textColor="#fff"
+    //       TabIndicatorProps={{
+    //         style: {
+    //           backgroundColor: "#fff",
+    //           height: "5px",
+    //           border: "1px solid #fff",
+    //           borderRadius: "10%",
+    //         },
+    //       }}
+    //       value={value}
+    //       onChange={handleChange}
+    //       variant="scrollable"
+    //       scrollButtons
+    //       allowScrollButtonsMobile
+    //       aria-label="scrollable force tabs example"
+    //     >
+    //       {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="শর্ট বায়ো"
+    //         {...a11yProps(0)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="প্রেজেন্টেশন ক্যারিয়ার"
+    //         {...a11yProps(1)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="RJ"
+    //         {...a11yProps(2)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="রাইটার"
+    //         {...a11yProps(3)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //       <Tab
+    //         sx={{ fontSize: "16px" }}
+    //         label="ইনফ্লুয়েন্সার"
+    //         {...a11yProps(4)}
+    //         style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //       />
+    //     </Tabs>
+    //   </Box>
+    //   <TabPanel value={value} index={0}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={1}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={2}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={3}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    //   <TabPanel value={value} index={4}>
+    //     <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
+    //       <div className="">
+    //         <img
+    //           src={demoImage}
+    //           alt=""
+    //           className="lg:-mt-32 w-[413px] h-[656px]"
+    //         />
+    //       </div>
+    //       <div className="px-20">
+    //         <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
+    //         <p className="text-lg text-justify">
+    //           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //           Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+    //           perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+    //           ratione, impedit corrupti sint ad pariatur animi quibusdam,
+    //           dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
+    //           incidunt inventore perferendis voluptate quos corrupti adipisci
+    //           sed repudiandae distinctio eius vel repellat sequi aliquam
+    //           consectetur, numquam Lorem ipsum dolor sit amet consectetur
+    //           adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
+    //           odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
+    //           incidunt ratione, impedit corrupti sint ad pariatur animi
+    //           quibusdam, dolores adipisci quas laboriosam accusantium assumenda
+    //           ab. Iusto incidunt inventore perferendis voluptate quos corrupti
+    //           adipisci sed repudiandae distinctio eius vel repellat sequi
+    //           aliquam consectetur, numquam
+    //         </p>
+    //         <button
+    //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
+    //           className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+    //         >
+    //           আরও পড়ুন
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </TabPanel>
+    // </Box>
+    <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg mt-10">
+      <div className="">
+        <img src={demoImage} alt="" className="lg:-mt-32 w-[413px] h-[656px]" />
+      </div>
+      <div className="px-20 text-primary">
+        <h1 className="text-4xl text-center lg:text-left font-bold my-5">
+          অ্যাংকর/MC 1
+        </h1>
+        <p className="text-lg text-center lg:text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+          vitae obcaecati aspernatur accusamus odio numquam perspiciatis
+          deleniti eaque illum voluptatibus cumque incidunt ratione, impedit
+          corrupti sint ad pariatur animi quibusdam, dolores adipisci quas
+          laboriosam accusantium assumenda ab. Iusto incidunt inventore
+          perferendis voluptate quos corrupti adipisci sed repudiandae
+          distinctio eius vel repellat sequi aliquam consectetur, numquam Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, vitae
+          obcaecati aspernatur accusamus odio numquam perspiciatis deleniti
+          eaque illum voluptatibus cumque incidunt ratione, impedit corrupti
+          sint ad pariatur animi quibusdam, dolores adipisci quas laboriosam
+          accusantium assumenda ab. Iusto incidunt inventore perferendis
+          voluptate quos corrupti adipisci sed repudiandae distinctio eius vel
+          repellat sequi aliquam consectetur, numquam
+        </p>
+        <div className="flex justify-center items-center ">
+          <button
             style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ color: "#E0E0E0", fontSize: "16px" }}
-            label="প্রেজেন্টেশন ক্যারিয়ার"
-            {...a11yProps(1)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ color: "#E0E0E0", fontSize: "16px" }}
-            label="RJ"
-            {...a11yProps(2)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ color: "#E0E0E0", fontSize: "16px" }}
-            label="রাইটার"
-            {...a11yProps(3)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-          <Tab
-            sx={{ color: "#E0E0E0", fontSize: "16px" }}
-            label="ইনফ্লুয়েন্সার"
-            {...a11yProps(4)}
-            style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-          />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md relative">
-          <div className="p-5">
-            <img className="rounded-md w-96" src={img} alt="" />
-          </div>
-          <div className="w-full rounded-md py-5 lg:pr-5 px-5">
-            <h3 className="font-bold text-2xl mb-5 text-primary">
-              Short Bio of Golam Rabby, Founder, Dream Deviser
-            </h3>
-            <div className="overflow-y-auto max-h-[250px]">
-              {text.map((txt, idx) => (
-                <p key={idx}>
-                  {txt} <br /> <br />
-                </p>
-              ))}
-            </div>
-          </div>
+            className="m-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] hover:text-black w-[258px] h-[49px] rounded-full font-bold"
+          >
+            আরও পড়ুন
+          </button>
         </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
-          <div className="p-5">
-            <img className="rounded-md w-96" src={img} alt="" />
-          </div>
-          <div className="w-full rounded-md py-5 lg:pr-5 px-5">
-            <h3 className="font-bold text-2xl mb-5 text-primary">
-              Presentation Career
-            </h3>
-            <div className="overflow-y-auto max-h-[250px]">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                nemo recusandae sit odio provident repellendus aliquam quibusdam
-                neque ipsam. Provident ratione eos ipsam officia eius vel, minus
-                deserunt veritatis totam ea odio labore magnam possimus libero,
-                tempora atque porro. Sed, laudantium maiores. Impedit itaque in
-                temporibus, minus voluptate delectus tenetur fugiat. Iste ipsam
-                autem laborum eaque eveniet aliquam laboriosam illum at
-                blanditiis ratione? Minima rerum, eveniet consectetur reiciendis
-                laudantium pariatur repellendus? Illum, suscipit incidunt
-                doloremque iure animi reiciendis modi fugit libero natus
-                dolores, quas eaque provident laborum aspernatur quam, odit
-                accusantium. Nostrum tenetur deserunt esse, non quibusdam soluta
-                culpa eligendi dolore numquam fugiat omnis fuga dolorum at, sunt
-                hic unde delectus? Corporis laborum vitae vel esse neque illum
-                alias, dignissimos eum earum explicabo. In et quia a id
-                perspiciatis fugiat nisi necessitatibus ratione optio, est
-                voluptatem nulla rerum eveniet commodi, debitis itaque officia
-                sed soluta aspernatur repellendus nemo perferendis saepe
-                impedit! Nemo minus porro recusandae laboriosam commodi
-                voluptatibus nobis quam possimus impedit aspernatur, officia
-                optio. Architecto eum fuga dolore debitis. Corporis harum
-                assumenda, fugiat dolor sapiente optio ipsum nobis perferendis
-                saepe architecto dicta eaque maiores laborum repudiandae,
-                praesentium, quisquam minima consectetur ex! Optio doloremque in
-                voluptatem labore totam quo sapiente!
-              </p>
-            </div>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
-          <div className="p-5">
-            <img className="rounded-md w-96" src={img} alt="" />
-          </div>
-          <div className="w-full rounded-md py-5 lg:pr-5 px-5">
-            <h3 className="font-bold text-2xl mb-5 text-primary">
-              Radio Jockey
-            </h3>
-            <div className="overflow-y-auto max-h-[250px]">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                voluptate reprehenderit asperiores, provident aperiam ipsum id
-                sed earum odit quia magni quis iusto ut quasi, cumque sint amet.
-                Repellat quas doloribus, totam, molestias nesciunt earum soluta
-                perspiciatis ducimus, aut exercitationem laborum nobis.
-                Quisquam, ut. Placeat modi voluptatum, voluptas sint inventore
-                nam odit. Nemo voluptate vel reiciendis magni quisquam,
-                consequatur sint sapiente? Ullam enim exercitationem, fugiat
-                obcaecati pariatur ea fuga totam sit sapiente quae dolores id
-                quia impedit perferendis illo sed repellendus saepe consectetur
-                voluptate maiores quis culpa quaerat officiis autem.
-                Necessitatibus repellat voluptatem, deleniti impedit asperiores
-                amet! Error veniam quos qui molestias molestiae repellendus
-                autem dolores, dicta minima mollitia voluptate perferendis quis
-                magnam, nulla architecto minus omnis quibusdam perspiciatis.
-                Amet minima maxime mollitia necessitatibus esse excepturi
-                perferendis nihil quo provident exercitationem nam id molestias
-                autem dicta quis nulla distinctio ut molestiae quos sed enim,
-                commodi quasi in at. Impedit rerum tempore necessitatibus quasi.
-                Laudantium, aut quod! Quibusdam inventore qui ipsa neque
-                nesciunt. Maiores atque, asperiores nostrum accusamus excepturi
-                neque sed nisi deserunt totam provident ea? Qui tempore
-                distinctio magni ipsam eligendi fuga consectetur corrupti,
-                consequatur eius provident nisi atque accusantium, voluptate
-                nesciunt. Vero libero impedit ullam quisquam. Fugit obcaecati,
-                distinctio hic enim illo mollitia praesentium reprehenderit
-                adipisci, delectus iste itaque labore sunt dolores quia
-                temporibus fugiat amet commodi modi voluptatibus.
-              </p>
-            </div>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
-          <div className="p-5">
-            <img className="rounded-md w-96" src={img} alt="" />
-          </div>
-          <div className="w-full rounded-md py-5 lg:pr-5 px-5">
-            <h3 className="font-bold text-2xl mb-5 text-primary">Writer</h3>
-            <div className="overflow-y-auto max-h-[250px]">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos quis doloribus molestias accusamus adipisci? Odio
-                quibusdam iure maiores quis debitis ipsum nemo inventore sequi
-                eveniet et voluptatibus enim quod possimus, reiciendis
-                architecto explicabo nostrum molestias nobis nisi animi amet
-                blanditiis exercitationem voluptas. Dolorem delectus iure
-                corrupti debitis praesentium voluptatem cumque quo omnis, hic
-                non eius quas, et provident commodi enim culpa, repellat magnam
-                odit optio suscipit libero aspernatur ipsa sed nesciunt? Ipsa,
-                dolores quasi? Similique quo eum earum inventore officia
-                mollitia accusamus sunt expedita maiores reiciendis officiis ut
-                animi, omnis temporibus blanditiis! Quidem quas, eligendi nobis
-                odit ab suscipit debitis assumenda nesciunt pariatur impedit hic
-                mollitia enim? Id asperiores officiis esse ducimus,
-                necessitatibus quisquam libero soluta quidem recusandae ratione
-                eligendi maxime cumque modi impedit atque iste dignissimos
-                dolorem consequatur dolore optio sapiente! Tempora asperiores
-                voluptates illum cumque nam omnis vitae impedit eum provident
-                error ab esse alias illo, aliquam commodi earum minus assumenda
-                nemo sit? Consequuntur, adipisci. Non aperiam recusandae ullam
-                voluptatum nam dolore! Deserunt, ducimus! Ea nam magni nemo
-                voluptates nostrum nulla cum, excepturi numquam incidunt
-                corrupti, sequi, exercitationem libero eligendi ab tenetur culpa
-                laboriosam perspiciatis? Eum sed neque, earum hic quaerat
-                deleniti, ipsa rem excepturi dolorem saepe dicta vero quas,
-                porro ipsam accusamus aliquid laboriosam ab laudantium eveniet.
-                Explicabo quia id blanditiis itaque ducimus optio minima labore
-                nam architecto laboriosam, quam unde quibusdam.
-              </p>
-            </div>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <div className="-mx-5 flex flex-col lg:flex-row items-center text-basic bg-[#111117] rounded-md">
-          <div className="p-5">
-            <img className="rounded-md w-96" src={img} alt="" />
-          </div>
-          <div className="w-full rounded-md py-5 lg:pr-5 px-5">
-            <h3 className="font-bold text-2xl mb-5 text-primary">Influencer</h3>
-            <div className="overflow-y-auto max-h-[250px]">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius,
-                at fuga, nisi necessitatibus quam iste illum modi maxime iusto
-                sint expedita non ea! Maiores nostrum exercitationem commodi.
-                Aliquam repellendus odio eveniet pariatur vero itaque
-                perspiciatis, animi, modi dignissimos odit praesentium repellat
-                quibusdam quisquam molestias eligendi reiciendis suscipit sint
-                quam consequuntur quod? Dignissimos accusantium quidem tempora,
-                ex voluptatum voluptas ipsam nihil aut repudiandae a veniam
-                corrupti tenetur non animi sint pariatur necessitatibus
-                voluptatem dolorem. Molestias quidem distinctio magnam dolor
-                atque. Nisi mollitia ipsum dolore in perspiciatis distinctio ea
-                eveniet quidem, inventore tenetur aliquam illum facilis quia
-                ipsam impedit laudantium voluptas atque nulla quaerat possimus
-                nihil molestias totam quis deserunt. Reprehenderit,
-                perspiciatis! Exercitationem minima odio cumque reprehenderit
-                velit dolores. Totam laborum aperiam quidem beatae, ab assumenda
-                temporibus et quis expedita. Nulla cum incidunt, dolore illo
-                molestias libero quidem pariatur quas ratione aperiam officiis!
-                Fugit officia explicabo delectus quia similique eum asperiores,
-                reiciendis accusamus ex esse minima, eligendi, itaque incidunt
-                nihil provident quis aut architecto dolore! Rem consequatur
-                beatae ea dolor quia nulla fugit asperiores repellat nostrum
-                libero sapiente rerum expedita deleniti distinctio provident,
-                consequuntur, dignissimos explicabo vel consectetur aliquid
-                adipisci nesciunt. Quam minima consectetur quo sed, fuga ut
-                aliquid labore debitis. Corporis iste incidunt, numquam aut
-                accusamus molestiae maxime ad delectus dolorum animi dolor
-                architecto necessitatibus obcaecati fuga quae aliquam explicabo
-                sint expedita?
-              </p>
-            </div>
-          </div>
-        </div>
-      </TabPanel>
-    </Box>
+      </div>
+    </div>
   );
 }

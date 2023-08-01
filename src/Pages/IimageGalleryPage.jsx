@@ -35,12 +35,12 @@ const IimageGalleryPage = () => {
         </h2>
       </Fade>
       {/* mobile */}
-      <div className="">
+      <div className="md:hidden">
         <Swiper
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards]}
-          className="w-[300px] md:hidden"
+          className="w-[300px]"
         >
           <SwiperSlide>
             <div className="relative md:m-2  md:w-[300px] md:h-[300px] md:border-8 lg:w-[600px] lg: overflow-hidden">
