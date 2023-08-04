@@ -5,10 +5,8 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Zoom } from "react-reveal";
-import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
 import bg from "../../assets/images/pexels-jahangeer-bm-1619299.jpg";
 import Features from "./Features";
 function TabPanel(props) {
@@ -65,17 +63,13 @@ const Statistics = () => {
         background: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        // backgroundAttachment: "fixed",
+        backgroundAttachment: "fixed",
         backgroundPosition: "10% 40%",
         boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.3)",
       }}
-      className="relative"
     >
-      <Box
-        sx={{ width: "100%" }}
-        className="py-[100px] z-20 max-w-[90%] mx-auto"
-      >
-        <Box className="mt-20 bg-white w-[365px] h-[48px] mx-auto rounded-tl-full rounded-tr-full mb-2">
+      <Box sx={{ width: "100%" }} className="p-16">
+        <Box className="mt-20 bg-white 2xl:w-[365px] h-[48px] mx-auto rounded-tl-full rounded-tr-full">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -115,50 +109,22 @@ const Statistics = () => {
             />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0} className="bg-white  rounded-lg">
-          <div style={{ fontFamily: "Hind Siliguri" }} className="p-14">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={20}
-              // loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              // navigation={{
-              //   prevEl: ".personal-btn-prev",
-              //   nextEl: ".personal-btn-next",
-              // }}
-              modules={[Pagination]}
-              breakpoints={{
-                668: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1280: {
-                  slidesPerView: 6,
-                  spaceBetween: 20,
-                },
-              }}
-              className=""
-            >
-              {statistics.map((statistic,index) => (
-                <SwiperSlide key={index} className="mb-10">
-                  <Zoom>
-                    <div
-                      key={statistic._id}
-                      className="whitespace-nowrap px-5 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
-                    >
-                      <h3 className="text-3xl drop-shadow-xl">
-                        {statistic.qty}
-                      </h3>
-                      <h3 className="text-center text-xl">
-                        {statistic.activity}
-                      </h3>
-                    </div>
-                  </Zoom>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+        <TabPanel value={value} index={0} className="bg-white rounded-lg">
+          <div
+            style={{ fontFamily: "Hind Siliguri" }}
+            className="grid 2xl:grid-cols-8 gap-5"
+          >
+            {statistics.map((statistic, index) => (
+              <Zoom>
+                <div
+                  key={statistic._id}
+                  className="px-5 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
+                >
+                  <h3 className="text-3xl drop-shadow-xl">{statistic.qty}</h3>
+                  <h3 className="text-center text-xl">{statistic.activity}</h3>
+                </div>
+              </Zoom>
+            ))}
           </div>
         </TabPanel>
         <TabPanel value={value} index={1} className="-mt-6 rounded-lg">

@@ -27,7 +27,7 @@ function Blogs() {
         </h1>
       </Fade>
       <div className="lg:px-24 py-14 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-5 mx-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-5 mx-5">
           <Zoom>
             <Link to={"/blogs"}>
               <div className="bg-white rounded-lg flex">

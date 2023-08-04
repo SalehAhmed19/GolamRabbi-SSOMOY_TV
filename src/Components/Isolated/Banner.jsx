@@ -1,9 +1,7 @@
 import React from "react";
-import reporter from "../../assets/images/image.png";
-import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
-import { Fade } from "react-reveal";
-import { AiOutlineShareAlt } from "react-icons/ai";
+import reporter from "../../assets/images/image.png";
 import BannerCard from "./Cards/BannerCard";
 
 function Banner() {
@@ -91,16 +89,16 @@ function Banner() {
         </Fade> */}
         <div className="flex justify-between items-center flex-col lg:flex-row h-[600px] relative">
           <div className="mt-36">
-            <h1 className="text-5xl font-bold text-[#fff]">
+            <h1 className="xxs:text-sm xs:text-xl text-5xl font-bold text-[#fff]">
               ভয়, জড়তা, শঙ্কা আর
             </h1>
             <h1
               style={{ fonFamily: "MyBanglaFont" }}
-              className="text-[#F90162] my-6 text-5xl font-bold"
+              className="xxs:text-sm text-[#F90162] my-6 text-5xl font-bold"
             >
               অনিশ্চয়তাকে পেছনে ফেলে
             </h1>
-            <h1 className="text-[#F3B004] font-bold text-xl">
+            <h1 className="xxs:text-sm  text-[#F3B004] font-bold text-xl">
               <Typewriter
                 options={{
                   strings: ["বিজয়ের গল্পের শুরু এখানেই ..."],

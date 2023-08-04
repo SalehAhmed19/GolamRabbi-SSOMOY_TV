@@ -34,10 +34,15 @@ const Footer = () => {
       }}
       className=""
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:max-w-[90%] mx-auto p-8 md:p-16 lg:p-20 text-white ">
-        <div className="">
-          <div className="space-y-7 text-[16px]">
-            <img src={logo} alt="footer-logo" className="w-[80px] h-[65px]" />
+      {/* first part */}
+      <div className="grid xs:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-20 mx-auto p-5 md:p-16 lg:p-20 text-white">
+        <div className="xl:-ml-6 2xl:-ml-0">
+          <div className="space-y-7 xs:text-[13px] 2xs:text-[15px] sm:text-[17px] md:text-[19px]">
+            <img
+              src={logo}
+              alt="footer-logo"
+              className="xs:w-[60px] 2xs:w-[80px] sm:w-[100px]"
+            />
             <p>ঠিকানা, ঠিকানা, ঢাকা </p>
             <p>hello.shopnershandesh@gmail.com</p>
             <div className="flex space-x-3">
@@ -45,15 +50,18 @@ const Footer = () => {
                 <img
                   src={icon.icon}
                   alt="social-icon"
-                  className="w-[25px] lg:w-[38px]"
+                  className="xs:w-[18px] 2xs:w-[20px] sm:w-[22px] md:w-[26px] lg:w-[28px] xl:w-[30px] 2xl:w-[32px]"
                 />
               ))}
             </div>
           </div>
         </div>
         <div className="">
-          <ul className="space-y-5 text-[20px]">
-            <li className="font-bold text-[22px]"> কুইক লিংক</li>
+          <ul className="space-y-5 xs:text-[13px] 2xs:text-[15px] sm:text-[17px] md:text-[19px]">
+            <li className="font-bold xs:text-[16px] 2xs:text-[18px] sm:text-[20px] md:text-[22px]">
+              {" "}
+              কুইক লিংক
+            </li>
             <li>আপকামিং লাইভ ব্যাচ</li>
             <li>ফ্রী লাইভ ক্লাস </li>
             <li>লাইভ ওয়ার্কশপ</li>
@@ -61,8 +69,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="">
-          <ul className="space-y-5 text-[20px]">
-            <li className="font-bold text-[22px]"> যোগাযোগ</li>
+          <ul className="space-y-5 xs:text-[13px] 2xs:text-[15px] sm:text-[17px] md:text-[19px]">
+            <li className="font-bold text-[21px]"> যোগাযোগ</li>
             <li className="flex items-center">
               <BsTelephone className="mr-2" /> +880 1777 777777
             </li>
@@ -75,8 +83,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="">
-          <ul className="space-y-5 text-[20px]">
-            <li className="font-bold text-[22px]"> কোম্পানি</li>
+          <ul className="space-y-5 xs:text-[13px] 2xs:text-[15px] sm:text-[17px] md:text-[19px]">
+            <li className="font-bold text-[21px]"> কোম্পানি</li>
             <li>আমাদের সম্পর্কে</li>
             <li>রিফান্ড পলিসি</li>
             <li>প্রাইভেসি পলিসি</li>
@@ -84,8 +92,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      {/* second part */}
       <div className="h-[53px] bg-[#f6b50f1d]">
-        <p className="text-white text-center pt-5">
+        <p className="text-white text-center pt-5 xs:text-[13px] 2xs:text-[15px] sm:text-[17px] md:text-[19px]">
           Developed by &nbsp;
           <span className="font-bold">
             <a
