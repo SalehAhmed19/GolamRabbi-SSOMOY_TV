@@ -19,7 +19,7 @@ function Banner() {
           backgroundRepeat: "no-repeat",
           objectFit: "cover",
         }}
-        className="pt-20 h-screen flex flex-col justify-center lg:px-24 px-5"
+        className=" flex flex-col justify-center lg:px-24 p-5"
       >
         {/* <Fade left>
           <div className="pt-20 grid grid-cols-2 p-5">
@@ -87,18 +87,18 @@ function Banner() {
             </div>
           </div>
         </Fade> */}
-        <div className="flex justify-between items-center flex-col lg:flex-row h-[600px] relative">
+        <div className="flex justify-between items-center flex-col md:flex-row h-[600px] relative">
           <div className="mt-36">
-            <h1 className="xxs:text-sm xs:text-xl text-5xl font-bold text-[#fff]">
+            <h1 className="2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] font-bold text-[#fff]">
               ভয়, জড়তা, শঙ্কা আর
             </h1>
             <h1
               style={{ fonFamily: "MyBanglaFont" }}
-              className="xxs:text-sm text-[#F90162] my-6 text-5xl font-bold"
+              className="2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-[#F90162] my-6 font-bold"
             >
               অনিশ্চয়তাকে পেছনে ফেলে
             </h1>
-            <h1 className="xxs:text-sm  text-[#F3B004] font-bold text-xl">
+            <h1 className="2xs:text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] text-[#F3B004] font-bold">
               <Typewriter
                 options={{
                   strings: ["বিজয়ের গল্পের শুরু এখানেই ..."],

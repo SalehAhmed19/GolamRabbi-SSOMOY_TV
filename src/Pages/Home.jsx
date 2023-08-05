@@ -6,9 +6,9 @@ import Banner from "../Components/Isolated/Banner";
 // import Blogs from "../Components/Isolated/Blogs";
 // import BookSection from "../Components/Isolated/BookSection";
 // import Events from "../Components/Isolated/Events";
-// import FanFun from "../Components/Isolated/FanFun";
+import FanFun from "../Components/Isolated/FanFun";
 // import Featured from "../Components/Isolated/Featured";
-// import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
+import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 // import Mentor from "../Components/Isolated/Mentor";
 // import MyAward from "../Components/Isolated/MyAward";
 // import Quotes from "../Components/Isolated/Quotes";
@@ -26,10 +26,10 @@ function Home() {
       </div> */}
       <div className="relative bg-opacity-75 backdrop-filter backdrop-blur-3xl">
         <Banner />
-         <Statistics />
-        {/*<MediaJobCircular />
-        <FanFun />
-        <Blogs />
+        <Statistics />
+        <MediaJobCircular />
+        <FanFun /> 
+       {/* <Blogs />
         <Mentor />
         <Advertisement2 />
         <Services />

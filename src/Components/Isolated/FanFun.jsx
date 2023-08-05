@@ -183,13 +183,10 @@ const FanFun = () => {
         backgroundPosition: "10% 40%",
         // boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.3)",
       }}
-      className="p-14"
+      className=""
     >
-      <Box
-        sx={{ width: "100%" }}
-        className="px-2 -py-[100px] z-20 max-w-full md:max-w-[90%] mx-auto"
-      >
-        <Box className="bg-white  md:w-[549px] md:h-[48px] mx-auto rounded-tl-full rounded-tr-full mb-2 lg:mb-0">
+      <Box className="p-5 md:p-16">
+        <Box className="bg-white  md:w-[549px] h-[48px] mx-auto rounded-tl-full rounded-tr-full">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -216,7 +213,7 @@ const FanFun = () => {
               sx={{
                 fontFamily: "Hind Siliguri",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "16px",
               }}
             />
             <Tab
@@ -225,7 +222,7 @@ const FanFun = () => {
               sx={{
                 fontFamily: "Hind Siliguri",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "16px",
               }}
             />
             <Tab
@@ -234,86 +231,93 @@ const FanFun = () => {
               sx={{
                 fontFamily: "Hind Siliguri",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "16px",
               }}
             />
           </Tabs>
         </Box>
-        <TabPanel
-          value={value}
-          index={0}
-          className="w-full bg-white rounded-lg"
-        >
-          <div className="md:pb-[80px] lg:px-24 px-5">
+        <TabPanel value={value} index={0} className="bg-white md:rounded-lg">
+          <div
+            className="md:px-14 md:pb-14"
+            style={{ fontFamily: "Hind Siliguri" }}
+          >
+            <Zoom>
+              <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-1 text-center  2xs:text-[20px] xs:text-[24px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
+                ফান উইথ ফ্যান
+              </h1>
+            </Zoom>
+            <Zoom>
+              <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+                ফান উইথ ফ্যান
+              </h1>
+            </Zoom>
             <div
               style={{ fontFamily: "Hind Siliguri" }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10"
+              className="grid 2xs:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-5"
             >
               {/* left */}
-              <div className="order-2 lg:order-none">
+              <div className="order-2 xl:order-none 2xl:col-span-2">
                 <Zoom>
                   <FanFunLeft setOpen={setOpen} />
                 </Zoom>
               </div>
               {/* rigth  */}
-              <div className="">
-                <Zoom>
-                  {/* tablet and desktop */}
-                  <div className="md:mx-auto  mt-[15px]  w-[270px] md:w-[80%] lg:w-full">
-                    {/* column 1 */}
-                    <div className="flex md:justify-center">
-                      <div className="ml-2 mb-2 hidden lg:block lg:ml-[310px]">
-                        <img
-                          src={gr2}
-                          alt=""
-                          className="w-[80px] md:w-[120px] lg:w-36"
-                        />
-                      </div>
-                    </div>
-                    {/* column 2 */}
-                    <div className="flex md:justify-center">
-                      <div className="m-2 lg:mx-[85px]">
-                        <img
-                          src={gr2}
-                          alt=""
-                          className="w-[80px] md:w-[120px] lg:w-36"
-                        />
-                      </div>
-                      <div className="m-2 lg:-mx-[70px]">
-                        <img
-                          src={gr2}
-                          alt=""
-                          className="w-[80px] md:w-[120px] lg:w-36"
-                        />
-                      </div>
-                    </div>
-                    {/* column 3 */}
-                    <div className="flex md:justify-center">
-                      <div className="m-2 hidden md:block">
-                        <img
-                          src={gr2}
-                          alt=""
-                          className="w-[80px] md:w-[120px] lg:w-36"
-                        />
-                      </div>
-                      <div className="m-2">
-                        <img
-                          src={gr2}
-                          alt=""
-                          className="w-[80px] md:w-[120px] lg:w-36 "
-                        />
-                      </div>
-                      <div className="m-2">
-                        <img
-                          src={gr2}
-                          alt=""
-                          className="w-[80px] md:w-[120px] lg:w-36 rounded-br-xl"
-                        />
-                      </div>
+              <Zoom>
+                {/* tablet and desktop */}
+                <div className="mx-auto  sm:w-[270px] md:w-[80%] lg:w-full xl:w-[95%] 2xl:w-full">
+                  {/* column 1 */}
+                  <div className="flex md:justify-center">
+                    <div className="ml-2 mb-2 hidden xl:block lg:ml-[200px] xl:ml-[280px] 2xl:ml-[305px]">
+                      <img
+                        src={gr2}
+                        alt=""
+                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36"
+                      />
                     </div>
                   </div>
-                </Zoom>
-              </div>
+                  {/* column 2 */}
+                  <div className="flex md:justify-center">
+                    <div className="m-2  xl:mx-[80px] 2xl:mx-[85px]">
+                      <img
+                        src={gr2}
+                        alt=""
+                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36"
+                      />
+                    </div>
+                    <div className="m-2 xl:-mx-[65px] 2xl:-mx-[70px]">
+                      <img
+                        src={gr2}
+                        alt=""
+                        className="2xs:w-[80px] md:w-[120px]  xl:w-[130px] 2xl:w-36"
+                      />
+                    </div>
+                  </div>
+                  {/* column 3 */}
+                  <div className="flex md:justify-center">
+                    <div className="m-2 hidden md:block">
+                      <img
+                        src={gr2}
+                        alt=""
+                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36"
+                      />
+                    </div>
+                    <div className="m-2">
+                      <img
+                        src={gr2}
+                        alt=""
+                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36"
+                      />
+                    </div>
+                    <div className="m-2">
+                      <img
+                        src={gr2}
+                        alt=""
+                        className="2xs:w-[80px] md:w-[120px]  xl:w-[130px] 2xl:w-36 rounded-br-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Zoom>
             </div>
             <MuiModal
               open={open}
@@ -355,10 +359,10 @@ const FanFun = () => {
             </MuiModal>
           </div>
         </TabPanel>
-        <TabPanel value={value} index={1} className="bg-primary rounded-lg">
+        <TabPanel value={value} index={1} className="bg-primary md:rounded-lg">
           <Invite />
         </TabPanel>
-        <TabPanel value={value} index={2} className="-mt-[23px] rounded-lg">
+        <TabPanel value={value} index={2} className="bg-black md:rounded-lg">
           <Advertisement />
         </TabPanel>
       </Box>
