@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import "../../Styles/MediaJobCircular.css";
 import blog from "../../assets/images/blogh.png";
 
-function Blogs() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Blogs = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -18,7 +18,7 @@ function Blogs() {
   };
   return (
     <div>
-      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-2 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
         ব্লগ সমূহ
       </h1>
       <Fade down>
@@ -45,8 +45,8 @@ function Blogs() {
           </Zoom>
           <Zoom>
             <Link to={"/blogs"}>
-              <div className="bg-white rounded-lg flex">
-                <img className="w-[200px]  rounded-l-lg" src={blog} alt="" />
+              <div className="bg-white rounded-lg flex flex-col">
+                <img className="w-  rounded-l-lg" src={blog} alt="" />
                 <div className="p-5">
                   <h3 className="text-2xl text-secondary font-bold">
                     বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে
@@ -84,6 +84,6 @@ function Blogs() {
       </div>
     </div>
   );
-}
+};
 
 export default Blogs;

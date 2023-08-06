@@ -9,7 +9,7 @@ import Banner from "../Components/Isolated/Banner";
 import FanFun from "../Components/Isolated/FanFun";
 // import Featured from "../Components/Isolated/Featured";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
-// import Mentor from "../Components/Isolated/Mentor";
+import Mentor from "../Components/Isolated/Mentor";
 // import MyAward from "../Components/Isolated/MyAward";
 // import Quotes from "../Components/Isolated/Quotes";
 // import Services from "../Components/Isolated/Services";
@@ -29,9 +29,9 @@ function Home() {
         <Statistics />
         <MediaJobCircular />
         <FanFun /> 
-       {/* <Blogs />
+        {/* <Blogs /> */}
         <Mentor />
-        <Advertisement2 />
+        {/*<Advertisement2 />
         <Services />
         <Events />
         <MyAward />

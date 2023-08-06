@@ -66,16 +66,16 @@ audio::-webkit-media-controls-volume-slider {
     1px 1px 0 #f40a5c;
   opacity: 0.2;
 }
-.custom-text-stroke-3 {
+.custom-text-stroke-2 {
   color: #14161c;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   text-shadow: -1px -1px 0 #f6b30f, 1px -1px 0 #f6b30f, -1px 1px 0 #f6b30f,
     1px 1px 0 #f6b30f;
-  opacity: 0.5;
+  opacity: 0.2;
 }
-.custom-text-stroke-2 {
+.custom-text-stroke-3 {
   color: #57253f;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 700;

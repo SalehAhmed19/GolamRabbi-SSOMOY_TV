@@ -179,11 +179,10 @@ const FanFun = () => {
         background: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        // backgroundAttachment: "fixed",
+        backgroundAttachment: "fixed",
         backgroundPosition: "10% 40%",
         // boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.3)",
       }}
-      className=""
     >
       <Box className="p-5 md:p-16">
         <Box className="bg-white  md:w-[549px] h-[48px] mx-auto rounded-tl-full rounded-tr-full">
@@ -205,7 +204,7 @@ const FanFun = () => {
                 borderTopRightRadius: "10px",
               },
             }}
-            className="lg:space-x-[55px]"
+            className="sm:space-x-[90px] md:space-x-[60px] lg:space-x-[55px]"
           >
             <Tab
               label="ফান উইথ ফ্যান"
@@ -236,19 +235,17 @@ const FanFun = () => {
             />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0} className="bg-white md:rounded-lg">
+        <TabPanel value={value} index={0} className="bg-white rounded-b-lg md:rounded-lg">
           <div
             className="md:px-14 md:pb-14"
             style={{ fontFamily: "Hind Siliguri" }}
           >
-            <Zoom>
-              <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-1 text-center  2xs:text-[20px] xs:text-[24px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
+              <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-1 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
                 ফান উইথ ফ্যান
               </h1>
-            </Zoom>
             <Zoom>
               <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
-                ফান উইথ ফ্যান
+                ফান উইথ ফ্যান 
               </h1>
             </Zoom>
             <div

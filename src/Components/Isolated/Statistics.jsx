@@ -123,7 +123,7 @@ const Statistics = () => {
               <Zoom>
                 <div
                   key={statistic._id}
-                  className="px-10 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
+                  className="sm:px-10 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
                 >
                   <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px] drop-shadow-xl">
                     {statistic.qty}
