@@ -2,10 +2,8 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import {
-  MdLocationOn
-} from "react-icons/md";
-import { Fade, Zoom } from "react-reveal";
+import { MdLocationOn } from "react-icons/md";
+import { Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -73,15 +71,15 @@ function Events() {
       className=" lg:px-24 py-14 text-[#fff] px-5"
     >
       <Zoom>{/* <Advertisement2 /> */}</Zoom>
-      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-2 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
+      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
         আসন্ন ইভেন্টস
       </h1>
-      <Fade down>
+      <Zoom>
         <h1 className="text-white text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           আসন্ন ইভেন্টস
         </h1>
-      </Fade>
-      <Fade up>
+      </Zoom>
+      <Zoom>
         <div className="relative mt-10 cursor-pointer max-w-7xl mx-auto">
           <Swiper
             slidesPerView={1}
@@ -103,7 +101,7 @@ function Events() {
                   <div className="-p-5 flex items-center flex-col md:flex-row">
                     <div className="mb-8 md:mb-0 text-primary mr-5 border-2 bg-white text-secondary shadow-xl p-5  rounded-md">
                       <h2
-                        className="text-6xl font-bold drop-shadow-xl"
+                        className="2xs:text-[36px] text-6xl font-bold drop-shadow-xl"
                         style={{ fontFamily: "Hind Siliguri" }}
                       >
                         {event.date}
@@ -116,15 +114,15 @@ function Events() {
                       </p>
                     </div>
                     <div>
-                      <h4 className="my-3 font-bold text-2xl text-white">
+                      <h4 className="my-3 font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-white">
                         {event.title}
                       </h4>
                       <hr />
-                      <p className="my-3 flex items-center text-[#c5c5c5]">
+                      <p className="my-3 flex items-center text-[#c5c5c5] 2xs:text-[12px]">
                         <AiOutlineClockCircle className="mr-2" />
                         {event.startingTime} ঘটিকা - {event.endingTime} ঘটিকা
                       </p>
-                      <p className="my-3 flex items-center text-[#c5c5c5]">
+                      <p className="my-3 flex items-center text-[#c5c5c5] 2xs:text-[12px]">
                         <MdLocationOn className="mr-2" />
                         {event.location}
                       </p>
@@ -149,20 +147,22 @@ function Events() {
             </span>
           </div> */}
           <div className="my-5 select-none">
-            <p className="font-bold text-xl md:text-2xl">
+            <p className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
               জীবনের এক রাস অনুভূতি ও অভিজ্ঞতা নিয়ে কিছু কথা হবে তোমাদের সাথে...
             </p>
-            <Fade up>
-              <Link
-                to="/events"
-                className="block mx-auto my-10 py-2 border-2 hover:border-[#f40a5c] w-[290px] text-center rounded-full text-[#f40a5c] bg-[#fff] font-bold text-xl"
-              >
-                আরও দেখুন
+            <Zoom>
+              <Link to="/events">
+                <button
+                  style={{ fontFamily: "Hind Siliguri" }}
+                  className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+                >
+                  আরও দেখুন
+                </button>
               </Link>
-            </Fade>
+            </Zoom>
           </div>
         </div>
-      </Fade>
+      </Zoom>
     </div>
   );
 }

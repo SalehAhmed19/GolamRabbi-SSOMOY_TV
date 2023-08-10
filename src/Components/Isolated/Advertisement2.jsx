@@ -57,7 +57,7 @@ function Advertisement2() {
     <div className="relative bg-white">
       {/* <img className="w-20 absolute top-5 blur-lg" src={box} alt="" /> */}
       <div className="lg:px-20 px-5 py-14">
-        <h1 className="lg:text-right font-bold lg:text-3xl">
+        <h1 className="lg:text-right font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
           মিডিয়া জব। বিশেষ করে সংবাদ উপস্থাপনা। তাও আবার টিভিতে। এ চাকরি নিয়ে
           জানতে চাও? <br /> তাহলে দেরী না করে এখনই ওয়াটস্ অ্যাপ করো অথবা মেইল
           করো।
@@ -72,22 +72,25 @@ function Advertisement2() {
           </Zoom>
           <div className="lg:w-1/3">
             <form onSubmit={handleSubmit}>
-              <input
-                className="placeholder:text-black rounded-full my-2 py-4 px-5 border-2 outline-none border-[#f40a5c] w-full"
-                placeholder="তোমার ইমেইল লিখো"
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <div className="my-2 pl-5 pr-2 border-2 border-[#f40a5c] rounded-full w-full flex justify-between">
+              <div className="">
                 <input
-                  className="placeholder:text-black rounded-full  py-3 outline-none bg-transparent w-full"
+                  className="placeholder:text-black rounded-full my-2 py-4 px-5 border-2 outline-none border-[#f40a5c] w-full 2xs:h-[20px]"
+                  placeholder="তোমার ইমেইল লিখো"
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="relative">
+                {/* my-2 pl-5 pr-2 border-2 border-[#f40a5c] rounded-full w-full flex justify-between */}
+                <input
+                  className="placeholder:text-black rounded-full my-2 py-4 px-5 border-2 outline-none border-[#f40a5c] w-full 2xs:h-[20px]"
                   placeholder="তোমার কথা লিখো"
                   type="text"
                   onChange={(e) => setMessage(e.target.value)}
                 />
                 <button
                   type="submit"
-                  className="bg-[#f40a5c] rounded-full py-2 w-36 text-[#fff] my-2"
+                  className="absolute right-0 xs:top-2 xs:right-2 xs:rounded-full md:top-2 md:right-2 lg:top-2 lg:right-2 bg-[#f40a5c] rounded-r-full md:rounded-full py-2 w-[70px] md:w-[80px] lg:w-36 text-[#fff] my-2 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
                 >
                   মেইল করো
                 </button>

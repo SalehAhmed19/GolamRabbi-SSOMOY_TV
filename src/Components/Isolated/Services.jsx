@@ -4,12 +4,9 @@ import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import { TiArrowSortedDown } from "react-icons/ti";
 import { Zoom } from "react-reveal";
-import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
 import bio from "../../assets/SVGs/bio-interview.png";
 import content from "../../assets/SVGs/content-writting.png";
 import cv from "../../assets/SVGs/cv-writting.png";
@@ -115,17 +112,14 @@ function Services() {
         background: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        // backgroundAttachment: "fixed",
+        backgroundAttachment: "fixed",
         backgroundPosition: "10% 40%",
         // boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.3)",
       }}
-      className="p-14  bg-[#fff] relative"
+      className="p-5 md:p-16"
     >
-      <Box
-        sx={{ width: "100%" }}
-        className="px-2 -py-[100px] z-20 max-w-full md:max-w-[90%] mx-auto"
-      >
-        <Box className=" bg-white  md:w-[549px] md:h-[48px] mx-auto rounded-tl-full rounded-tr-full mb-2 lg:mb-0">
+      <Box className="">
+        <Box className="bg-white md:w-[549px] md:h-[48px] mx-auto rounded-tl-full rounded-tr-full">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -144,7 +138,7 @@ function Services() {
                 borderTopRightRadius: "10px",
               },
             }}
-            className="space-x-7 md:space-x-[125px]"
+            className="xs:space-x-6 md:space-x-32"
           >
             <Tab
               label="সার্ভিস সমূহ"
@@ -152,7 +146,7 @@ function Services() {
               sx={{
                 fontFamily: "Hind Siliguri",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "16px",
               }}
             />
             <Tab
@@ -161,7 +155,7 @@ function Services() {
               sx={{
                 fontFamily: "Hind Siliguri",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "16px",
               }}
             />
           </Tabs>
@@ -169,171 +163,95 @@ function Services() {
         <TabPanel
           value={value}
           index={0}
-          className="w-full bg-[#0E0F15] rounded-lg"
+          className="p-5 md:p-16 bg-[#0E0F15] rounded-b-lg md:rounded-lg"
         >
-          <div className="hidden lg:block">
-            <div
-              style={{ fontFamily: "Hind Siliguri" }}
-              className="grid grid-cols-2 px-20"
-            >
-              <div className="mx-auto">
-                <img
-                  src={instructor}
-                  alt=""
-                  className="w-[400px] h-[px] object-cover -mb-6"
-                />
-              </div>
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full lg:mx-">
-                  <div className="lg:flex lg:flex-row lg:justify-center gap-5 mt-10 mb-5">
-                    {data.slice(0, 2).map((d) => (
-                      <Zoom>
-                        <div
-                          key={d._id}
-                          className="p-5 shadow-lg rounded-lg lg:w-48 flex flex-col justify-center items-center bg-white mx-5 lg:mx-0"
-                        >
-                          <img className="w-10 mb-3" src={d.icon} alt="" />
-                          <h3
-                            className={
-                              d.list.length === 0
-                                ? "text-center text-xl text-secondary font-bold"
-                                : "text-center text-secondary font-bold"
-                            }
-                          >
-                            {d.title}
-                          </h3>
-                          <p>
-                            {d.list.map((list, idx) => (
-                              <p key={idx}>{list}</p>
-                            ))}
-                          </p>
-                        </div>
-                      </Zoom>
-                    ))}
-                  </div>
-                  <div className="lg:flex lg:flex-row justify-center gap-5 my-5">
-                    {data.slice(2, 6).map((d) => (
-                      <Zoom>
-                        <div
-                          key={d._id}
-                          className="p-5 shadow-lg  rounded-lg lg:w-48 flex flex-col justify-center items-center bg-white mx-5 lg:mx-0"
-                        >
-                          <img className="w-10 mb-3" src={d.icon} alt="" />
-                          <h3
-                            className={
-                              d.list.length === 0
-                                ? "text-center text-xl text-secondary font-bold"
-                                : "text-center text-secondary font-bold"
-                            }
-                          >
-                            {d.title}
-                          </h3>
-                          <>
-                            {d.list.map((list, idx) => (
-                              <p key={idx}>{list}</p>
-                            ))}
-                          </>
-                        </div>
-                      </Zoom>
-                    ))}
-                  </div>
-                  <div className="lg:flex lg:flex-row justify-center gap-5 my-5">
-                    {data.slice(6, 9).map((d) => (
-                      <Zoom>
-                        <div
-                          key={d._id}
-                          className="p-5 shadow-lg rounded-lg lg:w-48 flex flex-col justify-center items-center bg-secondary bg-white mx-5 lg:mx-0"
-                        >
-                          <img className="w-10 mb-3" src={d.icon} alt="" />
-                          <h3
-                            className={
-                              d.list.length === 0
-                                ? "text-center text-xl text-secondary font-bold"
-                                : "text-center text-secondary font-bold"
-                            }
-                          >
-                            {d.title}
-                          </h3>
-                          <>
-                            {d.list.map((list, idx) => (
-                              <p key={idx}>{list}</p>
-                            ))}
-                          </>
-                        </div>
-                      </Zoom>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* mobile */}
-          <div className="lg:hidden flex items-center">
+          <div
+            style={{ fontFamily: "Hind Siliguri" }}
+            className="flex justify-between  items-center flex-col lg:flex-row"
+          >
             {/* left  */}
-            <div className="md:mr-5 mr-2">
-              <img
-                src={instructor}
-                alt=""
-                className="w-[200px] object-cover -mb-6"
-              />
+            <div>
+              <Zoom>
+                <img src={instructor} alt="" className="w-[400px]" />
+              </Zoom>
             </div>
-            {/* right */}
-            <div
-              style={{ fontFamily: "Hind Siliguri" }}
-              className="overflow-hidden w-full md:w-[800px]"
-            >
-              <Swiper
-                slidesPerView={1}
-                spaceBetween={20}
-                freeMode={true}
-                breakpoints={{
-                  668: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                  },
-                }}
-                navigation={{
-                  prevEl: ".service-btn-prev",
-                  nextEl: ".service-btn-next",
-                }}
-                modules={[Navigation]}
-                className="relative"
-              >
-                {data?.map((d) => (
-                  <SwiperSlide>
-                    <Zoom>
-                      <div
-                        key={d._id}
-                        className="p-5 shadow-lg  rounded-lg  md:w-[140px]  h-[180px] flex flex-col justify-center items-center bg-white"
-                      >
-                        <img className="w-10 mb-3" src={d.icon} alt="" />
-                        <h3
-                          className={
-                            d.list.length === 0
-                              ? "text-center text-sm lg:text-lg text-secondary font-bold"
-                              : "text-center text-secondary font-bold"
-                          }
-                        >
-                          {d.title}
-                        </h3>
-                        <>
-                          {d.list.map((list, idx) => (
-                            <p key={idx}>{list}</p>
-                          ))}
-                        </>
-                      </div>
-                    </Zoom>
-                  </SwiperSlide>
+            {/* right  */}
+            <div className="md:w-[600px] lg:w-[500px] xl:w-[80%]">
+              {/* row 1 */}
+              <div className="md:flex md:flex-row md:justify-center gap-5 mt-10 mb-5 2xs:space-y-5 xs:space-y-5">
+                {data.slice(0, 2).map((d) => (
+                  <Zoom>
+                    <div
+                      key={d._id}
+                      className="w-[139px] h-[118px] shadow-lg rounded-lg lg:w-48 flex flex-col justify-center items-center bg-white"
+                    >
+                      <img className="w-9 mb-3" src={d.icon} alt="" />
+                      <h3 className="2xs:text-[14px] xs:text-[15px] sm:text-[16] text-secondary font-bold text-center">
+                        {d.title}
+                      </h3>
+                      <p>
+                        {d.list.map((list, idx) => (
+                          <p key={idx}>{list}</p>
+                        ))}
+                      </p>
+                    </div>
+                  </Zoom>
                 ))}
-                <div className="select-none text-secondary space-x-2 cursor-pointer flex justify-end items-end mr-8 mt-3">
-                  <TiArrowSortedDown className="service-btn-prev text-2xl rotate-90 border-2 border-[#f40a5c] rounded-full " />
-                  <TiArrowSortedDown className="service-btn-next text-2xl -rotate-90 border-2 border-[#f40a5c] rounded-full " />
-                </div>
-              </Swiper>
+              </div>
+              {/* row 2 */}
+              <div className="md:flex md:flex-row justify-center gap-5 my-5 2xs:space-y-5 xs:space-y-5">
+                {data.slice(2, 6).map((d) => (
+                  <Zoom>
+                    <div
+                      key={d._id}
+                      className="w-[139px] h-[118px] shadow-lg  rounded-lg lg:w-48 flex flex-col justify-center items-center bg-white"
+                    >
+                      <img className="w-9 mb-3" src={d.icon} alt="" />
+                      <h3 className="2xs:text-[14px] xs:text-[15px] sm:text-[16] text-secondary font-bold text-center">
+                        {d.title}
+                      </h3>
+                      <>
+                        {d.list.map((list, idx) => (
+                          <p key={idx}>{list}</p>
+                        ))}
+                      </>
+                    </div>
+                  </Zoom>
+                ))}
+              </div>
+              {/* row 3 */}
+              <div className="md:flex md:flex-row justify-center gap-5 my-5 2xs:space-y-5 xs:space-y-5">
+                {data.slice(6, 9).map((d) => (
+                  <Zoom>
+                    <div
+                      key={d._id}
+                      className="w-[139px] h-[118px] shadow-lg rounded-lg lg:w-48 flex flex-col justify-center items-center bg-white"
+                    >
+                      <img
+                        className="w-9 mb-3 md:m-1 pt-1.5 lg:mb-3"
+                        src={d.icon}
+                        alt=""
+                      />
+                      <h3 className="pb-1 2xs:text-[14px] xs:text-[15px] sm:text-[16] text-secondary font-bold text-center">
+                        {d.title}
+                      </h3>
+                      <>
+                        {d.list.map((list, idx) => (
+                          <p key={idx}>{list}</p>
+                        ))}
+                      </>
+                    </div>
+                  </Zoom>
+                ))}
+              </div>
             </div>
           </div>
         </TabPanel>
-        <TabPanel value={value} index={1} className="bg-[] rounded-lg">
+        <TabPanel
+          value={value}
+          index={1}
+          className="bg-[#fff] rounded-b-lg md:rounded-lg"
+        >
           <Skills />
         </TabPanel>
       </Box>
