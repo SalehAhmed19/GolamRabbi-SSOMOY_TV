@@ -88,7 +88,7 @@ const Statistics = () => {
                 borderTopRightRadius: "10px",
               },
             }}
-            className="2xs:space-x-0 xs:space-x-3 space-x-9"
+            className="2xs:space-x-0 xs:space-x-3 space-x-7"
           >
             <Tab
               label="অর্জন"

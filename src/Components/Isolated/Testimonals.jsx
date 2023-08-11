@@ -1,7 +1,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React from "react";
-import { Fade } from "react-reveal";
+import { Zoom } from "react-reveal";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -73,8 +73,8 @@ function Testimonals() {
     },
   ];
   return (
-    <div className="bg-white pb-[1px]">
-      <div className="lg:mx-20 mx-5 my-14 relative">
+    <div className="bg-white p-5 md:py-16 md:px-10">
+      <div className=" relative">
         {/* <h1 className="pt-[26px] -mb-20 custom-text-stroke-2 text-center text-[100px] my-5">
           টেস্টিমোনিয়ালস
         </h1>
@@ -83,15 +83,15 @@ function Testimonals() {
             টেস্টিমোনিয়ালস
           </h1>
         </Fade> */}
-        <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+        <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-1 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
           টেস্টিমোনিয়ালস
         </h1>
-        <Fade down>
-          <h1 className="mb-10 text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+        <Zoom>
+          <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
             টেস্টিমোনিয়ালস
           </h1>
-        </Fade>
-        <div>
+        </Zoom>
+        <div className="mt-8">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
@@ -102,11 +102,11 @@ function Testimonals() {
             breakpoints={{
               668: {
                 slidesPerView: 1,
-                spaceBetween: 40,
+                spaceBetween: 30,
               },
               1280: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 40,
               },
             }}
             className=""

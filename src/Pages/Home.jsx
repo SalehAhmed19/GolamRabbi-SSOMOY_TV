@@ -15,8 +15,8 @@ import Quotes from "../Components/Isolated/Quotes";
 import Services from "../Components/Isolated/Services";
 // import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
-// import Subscribe from "../Components/Isolated/Subscribe";
-// import Testimonals from "../Components/Isolated/Testimonals";
+import Subscribe from "../Components/Isolated/Subscribe";
+import Testimonals from "../Components/Isolated/Testimonals";
 // import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
 function Home() {
   return (
@@ -36,9 +36,9 @@ function Home() {
         <Events />
         <MyAward />
         <Quotes />
-        {/*<Subscribe />
+        <Subscribe />
         <Testimonals />
-        <Featured />
+        {/*<Featured />
         <About />
         <BookSection />
         <SocialMedia />

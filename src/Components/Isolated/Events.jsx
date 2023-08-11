@@ -16,6 +16,22 @@ function Events() {
   const arr = [1, 2, 3, 4, 5, 6];
   const events = [
     {
+      title: "আইডিয়া ডেভেলপমেন্ট অ্যান্ড ক্রিয়েটিভ রাইটিং ",
+      date: "০১",
+      month: "সেপ্টেম্বর",
+      startingTime: "সকাল ১০:০০ টা",
+      endingTime: "বিকাল ০৪:০০ টা",
+      location: "বিশ্বসাহিত্য কেন্দ্র, বাংলা মোটর, ঢাকা",
+    },
+    {
+      title: "কীভাবে হবো নিউজ প্রেজেন্টার?",
+      date: "১০",
+      month: "সেপ্টেম্বর",
+      startingTime: "সকাল ১০:০০ টা",
+      endingTime: "বিকাল ০৪:০০ টা",
+      location: "বিশ্বসাহিত্য কেন্দ্র, বাংলা মোটর, ঢাকা",
+    },
+    {
       title: "জীবনের রূপকথা",
       date: "১২",
       month: "এপ্রিল",
@@ -148,7 +164,7 @@ function Events() {
           </div> */}
           <div className="my-5 select-none">
             <p className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-              জীবনের এক রাস অনুভূতি ও অভিজ্ঞতা নিয়ে কিছু কথা হবে তোমাদের সাথে...
+              আমার জীবনের বাস্তব অভিজ্ঞতা নিয়ে কথা হবে তোমাদের সাথে...
             </p>
             <Zoom>
               <Link to="/events">
@@ -156,7 +172,7 @@ function Events() {
                   style={{ fontFamily: "Hind Siliguri" }}
                   className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
                 >
-                  আরও দেখুন
+                  এখনই রেজিস্ট্রেশন করুন
                 </button>
               </Link>
             </Zoom>
