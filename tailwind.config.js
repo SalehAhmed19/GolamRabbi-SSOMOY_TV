@@ -20,7 +20,7 @@ export default {
     },
     extend: {
       screens: {
-        "2xs": { min: "240px", max: "360px" },
+        "2xs": { min: "240px", max: "359px" },
         // => @media (min-width: 240px) { ... }
         "xs": { min: "360px", max: "641px" },
         // => @media (min-width: 360px) { ... }

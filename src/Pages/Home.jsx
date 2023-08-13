@@ -3,8 +3,8 @@ import "../App.css";
 // import About from "../Components/Isolated/About";
 import Advertisement2 from "../Components/Isolated/Advertisement2";
 import Banner from "../Components/Isolated/Banner";
-// import Blogs from "../Components/Isolated/Blogs";
-// import BookSection from "../Components/Isolated/BookSection";
+import Blogs from "../Components/Isolated/Blogs";
+import BookSection from "../Components/Isolated/BookSection";
 import Events from "../Components/Isolated/Events";
 import FanFun from "../Components/Isolated/FanFun";
 // import Featured from "../Components/Isolated/Featured";
@@ -13,11 +13,11 @@ import Mentor from "../Components/Isolated/Mentor";
 import MyAward from "../Components/Isolated/MyAward";
 import Quotes from "../Components/Isolated/Quotes";
 import Services from "../Components/Isolated/Services";
-// import SocialMedia from "../Components/Isolated/SocialMedia";
+import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
 import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
-// import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
+import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
 function Home() {
   return (
     <div className="relative">
@@ -29,7 +29,7 @@ function Home() {
         <Statistics />
         <MediaJobCircular />
         <FanFun />
-        {/* <Blogs /> */}
+        <Blogs />
         <Mentor />
         <Advertisement2 />
         <Services />
@@ -38,11 +38,11 @@ function Home() {
         <Quotes />
         <Subscribe />
         <Testimonals />
-        {/*<Featured />
-        <About />
+        {/* <Featured /> */}
+        {/* <About /> */}
         <BookSection />
         <SocialMedia />
-        <HomeImageGallery /> */}
+        <HomeImageGallery /> 
       </div>
     </div>
   );

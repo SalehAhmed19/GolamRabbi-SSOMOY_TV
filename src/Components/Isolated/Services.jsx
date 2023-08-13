@@ -167,7 +167,7 @@ function Services() {
         >
           <div
             style={{ fontFamily: "Hind Siliguri" }}
-            className="flex justify-between  items-center flex-col lg:flex-row"
+            className="flex justify- items-center flex-col lg:flex-row"
           >
             {/* left  */}
             <div>

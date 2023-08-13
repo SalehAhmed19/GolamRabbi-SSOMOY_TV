@@ -15,8 +15,8 @@ import hafCircle from "../../assets/images/half-circle.png";
 function BookSection() {
   return (
     <>
-      <div className="py-20 relative bg-[#111118]">
-        <div className="absolute top-[150px] left-[30px] md:top-[120px] md:left-[200px] lg:left-[650px]  border-4 border-[#D89F17] border-dashed  opacity-[0.5] w-[80px] h-[80px] md:w-[120px] md:h-[120px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div>
+      <div className="relative bg-[#111118]">
+        <div className="2xs:hidden xs:hidden block md:w-[130px] md:h-[130px] xl:w-[150px] xl:h-[150px] absolute md:top-[105px] md:left-[160px] lg:top-[120px] lg:left-[300px] xl:top-[100px] xl:left-[400px] 2xl:left-[720px] border-4 border-[#D89F17] border-dashed opacity-[0.5] rounded-full"></div>
         {/* <div className="absolute md:-top-[80px] md:right-1  border-b-4  border-[#D89F17] border-dashed   md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div> */}
         {/* <div className="absolute md:-bottom-[80px] md:left-1 border-t-4  border-[#D89F17] border-dashed   md:w-[150px] md:h-[150px]  lg:w-[180px] lg:h-[180px]  rounded-full"></div> */}
         <div className="relative">
@@ -37,34 +37,41 @@ function BookSection() {
               prevEl: ".book-btn-prev",
               nextEl: ".book-btn-next",
             }}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 3500,
+            //   disableOnInteraction: false,
+            // }}
             modules={[EffectCoverflow, Navigation, Autoplay]}
             className=""
           >
             <SwiperSlide>
-              <div className="w-full mb-5 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+              <div className="w-full py-5 md:py-16 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                    বই মেলায় আসছে
+                  </h3>
+                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                    এপ্রিল ১৪
+                  </p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="lg:h-[565px]">
+                  <div className="">
                     <img
-                      className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
                       src={book2}
                       alt=""
                     />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                    <button
+                      style={{ fontFamily: "Hind Siliguri" }}
+                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                    >
                       কিনতে চাও?
                     </button>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -72,26 +79,33 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+              <div className="w-full py-5 md:py-16 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                    বই মেলায় আসছে
+                  </h3>
+                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                    এপ্রিল ১৪
+                  </p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="lg:h-[565px]">
+                  <div className="">
                     <img
-                      className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
                       src={book1}
                       alt=""
                     />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                    <button
+                      style={{ fontFamily: "Hind Siliguri" }}
+                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                    >
                       কিনতে চাও?
                     </button>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -99,26 +113,33 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+              <div className="w-full py-5 md:py-16 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                    বই মেলায় আসছে
+                  </h3>
+                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                    এপ্রিল ১৪
+                  </p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="lg:h-[565px]">
+                  <div className="">
                     <img
-                      className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
                       src={book2}
                       alt=""
                     />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                    <button
+                      style={{ fontFamily: "Hind Siliguri" }}
+                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                    >
                       কিনতে চাও?
                     </button>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -126,26 +147,33 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+              <div className="w-full py-5 md:py-16 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                    বই মেলায় আসছে
+                  </h3>
+                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                    এপ্রিল ১৪
+                  </p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="lg:h-[565px]">
+                  <div className="">
                     <img
-                      className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
                       src={book1}
                       alt=""
                     />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                    <button
+                      style={{ fontFamily: "Hind Siliguri" }}
+                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                    >
                       কিনতে চাও?
                     </button>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -153,26 +181,67 @@ function BookSection() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full mb-5 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 lg:mx-64">
-                  <h3 className="text-4xl mb-2">বই মেলায় আসছে</h3>
-                  <p className="text-xl mb-3">এপ্রিল ১৪</p>
+              <div className="w-full py-5 md:py-16 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                    বই মেলায় আসছে
+                  </h3>
+                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                    এপ্রিল ১৪
+                  </p>
                 </div>
                 <div className="flex justify-center items-center">
-                  <div className="lg:h-[565px]">
+                  <div className="">
                     <img
-                      className="drop-shadow-xl w-64 md:72 lg:w-96 rounded-lg  shadow-2xl"
+                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
                       src={book2}
                       alt=""
                     />
-                    <button className="mx-8 mt-8 lg:mx-24  border-2 border-[#D89F17] border-dashed px-14 py-2 rounded-full text-white font-bold text-xl">
+                    <button
+                      style={{ fontFamily: "Hind Siliguri" }}
+                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                    >
                       কিনতে চাও?
                     </button>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
                   <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary font-bold p-5  text-base md:text-2xl">
+                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
+                      মূল্যঃ ২০৬ টাকা
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full py-5 md:py-16 group">
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                    বই মেলায় আসছে
+                  </h3>
+                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                    এপ্রিল ১৪
+                  </p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <div className="">
+                    <img
+                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
+                      src={book1}
+                      alt=""
+                    />
+                    <button
+                      style={{ fontFamily: "Hind Siliguri" }}
+                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                    >
+                      কিনতে চাও?
+                    </button>
+                  </div>
+                </div>
+                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
+                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
+                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
                       মূল্যঃ ২০৬ টাকা
                     </button>
                   </div>
@@ -181,31 +250,31 @@ function BookSection() {
             </SwiperSlide>
           </Swiper>
           {/* previous btn */}
-          <div className="book-btn-prev z-10 cursor-pointer absolute top-[230px] left-[10px]  lg:top-[325px] md:left-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
-            <span className="text-primary font-bold text-xl">
+          <div className="book-btn-prev z-10 cursor-pointer 2xs:w-[20px] xs:w-[30px] md:w-[50px] absolute 2xs:top-[195px] 2xs:left-[5px] xs:top-[250px] xs:left-[10px]  md:top-[365px] md:left-[90px] bg-[#111118] rounded-full p-1 md:p-3  ">
+            <span className="text-primary font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
               <MdOutlineKeyboardArrowLeft />
             </span>
           </div>
           {/* next btn */}
-          <div className="book-btn-next z-10 cursor-pointer absolute top-[230px] right-[10px] lg:top-[325px] md:right-[90px] bg-[#111118] rounded-full p-1 lg:p-3 w-[30px] lg:w-[45px] ">
-            <span className="text-primary font-bold text-xl">
+          <div className="book-btn-next z-10 cursor-pointer 2xs:w-[20px] xs:w-[30px] md:w-[50px] absolute 2xs:top-[195px] 2xs:right-[5px] xs:top-[250px] xs:right-[10px] md:top-[365px] md:right-[90px] bg-[#111118] rounded-full p-1 md:p-3">
+            <span className="text-primary font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
               <MdOutlineKeyboardArrowRight />
             </span>
           </div>
         </div>
         {/* background shape*/}
         <div className="relative space-y-5 ">
-          <div className="absolute -top-[490px] w-full text-white text-4xl bg-primary h-[10px]"></div>
-          <div className="absolute -top-[480px] w-full bg-primary h-[40px]"></div>
-          <div className="absolute -top-[420px] w-full bg-primary h-[40px]"></div>
-          <div className="absolute -top-[360px] w-full bg-primary h-[10px]"></div>
+          <div className="absolute 2xs:-top-[350px] xs:-top-[380px] md:-top-[590px] w-full bg-primary h-[10px]"></div>
+          <div className="absolute 2xs:-top-[350px] xs:-top-[380px] md:-top-[580px] w-full bg-primary h-[40px]"></div>
+          <div className="absolute 2xs:-top-[300px] xs:-top-[330px] md:-top-[520px] w-full bg-primary h-[40px]"></div>
+          <div className="absolute 2xs:-top-[250px] xs:-top-[280px] md:-top-[460px] w-full bg-primary h-[10px]"></div>
         </div>
         {/* right top shape */}
-        <div className="absolute -top-[23px] right-[30px] md:-top-[40px] md:right-14 w-[50px] md:w-[100px] md:h-[100] -rotate-[90deg]">
+        <div className="2xs:hidden xs:hidden absolute -top-[23px] right-[30px] md:-top-[40px] md:right-11 w-[50px] md:w-[80px] -rotate-[90deg]">
           <img src={hafCircle} alt="" />
         </div>
         {/* left bottom shape */}
-        <div className="absolute left-[29px] -bottom-[22px] md:-bottom-[47px] md:left-14 w-[50px] md:w-[100px] md:h-[100] rotate-[92deg]">
+        <div className="2xs:hidden xs:hidden absolute left-[29px] -bottom-5 md:-bottom-9 md:left-11 w-[50px] md:w-[80px] rotate-[92deg]">
           <img src={hafCircle} alt="" />
         </div>
       </div>

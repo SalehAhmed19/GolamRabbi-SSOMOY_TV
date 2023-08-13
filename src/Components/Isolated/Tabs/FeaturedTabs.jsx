@@ -86,7 +86,9 @@ const FeaturedTabs = () => {
   });
   return (
     <Box sx={{ width: "100%" }} className="mt-10">
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box
+      //  sx={{ borderBottom: 1, borderColor: "divider" }}
+      >
         <Tabs
           sx={{
             borderRadius: "8px",
@@ -130,39 +132,16 @@ const FeaturedTabs = () => {
       <TabPanel value={value} index={0}>
         <div className="-mx-5 relative rounded-md  cursor-pointer">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {/* item 1 */}
             <div className="relative">
               <img
                 src={FeaturedImages}
                 alt="news-image"
                 className="object-cover rounded-lg"
               />
-              <div className="absolute top-0 w-[323px] h-[182px] md:w-[330px] md:h-[187px] lg:w-[555px] lg:h-[312px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute top-[60px] left-[142px] md:top-[65px] md:left-[148px] lg:top-[127px] lg:left-[272px]">
-                  <BiPlayCircle className="w-[60px] h-[60px] text-secondary" />
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src={FeaturedImages}
-                alt="news-image"
-                className="object-cover rounded-lg"
-              />
-              <div className="absolute top-0 w-[323px] h-[182px] md:w-[330px] md:h-[187px] lg:w-[555px] lg:h-[312px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute top-[60px] left-[142px] md:top-[65px] md:left-[148px] lg:top-[127px] lg:left-[272px]">
-                  <BiPlayCircle className="w-[60px] h-[60px] text-secondary" />
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src={FeaturedImages}
-                alt="news-image"
-                className="object-cover rounded-lg"
-              />
-              <div className="absolute top-0 w-[323px] h-[182px] md:w-[330px] md:h-[187px] lg:w-[555px] lg:h-[312px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute top-[60px] left-[142px] md:top-[65px] md:left-[148px] lg:top-[127px] lg:left-[272px]">
-                  <BiPlayCircle className="w-[60px] h-[60px] text-secondary" />
+              <div className="absolute top-0 2xs:w-[192px] 2xs:h-[108px] xs:w-[327px] xs:h-[184px] md:w-[308px] md:h-[172px] lg:w-[284px] lg:h-[160px] xl:w-[369px] xl:h-[208px] 2xl:w-[578px] 2xl:h-[325px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[95px] xs:top-[78px] xs:left-[160px] md:top-[65px] md:left-[148px] lg:top-[55px] lg:left-[125px] xl:top-[75px] xl:left-[165px] 2xl:top-[132px] 2xl:left-[290px]">
+                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-secondary" />
                 </div>
               </div>
             </div>

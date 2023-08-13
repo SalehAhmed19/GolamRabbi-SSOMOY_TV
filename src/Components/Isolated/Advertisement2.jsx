@@ -90,7 +90,7 @@ function Advertisement2() {
                 />
                 <button
                   type="submit"
-                  className="absolute right-0 xs:top-2 xs:right-2 xs:rounded-full md:top-2 md:right-2 lg:top-2 lg:right-2 bg-[#f40a5c] rounded-r-full md:rounded-full py-2 w-[70px] md:w-[80px] lg:w-36 text-[#fff] my-2 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+                  className="absolute 2xs:right-0 xs:top-2 xs:right-2 xs:rounded-full md:top-2 md:right-2 lg:top-2 lg:right-2 bg-[#f40a5c] rounded-r-full md:rounded-full py-2 w-[70px] md:w-[80px] lg:w-36 text-[#fff] my-2 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
                 >
                   মেইল করো
                 </button>
