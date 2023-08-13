@@ -44,7 +44,7 @@ function MediaJobCircular() {
       className="pb-10"
     >
       <Fade down>
-        <h2 className="text-primary text-center py-10 text-4xl font-bold">
+        <h2 className="2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center py-10  font-bold">
           মিডিয়া জব সার্কুলার
         </h2>
       </Fade>
@@ -73,10 +73,7 @@ function MediaJobCircular() {
             >
               {arr.map((a) => (
                 <SwiperSlide className="mb-14">
-                  <div
-                    key={a}
-                    className="rounded-lg bg-[#222]"
-                  >
+                  <div key={a} className="rounded-lg bg-[#222]">
                     <img src={job} alt="" />
                     <div className="text-basic p-5">
                       <h3 className="text-xl">

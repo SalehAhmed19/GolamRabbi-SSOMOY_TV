@@ -58,30 +58,30 @@ audio::-webkit-media-controls-volume-slider {
   background-color: #f6b30f;
 }
 .custom-text-stroke-1 {
-  color: #14161c;
-  font-family: "Hind Siliguri", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: -1px -1px 0 #f6b30f, 1px -1px 0 #f6b30f, -1px 1px 0 #f6b30f,
-    1px 1px 0 #f6b30f;
-  opacity: 0.5;
-}
-.custom-text-stroke-2 {
-  color: #57253f;
-  font-family: "Hind Siliguri", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white;
-  opacity: 0.5;
-}
-.custom-text-stroke-3 {
   color: white;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   text-shadow: -1px -1px 0 #f40a5c, 1px -1px 0 #f40a5c, -1px 1px 0 #f40a5c,
     1px 1px 0 #f40a5c;
+  opacity: 0.2;
+}
+.custom-text-stroke-2 {
+  color: #14161c;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 #f6b30f, 1px -1px 0 #f6b30f, -1px 1px 0 #f6b30f,
+    1px 1px 0 #f6b30f;
+  opacity: 0.2;
+}
+.custom-text-stroke-3 {
+  color: #57253f;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
   opacity: 0.5;
 }
 
@@ -93,4 +93,31 @@ audio::-webkit-media-controls-volume-slider {
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
   opacity: 0.5;
+}
+
+.swiper-pagination-bullet {
+  background: #f40a5c;
+  width: 10px;
+  height: 10px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet:hover {
+  background: #f40a5c;
+  width: 25px;
+  height: 9px;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #f40a5c;
+  width: 25px;
+  height: 9px;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.swiper-button-disabled {
+  display: none;
 }

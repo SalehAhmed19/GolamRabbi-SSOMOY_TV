@@ -1,6 +1,6 @@
 import React from "react";
-import { RiSendPlane2Fill } from "react-icons/ri";
 import { toast } from "react-hot-toast";
+import { RiSendPlane2Fill } from "react-icons/ri";
 import eye from "../../assets/images/eye.jpg";
 
 function Subscribe() {
@@ -33,9 +33,9 @@ function Subscribe() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="p-7 lg:mx-20 mx-5 rounded-md text-primary mt-20 mb-10 flex flex-col lg:flex-row items-center justify-between"
+      className="p-7 lg:mx-20 mx-5 rounded-md text-primary mt-20 flex flex-col lg:flex-row items-center justify-between"
     >
-      <h3 className="font-bold text-xl md:text-2xl">
+      <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
         জীবনকে এগিয়ে নিতে। সময়কে উপভোগ্য করতে। <br /> এখনই সাবস্ক্রাইব করো।
       </h3>
       <form

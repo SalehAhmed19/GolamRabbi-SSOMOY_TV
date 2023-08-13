@@ -42,7 +42,7 @@ function Home() {
         <About />
         <BookSection />
         <SocialMedia />
-        <HomeImageGallery />
+        <HomeImageGallery /> 
       </div>
     </div>
   );

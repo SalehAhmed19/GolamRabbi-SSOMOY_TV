@@ -6,10 +6,12 @@ const ReviewCard = ({ d }) => {
       <div>
         {/* desktop and table rating info */}
         <div className="hidden md:block">
-          <div className="flex justify-center items-center  w-[200px] h-[200px] rounded-lg bg-secondary">
+          <div className="lg:mx-[100px] xl:mx-0 flex justify-center items-center  w-[200px] h-[200px] rounded-lg bg-secondary">
             <div className="text-white mx-8">
-              <h2 className="text-3xl font-bold">আহনাফ শাহারিয়ার</h2>
-              <p>সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
+              <h2 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold">
+                আহনাফ শাহারিয়ার
+              </h2>
+              <p className="">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
               <div className="flex space-x-1">
                 <BsStarFill />
                 <BsStarFill />
@@ -19,13 +21,13 @@ const ReviewCard = ({ d }) => {
               </div>
             </div>
           </div>
-          <div className="md:w-[504px] md:h-[784px] md:flex md:absolute md:left-[180px] md:top-[45px]">
+          <div className="lg:mx-[100px] xl:mx-0 md:w-[504px] xl:w-[400px] 2xl:w-[504px]  md:flex md:absolute md:left-[180px] md:top-[45px]">
             <img
               src={d.img}
               alt="image"
               className="w-[90px] h-[90px] rounded-lg hidden md:block"
             />
-            <div className="md:mx-6 mt-5 md:mt-0">
+            <div className="md:mx-3 mt-5 md:mt-0 text-justify">
               <p>
                 আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর
                 কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ
@@ -36,14 +38,17 @@ const ReviewCard = ({ d }) => {
             </div>
           </div>
         </div>
-
         {/* mobile rating info */}
         <div className="md:hidden flex justify-center items-center">
           <div className="relative">
-            <div className="mx-14 p-12 text-white bg-secondary w-[186px] h-[118px]  rounded-lg">
-              <h2 className="text-xl text-center font-bold">আহনাফ শাহারিয়ার</h2>
-              <p className="text-center">সাইবার সিকিউরিটি স্পেশালিষ্ট</p>
-              <div className="flex justify-center space-x-1">
+            <div className="xs:mx-14 xs:p-12 2xs:p-5 text-white bg-secondary 2xs:h-[100px] xs:w-[186px] xs:h-[118px]  rounded-lg">
+              <h2 className="2xs:text-[12px] xs:text-[18px] sm:text-[22px] text-center font-bold">
+                আহনাফ শাহারিয়ার
+              </h2>
+              <p className="text-center 2xs:text-[12px]">
+                সাইবার সিকিউরিটি স্পেশালিষ্ট
+              </p>
+              <div className="2xs:text-[12px] font-bold flex justify-center space-x-1">
                 <BsStarFill />
                 <BsStarFill />
                 <BsStarFill />
@@ -51,15 +56,15 @@ const ReviewCard = ({ d }) => {
                 <BsStarHalf />
               </div>
             </div>
-            <div className="mx-36 -mt-20">
+            <div className="2xs:-mt-14 2xs:mx-14 xs:mx-36 xs:-mt-20">
               <img
                 src={d.img}
                 alt="image"
-                className="w-[112px] h-[112px] rounded-lg"
+                className="2xs:w-[80px] 2xs:h-[80px] xs:w-[112px] xs:h-[112px] rounded-lg"
               />
             </div>
-            <div className="text-center p-2">
-              <p>
+            <div>
+              <p className="text-justify 2xs:text-[12px] py-2 2xs:w-full xs:w-[320px] xs:mx-auto">
                 আমি একজন নিয়মিত সময় টিভি এর সংবাদ প্রদানকারী গোলাম রাব্বী- এর
                 কাজে সন্মান জানাতে চাই। তাঁর দক্ষতা, সতর্কতা এবং পেশাদারী আচরণ
                 নিয়ে আমি সর্বদা প্রভাবিত হই। তাঁর সংবাদ প্রদান মানসম্পন্ন এবং

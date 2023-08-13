@@ -69,27 +69,29 @@ function Advertisement() {
         backgroundRepeat: "no-repeat",
         fontFamily: "Hind Siliguri",
       }}
-      className="rounded-lg lg:px-24 px-5 flex flex-col items-center justify-center h-[70vh]"
+      className="rounded-lg lg:px-24 px-5 flex flex-col items-center justify-center md:h-[70vh]"
     >
       <Zoom>
-        <h2 className="text-[15px] md:text-[25px] lg:text-[29px] text-primary text-center font-bold mb-5">
+        <h2 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-primary text-center font-bold mb-5">
           শেয়ার করো; সমাধান পাও
         </h2>
-        <h4 className="text-[15px] md:text-[25px] lg:text-[29px] text-primary font-bold">
+        <h4 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-primary font-bold mb-1">
           মনে হচ্ছে - জীবনটা সঠিকভাবে এগুচ্ছে না!
         </h4>
-        <p className="text-[#fff] text-center text-[15px] md:text-[25px] lg:text-[29px]">
+        <p className="text-[#fff] text-center 2xs:text-[10px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
           পরিশ্রম করছো অনেক; কিন্তু সফলতার পাগলা ঘোড়া সেভাবে ধরা দিচ্ছে না। হতাশ
           হয়ে যাচ্ছো। <br /> সমাধান পেতে; লিখো এখানে চাচ্ছো- অভিজ্ঞ করো পরামর্শ।
           তাহলে দেরী কেনো? এখনই লিখে ফেলো তোমার কথা। আর পেয়ে যাও <br /> সুন্দর
           সমাধান।
         </p>
-        <button
-          onClick={() => setOpen(true)}
-          className="my-10 py-2 border-2 border-[#AF1453] hover:bg-[#AF1453] w-[180px] md:w-[250px] text-center rounded-full text-[#fff] font-bold text-sm md:text-xl"
-        >
-          সমাধান পেতে; লিখে জানাও
-        </button>
+        <Zoom>
+          <button
+            onClick={() => setOpen(true)}
+            className="block 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#AF1453] hover:bg-[#AF1453] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+          >
+            সমাধান পেতে; লিখে জানাও
+          </button>
+        </Zoom>
       </Zoom>
       <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
         <h4 className="text-primary font-bold text-xl">
