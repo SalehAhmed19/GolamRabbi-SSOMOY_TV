@@ -23,7 +23,6 @@ import NewsCards from "../Cards/NewsCards";
 import OnnanoCard from "../Cards/OnnanoCard";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -85,44 +84,53 @@ const FeaturedTabs = () => {
     },
   });
   return (
-    <Box sx={{ width: "100%" }} className="mt-10">
-      <Box
-      //  sx={{ borderBottom: 1, borderColor: "divider" }}
-      >
+    <Box className="p-5 md:p-16">
+      <Box className=" relative flex -mb-6 -mx-9">
         <Tabs
           sx={{
             borderRadius: "8px",
-            // background: "#111118",
+            background: "", //#111118
             margin: "0 5px",
-            color: "#D89F17",
+            color: "#f6b30f",
           }}
           value={value}
           onChange={handleChange}
           variant="scrollable"
           scrollButtons
           allowScrollButtonsMobile
+          indicatorColor="#f40a5c"
+          textColor="#f40a5c"
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: "#f6b30f",
+              height: "5px",
+              border: "1px solid #f6b30f",
+              borderTopLeftRadius: "10px",
+              borderTopRightRadius: "10px",
+            },
+          }}
         >
           {/* className="bg-[#222] text-primary lg:bg-[#B8084F] lg:my-7 w-40 py-2 cursor-pointer lg:text-[#fff] text-xl text-center" */}
           <Tab
-            sx={{ color: "#D89F17", fontSize: "16px" }}
+            sx={{ color: "#f6b30f", fontSize: "16px" }}
             label="টিভি"
             {...a11yProps(0)}
             style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
-            sx={{ color: "#D89F17", fontSize: "16px" }}
+            sx={{ color: "#f6b30f", fontSize: "16px" }}
             label="নিউজ পেপার"
             {...a11yProps(1)}
             style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
-            sx={{ color: "#D89F17", fontSize: "16px" }}
+            sx={{ color: "#f6b30f", fontSize: "16px" }}
             label="রেডিও"
             {...a11yProps(2)}
             style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
           />
           <Tab
-            sx={{ color: "#D89F17", fontSize: "16px" }}
+            sx={{ color: "#f6b30f", fontSize: "16px" }}
             label="অন্যান্য"
             {...a11yProps(3)}
             style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
@@ -130,18 +138,44 @@ const FeaturedTabs = () => {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="-mx-5 relative rounded-md  cursor-pointer">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className=" -mx-5 relative rounded-md  cursor-pointer">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {/* item 1 */}
             <div className="relative">
               <img
                 src={FeaturedImages}
                 alt="news-image"
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px]"
               />
-              <div className="absolute top-0 2xs:w-[192px] 2xs:h-[108px] xs:w-[327px] xs:h-[184px] md:w-[308px] md:h-[172px] lg:w-[284px] lg:h-[160px] xl:w-[369px] xl:h-[208px] 2xl:w-[578px] 2xl:h-[325px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute 2xs:top-[45px] 2xs:left-[95px] xs:top-[78px] xs:left-[160px] md:top-[65px] md:left-[148px] lg:top-[55px] lg:left-[125px] xl:top-[75px] xl:left-[165px] 2xl:top-[132px] 2xl:left-[290px]">
-                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-secondary" />
+              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px]">
+                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary" />
+                </div>
+              </div>
+            </div>
+            {/* item 2 */}
+            <div className="relative">
+              <img
+                src={FeaturedImages}
+                alt="news-image"
+                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px]"
+              />
+              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px]">
+                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary" />
+                </div>
+              </div>
+            </div>
+            {/* item 3 */}
+            <div className="relative">
+              <img
+                src={FeaturedImages}
+                alt="news-image"
+                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px]"
+              />
+              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px]">
+                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary" />
                 </div>
               </div>
             </div>
@@ -250,13 +284,13 @@ const FeaturedTabs = () => {
           </div>
           {/* shapes */}
           {/* shape 1 */}
-          <div className="absolute top-0 left-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-dashed border-[#D89F17] rounded-tl-[500px] rounded-br-full"></div>
+          <div className="absolute top-0 left-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-dashed border-[#f6b30f] rounded-tl-[500px] rounded-br-full"></div>
           {/* shape 2 */}
-          <div className="absolute top-5 right-1 md:top-12 md:right-12 lg:top-8 lg:right-[200px]  md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] rounded-full bg-[#D89F17]"></div>
+          <div className="absolute top-5 right-1 md:top-12 md:right-12 lg:top-8 lg:right-[200px]  md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] rounded-full bg-[#f6b30f]"></div>
           {/* shape 3 */}
-          <div className="absolute bottom-[40px] left-1 md:bottom-[90px] md:left-8 lg:bottom-8 lg:left-[200px]   md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] border-2 border-dashed border-[#D89F17] rounded-full"></div>
+          <div className="absolute bottom-[40px] left-1 md:bottom-[90px] md:left-8 lg:bottom-8 lg:left-[200px]   md:w-[120px] w-[50px] h-[50px] md:h-[120px] lg:w-[180px] lg:h-[180px] border-2 border-dashed border-[#f6b30f] rounded-full"></div>
           {/* shape 4 */}
-          <div className="absolute bottom-0 right-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] bg-[#D89F17] rounded-tl-full rounded-br-[500px]"></div>
+          <div className="absolute bottom-0 right-0 w-[50px] h-[50px] md:w-[100px] md:h-[100px] bg-[#f6b30f] rounded-tl-full rounded-br-[500px]"></div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
@@ -360,7 +394,7 @@ function Arrow(props) {
 //      <SwiperSlide className="mb-5 py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
 //        <div>
 //          <iframe
-//            className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
+//            className="border-[3px] border-[#f6b30f] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
 //            src="https://www.youtube.com/embed/Lq5yXrYSVzg"
 //            title="YouTube video player"
 //            frameborder="0"
@@ -372,7 +406,7 @@ function Arrow(props) {
 //      <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
 //        <div>
 //          <iframe
-//            className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
+//            className="border-[3px] border-[#f6b30f] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
 //            src="https://www.youtube.com/embed/gYOlzeTsgAE"
 //            title="YouTube video player"
 //            frameborder="0"
@@ -384,7 +418,7 @@ function Arrow(props) {
 //      <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
 //        <div>
 //          <iframe
-//            className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
+//            className="border-[3px] border-[#f6b30f] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
 //            src="https://www.youtube.com/embed/gYOlzeTsgAE"
 //            title="YouTube video player"
 //            frameborder="0"
@@ -396,7 +430,7 @@ function Arrow(props) {
 //      <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
 //        <div>
 //          <iframe
-//            className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
+//            className="border-[3px] border-[#f6b30f] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
 //            src="https://www.youtube.com/embed/gYOlzeTsgAE"
 //            title="YouTube video player"
 //            frameborder="0"
@@ -408,7 +442,7 @@ function Arrow(props) {
 //      <SwiperSlide className="py-5 w-full h-1/2 flex justify-center items-center md:pt-16 md:pb-20">
 //        <div>
 //          <iframe
-//            className="border-[3px] border-[#D89F17] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
+//            className="border-[3px] border-[#f6b30f] md:w-[600px] md:h-[400px] lg:w-[1100px] lg:h-[550px] rounded-md"
 //            src="https://www.youtube.com/embed/gYOlzeTsgAE"
 //            title="YouTube video player"
 //            frameborder="0"

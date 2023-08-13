@@ -50,10 +50,10 @@ export default function AboutTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box>
       <Box
         // sx={{ borderBottom: 1, borderColor: "divider" }}
-        className="relative flex -mb-6 mx-4"
+        className="relative flex justify-end -mb-6 mx-6"
       >
         <Tabs
           sx={{
@@ -114,73 +114,67 @@ export default function AboutTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
+        <div
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
+        >
+          <div>
+            <img
+              src={demoImage}
+              alt=""
+              className="xl:-mt-32 w-[413px] object-cover"
+            />
+          </div>
+          <div className="xl:mr-[100px]">
+            <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+              অ্যাংকর/MC 1
+            </h1>
+            <p className="text-justify 2xs:text-[12px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
               perspiciatis deleniti eaque illum voluptatibus cumque incidunt
               ratione, impedit corrupti sint ad pariatur animi quibusdam,
               dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
+              incidunt inventore perferendis.
             </p>
             <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+              onClick={() => setOpen(true)}
+              style={{ fontFamily: "Hind Siliguri" }}
+              className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
           </div>
-          <div className="">
-            <img
-              src={demoImage}
-              alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
-            />
-          </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
+        <div
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
+        >
+          <div>
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="xl:-mt-32 w-[413px] object-cover"
             />
           </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
+          <div className="xl:mr-[100px]">
+            <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+              অ্যাংকর/MC 1
+            </h1>
+            <p className="text-justify 2xs:text-[12px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
               perspiciatis deleniti eaque illum voluptatibus cumque incidunt
               ratione, impedit corrupti sint ad pariatur animi quibusdam,
               dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
+              incidunt inventore perferendis.
             </p>
             <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+              onClick={() => setOpen(true)}
+              style={{ fontFamily: "Hind Siliguri" }}
+              className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
@@ -188,36 +182,33 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
+        <div
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
+        >
+          <div>
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="xl:-mt-32 w-[413px] object-cover"
             />
           </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
+          <div className="xl:mr-[100px]">
+            <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+              অ্যাংকর/MC 1
+            </h1>
+            <p className="text-justify 2xs:text-[12px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
               perspiciatis deleniti eaque illum voluptatibus cumque incidunt
               ratione, impedit corrupti sint ad pariatur animi quibusdam,
               dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
+              incidunt inventore perferendis.
             </p>
             <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+              onClick={() => setOpen(true)}
+              style={{ fontFamily: "Hind Siliguri" }}
+              className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
@@ -225,36 +216,33 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
+        <div
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
+        >
+          <div>
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="xl:-mt-32 w-[413px] object-cover"
             />
           </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
+          <div className="xl:mr-[100px]">
+            <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+              অ্যাংকর/MC 1
+            </h1>
+            <p className="text-justify 2xs:text-[12px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
               perspiciatis deleniti eaque illum voluptatibus cumque incidunt
               ratione, impedit corrupti sint ad pariatur animi quibusdam,
               dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
+              incidunt inventore perferendis.
             </p>
             <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+              onClick={() => setOpen(true)}
+              style={{ fontFamily: "Hind Siliguri" }}
+              className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
@@ -262,36 +250,33 @@ export default function AboutTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-white rounded-lg">
-          <div className="">
+        <div
+          style={{ fontFamily: "Hind Siliguri" }}
+          className="p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
+        >
+          <div>
             <img
               src={demoImage}
               alt=""
-              className="lg:-mt-32 w-[413px] h-[656px]"
+              className="xl:-mt-32 w-[413px] object-cover"
             />
           </div>
-          <div className="px-20">
-            <h1 className="text-4xl font-bold my-5">অ্যাংকর/MC 1</h1>
-            <p className="text-lg text-justify">
+          <div className="xl:mr-[100px]">
+            <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+              অ্যাংকর/MC 1
+            </h1>
+            <p className="text-justify 2xs:text-[12px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
               perspiciatis deleniti eaque illum voluptatibus cumque incidunt
               ratione, impedit corrupti sint ad pariatur animi quibusdam,
               dolores adipisci quas laboriosam accusantium assumenda ab. Iusto
-              incidunt inventore perferendis voluptate quos corrupti adipisci
-              sed repudiandae distinctio eius vel repellat sequi aliquam
-              consectetur, numquam Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptatum, vitae obcaecati aspernatur accusamus
-              odio numquam perspiciatis deleniti eaque illum voluptatibus cumque
-              incidunt ratione, impedit corrupti sint ad pariatur animi
-              quibusdam, dolores adipisci quas laboriosam accusantium assumenda
-              ab. Iusto incidunt inventore perferendis voluptate quos corrupti
-              adipisci sed repudiandae distinctio eius vel repellat sequi
-              aliquam consectetur, numquam
+              incidunt inventore perferendis.
             </p>
             <button
-              style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-              className="m-5 border-2 border-[#f40a5c] w-[258px] h-[49px] rounded-full font-bold"
+              onClick={() => setOpen(true)}
+              style={{ fontFamily: "Hind Siliguri" }}
+              className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
@@ -301,37 +286,3 @@ export default function AboutTabs() {
     </Box>
   );
 }
-  // <div className="lg:-space-x-32 grid grid-cols-1 lg:grid-cols-2 place-items-center bg-black rounded-lg mt-10">
-  //     <div className="">
-  //       <img src={demoImage} alt="" className="lg:-mt-32 w-[413px] h-[656px]" />
-  //     </div>
-  //     <div className="px-20 text-primary">
-  //       <h1 className="text-4xl text-center lg:text-left font-bold my-5">
-  //         অ্যাংকর/MC 1
-  //       </h1>
-  //       <p className="text-lg text-center lg:text-justify">
-  //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
-  //         vitae obcaecati aspernatur accusamus odio numquam perspiciatis
-  //         deleniti eaque illum voluptatibus cumque incidunt ratione, impedit
-  //         corrupti sint ad pariatur animi quibusdam, dolores adipisci quas
-  //         laboriosam accusantium assumenda ab. Iusto incidunt inventore
-  //         perferendis voluptate quos corrupti adipisci sed repudiandae
-  //         distinctio eius vel repellat sequi aliquam consectetur, numquam Lorem
-  //         ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, vitae
-  //         obcaecati aspernatur accusamus odio numquam perspiciatis deleniti
-  //         eaque illum voluptatibus cumque incidunt ratione, impedit corrupti
-  //         sint ad pariatur animi quibusdam, dolores adipisci quas laboriosam
-  //         accusantium assumenda ab. Iusto incidunt inventore perferendis
-  //         voluptate quos corrupti adipisci sed repudiandae distinctio eius vel
-  //         repellat sequi aliquam consectetur, numquam
-  //       </p>
-  //       <div className="flex justify-center items-center ">
-  //         <button
-  //           style={{ fontFamily: "Hind Siliguri", fontWeight: 500 }}
-  //           className="m-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] hover:text-black w-[258px] h-[49px] rounded-full font-bold"
-  //         >
-  //           আরও পড়ুন
-  //         </button>
-  //       </div>
-  //     </div>
-  //   </div>
