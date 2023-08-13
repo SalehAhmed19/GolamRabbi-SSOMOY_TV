@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "react-reveal";
+import { Fade, Zoom } from "react-reveal";
 import img1 from "../../assets/images/social1.png";
 import img2 from "../../assets/images/social2.png";
 import img3 from "../../assets/images/social3.png";
@@ -29,22 +29,22 @@ function SocialMedia() {
     },
   ];
   return (
-    <div className="pb-36 lg:px-24 text-[#fff] px-5">
-      <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-1 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
-        সোশ্যাল মিডিয়াতে সংযুক্ত হোন
-      </h1>
-      <Fade down>
-        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+    <div className="p-5 md:p-16 text-[#fff] px-5">
+      <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-2 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
           সোশ্যাল মিডিয়াতে সংযুক্ত হোন
+      </h1>
+      <Zoom>
+        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
+            সোশ্যাল মিডিয়াতে সংযুক্ত হোন
         </h1>
-      </Fade>
+      </Zoom>
       <div className="mt-10 grid md:grid-cols-2 gap-5 place-items-center lg:flex lg:justify-center lg:items-center">
         {arr.map((a, idx) => (
           <Fade up>
             <a href={a.href} target="_blank">
               <div
                 key={idx}
-                className="w-56 h-56 shadow-lg shadow-[#282828] rounded-md flex items-end justify-center cursor-pointer"
+                className="2xs:w-48 2xs:h-48  w-56 h-56 shadow-lg shadow-[#282828] rounded-md flex items-end justify-center cursor-pointer"
                 style={{
                   background: `url(${a.img})`,
                   backgroundSize: "cover",

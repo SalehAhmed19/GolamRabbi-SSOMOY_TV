@@ -1,9 +1,5 @@
 import React from "react";
 import { Zoom } from "react-reveal";
-import { Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Features.css";
 import bg from "../../assets/images/feature-bg.jpg";
 function Features() {
@@ -19,48 +15,27 @@ function Features() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="p-14 rounded-lg"
+      className="md:p-14 rounded-lg"
     >
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={20}
-        // loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        // navigation={{
-        //   prevEl: ".personal-btn-prev",
-        //   nextEl: ".personal-btn-next",
-        // }}
-        modules={[ Pagination]}
-        breakpoints={{
-          668: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1280: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
-        className=""
-      >
-         {features.map((feature , index) => (
-          <SwiperSlide key={index} className="mb-10">
-            <Zoom>
+      <div className="grid gird-cols-1 lg:grid-cols-3 gap-5">
+        {features.map((feature, index) => (
+          <Zoom>
             <div
               key={feature._id}
-              className="text-xl lg:text-3xl font-bold text-[#FCAE01] text-center bg-[#03273B] custom-round h-56 px-5 flex justify-center items-center mx-5"
+              className="font-bold  text-center bg-[#03273B] custom-round 2xs:h-36 h-56 px-5 flex justify-center items-center md:mx-5"
             >
               <div className="">
-                <h3 className="mr-3">{feature.qty}</h3>
-                <h3 className="text-[#fff]">{feature.title}</h3>
+                <h3 className="text-[#FCAE01] 2xs:text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+                  {feature.qty}
+                </h3>
+                <h3 className="text-[#fff] 2xs:text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+                  {feature.title}
+                </h3>
               </div>
             </div>
           </Zoom>
-          </SwiperSlide>
         ))}
-      </Swiper>
+      </div>
     </div>
   );
 }

@@ -1,10 +1,8 @@
 import React from "react";
 import { Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
-import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
 import img2 from "../../assets/images/leadership.jpg";
 import img3 from "../../assets/images/life.jpg";
 import img1 from "../../assets/images/media.jpg";
@@ -22,73 +20,44 @@ function Course() {
       //   backgroundSize: "cover",
       //   backgroundRepeat: "no-repeat",
       // }}
-      className="lg:px-24"
+      className="md:px-14 md:pb-14"
+      style={{ fontFamily: "Hind Siliguri" }}
     >
-      {/* <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px]  my-5">
+      <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-2 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
         কোর্স সমূহ
       </h1>
-      <Zoom down>
-        <h1
-          style={{ fontFamily: "Hind Siliguri" }}
-          className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold"
-        >
+      <Zoom>
+        <h1 className="text-primary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
           কোর্স সমূহ
         </h1>
-      </Zoom> */}
-      <div className="p-5">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={20}
-          // loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          // navigation={{
-          //   prevEl: ".personal-btn-prev",
-          //   nextEl: ".personal-btn-next",
-          // }}
-          modules={[Pagination]}
-          breakpoints={{
-            668: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1280: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-          }}
-          className=""
-        >
-          <SwiperSlide className="mb-10">
-            <Link to="/media-courses">
-              <img className="rounded-md" src={img1} alt="" />
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide className="mb-10">
-            <Link to="/leadership-courses">
-              <img className="rounded-md" src={img2} alt="" />
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide className="mb-10">
-            <Link to="/life-courses">
-              <img className="rounded-md" src={img3} alt="" />
-            </Link>
-          </SwiperSlide>
-        </Swiper>
+      </Zoom>
+      <div className="2xs:mt-3 xs:mt-5 sm:mt-7 md:mt-14 grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <Link to="/media-courses">
+          <Zoom>
+            <img className="rounded-md" src={img1} alt="" />
+          </Zoom>
+        </Link>
+        <Link to="/leadership-courses">
+          <Zoom>
+            <img className="rounded-md" src={img2} alt="" />
+          </Zoom>
+        </Link>
+        <Link to="/life-courses">
+          <Zoom>
+            <img className="rounded-md" src={img3} alt="" />
+          </Zoom>
+        </Link>
       </div>
-      <div className="md:my-5 md:mx-5">
+      <Zoom>
         <Link to="/courses">
           <button
-            className="block mx-auto md:my-10 py-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] w-[120px] md:w-[290px] text-center rounded-full text-[#fff] font-bold text-sm md:text-xl"
-            // onClick={() => setShow(true)}
+            onClick={() => setOpen(true)}
+            style={{ fontFamily: "Hind Siliguri" }}
+            className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f40a5c] hover:bg-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
           >
             আরও দেখুন
           </button>
         </Link>
-      </div>
-      <Zoom>
-        <div className="flex justify-center"></div>
       </Zoom>
     </div>
   );
