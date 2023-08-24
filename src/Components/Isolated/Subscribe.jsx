@@ -33,7 +33,7 @@ function Subscribe() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="p-7 lg:mx-20 mx-5 rounded-md text-primary mt-20 flex flex-col lg:flex-row items-center justify-between"
+      className="p-7 lg:mx-40 m-5 rounded-md text-primary mt-20 flex flex-col lg:flex-row items-center justify-between"
     >
       <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
         জীবনকে এগিয়ে নিতে। সময়কে উপভোগ্য করতে। <br /> এখনই সাবস্ক্রাইব করো।

@@ -119,7 +119,7 @@ function Services() {
       className="p-5 md:p-16"
     >
       <Box className="">
-        <Box className="bg-white md:w-[549px] md:h-[48px] mx-auto rounded-tl-full rounded-tr-full">
+        <Box className="bg-white md:w-[549px] md:h-[48px] mx-auto rounded-tl-md rounded-tr-md md:rounded-tl-full md:rounded-tr-full">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -250,7 +250,7 @@ function Services() {
         <TabPanel
           value={value}
           index={1}
-          className="bg-[#fff] rounded-b-lg md:rounded-lg"
+          className="bg-[#0E0F15] rounded-b-lg md:rounded-lg"
         >
           <Skills />
         </TabPanel>
