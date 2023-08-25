@@ -3,9 +3,10 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
-import * as React from "react";
+import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import demoImage from "../../../assets/images/instructor-3.png";
-import MuiModal from "../Modals/MuiModal";
+import CoustomModal from "../Modals/CoustomModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -40,12 +41,14 @@ function a11yProps(index) {
 }
 
 export default function InviteTabs() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
   return (
     <Box>
       <Box className="relative flex justify-start md:-mb-8 md:-mx-16 md:p-8">
@@ -114,13 +117,31 @@ export default function InviteTabs() {
               incidunt inventore perferendis.
             </p>
             <button
-              onClick={() => setOpen(true)}
+              onClick={handleOpen}
               style={{ fontFamily: "Hind Siliguri" }}
               className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
-       
+            <CoustomModal open={open} handleClose={handleClose}>
+              <div className="">
+                <AiOutlineClose
+                  className="text-xl cursor-pointer absolute right-4 top-4"
+                  onClick={handleClose}
+                />
+                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+                  অ্যাংকর/MC 1
+                </h1>
+                <p className="text-justify 2xs:text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
+                  dolores adipisci quas laboriosam accusantium assumenda ab.
+                  Iusto incidunt inventore perferendis.
+                </p>
+              </div>
+            </CoustomModal>
           </div>
           <div className="">
             <img
@@ -149,12 +170,31 @@ export default function InviteTabs() {
               incidunt inventore perferendis.
             </p>
             <button
-              onClick={() => setOpen(true)}
+              onClick={handleOpen}
               style={{ fontFamily: "Hind Siliguri" }}
               className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
+            <CoustomModal open={open} handleClose={handleClose}>
+              <div className="">
+                <AiOutlineClose
+                  className="text-xl cursor-pointer absolute right-4 top-4"
+                  onClick={handleClose}
+                />
+                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+                  অ্যাংকর/MC 1
+                </h1>
+                <p className="text-justify 2xs:text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
+                  dolores adipisci quas laboriosam accusantium assumenda ab.
+                  Iusto incidunt inventore perferendis.
+                </p>
+              </div>
+            </CoustomModal>
           </div>
           <div className="">
             <img
@@ -183,12 +223,31 @@ export default function InviteTabs() {
               incidunt inventore perferendis.
             </p>
             <button
-              onClick={() => setOpen(true)}
+              onClick={handleOpen}
               style={{ fontFamily: "Hind Siliguri" }}
               className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f6b30f] hover:bg-[#f6b30f] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
             >
               আরও পড়ুন
             </button>
+            <CoustomModal open={open} handleClose={handleClose}>
+              <div className="">
+                <AiOutlineClose
+                  className="text-xl cursor-pointer absolute right-4 top-4"
+                  onClick={handleClose}
+                />
+                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
+                  অ্যাংকর/MC 1
+                </h1>
+                <p className="text-justify 2xs:text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
+                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
+                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
+                  dolores adipisci quas laboriosam accusantium assumenda ab.
+                  Iusto incidunt inventore perferendis.
+                </p>
+              </div>
+            </CoustomModal>
           </div>
           <div className="">
             <img

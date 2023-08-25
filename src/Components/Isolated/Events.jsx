@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import { Zoom } from "react-reveal";
-import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,6 +11,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
 import bg from "../../assets/images/event-bg.jpg";
+import EventRegistrationModal from "./Modals/EventRegistrationModal";
 function Events() {
   const arr = [1, 2, 3, 4, 5, 6];
   const events = [
@@ -76,6 +76,10 @@ function Events() {
       setLoaded(true);
     },
   });
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div
       style={{
@@ -167,14 +171,18 @@ function Events() {
               আমার জীবনের বাস্তব অভিজ্ঞতা নিয়ে কথা হবে তোমাদের সাথে...
             </p>
             <Zoom>
-              <Link to="/events">
-                <button
-                  style={{ fontFamily: "Hind Siliguri" }}
-                  className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
-                >
-                  এখনই রেজিস্ট্রেশন করুন
-                </button>
-              </Link>
+              <button
+                onClick={handleOpen}
+                style={{ fontFamily: "Hind Siliguri" }}
+                className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+              >
+                এখনই রেজিস্ট্রেশন করুন
+              </button>
+              <EventRegistrationModal
+                open={open}
+                setOpen={setOpen}
+                handleClose={handleClose}
+              />
             </Zoom>
           </div>
         </div>
