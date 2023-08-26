@@ -69,7 +69,7 @@ const Statistics = () => {
       }}
     >
       <Box sx={{ width: "100%" }} className="p-5 md:p-16">
-        <Box className="mt-20 bg-white 2xs:w-full sm:w-[365px] h-[48px] mx-auto rounded-tl-full rounded-tr-full">
+        <Box className="mt-20 bg-white 2xs:w-full sm:w-[365px] h-[48px] mx-auto rounded-tl-md rounded-tr-md md:rounded-tl-full md:rounded-tr-full">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -113,7 +113,7 @@ const Statistics = () => {
         <TabPanel
           value={value}
           index={0}
-          className="bg-white sm:rounded-lg p-5 md:p-14"
+          className="bg-white rounded-b-lg md:rounded-lg p-5 md:p-14"
         >
           <div
             style={{ fontFamily: "Hind Siliguri" }}
