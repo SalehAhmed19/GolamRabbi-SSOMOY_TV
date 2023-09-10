@@ -82,7 +82,7 @@ audio::-webkit-media-controls-volume-slider {
   letter-spacing: 2px;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .custom-text-stroke-4 {
@@ -92,7 +92,7 @@ audio::-webkit-media-controls-volume-slider {
   letter-spacing: 2px;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .swiper-pagination-bullet {

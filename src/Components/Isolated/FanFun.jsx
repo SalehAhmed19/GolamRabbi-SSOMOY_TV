@@ -185,7 +185,7 @@ const FanFun = () => {
       }}
     >
       <Box className="p-5 md:p-16">
-        <Box className="bg-white  md:w-[549px] h-[48px] mx-auto rounded-tl-full rounded-tr-full">
+        <Box className="bg-white  md:w-[549px] h-[48px] mx-auto rounded-tl-md rounded-tr-md md:rounded-tl-full md:rounded-tr-full">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -235,17 +235,21 @@ const FanFun = () => {
             />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0} className="bg-white rounded-b-lg md:rounded-lg">
+        <TabPanel
+          value={value}
+          index={0}
+          className="bg-white rounded-b-lg md:rounded-lg"
+        >
           <div
             className="md:px-14 md:pb-14"
             style={{ fontFamily: "Hind Siliguri" }}
           >
-              <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-1 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
-                ফান উইথ ফ্যান
-              </h1>
+            <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-1 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
+              ফান উইথ ফ্যান
+            </h1>
             <Zoom>
               <h1 className="text-secondary text-center invisible md:visible md:text-[23px] lg:text-[41px] font-bold">
-                ফান উইথ ফ্যান 
+                ফান উইথ ফ্যান
               </h1>
             </Zoom>
             <div
@@ -268,24 +272,24 @@ const FanFun = () => {
                       <img
                         src={gr2}
                         alt=""
-                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36"
+                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36 3xl:w-[130px]"
                       />
                     </div>
                   </div>
                   {/* column 2 */}
                   <div className="flex md:justify-center">
-                    <div className="m-2  xl:mx-[80px] 2xl:mx-[85px]">
+                    <div className="m-2  xl:mx-[80px] 2xl:mx-[85px] 3xl:mx-[86px]">
                       <img
                         src={gr2}
                         alt=""
-                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36"
+                        className="2xs:w-[80px] md:w-[120px] xl:w-[130px] 2xl:w-36 3xl:w-[130px]"
                       />
                     </div>
-                    <div className="m-2 xl:-mx-[65px] 2xl:-mx-[70px]">
+                    <div className="m-2 xl:-mx-[65px] 2xl:-mx-[70px] 3xl:-mx-[66px]">
                       <img
                         src={gr2}
                         alt=""
-                        className="2xs:w-[80px] md:w-[120px]  xl:w-[130px] 2xl:w-36"
+                        className="2xs:w-[80px] md:w-[120px]  xl:w-[130px] 2xl:w-36 3xl:w-[130px]"
                       />
                     </div>
                   </div>

@@ -24,6 +24,8 @@ export default {
         // => @media (min-width: 240px) { ... }
         "xs": { min: "360px", max: "641px" },
         // => @media (min-width: 360px) { ... }
+        "3xl": { min: "1441px", max: "1680px" },
+         // => @media (min-width: 360px) { ... }
       },
     },
   },

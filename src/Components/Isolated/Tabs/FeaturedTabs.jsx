@@ -7,6 +7,7 @@ import { useKeenSlider } from "keen-slider/react";
 import PropTypes from "prop-types";
 import * as React from "react";
 import { BiPlayCircle } from "react-icons/bi";
+import { IoIosClose } from "react-icons/io";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -21,6 +22,7 @@ import FeaturedImages from "../../../assets/images/clean-live-news.jpg";
 import AudioCard from "../Cards/AudioCard";
 import NewsCards from "../Cards/NewsCards";
 import OnnanoCard from "../Cards/OnnanoCard";
+import MuiModal from "../Modals/MuiModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -83,6 +85,9 @@ const FeaturedTabs = () => {
       setLoaded(true);
     },
   });
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Box className="p-5 md:p-16">
       <Box className=" relative flex -mb-6 -mx-9">
@@ -145,11 +150,34 @@ const FeaturedTabs = () => {
               <img
                 src={FeaturedImages}
                 alt="news-image"
-                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px]"
+                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
               />
-              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px]">
-                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary" />
+              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
+                  <BiPlayCircle
+                    onClick={handleOpen}
+                    className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
+                  />
+                  <MuiModal
+                    open={open}
+                    handleOpen={handleOpen}
+                    handleClose={handleClose}
+                  >
+                    <div className="relative ">
+                      <IoIosClose
+                        onClick={handleClose}
+                        className="cursor-pointer text-secondary text-3xl absolute right-0 -top-6"
+                      />
+                      <iframe
+                        className="w-full h-56 rounded-md"
+                        src="https://www.youtube.com/embed/Lq5yXrYSVzg"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </MuiModal>
                 </div>
               </div>
             </div>
@@ -158,11 +186,34 @@ const FeaturedTabs = () => {
               <img
                 src={FeaturedImages}
                 alt="news-image"
-                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px]"
+                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
               />
-              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px]">
-                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary" />
+              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
+                  <BiPlayCircle
+                    onClick={handleOpen}
+                    className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
+                  />
+                  <MuiModal
+                    open={open}
+                    handleOpen={handleOpen}
+                    handleClose={handleClose}
+                  >
+                    <div className="relative">
+                      <IoIosClose
+                        onClick={handleClose}
+                        className="cursor-pointer text-3xl absolute right-0 -top-6"
+                      />
+                      <iframe
+                        className="w-full h-56 rounded-md"
+                        src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </MuiModal>
                 </div>
               </div>
             </div>
@@ -171,11 +222,35 @@ const FeaturedTabs = () => {
               <img
                 src={FeaturedImages}
                 alt="news-image"
-                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px]"
+                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
               />
-              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] bg-[#552240]  opacity-[.8] rounded-lg">
-                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px]">
-                  <BiPlayCircle className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary" />
+              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px] bg-[#552240]  opacity-[.8] rounded-lg">
+                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
+                  <BiPlayCircle
+                    onClick={handleOpen}
+                    className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
+                  />
+                  <MuiModal
+                    open={open}
+                    handleOpen={handleOpen}
+                    handleClose={handleClose}
+                  >
+                    <div className="relative">
+                      <IoIosClose
+                        onClick={handleClose}
+                        className="cursor-pointer text-3xl absolute right-0 -top-6"
+                      />
+
+                      <iframe
+                        className="w-full h-56 rounded-md"
+                        src="https://www.youtube.com/embed/gYOlzeTsgAE"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </MuiModal>
                 </div>
               </div>
             </div>
