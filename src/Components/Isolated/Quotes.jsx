@@ -10,8 +10,11 @@ function Quotes() {
         <div className="bg-[#0e0f14] lg:p-10 p-5 rounded-md relative flex items-center">
           <div className="w-1 rounded-full lg:h-1/2 h-2/5 bg-[#D9A017] mt-28 lg:mt-0"></div>
           <h3 className="z-20 absolute 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mt-20 lg:mt-0 ml-5">
-            The key to being extraordinary is knowing what rules to follow and
-            what rules to break.
+          " আপনার কি ইতিবাচক একটি স্বপ্ন আছে...?
+            <br />
+            সৎ সাহস নিয়ে সাধনা করে যান,
+            <br />
+            সফলতার পাশাপশি সার্থক আপনি হবেন-ই "
           </h3>
           <img className="lg:mt-60 mt-96 w-48 z-20" src={signature} alt="" />
         </div>
