@@ -23,7 +23,9 @@ const EventRegistrationModal = ({
                   onClick={handleClose}
                   className="text-xl text-primary cursor-pointer float-right"
                 />
-                <h4 className="mb-5 text-primary font-bold text-xl">Registration</h4>
+                <h4 className="mb-5 text-primary font-bold text-xl">
+                  Registration
+                </h4>
                 <form>
                   <h2 className="text-primary">Application for</h2>
                   {/*content 1 */}
@@ -147,6 +149,7 @@ const EventRegistrationModal = ({
                       <label htmlFor="" className="text-primary">
                         First name
                       </label>
+                     
                       <input
                         name="courseFree"
                         placeholder="কোর্সের ফি"

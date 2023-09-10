@@ -4,9 +4,9 @@ import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import { IoIosClose } from "react-icons/io";
 import demoImage from "../../../assets/images/instructor-3.png";
-import CoustomModal from "../Modals/CoustomModal";
+import MuiModal from "../Modals/MuiModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -123,11 +123,11 @@ export default function InviteTabs() {
             >
               আরও পড়ুন
             </button>
-            <CoustomModal open={open} handleClose={handleClose}>
-              <div className="">
-                <AiOutlineClose
-                  className="text-xl cursor-pointer absolute right-4 top-4"
+            <MuiModal open={open} handleClose={handleClose}>
+              <div className="relative text-secondary font-bold">
+                <IoIosClose
                   onClick={handleClose}
+                  className="cursor-pointer text-3xl absolute right-0 -top-6"
                 />
                 <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
                   অ্যাংকর/MC 1
@@ -141,7 +141,7 @@ export default function InviteTabs() {
                   Iusto incidunt inventore perferendis.
                 </p>
               </div>
-            </CoustomModal>
+            </MuiModal>
           </div>
           <div className="">
             <img
@@ -176,11 +176,11 @@ export default function InviteTabs() {
             >
               আরও পড়ুন
             </button>
-            <CoustomModal open={open} handleClose={handleClose}>
-              <div className="">
-                <AiOutlineClose
-                  className="text-xl cursor-pointer absolute right-4 top-4"
+            <MuiModal open={open} handleClose={handleClose}>
+              <div className="relative text-secondary font-bold">
+                <IoIosClose
                   onClick={handleClose}
+                  className="cursor-pointer text-3xl absolute right-0 -top-6"
                 />
                 <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
                   অ্যাংকর/MC 1
@@ -194,7 +194,7 @@ export default function InviteTabs() {
                   Iusto incidunt inventore perferendis.
                 </p>
               </div>
-            </CoustomModal>
+            </MuiModal>
           </div>
           <div className="">
             <img
@@ -229,11 +229,11 @@ export default function InviteTabs() {
             >
               আরও পড়ুন
             </button>
-            <CoustomModal open={open} handleClose={handleClose}>
-              <div className="">
-                <AiOutlineClose
-                  className="text-xl cursor-pointer absolute right-4 top-4"
+            <MuiModal open={open} handleClose={handleClose}>
+              <div className="relative text-secondary font-bold">
+                <IoIosClose
                   onClick={handleClose}
+                  className="cursor-pointer text-3xl absolute right-0 -top-6"
                 />
                 <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
                   অ্যাংকর/MC 1
@@ -247,7 +247,7 @@ export default function InviteTabs() {
                   Iusto incidunt inventore perferendis.
                 </p>
               </div>
-            </CoustomModal>
+            </MuiModal>
           </div>
           <div className="">
             <img

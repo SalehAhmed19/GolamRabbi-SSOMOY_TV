@@ -2,6 +2,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { IoIosClose } from "react-icons/io";
 import { MdLocationOn } from "react-icons/md";
 import { Zoom } from "react-reveal";
 import { Navigation, Pagination } from "swiper";
@@ -11,11 +12,12 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
 import bg from "../../assets/images/event-bg.jpg";
-import EventRegistrationModal from "./Modals/EventRegistrationModal";
+import MuiModal from "./Modals/MuiModal";
 function Events() {
   const arr = [1, 2, 3, 4, 5, 6];
   const events = [
     {
+      id: 1,
       title: "আইডিয়া ডেভেলপমেন্ট অ্যান্ড ক্রিয়েটিভ রাইটিং ",
       date: "০১",
       month: "সেপ্টেম্বর",
@@ -24,6 +26,7 @@ function Events() {
       location: "বিশ্বসাহিত্য কেন্দ্র, বাংলা মোটর, ঢাকা",
     },
     {
+      id: 2,
       title: "কীভাবে হবো নিউজ প্রেজেন্টার?",
       date: "১০",
       month: "সেপ্টেম্বর",
@@ -32,6 +35,7 @@ function Events() {
       location: "বিশ্বসাহিত্য কেন্দ্র, বাংলা মোটর, ঢাকা",
     },
     {
+      id: 3,
       title: "জীবনের রূপকথা",
       date: "১২",
       month: "এপ্রিল",
@@ -40,6 +44,7 @@ function Events() {
       location: "মিরপুর, ঢাকা",
     },
     {
+      id: 4,
       title: "বেকারত্বের কালো মেঘ",
       date: "২৩",
       month: "এপ্রিল",
@@ -48,6 +53,7 @@ function Events() {
       location: "ধানমন্ডি, ঢাকা",
     },
     {
+      id: 5,
       title: "জীবন নিয়ে কিছু কথা",
       date: "১০",
       month: "মে",
@@ -56,6 +62,7 @@ function Events() {
       location: "মিরপুর, ঢাকা",
     },
     {
+      id: 6,
       title: "জীবনের রূপকথা",
       date: "১৯",
       month: "জুন",
@@ -171,18 +178,140 @@ function Events() {
               আমার জীবনের বাস্তব অভিজ্ঞতা নিয়ে কথা হবে তোমাদের সাথে...
             </p>
             <Zoom>
-              <button
-                onClick={handleOpen}
-                style={{ fontFamily: "Hind Siliguri" }}
-                className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
-              >
-                এখনই রেজিস্ট্রেশন করুন
-              </button>
-              <EventRegistrationModal
-                open={open}
-                setOpen={setOpen}
-                handleClose={handleClose}
-              />
+              {events.slice(0, 1).map((event) => (
+                <button
+                  onClick={() => handleOpen(event.id)}
+                  style={{ fontFamily: "Hind Siliguri" }}
+                  className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+                >
+                  এখনই রেজিস্ট্রেশন করুন
+                </button>
+              ))}
+              <MuiModal open={open} setOpen={setOpen} handleClose={handleClose}>
+                <div className="relative text-secondary font-bold">
+                  <IoIosClose
+                    onClick={handleClose}
+                    className="cursor-pointer text-3xl absolute right-0 -top-6"
+                  />
+                  <form className="">
+                    <h2 className="">Application for</h2>
+                    {/*content 1 */}
+                    <div className="w-full">
+                      <input
+                        name="courseName"
+                        type="text"
+                        placeholder="পদের নাম"
+                        className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                      />
+                    </div>
+                    <h4 className="mt-8 mb-5 ">Personal data</h4>
+                    {/* content 2 */}
+                    <div className="w-full grid md:grid-cols-2 gap-5">
+                      <div className="">
+                        <label htmlFor="" className="">
+                          First name
+                        </label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                    </div>
+                    {/* content 3 */}
+                    <div className="grid md:grid-cols-2 gap-5">
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                    </div>
+                    {/* content 4 */}
+                    <div className="">
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                    </div>
+                    {/* content 5 */}
+                    <div className="grid md:grid-cols-2 gap-5">
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseName"
+                          type="text"
+                          placeholder="পদের নাম"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                        />
+                      </div>
+                    </div>
+                    {/* content 6 */}
+                    <h4 className="mt-10 mb-5 font-bold">
+                      Application documents
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-5">
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseFree"
+                          placeholder="কোর্সের ফি"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                          type="file"
+                        />
+                      </div>
+                      <div className="">
+                        <label htmlFor="">First name</label>
+                        <input
+                          name="courseFree"
+                          placeholder="কোর্সের ফি"
+                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
+                          type="file"
+                        />
+                      </div>
+                    </div>
+                    <button className="bg-secondary text-white w-full block ml-auto my-3 px-10 py-1 rounded">
+                      সাবমিট
+                    </button>
+                  </form>
+                </div>
+              </MuiModal>
             </Zoom>
           </div>
         </div>
