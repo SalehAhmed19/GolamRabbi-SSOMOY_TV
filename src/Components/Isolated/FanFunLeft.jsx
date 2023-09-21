@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 // mt-10 flex flex-col justify-center font-semibold
-const FanFunLeft = ({ setOpen }) => {
+const FanFunLeft = ({handleOpen}) => {
   return (
     <>
       <div className="font-semibold">
@@ -24,7 +24,7 @@ const FanFunLeft = ({ setOpen }) => {
         </ul>
         <Fade up>
           <button
-            onClick={() => setOpen(true)}
+            onClick={handleOpen}
             className="block 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f40a5c] hover:bg-[#f40a5c] 2xs: sm:w-[180px] md:w-[290px] text-center rounded-full hover:text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
           >
             অংশ নিতে ক্লিক করো
