@@ -2,10 +2,8 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
-import emailjs from "emailjs-com";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import { toast } from "react-hot-toast";
 import { Zoom } from "react-reveal";
 import bg from "../../assets/images/deepak-kumar-r4ZEUFKZPJM-unsplash.jpg";
 import gr2 from "../../assets/images/golamrabby.jpeg";
@@ -114,23 +112,24 @@ const FanFun = () => {
     .VITE_emailjs_fan_with_fun_template_id;
   const emailjsPublicKey = import.meta.env.VITE_emailjs_public_key;
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const mobile = event.target.mobile.value;
-    const form = {
-      title: "Fun with Fan",
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const mobile = e.target.mobile.value;
+
+    const FWFRegInfo = {
+      // title: "Fun with Fan",
       name: name,
       email: email,
       mobile: mobile,
-      dateAndTime: new Date().toLocaleString(),
+      // dateAndTime: new Date().toLocaleString(),
     };
 
     fetch("http://localhost:4000/api/fun-with-fan-reg", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify(FWFRegInfo),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -171,8 +170,31 @@ const FanFun = () => {
         }
       });
 
-    console.log(form);
+    console.log(FWFRegInfo);
   };
+  // const handleSubmit =(e)=>{
+  //   e.preventDefault();
+  //   const name = e.target.name.value;
+  //   const email = e.target.email.value;
+  //   const mobile = e.target.mobile.value;
+
+  //   const FWFRegInfo = {
+  //     name: name,
+  //     email: email,
+  //     mobile: mobile,
+  //   };
+
+  //   fetch("http://localhost:4000/api/fun-with-fan-reg", {
+  //     method: "POST",
+  //     headers: { "content-type": "application/json" },
+  //     body: JSON.stringify(FWFRegInfo),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  //   console.log(FWFRegInfo)
+  // }
   return (
     <div
       style={{
@@ -259,7 +281,7 @@ const FanFun = () => {
               {/* left */}
               <div className="order-2 xl:order-none 2xl:col-span-2">
                 <Zoom>
-                  <FanFunLeft setOpen={setOpen} />
+                  <FanFunLeft handleOpen={handleOpen} />
                 </Zoom>
               </div>
               {/* rigth  */}
@@ -320,44 +342,10 @@ const FanFun = () => {
                 </div>
               </Zoom>
             </div>
-            <MuiModal
-              open={open}
-              handleOpen={handleOpen}
-              handleClose={handleClose}
-            >
-              <h4 className="text-primary font-bold text-xl">ফান উইথ ফ্যান</h4>
-              <form onSubmit={() => handleSubmit(event)} action="">
-                <input
-                  type="text"
-                  name="title"
-                  readOnly
-                  value="Fun with Fan"
-                  className="hidden"
-                />
-                <input
-                  name="name"
-                  placeholder="তোমার নাম লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-                <input
-                  name="email"
-                  placeholder="তোমার ইমেইল লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="email"
-                />
-                <input
-                  name="mobile"
-                  placeholder="তোমার মোবাইল নাম্বার লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="number"
-                />
-
-                <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-                  সাবমিট করো
-                </button>
-              </form>
+            <MuiModal  open={open} handleClose={handleClose}>
+              <h1>ell</h1>
             </MuiModal>
+            {/* <FanFunModal open={open} handleClose={handleClose}/> */}
           </div>
         </TabPanel>
         <TabPanel value={value} index={1} className="bg-primary md:rounded-lg">

@@ -32,6 +32,7 @@ import Testimonials from "./Pages/Dashboard/Testimonials";
 import Home from "./Pages/Home";
 import IimageGalleryPage from "./Pages/IimageGalleryPage";
 import Jobs from "./Pages/Jobs";
+import JobsDetail from "./Pages/JobsDetail";
 
 function App() {
   const theme = createTheme({
@@ -68,6 +69,7 @@ function App() {
           <Route path="/blogs/:id" element={<Blog1 />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/jobs" element={<Jobs />} />
+          <Route path="/jobs/:id" element={<JobsDetail />} />
           <Route path="/professional-blogs" element={<ProfessionalBlogs />} />
           <Route path="/personal-blogs" element={<PersonalBlogs />} />
           <Route path="/media-courses" element={<MediaCourses />} />

@@ -7,7 +7,7 @@ function CourseCard({ course }) {
     <div className={`shadow-lg rounded-lg bg-[#ffffff0f] overflow-hidden`}>
       <img className="w-full" src={course.img} alt="random image" />
       <div className="p-4">
-        <p className="text-primary font-bold text-base mb-2">{course.name}</p>
+        <p className="text-white font-bold text-base mb-2">{course.name}</p>
         <p className="text-gray-500 text-sm mb-4">{course.des}</p>
         <div className="flex items-center justify-between">
           <button
