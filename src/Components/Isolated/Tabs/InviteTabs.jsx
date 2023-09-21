@@ -124,7 +124,7 @@ export default function InviteTabs() {
               আরও পড়ুন
             </button>
             <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative text-secondary font-bold">
+              <div className="relative font-bold">
                 <IoIosClose
                   onClick={handleClose}
                   className="cursor-pointer text-3xl absolute right-0 -top-6"
@@ -177,7 +177,7 @@ export default function InviteTabs() {
               আরও পড়ুন
             </button>
             <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative text-secondary font-bold">
+              <div className="relative font-bold">
                 <IoIosClose
                   onClick={handleClose}
                   className="cursor-pointer text-3xl absolute right-0 -top-6"
@@ -230,7 +230,7 @@ export default function InviteTabs() {
               আরও পড়ুন
             </button>
             <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative text-secondary font-bold">
+              <div className="relative font-bold">
                 <IoIosClose
                   onClick={handleClose}
                   className="cursor-pointer text-3xl absolute right-0 -top-6"

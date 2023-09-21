@@ -12,7 +12,7 @@ const style = {
   boxShadow: 24,
 };
 
-export default function MuiModal({ children, open, handleOpen, handleClose }) {
+export default function MuiModal({ children, open, handleClose }) {
   // const [open,#f40a5c setOpen] = React.useState(false);
   // const handleOpen = () => setOpen(true);
   // const handleClose = () => setOpen(false);

@@ -152,7 +152,7 @@ const FeaturedTabs = () => {
                 alt="news-image"
                 className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
               />
-              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px] bg-[#552240]  opacity-[.8] rounded-lg">
+              <div>
                 <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
                   <BiPlayCircle
                     onClick={handleOpen}
@@ -187,8 +187,8 @@ const FeaturedTabs = () => {
                 src={FeaturedImages}
                 alt="news-image"
                 className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
-              />
-              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px] bg-[#552240]  opacity-[.8] rounded-lg">
+              />opacity-[.8] rounded-lg
+              <div className="">
                 <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
                   <BiPlayCircle
                     onClick={handleOpen}
@@ -224,7 +224,7 @@ const FeaturedTabs = () => {
                 alt="news-image"
                 className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
               />
-              <div className="absolute top-0 2xs:w-[152px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px] bg-[#552240]  opacity-[.8] rounded-lg">
+              <div className="">
                 <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
                   <BiPlayCircle
                     onClick={handleOpen}
