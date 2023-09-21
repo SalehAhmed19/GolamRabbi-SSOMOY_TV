@@ -14,7 +14,7 @@ import gr6 from "../../assets/images/gr5.jpg";
 import Advertisement from "./Advertisement";
 import FanFunLeft from "./FanFunLeft";
 import Invite from "./Invite/Invite";
-import MuiModal from "./Modals/MuiModal";
+import FanFunModal from "./Modals/FanFunModal";
 // https://v1.nocodeapi.com/golamrabbytest/google_sheets/ErpScSALkInmlYSY
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -342,10 +342,7 @@ const FanFun = () => {
                 </div>
               </Zoom>
             </div>
-            <MuiModal  open={open} handleClose={handleClose}>
-              <h1>ell</h1>
-            </MuiModal>
-            {/* <FanFunModal open={open} handleClose={handleClose}/> */}
+            <FanFunModal  open={open} handleClose={handleClose}/>
           </div>
         </TabPanel>
         <TabPanel value={value} index={1} className="bg-primary md:rounded-lg">
