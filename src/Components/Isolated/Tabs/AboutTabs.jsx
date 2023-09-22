@@ -4,9 +4,8 @@ import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { IoIosClose } from "react-icons/io";
 import demoImage from "../../../assets/images/instructor-3.png";
-import MuiModal from "../Modals/MuiModal";
+import AboutModal from "../Modals/AboutModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -148,25 +147,7 @@ const handleClose = () => setOpen(false);
             >
               আরও পড়ুন
             </button>
-            <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative font-bold">
-                <IoIosClose
-                  onClick={handleClose}
-                  className="cursor-pointer text-3xl absolute right-0 -top-6"
-                />
-                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-                  অ্যাংকর/MC 1
-                </h1>
-                <p className="text-justify 2xs:text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
-                  dolores adipisci quas laboriosam accusantium assumenda ab.
-                  Iusto incidunt inventore perferendis.
-                </p>
-              </div>
-            </MuiModal>
+            <AboutModal open={open} handleClose={handleClose} />
           </div>
         </div>
       </TabPanel>
@@ -201,25 +182,7 @@ const handleClose = () => setOpen(false);
             >
               আরও পড়ুন
             </button>
-            <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative font-bold">
-                <IoIosClose
-                  onClick={handleClose}
-                  className="cursor-pointer text-3xl absolute right-0 -top-6"
-                />
-                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-                  অ্যাংকর/MC 1
-                </h1>
-                <p className="text-justify 2xs:text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
-                  dolores adipisci quas laboriosam accusantium assumenda ab.
-                  Iusto incidunt inventore perferendis.
-                </p>
-              </div>
-            </MuiModal>
+            <AboutModal open={open} handleClose={handleClose} />
           </div>
         </div>
       </TabPanel>
@@ -254,25 +217,7 @@ const handleClose = () => setOpen(false);
             >
               আরও পড়ুন
             </button>
-            <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative font-bold">
-                <IoIosClose
-                  onClick={handleClose}
-                  className="cursor-pointer text-3xl absolute right-0 -top-6"
-                />
-                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-                  অ্যাংকর/MC 1
-                </h1>
-                <p className="text-justify 2xs:text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
-                  dolores adipisci quas laboriosam accusantium assumenda ab.
-                  Iusto incidunt inventore perferendis.
-                </p>
-              </div>
-            </MuiModal>
+            <AboutModal open={open} handleClose={handleClose} />
           </div>
         </div>
       </TabPanel>
@@ -307,25 +252,7 @@ const handleClose = () => setOpen(false);
             >
               আরও পড়ুন
             </button>
-            <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative font-bold">
-                <IoIosClose
-                  onClick={handleClose}
-                  className="cursor-pointer text-3xl absolute right-0 -top-6"
-                />
-                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-                  অ্যাংকর/MC 1
-                </h1>
-                <p className="text-justify 2xs:text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
-                  dolores adipisci quas laboriosam accusantium assumenda ab.
-                  Iusto incidunt inventore perferendis.
-                </p>
-              </div>
-            </MuiModal>
+            <AboutModal open={open} handleClose={handleClose} />
           </div>
         </div>
       </TabPanel>
@@ -360,25 +287,7 @@ const handleClose = () => setOpen(false);
             >
               আরও পড়ুন
             </button>
-            <MuiModal open={open} handleClose={handleClose}>
-              <div className="relative font-bold">
-                <IoIosClose
-                  onClick={handleClose}
-                  className="cursor-pointer text-3xl absolute right-0 -top-6"
-                />
-                <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-                  অ্যাংকর/MC 1
-                </h1>
-                <p className="text-justify 2xs:text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum, vitae obcaecati aspernatur accusamus odio numquam
-                  perspiciatis deleniti eaque illum voluptatibus cumque incidunt
-                  ratione, impedit corrupti sint ad pariatur animi quibusdam,
-                  dolores adipisci quas laboriosam accusantium assumenda ab.
-                  Iusto incidunt inventore perferendis.
-                </p>
-              </div>
-            </MuiModal>
+            <AboutModal open={open} handleClose={handleClose} />
           </div>
         </div>
       </TabPanel>

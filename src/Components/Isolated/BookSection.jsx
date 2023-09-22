@@ -1,5 +1,4 @@
-import React from "react";
-import { IoIosClose } from "react-icons/io";
+import React, { useState } from "react";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -13,9 +12,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import book2 from "../../assets/images/book-2.png";
 import book1 from "../../assets/images/book1.jpg";
 import hafCircle from "../../assets/images/half-circle.png";
-import MuiModal from "./Modals/MuiModal";
+import BookByModal from "./Modals/BookByModal";
 function BookSection() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
@@ -73,135 +72,7 @@ function BookSection() {
                     >
                       কিনতে চাও?
                     </button>
-                    <MuiModal
-                      open={open}
-                      handleOpen={handleOpen}
-                      handleClose={handleClose}
-                    >
-                      <div className="relative text-secondary font-bold">
-                        <IoIosClose
-                          onClick={handleClose}
-                          className="cursor-pointer text-3xl absolute right-0 -top-6"
-                        />
-                        <form className="">
-                          <h2 className="">Application for</h2>
-                          {/*content 1 */}
-                          <div className="w-full">
-                            <input
-                              name="courseName"
-                              type="text"
-                              placeholder="পদের নাম"
-                              className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                            />
-                          </div>
-                          <h4 className="mt-8 mb-5 ">Personal data</h4>
-                          {/* content 2 */}
-                          <div className="w-full grid md:grid-cols-2 gap-5">
-                            <div className="">
-                              <label htmlFor="" className="">
-                                First name
-                              </label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                          </div>
-                          {/* content 3 */}
-                          <div className="grid md:grid-cols-2 gap-5">
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                          </div>
-                          {/* content 4 */}
-                          <div className="">
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                          </div>
-                          {/* content 5 */}
-                          <div className="grid md:grid-cols-2 gap-5">
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseName"
-                                type="text"
-                                placeholder="পদের নাম"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                              />
-                            </div>
-                          </div>
-                          {/* content 6 */}
-                          <h4 className="mt-10 mb-5 font-bold">
-                            Application documents
-                          </h4>
-                          <div className="grid md:grid-cols-2 gap-5">
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseFree"
-                                placeholder="কোর্সের ফি"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                                type="file"
-                              />
-                            </div>
-                            <div className="">
-                              <label htmlFor="">First name</label>
-                              <input
-                                name="courseFree"
-                                placeholder="কোর্সের ফি"
-                                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                                type="file"
-                              />
-                            </div>
-                          </div>
-                          <button className="bg-secondary text-white w-full block ml-auto my-3 px-10 py-1 rounded">
-                            সাবমিট
-                          </button>
-                        </form>
-                      </div>
-                    </MuiModal>
+                    <BookByModal open={open} handleClose={handleClose}/>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
@@ -232,10 +103,12 @@ function BookSection() {
                     />
                     <button
                       style={{ fontFamily: "Hind Siliguri" }}
+                      onClick={handleOpen}
                       className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
                     >
                       কিনতে চাও?
                     </button>
+                    <BookByModal open={open} handleClose={handleClose}/>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
@@ -266,10 +139,12 @@ function BookSection() {
                     />
                     <button
                       style={{ fontFamily: "Hind Siliguri" }}
+                      onClick={handleOpen}
                       className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
                     >
                       কিনতে চাও?
                     </button>
+                    <BookByModal open={open} handleClose={handleClose}/>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
@@ -300,10 +175,12 @@ function BookSection() {
                     />
                     <button
                       style={{ fontFamily: "Hind Siliguri" }}
+                      onClick={handleOpen}
                       className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
                     >
                       কিনতে চাও?
                     </button>
+                    <BookByModal open={open} handleClose={handleClose}/>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
@@ -334,10 +211,12 @@ function BookSection() {
                     />
                     <button
                       style={{ fontFamily: "Hind Siliguri" }}
+                      onClick={handleOpen}
                       className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
                     >
                       কিনতে চাও?
                     </button>
+                    <BookByModal open={open} handleClose={handleClose}/>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
@@ -368,10 +247,12 @@ function BookSection() {
                     />
                     <button
                       style={{ fontFamily: "Hind Siliguri" }}
+                      onClick={handleOpen}
                       className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
                     >
                       কিনতে চাও?
                     </button>
+                    <BookByModal open={open} handleClose={handleClose}/>
                   </div>
                 </div>
                 <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">

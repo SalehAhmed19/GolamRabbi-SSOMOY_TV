@@ -2,7 +2,8 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React from "react";
 import { IoIosClose } from "react-icons/io";
-const InviteModal = ({ open, handleClose }) => {
+
+const AboutModal = ({open, handleClose}) => {
   const style = {
     position: "absolute",
     top: "50%",
@@ -25,7 +26,10 @@ const InviteModal = ({ open, handleClose }) => {
           sx={style}
           className="p-5 2xs:w-[85%] xs:w-[90%] md:w-full md:h-full"
         >
-          <IoIosClose onClick={handleClose} className="text-5xl cursor-pointer" />
+          <IoIosClose
+            onClick={handleClose}
+            className="text-5xl cursor-pointer"
+          />
           <div
             className="h-[40vh] overflow-auto bg-white"
             style={{ fontFamily: "Hind Siliguri" }}
@@ -45,4 +49,4 @@ const InviteModal = ({ open, handleClose }) => {
   );
 };
 
-export default InviteModal;
+export default AboutModal;

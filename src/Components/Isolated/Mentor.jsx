@@ -11,7 +11,7 @@ import news from "../../assets/images/mentorship.png";
 import bg from "../../assets/images/pexels-klaus-nielsen-6287295.jpg";
 import Course from "./Course";
 import MockTest from "./MockTest";
-import MuiModal from "./Modals/MuiModal";
+import MentorModal from "./Modals/MentorModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -221,46 +221,7 @@ const Mentor = () => {
                 আমাকে বুক করতে
               </button>
             </Zoom>
-            <MuiModal
-              open={open}
-              handleOpen={handleOpen}
-              handleClose={handleClose}
-            >
-              <h4 className="text-primary font-bold text-xl">
-                আমাকে মেন্টর হিসেবে চাও?
-              </h4>
-              <form onSubmit={() => handleSubmit(event)} action="">
-                <input
-                  type="text"
-                  name="title"
-                  readOnly
-                  value="Paid Mentorship"
-                  className="hidden"
-                />
-                <input
-                  name="name"
-                  placeholder="তোমার নাম লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-                <input
-                  name="email"
-                  placeholder="তোমার ইমেইল লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-                <input
-                  name="mobile"
-                  placeholder="তোমার মোবাইল নাম্বার লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-
-                <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-                  সাবমিট করো
-                </button>
-              </form>
-            </MuiModal>
+            <MentorModal open={open} handleClose={handleClose} />
           </div>
         </TabPanel>
         <TabPanel

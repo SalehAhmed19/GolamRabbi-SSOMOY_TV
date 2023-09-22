@@ -2,7 +2,6 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { IoIosClose } from "react-icons/io";
 import { MdLocationOn } from "react-icons/md";
 import { Zoom } from "react-reveal";
 import { Navigation, Pagination } from "swiper";
@@ -12,7 +11,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
 import bg from "../../assets/images/event-bg.jpg";
-import MuiModal from "./Modals/MuiModal";
+import EventRegistrationModal from "./Modals/EventRegistrationModal";
 function Events() {
   const arr = [1, 2, 3, 4, 5, 6];
   const events = [
@@ -187,131 +186,8 @@ function Events() {
                   এখনই রেজিস্ট্রেশন করুন
                 </button>
               ))}
-              <MuiModal open={open} setOpen={setOpen} handleClose={handleClose}>
-                <div className="relative text-secondary font-bold">
-                  <IoIosClose
-                    onClick={handleClose}
-                    className="cursor-pointer text-3xl absolute right-0 -top-6"
-                  />
-                  <form className="">
-                    <h2 className="">Application for</h2>
-                    {/*content 1 */}
-                    <div className="w-full">
-                      <input
-                        name="courseName"
-                        type="text"
-                        placeholder="পদের নাম"
-                        className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                      />
-                    </div>
-                    <h4 className="mt-8 mb-5 ">Personal data</h4>
-                    {/* content 2 */}
-                    <div className="w-full grid md:grid-cols-2 gap-5">
-                      <div className="">
-                        <label htmlFor="" className="">
-                          First name
-                        </label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                    </div>
-                    {/* content 3 */}
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                    </div>
-                    {/* content 4 */}
-                    <div className="">
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                    </div>
-                    {/* content 5 */}
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseName"
-                          type="text"
-                          placeholder="পদের নাম"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                        />
-                      </div>
-                    </div>
-                    {/* content 6 */}
-                    <h4 className="mt-10 mb-5 font-bold">
-                      Application documents
-                    </h4>
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseFree"
-                          placeholder="কোর্সের ফি"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                          type="file"
-                        />
-                      </div>
-                      <div className="">
-                        <label htmlFor="">First name</label>
-                        <input
-                          name="courseFree"
-                          placeholder="কোর্সের ফি"
-                          className="w-full my-2 py-1 px-3 focus:outline-none bg-[#14161C] text-[white] text-primary rounded"
-                          type="file"
-                        />
-                      </div>
-                    </div>
-                    <button className="bg-secondary text-white w-full block ml-auto my-3 px-10 py-1 rounded">
-                      সাবমিট
-                    </button>
-                  </form>
-                </div>
-              </MuiModal>
+              <EventRegistrationModal  open={open} handleClose={handleClose}/>
+              
             </Zoom>
           </div>
         </div>
