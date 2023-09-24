@@ -17,6 +17,50 @@ function BookSection() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const allBooks = [
+    {
+      id: 1,
+      title: "বই মেলায় আসছে",
+      date: "এপ্রিল ১৪",
+      image: book2 ,
+      price: "২০৬",
+    },
+    {
+      id: 2,
+      title: "বই মেলায় আসছে",
+      date: "এপ্রিল ১৪",
+      image: book1 ,
+      price: "২০৬",
+    },
+    {
+      id: 3,
+      title: "বই মেলায় আসছে",
+      date: "এপ্রিল ১৪",
+      image: book2,
+      price: "২০৬",
+    },
+    {
+      id: 4,
+      title: "বই মেলায় আসছে",
+      date: "এপ্রিল ১৪",
+      image: book1 ,
+      price: "২০৬",
+    },
+    {
+      id: 5,
+      title: "বই মেলায় আসছে",
+      date: "এপ্রিল ১৪",
+      image: book2 ,
+      price: "২০৬",
+    },
+    {
+      id: 6,
+      title: "বই মেলায় আসছে",
+      date: "এপ্রিল ১৪",
+      image: book1,
+      price: "২০৬",
+    },
+  ];
   return (
     <>
       <div className="relative bg-[#111118]">
@@ -48,223 +92,45 @@ function BookSection() {
             modules={[EffectCoverflow, Navigation, Autoplay]}
             className=""
           >
-            <SwiperSlide>
-              <div className="w-full py-5 md:py-16 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
-                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
-                    বই মেলায় আসছে
-                  </h3>
-                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
-                    এপ্রিল ১৪
-                  </p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
-                      src={book2}
-                      alt=""
-                    />
-                    <button
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      onClick={handleOpen}
-                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
-                    >
-                      কিনতে চাও?
-                    </button>
-                    <BookByModal open={open} handleClose={handleClose}/>
+            {allBooks?.map((book, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full py-5 md:py-16 group">
+                  <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
+                    <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
+                      {book.title}
+                    </h3>
+                    <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
+                      {book.date}
+                    </p>
+                  </div>
+                  <div className="flex justify-center items-center">
+                    <div className="">
+                      <img
+                        className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
+                        src={book.image}
+                        alt=""
+                      />
+                      <button
+                        style={{ fontFamily: "Hind Siliguri" }}
+                        onClick={handleOpen}
+                        className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
+                      >
+                        কিনতে চাও?
+                      </button>
+                    </div>
+                  </div>
+                  <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
+                    <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
+                      <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
+                        মূল্যঃ {book.price} টাকা
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
-                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-                      মূল্যঃ ২০৬ টাকা
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full py-5 md:py-16 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
-                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
-                    বই মেলায় আসছে
-                  </h3>
-                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
-                    এপ্রিল ১৪
-                  </p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
-                      src={book1}
-                      alt=""
-                    />
-                    <button
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      onClick={handleOpen}
-                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
-                    >
-                      কিনতে চাও?
-                    </button>
-                    <BookByModal open={open} handleClose={handleClose}/>
-                  </div>
-                </div>
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
-                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-                      মূল্যঃ ২০৬ টাকা
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full py-5 md:py-16 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
-                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
-                    বই মেলায় আসছে
-                  </h3>
-                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
-                    এপ্রিল ১৪
-                  </p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
-                      src={book2}
-                      alt=""
-                    />
-                    <button
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      onClick={handleOpen}
-                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
-                    >
-                      কিনতে চাও?
-                    </button>
-                    <BookByModal open={open} handleClose={handleClose}/>
-                  </div>
-                </div>
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
-                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-                      মূল্যঃ ২০৬ টাকা
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full py-5 md:py-16 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
-                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
-                    বই মেলায় আসছে
-                  </h3>
-                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
-                    এপ্রিল ১৪
-                  </p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
-                      src={book1}
-                      alt=""
-                    />
-                    <button
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      onClick={handleOpen}
-                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
-                    >
-                      কিনতে চাও?
-                    </button>
-                    <BookByModal open={open} handleClose={handleClose}/>
-                  </div>
-                </div>
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
-                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-                      মূল্যঃ ২০৬ টাকা
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full py-5 md:py-16 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
-                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
-                    বই মেলায় আসছে
-                  </h3>
-                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
-                    এপ্রিল ১৪
-                  </p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
-                      src={book2}
-                      alt=""
-                    />
-                    <button
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      onClick={handleOpen}
-                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
-                    >
-                      কিনতে চাও?
-                    </button>
-                    <BookByModal open={open} handleClose={handleClose}/>
-                  </div>
-                </div>
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
-                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-                      মূল্যঃ ২০৬ টাকা
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full py-5 md:py-16 group">
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 text-primary font-bold mx-16 xl:mx-64">
-                  <h3 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] mb-2">
-                    বই মেলায় আসছে
-                  </h3>
-                  <p className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] mb-3">
-                    এপ্রিল ১৪
-                  </p>
-                </div>
-                <div className="flex justify-center items-center">
-                  <div className="">
-                    <img
-                      className="drop-shadow-xl 2xs:w-40 xs:w-48 md:w-[316px] md:h-[472px]  rounded-lg  shadow-2xl"
-                      src={book1}
-                      alt=""
-                    />
-                    <button
-                      style={{ fontFamily: "Hind Siliguri" }}
-                      onClick={handleOpen}
-                      className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#D89F17] border-dashed hover:bg-[#D89F17] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px] hover:text-black"
-                    >
-                      কিনতে চাও?
-                    </button>
-                    <BookByModal open={open} handleClose={handleClose}/>
-                  </div>
-                </div>
-                <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
-                  <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
-                    <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-                      মূল্যঃ ২০৬ টাকা
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
+          <BookByModal open={open} handleClose={handleClose} />
           {/* previous btn */}
           <div className="book-btn-prev z-10 cursor-pointer 2xs:w-[20px] xs:w-[30px] md:w-[50px] absolute 2xs:top-[195px] 2xs:left-[5px] xs:top-[250px] xs:left-[10px]  md:top-[365px] md:left-[90px] bg-[#111118] rounded-full p-1 md:p-3  ">
             <span className="text-primary font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
@@ -299,7 +165,3 @@ function BookSection() {
 }
 
 export default BookSection;
-
-
-
-
