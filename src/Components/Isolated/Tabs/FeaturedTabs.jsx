@@ -6,8 +6,8 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import PropTypes from "prop-types";
 import * as React from "react";
+import { useState } from "react";
 import { BiPlayCircle } from "react-icons/bi";
-import { IoIosClose } from "react-icons/io";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -22,7 +22,7 @@ import FeaturedImages from "../../../assets/images/clean-live-news.jpg";
 import AudioCard from "../Cards/AudioCard";
 import NewsCards from "../Cards/NewsCards";
 import OnnanoCard from "../Cards/OnnanoCard";
-import MuiModal from "../Modals/MuiModal";
+import TvModal from "../Modals/TvModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -85,9 +85,30 @@ const FeaturedTabs = () => {
       setLoaded(true);
     },
   });
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [clickId, setClickId] =useState(0)
+  const allTvNews = [
+    {
+      id: 1,
+      tvNewsSrc:
+        "https://www.youtube.com/embed/emffDyskNQI?si=fFR87rUcgSg4bGWQ",
+      tvNewsImage: FeaturedImages,
+    },
+    {
+      id: 2,
+      tvNewsSrc:
+        "https://www.youtube.com/embed/Pa4SddNfY3A?si=rovn_O0CtcZKIB6d",
+      tvNewsImage: FeaturedImages,
+    },
+    {
+      id: 3,
+      tvNewsSrc:
+        "https://www.youtube.com/embed/tpn5lHiBu70?si=zEcrj2JZTn0XiQ97",
+      tvNewsImage: FeaturedImages,
+    },
+  ];
   return (
     <Box className="p-5 md:p-16">
       <Box className=" relative flex -mb-6 -mx-9">
@@ -145,116 +166,35 @@ const FeaturedTabs = () => {
       <TabPanel value={value} index={0}>
         <div className=" -mx-5 relative rounded-md  cursor-pointer">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {/* item 1 */}
-            <div className="relative">
-              <img
-                src={FeaturedImages}
-                alt="news-image"
-                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
-              />
-              <div>
+            {allTvNews?.map((tvNew, index) => (
+              <div className="relative" key={index}>
+                <img
+                  src={tvNew.tvNewsImage}
+                  alt="news-image"
+                  className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
+                />
                 <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
                   <BiPlayCircle
-                    onClick={handleOpen}
+                    onClick={() => handleOpen(setClickId(tvNew.id))}
                     className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
                   />
-                  <MuiModal
-                    open={open}
-                    handleOpen={handleOpen}
-                    handleClose={handleClose}
-                  >
-                    <div className="relative ">
-                      <IoIosClose
-                        onClick={handleClose}
-                        className="cursor-pointer text-secondary text-3xl absolute right-0 -top-6"
-                      />
-                      <iframe
-                        className="w-full h-56 rounded-md"
-                        src="https://www.youtube.com/embed/Lq5yXrYSVzg"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                  </MuiModal>
                 </div>
+                <TvModal
+                  open={open}
+                  handleClose={handleClose}
+                  tvNew={tvNew}
+                  clickId={clickId}
+                />
               </div>
-            </div>
-            {/* item 2 */}
-            <div className="relative">
-              <img
-                src={FeaturedImages}
-                alt="news-image"
-                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
-              />opacity-[.8] rounded-lg
-              <div className="">
-                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
-                  <BiPlayCircle
-                    onClick={handleOpen}
-                    className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
-                  />
-                  <MuiModal
-                    open={open}
-                    handleOpen={handleOpen}
-                    handleClose={handleClose}
-                  >
-                    <div className="relative">
-                      <IoIosClose
-                        onClick={handleClose}
-                        className="cursor-pointer text-3xl absolute right-0 -top-6"
-                      />
-                      <iframe
-                        className="w-full h-56 rounded-md"
-                        src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                  </MuiModal>
-                </div>
-              </div>
-            </div>
-            {/* item 3 */}
-            <div className="relative">
-              <img
-                src={FeaturedImages}
-                alt="news-image"
-                className="object-cover rounded-lg 2xs:w-[192px] 2xs:h-[108px] xs:w-[272px] xs:h-[152px] md:w-[242px] md:h-[136px] lg:w-[240px] lg:h-[135px] xl:w-[325px] xl:h-[185px] 2xl:w-[535px] 2xl:h-[302px] 3xl:w-[459px]"
-              />
-              <div className="">
-                <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
-                  <BiPlayCircle
-                    onClick={handleOpen}
-                    className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
-                  />
-                  <MuiModal
-                    open={open}
-                    handleOpen={handleOpen}
-                    handleClose={handleClose}
-                  >
-                    <div className="relative">
-                      <IoIosClose
-                        onClick={handleClose}
-                        className="cursor-pointer text-3xl absolute right-0 -top-6"
-                      />
-
-                      <iframe
-                        className="w-full h-56 rounded-md"
-                        src="https://www.youtube.com/embed/gYOlzeTsgAE"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                  </MuiModal>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+          {/* <button
+            // onClick={handleLoadMore}
+            style={{ fontFamily: "Hind Siliguri" }}
+            className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f40a5c] hover:bg-[#f40a5c] text-white  sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+          >
+            আরও দেখতে
+          </button> */}
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

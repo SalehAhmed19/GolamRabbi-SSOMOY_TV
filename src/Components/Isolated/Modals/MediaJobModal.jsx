@@ -1,11 +1,10 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import React from "react";
+import React from 'react';
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { IoIosClose } from "react-icons/io";
-const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
-  const handleModalClose = () => setOpenModal(false);
-  const {title} = evened;
+const MediaJobModal = ({ circulars, openModal, setOpenModal }) => {
+  const handleModalClose = () => setOpenModal(!openModal);
   const style = {
     position: "absolute",
     top: "50%",
@@ -15,9 +14,8 @@ const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
     borderRadius: "7px",
     boxShadow: 24,
   };
-
   return (
-    <div>
+    <>
       <Modal
         open={openModal}
         onClose={handleModalClose}
@@ -45,7 +43,7 @@ const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
                 <input
                   name="courseName"
                   type="text"
-                  value={title}
+                  value={circulars?.id}
                   placeholder="পদের নাম"
                   className="cursor-not-allowed  w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   readOnly
@@ -167,12 +165,13 @@ const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
                   />
                 </div>
               </div>
+
               <button className="bg-secondary text-white my-3 px-10 py-1 rounded 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
                 সাবমিট
               </button>
               <button
                 onClick={handleModalClose}
-                className="xs:ms-2 md:mx-5  px-10 py-1 rounded 2xs:my-4 xs:my-6 sm:my-8 md:my-10 bg-secondary text-white my-3 text-center 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+                className=" xs:ms-2 md:mx-5 px-10 py-1 rounded 2xs:my-4 xs:my-6 sm:my-8 md:my-10 bg-secondary text-white my-3 text-center 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
               >
                 বন্ধ করুন
               </button>
@@ -180,8 +179,8 @@ const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
           </div>
         </Box>
       </Modal>
-    </div>
+    </>
   );
 };
 
-export default EventRegistrationModal;
+export default MediaJobModal;

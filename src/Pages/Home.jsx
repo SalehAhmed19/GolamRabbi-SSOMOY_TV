@@ -8,6 +8,7 @@ import BookSection from "../Components/Isolated/BookSection";
 import Events from "../Components/Isolated/Events";
 import FanFun from "../Components/Isolated/FanFun";
 import Featured from "../Components/Isolated/Featured";
+import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
 import MediaJobCircular from "../Components/Isolated/MediaJobCircular";
 import Mentor from "../Components/Isolated/Mentor";
 import MyAward from "../Components/Isolated/MyAward";
@@ -17,7 +18,6 @@ import SocialMedia from "../Components/Isolated/SocialMedia";
 import Statistics from "../Components/Isolated/Statistics";
 import Subscribe from "../Components/Isolated/Subscribe";
 import Testimonals from "../Components/Isolated/Testimonals";
-import HomeImageGallery from "../Components/Isolated/HomeImageGallery";
 function Home() {
   return (
     <div className="relative">

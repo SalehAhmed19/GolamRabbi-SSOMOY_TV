@@ -3,6 +3,7 @@ import { toast } from "react-hot-toast";
 import { Zoom } from "react-reveal";
 import box from "../../assets/SVGs/box.png";
 import news from "../../assets/images/interview.png";
+import MockTestModal from "./Modals/MockTestModal";
 import MuiModal from "./Modals/MuiModal";
 
 function MockTest() {
@@ -133,6 +134,7 @@ function MockTest() {
           </button>
         </form>
       </MuiModal>
+      <MockTestModal open={open} handleClose={handleClose}/>
       <img
         src={box}
         className="absolute bottom-5 right-0 blur-lg w-36 hidden md:block"

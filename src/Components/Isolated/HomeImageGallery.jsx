@@ -10,6 +10,14 @@ import person1 from "../../assets/galleryImages/person-1.jpeg";
 import person2 from "../../assets/galleryImages/person-2.jpeg";
 import person4 from "../../assets/galleryImages/person-4.jpg";
 const HomeImageGallery = () => {
+  const galleryImages = [
+    { id: 1, image: person1 },
+    { id: 2, image: person2 },
+    { id: 3, image: person3 },
+    { id: 4, image: person4 },
+    { id: 5, image: person1 },
+    { id: 6, image: person2 },
+  ];
   return (
     <div className="p-5 md:p-16">
       <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-2 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
@@ -40,48 +48,15 @@ const HomeImageGallery = () => {
           }}
           className="2xs:mx-0 mx-[40px]"
         >
-          <SwiperSlide className="mb-16">
-            <img
-              src={person1}
-              alt="gallery-images"
-              className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={person2}
-              alt="gallery-images"
-              className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={person3}
-              alt="gallery-images"
-              className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={person4}
-              alt="gallery-images"
-              className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={person1}
-              alt="gallery-images"
-              className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={person2}
-              alt="gallery-images"
-              className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
-            />
-          </SwiperSlide>
+          {galleryImages?.map((image, index) => (
+            <SwiperSlide className="mb-16" key={index}>
+              <img
+                src={image.image}
+                alt="gallery-images"
+                className="w-[268px] h-[268px] object-cover rounded-lg shadow-lg"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
 
