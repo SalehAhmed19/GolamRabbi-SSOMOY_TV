@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MediaJobModal from "../Modals/MediaJobModal";
+import JobsApplyModal from "../Modals/JobsApplyModal";
 
-const MediaJobCard = ({ circulars }) => {
+const JobCard = ({ circulars }) => {
   const [openModal, setOpenModal] = useState(false);
+
   return (
     <>
       <div key={circulars.id} className="relative rounded-lg bg-[#222]">
@@ -15,10 +16,12 @@ const MediaJobCard = ({ circulars }) => {
             <span className="font-bold">পদবিঃ </span> {circulars.position}
           </h3>
           <p>
-            <span className="font-bold">আবেদনের শেষ তারিখঃ </span> {circulars.lastDate}
+            <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
+            {circulars.lastDate}
           </p>
           <p>
-            <span className="font-bold">প্রতিষ্ঠানঃ </span> {circulars.organization}
+            <span className="font-bold">প্রতিষ্ঠানঃ </span>{" "}
+            {circulars.organization}
           </p>
         </div>
         <div className="flex justify-center items-center pb-3">
@@ -30,8 +33,9 @@ const MediaJobCard = ({ circulars }) => {
           </button>
         </div>
       </div>
+
       {openModal && (
-        <MediaJobModal
+        <JobsApplyModal
           circulars={circulars}
           openModal={openModal}
           setOpenModal={setOpenModal}
@@ -41,4 +45,4 @@ const MediaJobCard = ({ circulars }) => {
   );
 };
 
-export default MediaJobCard;
+export default JobCard;

@@ -17,14 +17,62 @@ const MediaJobCircular = () => {
   const handleModalOpen = () => setOpenModal(true);
   const handleModalClose = () => setOpenModal(false);
   const medialJobCirculars = [
-    { id: 1, image: jobImage },
-    { id: 2, image: jobImage },
-    { id: 3, image: jobImage },
-    { id: 4, image: jobImage },
-    { id: 5, image: jobImage },
-    { id: 6, image: jobImage },
-    { id: 7, image: jobImage },
-    { id: 8, image: jobImage },
+    {
+      id: 1,
+      position: "সাংবাদিক ১",
+      organization: "সময় টিভি ১",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 2,
+      position: "সাংবাদিক ২",
+      organization: "সময় টিভি ২",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 3,
+      position: "সাংবাদিক ৩",
+      organization: "সময় টিভি ৩",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 4,
+      position: "সাংবাদিক ৪",
+      organization: "সময় টিভি ৪",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 5,
+      position: "সাংবাদিক ৫",
+      organization: "সময় টিভি ৫",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 6,
+      position: "সাংবাদিক ৬",
+      organization: "সময় টিভি ৬",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 7,
+      position: "সাংবাদিক ৭",
+      organization: "সময় টিভি ৭",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 8,
+      position: "সাংবাদিক ৮",
+      organization: "সময় টিভি ৮",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

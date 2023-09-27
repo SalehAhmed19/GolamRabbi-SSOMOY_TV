@@ -22,7 +22,7 @@ const FanFunModal = ({ open, handleClose }) => {
       >
         <Box sx={style} className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px]">
           <div
-            className="h-[20vh] overflow-auto bg-white"
+            className=" bg-white"
             style={{ fontFamily: "Hind Siliguri" }}
           >
             <form>
