@@ -175,7 +175,7 @@ const FeaturedTabs = () => {
                 />
                 <div className="absolute 2xs:top-[45px] 2xs:left-[75px] xs:top-[62px] xs:left-[135px] md:top-[52px] md:left-[109px] lg:top-[50px] lg:left-[105px] xl:top-[65px] xl:left-[145px] 2xl:top-[123px] 2xl:left-[266px] 3xl:left-[227px]">
                   <BiPlayCircle
-                    onClick={() =>handleOpen(setClickId(tvNew.id))}
+                    onClick={() => handleOpen(setClickId(tvNew.id))}
                     className="2xs:text-[20px] xs:text-[30px] md:text-[35px] xl:text-[55px] text-secondary"
                   />
                 </div>
@@ -188,6 +188,13 @@ const FeaturedTabs = () => {
               </div>
             ))}
           </div>
+          {/* <button
+            // onClick={handleLoadMore}
+            style={{ fontFamily: "Hind Siliguri" }}
+            className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f40a5c] hover:bg-[#f40a5c] text-white  sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+          >
+            আরও দেখতে
+          </button> */}
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

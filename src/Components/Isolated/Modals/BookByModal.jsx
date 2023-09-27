@@ -3,7 +3,7 @@ import Modal from "@mui/material/Modal";
 import React from "react";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { IoIosClose } from "react-icons/io";
-const BookByModal = ({ openModal, setOpenModal, book }) => {
+const BookByModal = ({ book, openModal, setOpenModal }) => {
   const handleModalClose = () => setOpenModal(!openModal);
   const style = {
     position: "absolute",
@@ -27,7 +27,7 @@ const BookByModal = ({ openModal, setOpenModal, book }) => {
           className="h-[90vh] p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px] md:h-[500px] overflow-auto bg-white"
           style={{ fontFamily: "Hind Siliguri" }}
         >
-          <div className="relative">
+          <div>
             <form className="">
               <div className="text-secondary font-bold flex justify-between items-center">
                 <span className="mb-2">Application for</span>
@@ -47,7 +47,7 @@ const BookByModal = ({ openModal, setOpenModal, book }) => {
                   placeholder="পদের নাম"
                   className="cursor-not-allowed  w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   readOnly
-                 />
+                />
               </div>
               <h4 className="mt-8 mb-5 ">Personal data</h4>
               {/* content 2 */}
@@ -165,8 +165,15 @@ const BookByModal = ({ openModal, setOpenModal, book }) => {
                   />
                 </div>
               </div>
-              <button className="bg-secondary text-white  block ml-auto my-3 px-10 py-1 rounded">
+
+              <button className="bg-secondary text-white my-3 px-10 py-1 rounded 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
                 সাবমিট
+              </button>
+              <button
+                onClick={handleModalClose}
+                className=" xs:ms-2 md:mx-5 px-10 py-1 rounded 2xs:my-4 xs:my-6 sm:my-8 md:my-10 bg-secondary text-white my-3 text-center 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+              >
+                বন্ধ করুন
               </button>
             </form>
           </div>

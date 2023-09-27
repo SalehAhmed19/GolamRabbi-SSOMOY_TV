@@ -4,8 +4,6 @@ import React, { useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 
-
-
 const CoursesModal = ({ course, openModal, setOpenModal }) => {
   const handleModalClose = () => setOpenModal(!openModal);
   const handleModalCloseOutSiteClick = (e) => {

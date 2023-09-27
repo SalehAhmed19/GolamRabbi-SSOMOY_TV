@@ -2,7 +2,6 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
-import { Link } from "react-router-dom";
 import { FreeMode, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -10,19 +9,22 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/MediaJobCircular.css";
 import mySwiper from "../../Styles/mySwiper.css";
-import job from "../../assets/images/Job.png";
+import jobImage from "../../assets/images/Job.png";
 import bg from "../../assets/images/job-bg.jpg";
-
-function MediaJobCircular() {
-  const arr = [
-    { id: 1, image: 1 },
-    { id: 2, image: 2 },
-    { id: 3, image: 3 },
-    { id: 4, image: 4 },
-    { id: 5, image: 5 },
-    { id: 6, image: 6 },
-    { id: 7, image: 7 },
-    { id: 8, image: 8 },
+import MediaJobCard from "./Cards/MediaJobCard";
+const MediaJobCircular = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const handleModalOpen = () => setOpenModal(true);
+  const handleModalClose = () => setOpenModal(false);
+  const medialJobCirculars = [
+    { id: 1, image: jobImage },
+    { id: 2, image: jobImage },
+    { id: 3, image: jobImage },
+    { id: 4, image: jobImage },
+    { id: 5, image: jobImage },
+    { id: 6, image: jobImage },
+    { id: 7, image: jobImage },
+    { id: 8, image: jobImage },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,28 +84,9 @@ function MediaJobCircular() {
               modules={[FreeMode, Pagination]}
               className={mySwiper}
             >
-              {arr.map((a) => (
+              {medialJobCirculars.map((circulars, index) => (
                 <SwiperSlide className="mb-14 cursor-pointer">
-                  <div key={a} className="rounded-lg bg-[#222]">
-                    <Link to={`/jobs/${a.id}`}>
-                      <img src={job} alt="" />
-                    </Link>
-                    <div className="text-basic p-5">
-                      <h3 className="text-xl">
-                        <span className="font-bold">পদবিঃ </span> সাংবাদিক
-                      </h3>
-                      <p>
-                        <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
-                        সাংবাদিক
-                      </p>
-                      <p>
-                        <span className="font-bold">প্রতিষ্ঠানঃ </span> সময় টিভি
-                      </p>
-                      <button className="2xs:my-4 xs:my-6 sm:my-8  py-2 px-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] sm:w-[180px] 2xl:w-[230px] 3xl:w-[280px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
-                        আবেদন করো এখনি
-                      </button>
-                    </div>
-                  </div>
+                  <MediaJobCard circulars={circulars} key={index} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -112,6 +95,6 @@ function MediaJobCircular() {
       </div>
     </div>
   );
-}
+};
 
 export default MediaJobCircular;

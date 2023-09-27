@@ -1,8 +1,5 @@
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
-import React, { useState } from "react";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { MdLocationOn } from "react-icons/md";
+import React from "react";
 import { Zoom } from "react-reveal";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -11,10 +8,11 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
 import bg from "../../assets/images/event-bg.jpg";
+import EventsCard from "./Cards/EventsCard";
 import EventRegistrationModal from "./Modals/EventRegistrationModal";
-function Events() {
-  const arr = [1, 2, 3, 4, 5, 6];
-  const events = [
+
+const Events = () => {
+  const allEvents = [
     {
       id: 1,
       title: "আইডিয়া ডেভেলপমেন্ট অ্যান্ড ক্রিয়েটিভ রাইটিং ",
@@ -32,6 +30,7 @@ function Events() {
       startingTime: "সকাল ১০:০০ টা",
       endingTime: "বিকাল ০৪:০০ টা",
       location: "বিশ্বসাহিত্য কেন্দ্র, বাংলা মোটর, ঢাকা",
+      btnHidden: "hidden",
     },
     {
       id: 3,
@@ -41,6 +40,7 @@ function Events() {
       startingTime: "সকাল ০৮:০০",
       endingTime: "দুপুর ০২:০০",
       location: "মিরপুর, ঢাকা",
+      btnHidden: "hidden",
     },
     {
       id: 4,
@@ -50,6 +50,7 @@ function Events() {
       startingTime: "সকাল ১০:০০",
       endingTime: "দুপুর ০১:০০",
       location: "ধানমন্ডি, ঢাকা",
+      btnHidden: "hidden",
     },
     {
       id: 5,
@@ -59,6 +60,7 @@ function Events() {
       startingTime: "সকাল ০৮:০০",
       endingTime: "দুপুর ০২:০০",
       location: "মিরপুর, ঢাকা",
+      btnHidden: "hidden",
     },
     {
       id: 6,
@@ -68,24 +70,9 @@ function Events() {
       startingTime: "সকাল ০৮:০০",
       endingTime: "দুপুর ০২:০০",
       location: "মিরপুর, ঢাকা",
+      btnHidden: "hidden",
     },
   ];
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
-    loop: true,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
-    created() {
-      setLoaded(true);
-    },
-  });
-
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
   return (
     <div
       style={{
@@ -93,10 +80,10 @@ function Events() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         boxShadow: "inset 0 0 0 2000px rgba(255, 0, 150, 0.1)",
+        opacity: 0.9,
       }}
       className=" lg:px-24 py-14 text-[#fff] px-5"
     >
-      <Zoom>{/* <Advertisement2 /> */}</Zoom>
       <h1 className="pt-[26px] -mb-5 md:-mb-10 lg:-mb-20 custom-text-stroke-3 text-center text-[28px] md:text-[55px] lg:text-[100px] my-5">
         আসন্ন ইভেন্টস
       </h1>
@@ -121,42 +108,14 @@ function Events() {
             modules={[Navigation, Pagination]}
             className=""
           >
-            {events.map((event, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="mb-10">
-                  <div className="-p-5 flex items-center flex-col md:flex-row">
-                    <div className="mb-8 md:mb-0 text-primary mr-5 border-2 bg-white text-secondary shadow-xl p-5  rounded-md">
-                      <h2
-                        className="2xs:text-[36px] text-6xl font-bold drop-shadow-xl"
-                        style={{ fontFamily: "Hind Siliguri" }}
-                      >
-                        {event.date}
-                      </h2>
-                      <p
-                        className="text-center text-black font-bold"
-                        style={{ fontFamily: "Hind Siliguri" }}
-                      >
-                        {event.month}
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="my-3 font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-white">
-                        {event.title}
-                      </h4>
-                      <hr />
-                      <p className="my-3 flex items-center text-[#c5c5c5] 2xs:text-[12px]">
-                        <AiOutlineClockCircle className="mr-2" />
-                        {event.startingTime} ঘটিকা - {event.endingTime} ঘটিকা
-                      </p>
-                      <p className="my-3 flex items-center text-[#c5c5c5] 2xs:text-[12px]">
-                        <MdLocationOn className="mr-2" />
-                        {event.location}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            {allEvents?.map((evened, index) => (
+              <SwiperSlide key={index} className="mb-10">
+                <EventsCard
+                  evened={evened}
+                />
               </SwiperSlide>
             ))}
+        
           </Swiper>
           {/* previous btn */}
           {/* <div
@@ -172,48 +131,10 @@ function Events() {
               <MdOutlineKeyboardArrowRight />
             </span>
           </div> */}
-          <div className="my-5 select-none">
-            <p className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-              আমার জীবনের বাস্তব অভিজ্ঞতা নিয়ে কথা হবে তোমাদের সাথে...
-            </p>
-            <Zoom>
-              {events.slice(0, 1).map((event) => (
-                <button
-                  onClick={() => handleOpen(event.id)}
-                  style={{ fontFamily: "Hind Siliguri" }}
-                  className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] hover:text-[#f40a5c] sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
-                >
-                  এখনই রেজিস্ট্রেশন করুন
-                </button>
-              ))}
-              <EventRegistrationModal  open={open} handleClose={handleClose}/>
-              
-            </Zoom>
-          </div>
         </div>
       </Zoom>
     </div>
   );
-}
+};
 
 export default Events;
-function Arrow(props) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
-  return (
-    <svg
-      onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabeld}`}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      {props.left && (
-        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-      )}
-      {!props.left && (
-        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-      )}
-    </svg>
-  );
-}
