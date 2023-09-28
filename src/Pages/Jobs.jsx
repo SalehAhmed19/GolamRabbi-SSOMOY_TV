@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import JobCard from "../Components/Isolated/Cards/JobCard";
-import JobsApplyModal from "../Components/Isolated/Modals/JobsApplyModal";
 import jobImage from "../assets/images/Job.png";
 
 function Jobs() {
@@ -64,20 +63,19 @@ function Jobs() {
     },
   ];
   return (
-    <div className="pb-36">
-      <div className="lg:py-20 py-10 lg:mx-20 mx-5">
+    <div>
+      <div className="lg:px-24 py-20 p-5 pb-36">
         <Fade down>
-          <h2 className="text-center text-4xl font-bold text-primary py-14 my-5">
+          <h2 className="mt-12 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
             চাকুরী সমূহ
           </h2>
         </Fade>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {medialJobCirculars.map((circulars, index) => (
-            <JobCard circulars={circulars} key={index}/>
+            <JobCard circulars={circulars} key={index} />
           ))}
         </div>
       </div>
-    
     </div>
   );
 }

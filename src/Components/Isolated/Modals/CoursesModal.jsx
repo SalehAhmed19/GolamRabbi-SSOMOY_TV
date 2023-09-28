@@ -1,10 +1,19 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React, { useEffect } from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import { IoIosClose } from "react-icons/io";
 
 
 const CoursesModal = ({ course, openModal, setOpenModal }) => {
+    const style = {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      bgcolor: "#fff",
+      borderRadius: "7px",
+      boxShadow: 24,
+    };
   const handleModalClose = () => setOpenModal(!openModal);
   const handleModalCloseOutSiteClick = (e) => {
     if (e.target.id === "container") handleModalClose();
@@ -42,57 +51,76 @@ const CoursesModal = ({ course, openModal, setOpenModal }) => {
         aria-describedby="modal-modal-description"
         sx={{ fontFamily: "Hind Siliguri" }}
       >
-        <Box>
+        <Box sx={style} className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px]">
           <div
-            id="container"
-            onClick={handleModalCloseOutSiteClick}
-            className={`select-none cursor-pointer`}
+            className="2xs:h-[50vh]  overflow-auto bg-white"
+            style={{ fontFamily: "Hind Siliguri" }}
           >
-            <div className="md:w-1/2 flex justify-center items-center mt-[50%] md:mx-[24%] lg:mt-[20%] ">
-              <div className="bg-[#222] text-basic rounded-md p-5 mx-5">
-                <AiOutlineClose
-                  onClick={() => setOpenModal(!openModal)}
-                  className="text-xl text-primary cursor-pointer float-right"
-                />
-                <h4 className="text-primary font-bold text-xl">
-                  কোর্সে এনরোল করতে চাও?
-                </h4>
-                <form
-                  onSubmit={() => handleSubmit(event)}
-                  className="lg:w-96"
-                  action=""
-                >
-                  <input
-                    name="course"
-                    type="text"
-                    value={course?.name}
-                    className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                    readOnly
+            <form>
+              <div className="text-secondary font-bold flex justify-between items-center">
+                <span className="mb-2 2xs:text-[12px]">
+                  কোর্সে এনরোল করতে চাওন ?
+                </span>
+                <span>
+                  <IoIosClose
+                    onClick={handleModalClose}
+                    className="text-3xl cursor-pointer"
                   />
-                  <input
-                    name="name"
-                    placeholder="তোমার নাম লিখো"
-                    className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                    type="text"
-                  />
-                  <input
-                    name="email"
-                    placeholder="তোমার ইমেইল লিখো"
-                    className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                    type="text"
-                  />
-                  <input
-                    name="mobile"
-                    placeholder="তোমার মোবাইল নাম্বার লিখো"
-                    className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                    type="text"
-                  />
-                  <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-                    সাবমিট করো
-                  </button>
-                </form>
+                </span>
               </div>
-            </div>
+              {/*content 1 */}
+              <div className="w-full">
+                <label htmlFor="" className="2xs:text-[12px]">
+                  কোর্স
+                </label>
+                <input
+                  name="course"
+                  type="text"
+                  value={course?.name}
+                  className="cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  readOnly
+                />
+              </div>
+              {/*content 2 */}
+              <div className="w-full">
+                <label htmlFor="" className="2xs:text-[12px]">
+                  নাম
+                </label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="আপনার নাম লিখুন"
+                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                />
+              </div>
+              {/*content 2 */}
+              <div className="w-full">
+                <label htmlFor="" className="2xs:text-[12px]">
+                  ই-মেইল
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="আপনার ই-মেইল লিখুন"
+                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                />
+              </div>
+              {/*content 4 */}
+              <div className="w-full">
+                <label htmlFor="" className="2xs:text-[12px]">
+                  মোবাইল
+                </label>
+                <input
+                  name="courseName"
+                  type="number"
+                  placeholder="আপনার মোবাইল নাম্বার লিখুন"
+                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                />
+              </div>
+              <button className="bg-secondary text-white  my-3 px-10 py-1 rounded  2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
+                সাবমিট
+              </button>
+            </form>
           </div>
         </Box>
       </Modal>
@@ -101,59 +129,4 @@ const CoursesModal = ({ course, openModal, setOpenModal }) => {
 };
 
 export default CoursesModal;
-{
-  /* <>
-      <div
-        id="container"
-        onClick={handleModalCloseOutSiteClick}
-        className={`select-none cursor-pointer h-screen fixed top-0 bottom-0 left-0 right-0  backdrop-blur-sm`}
-      >
-      
-        <div className="md:w-1/2 flex justify-center items-center mt-[50%] md:mx-[24%] lg:mt-[20%] ">
-          <div className="bg-[#222] text-basic rounded-md p-5 mx-5">
-            <AiOutlineClose
-              onClick={() => setOpenModal(!openModal)}
-              className="text-xl text-primary cursor-pointer float-right"
-            />
-            <h4 className="text-primary font-bold text-xl">
-              কোর্সে এনরোল করতে চাও?
-            </h4>
-            <form
-              onSubmit={() => handleSubmit(event)}
-              className="lg:w-96"
-              action=""
-            >
-              <input
-                name="course"
-                type="text"
-                value={course?.name}
-                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                readOnly
-              />
-              <input
-                name="name"
-                placeholder="তোমার নাম লিখো"
-                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                type="text"
-              />
-              <input
-                name="email"
-                placeholder="তোমার ইমেইল লিখো"
-                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                type="text"
-              />
-              <input
-                name="mobile"
-                placeholder="তোমার মোবাইল নাম্বার লিখো"
-                className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                type="text"
-              />
-              <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-                সাবমিট করো
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </> */
-}
+

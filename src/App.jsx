@@ -31,8 +31,10 @@ import Quotes from "./Pages/Dashboard/Quotes";
 import Testimonials from "./Pages/Dashboard/Testimonials";
 import Home from "./Pages/Home";
 import IimageGalleryPage from "./Pages/IimageGalleryPage";
+import InvitePage from "./Pages/InvitePage";
 import Jobs from "./Pages/Jobs";
 import JobsDetail from "./Pages/JobsDetail";
+import WhatsNew from "./Pages/WhatsNew";
 
 function App() {
   const theme = createTheme({
@@ -64,18 +66,20 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events" element={<AllEvents />} />
-          <Route path="/blogs" element={<BlogsPage />} />
-          <Route path="/blogs/:id" element={<Blog1 />} />
-          <Route path="/courses" element={<Courses />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/jobs/:id" element={<JobsDetail />} />
+          <Route path="/events" element={<AllEvents />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:id" element={<Blog1 />} />
+          <Route path="/invite" element={<InvitePage />} />
+          <Route path="/whats-new" element={<WhatsNew />} />
+          <Route path="/gallery" element={<IimageGalleryPage />} />
           <Route path="/professional-blogs" element={<ProfessionalBlogs />} />
           <Route path="/personal-blogs" element={<PersonalBlogs />} />
           <Route path="/media-courses" element={<MediaCourses />} />
           <Route path="/leadership-courses" element={<LeadershipCourses />} />
           <Route path="/life-courses" element={<LifeCourses />} />
-          <Route path="/gallery" element={<IimageGalleryPage />} />
           {/* dashboard */}
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardHome />} />
@@ -105,7 +109,7 @@ function App() {
           alignItems: "center",
           color: "#333",
           backgroundColor: "#D89F17",
-          zIndex:9999
+          zIndex: 9999,
         }}
         component={<TbArrowBigUpLinesFilled />}
         smooth

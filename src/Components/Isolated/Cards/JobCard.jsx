@@ -27,7 +27,7 @@ const JobCard = ({ circulars }) => {
         <div className="flex justify-center items-center pb-3">
           <button
             onClick={() => setOpenModal(true)}
-            className="2xs:my-4 xs:my-6 sm:my-8  py-2 px-2 border-2 border-[#f40a5c] hover:bg-[#f40a5c] sm:w-[180px] 2xl:w-[230px] 3xl:w-[280px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+            className="2xs:my-4 xs:my-6 sm:my-8  py-2 px-2 border-2 border-[#AF1453] hover:bg-[#AF1453] sm:w-[180px] 2xl:w-[230px] 3xl:w-[280px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
           >
             আবেদন করো এখনি
           </button>
