@@ -23,7 +23,7 @@ function BannerCard() {
       <form className="input">
         <input
           placeholder="তোমার কথা লিখো"
-          className="outline-none rounded-full px-5 py-2 my-2 w-full"
+          className="outline-none rounded-full px-5 py-2 my-2 w-full border mt-5"
           type="text"
         />
         <button className="bg-primary w-full text-[#222] py-1 rounded-full font-bold">

@@ -101,12 +101,14 @@
 }
 .scaling-div2:hover {
   height: 280px;
-  background-color: #f80262;
-  color: #fff;
+  width: 300px;
+  background-color: #fff;
+  color: #333;
 }
 .scaling-div2:hover .text {
+  text-align: left;
   display: block;
-  color: #fff;
+  color: #333;
 }
 
 .scaling-div2:hover .input {
@@ -143,7 +145,7 @@
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 30%;
-  left: 60%;
+  left: 70%;
   width: 112px;
   font-size: 72px;
   /* -webkit-filter: invert(100%); */

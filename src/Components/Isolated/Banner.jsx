@@ -124,7 +124,6 @@ function Banner() {
               />
             </h1>
 
-          
             <div className="flex space-x-3 mt-5">
               {icons?.map((icon) => (
                 <img
