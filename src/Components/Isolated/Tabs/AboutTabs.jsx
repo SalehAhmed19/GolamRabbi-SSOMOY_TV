@@ -93,7 +93,7 @@ const AboutTabs = () => {
 
   const text = longText.split("\n");
   // console.log(text);
-  
+
   return (
     <Box>
       <Box
