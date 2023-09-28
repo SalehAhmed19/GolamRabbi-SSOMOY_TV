@@ -41,17 +41,17 @@ function Courses() {
 
   const mediaCourse = [
     {
-      name: "Media Mastery: Unleashing the Power of Communication",
+      name: "1Media Mastery: Unleashing the Power of Communication",
       img: media,
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
-      name: "Media Mastery: Unleashing the Power of Communication",
+      name: "2Media Mastery: Unleashing the Power of Communication",
       img: media,
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
     {
-      name: "Media Mastery: Unleashing the Power of Communication",
+      name: "3Media Mastery: Unleashing the Power of Communication",
       img: media,
       des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, excepturi.",
     },
@@ -154,7 +154,7 @@ function Courses() {
   return (
     <div className="lg:px-24 py-20 p-5 pb-36">
       <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
+        <h2 className="mt-12 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
           কোর্স সমূহ
         </h2>
       </Fade>

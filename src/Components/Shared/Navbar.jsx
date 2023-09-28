@@ -24,8 +24,8 @@ const lowerNavItems = [
   { menu: "ইভেন্ট", route: "/events" },
   { menu: "কোর্স", route: "/courses" },
   { menu: "ব্লগ", route: "/blogs" },
-  { menu: "ইনভাইট", route: "/invitation" },
-  { menu: "হোয়াটস নিউ", route: "/invitation" },
+  { menu: "ইনভাইট", route: "/invite" },
+  { menu: "হোয়াটস নিউ", route: "/whats-new" },
   { menu: "গ্যালারি", route: "/gallery" },
   { menu: "ড্যাশবোর্ড", route: "/dashboard" },
 ];

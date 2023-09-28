@@ -22,12 +22,12 @@ const FanFunModal = ({ open, handleClose }) => {
       >
         <Box sx={style} className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px]">
           <div
-            className="h-[20vh] overflow-auto bg-white"
+            className="2xs:h-[50vh]  overflow-auto bg-white"
             style={{ fontFamily: "Hind Siliguri" }}
           >
             <form>
               <div className="text-secondary font-bold flex justify-between items-center">
-                <span className="mb-2">
+                <span className="mb-2 2xs:text-[12px]">
                   ফর্মটি পূরণ করে পাঠিয়ে দিন আমাদের কাছে
                 </span>
                 <span>

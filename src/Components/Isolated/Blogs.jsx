@@ -80,7 +80,7 @@ const Blogs = () => {
               <Zoom>
                 <Link to={`/blogs/${d.id}`}>
                   <div className="bg-white rounded-lg">
-                    <img className="w-full  rounded-lg" src={blog} alt="" />
+                    <img className="w-full  rounded-t-lg" src={blog} alt="" />
                     <div className="p-5">
                       <h3 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-secondary font-bold">
                         {d.subTitle} <br />
