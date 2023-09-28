@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import GalleryModal from "../Modals/GalleryModal";
 
-const GalleryCard = ({image}) => {
-    const [openModal, setOpenModal] = useState(false);
+const GalleryCard = ({ image }) => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div
       onClick={() => setOpenModal(true)}
@@ -20,7 +20,13 @@ const GalleryCard = ({image}) => {
           {image.title}
         </h1>
       </div> */}
-      {openModal && <GalleryModal image={image}  openModal={openModal} setOpenModal={setOpenModal}/>}
+      {openModal && (
+        <GalleryModal
+          image={image}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />
+      )}
     </div>
   );
 };
