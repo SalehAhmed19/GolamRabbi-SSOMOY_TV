@@ -110,12 +110,9 @@ const Events = () => {
           >
             {allEvents?.map((evened, index) => (
               <SwiperSlide key={index} className="mb-10">
-                <EventsCard
-                  evened={evened}
-                />
+                <EventsCard evened={evened} />
               </SwiperSlide>
             ))}
-        
           </Swiper>
           {/* previous btn */}
           {/* <div

@@ -9,7 +9,7 @@ const TvModal = ({ open, handleClose, tvNew, clickId }) => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    bgcolor: "#fff",
+    bgcolor: "transparent",
     borderRadius: "7px",
     boxShadow: 24,
   };
@@ -25,17 +25,16 @@ const TvModal = ({ open, handleClose, tvNew, clickId }) => {
         >
           <Box
             sx={style}
-            className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[900px] md:h-[500px]"
+            className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[900px] md:h-[500px] focus:outline-none"
           >
-            
             <div className="font-bold text-secondary flex justify-between items-center">
-              <MdOutlineClose
+              {/* <MdOutlineClose
                 onClick={handleClose}
                 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]  cursor-pointer"
-              />
+              /> */}
             </div>
             <iframe
-              className="w-full md:h-[380px] rounded"
+              className="w-full md:h-[500px] rounded"
               src={tvNew.tvNewsSrc}
               title="YouTube video player"
               frameborder="0"
