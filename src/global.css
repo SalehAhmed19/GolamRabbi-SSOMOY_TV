@@ -44,7 +44,7 @@ audio::-webkit-media-controls-volume-slider {
 }
 /*  */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #f40a5c;

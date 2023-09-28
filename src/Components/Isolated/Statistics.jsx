@@ -3,7 +3,7 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Zoom } from "react-reveal";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -57,6 +57,19 @@ const Statistics = () => {
     { _id: 7, qty: "৫", activity: "ফ্যান ফলোয়ার্স" },
     { _id: 8, qty: "১১০", activity: "বায়ো ইন্টার্ভিউ রাইটিং" },
   ];
+  const [allStatistics, setAllStatistics] = useState([]);
+  const [visible, setVisible] = useState(3);
+
+  useEffect(() => {
+    fetch("statistics.json")
+      .then((res) => res.json())
+      .then((data) => setAllStatistics(data));
+  }, [allStatistics]);
+
+  const handleLoadMore = () => {
+    setVisible((previous) => previous + 3);
+  };
+
   return (
     <div
       style={{
@@ -119,11 +132,12 @@ const Statistics = () => {
             style={{ fontFamily: "Hind Siliguri" }}
             className="grid grid-cols-1 lg:grid-cols-8 gap-5"
           >
-            {statistics.map((statistic, index) => (
+            {/* tablet and desktop */}
+            {allStatistics?.map((statistic, index) => (
               <Zoom>
                 <div
                   key={statistic._id}
-                  className="sm:px-10 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
+                  className="hidden lg:block sm:px-10 py-10 rounded-lg bg-secondary text-white font-bold lg:flex lg:flex-col lg:items-center"
                 >
                   <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px] drop-shadow-xl">
                     {statistic.qty}
@@ -134,6 +148,33 @@ const Statistics = () => {
                 </div>
               </Zoom>
             ))}
+            {/* mobile  */}
+            <div className="lg:hidden space-y-5">
+              {allStatistics.slice(0, visible)?.map((statistic, index) => (
+                <Zoom>
+                  <div
+                    key={statistic._id}
+                    className="sm:px-10 py-10 rounded-lg bg-secondary text-white font-bold flex flex-col items-center"
+                  >
+                    <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px] drop-shadow-xl">
+                      {statistic.qty}
+                    </h3>
+                    <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[13px] xl:text-[18px] 2xl:text-[22px] text-center">
+                      {statistic.activity}
+                    </h3>
+                  </div>
+                </Zoom>
+              ))}
+              {visible < allStatistics?.length && (
+                <button
+                  onClick={handleLoadMore}
+                  style={{ fontFamily: "Hind Siliguri" }}
+                  className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#f40a5c] hover:bg-[#f40a5c] hover:text-white sm:w-[180px] md:w-[290px] text-center rounded-full font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+                >
+                  আরও দেখতে
+                </button>
+              )}
+            </div>
           </div>
         </TabPanel>
         <TabPanel value={value} index={1} className="bg-black sm:rounded-lg">

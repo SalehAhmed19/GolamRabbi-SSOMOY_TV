@@ -1,8 +1,16 @@
 import { Box, Modal } from "@mui/material";
 import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
-const AnnsEventsModal = ({event, openModal, setOpenModal}) => {
-
+import { IoIosClose } from "react-icons/io";
+const AnnsEventsModal = ({ event, openModal, setOpenModal }) => {
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    bgcolor: "#fff",
+    // borderRadius: "7px",
+    boxShadow: 24,
+  };
   const handleModalClose = () => setOpenModal(!openModal);
 
   const handleModalCloseOutSiteClick = (e) => {
@@ -10,7 +18,7 @@ const AnnsEventsModal = ({event, openModal, setOpenModal}) => {
   };
 
   if (!openModal) return null;
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -36,57 +44,58 @@ const AnnsEventsModal = ({event, openModal, setOpenModal}) => {
       aria-describedby="modal-modal-description"
       sx={{ fontFamily: "Hind Siliguri" }}
     >
-      <Box>
+      <Box sx={style} className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px] rounded-md">
         <div
-          id="container"
-          onClick={handleModalCloseOutSiteClick}
-          className={`select-none cursor-pointer`}
+          className="2xs:h-[50vh]  overflow-auto bg-white "
+          style={{ fontFamily: "Hind Siliguri" }}
         >
-          <div className="md:w-1/2 flex justify-center items-center mt-[50%] md:mx-[24%] lg:mt-[20%] ">
-            <div className="bg-[#222] text-basic rounded-md p-5 mx-5">
-              <AiOutlineClose
-                onClick={handleModalClose}
-                className="text-xl text-primary cursor-pointer float-right"
-              />
-              <h4 className="text-primary font-bold text-xl">
-                ইভেন্ট এ আসতে চাও?
-              </h4>
-              <form
-                onSubmit={(e) => handleSubmit(e)}
-                className="lg:w-96"
-                action=""
-              >
-                <input
-                  name="course"
-                  type="text"
-                  value={event?.title}
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  readOnly
+          <form>
+            <div className="text-secondary font-bold flex justify-between items-center">
+              <span className="mb-2 2xs:text-[12px]">
+                ফর্মটি পূরণ করে পাঠিয়ে দিন আমাদের কাছে
+              </span>
+              <span>
+                <IoIosClose
+                  onClick={handleModalClose}
+                  className="text-3xl cursor-pointer"
                 />
-                <input
-                  name="name"
-                  placeholder="তোমার নাম লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-                <input
-                  name="email"
-                  placeholder="তোমার ইমেইল লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-                <input
-                  name="mobile"
-                  placeholder="তোমার মোবাইল নাম্বার লিখো"
-                  className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-                  type="text"
-                />
-                <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-                  সাবমিট করো
-                </button>
-              </form>
+              </span>
             </div>
-          </div>
+            {/*content 1 */}
+            <div className="w-full">
+              <label htmlFor="">নাম</label>
+              <input
+                name="name"
+                type="text"
+                value={event?.title}
+                placeholder="আপনার নাম লিখুন"
+                className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+              />
+            </div>
+            {/*content 2 */}
+            <div className="w-full">
+              <label htmlFor="">ই-মেইল</label>
+              <input
+                name="email"
+                type="email"
+                placeholder="আপনার ই-মেইল লিখুন"
+                className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+              />
+            </div>
+            {/*content 3 */}
+            <div className="w-full">
+              <label htmlFor="">মোবাইল</label>
+              <input
+                name="courseName"
+                type="number"
+                placeholder="আপনার মোবাইল নাম্বার লিখুন"
+                className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+              />
+            </div>
+            <button className="bg-secondary text-white w-ful  my-3 px-10 py-1 rounded">
+              সাবমিট
+            </button>
+          </form>
         </div>
       </Box>
     </Modal>

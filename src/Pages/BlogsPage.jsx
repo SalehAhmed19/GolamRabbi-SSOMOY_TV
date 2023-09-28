@@ -5,7 +5,7 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import { Fade } from "react-reveal";
+import { Fade, Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../Styles/MediaJobCircular.css";
+import blog from "../assets/images/bolg1.png";
 import ProfessionalBlog from "./Blogs/ProfessionalBlog";
 function BlogsPage() {
   const data = [
@@ -186,27 +187,26 @@ function BlogsPage() {
           }}
           className=""
         >
-          {data?.map((a, index) => (
+          {data?.map((d, index) => (
             <SwiperSlide key={index} className="mb-10">
-              <div className="rounded-lg bg-[#222]">
-                <Link to={`/blogs/${a?.id}`}>
-                  <div className="relative text-basic ">
-                    <img
-                      className="opacity-50 rounded-md"
-                      src="https://images.unsplash.com/photo-1484766280341-87861644c80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-                      alt=""
-                    />
-                    <div className="absolute bottom-[20px] mx-5">
-                      <h3 className="text-2xl font-bold">{a.headline}</h3>
-                      <p>
-                        পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের
-                        বাংলাদেশের আবহাওয়ার খবর। জেনে নিন আবহাওয়ার
-                        পূর্বাভাস...
+              <Zoom>
+                <Link to={`/blogs/${d.id}`}>
+                  <div className="bg-white rounded-lg">
+                    <img className="w-full  rounded-t-lg" src={blog} alt="" />
+                    <div className="p-5">
+                      <h3 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-secondary font-bold">
+                        {/* {d.heading} <br /> */}
+                        {d.headline}
+                      </h3>
+                      <p className="text-[#7B7B7B] 2xs:text-[12px]">
+                        {d.subHeading}
+                        <br />
+                        {d.subDescription1}
                       </p>
                     </div>
                   </div>
                 </Link>
-              </div>
+              </Zoom>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -217,3 +217,4 @@ function BlogsPage() {
 }
 
 export default BlogsPage;
+ 

@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React from "react";
 import { IoIosClose } from "react-icons/io";
-const FanFunModal = ({ open, handleClose }) => {
+const MentorModal = ({ open, handleClose }) => {
   const style = {
     position: "absolute",
     top: "50%",
@@ -21,15 +21,10 @@ const FanFunModal = ({ open, handleClose }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px]">
-          <div
-            className="2xs:h-[50vh]  overflow-auto bg-white"
-            style={{ fontFamily: "Hind Siliguri" }}
-          >
+          <div className="bg-white" style={{ fontFamily: "Hind Siliguri" }}>
             <form>
-              <div className="text-secondary font-bold flex justify-between items-center">
-                <span className="mb-2 2xs:text-[12px]">
-                  ফর্মটি পূরণ করে পাঠিয়ে দিন আমাদের কাছে
-                </span>
+              <div className="text-secondary font-bold mb-2 flex justify-between items-center">
+                <span>আমাকে মেন্টর হিসেবে চাও?</span>
                 <span>
                   <IoIosClose
                     onClick={handleClose}
@@ -53,7 +48,7 @@ const FanFunModal = ({ open, handleClose }) => {
                 <input
                   name="email"
                   type="email"
-                  placeholder="আপনার ই-মেইল লিখুন"
+                  placeholder="আপনার ইমেইল লিখুন"
                   className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                 />
               </div>
@@ -61,23 +56,13 @@ const FanFunModal = ({ open, handleClose }) => {
               <div className="w-full">
                 <label htmlFor="">মোবাইল</label>
                 <input
-                  name="courseName"
-                  type="text"
+                  name="mobile"
+                  type="number"
                   placeholder="আপনার মোবাইল নাম্বার লিখুন"
                   className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                 />
               </div>
-              {/*content 4 */}
-              <div className="w-full">
-                <label htmlFor="">ফেইসবুক/ লিঙ্কডইন আইডি লিঙ্ক</label>
-                <input
-                  name="courseName"
-                  type="text"
-                  placeholder="আপনার ফেইসবুক/ লিঙ্কডইন আইডি লিঙ্ক লিখুন"
-                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                />
-              </div>
-              <button className="bg-secondary text-white w-ful  my-3 px-10 py-1 rounded">
+              <button className="block bg-secondary text-white  my-3 px-10 py-1 rounded">
                 সাবমিট
               </button>
             </form>
@@ -88,4 +73,4 @@ const FanFunModal = ({ open, handleClose }) => {
   );
 };
 
-export default FanFunModal;
+export default MentorModal;

@@ -2,7 +2,6 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
-import { Link } from "react-router-dom";
 import { FreeMode, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -10,19 +9,70 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/MediaJobCircular.css";
 import mySwiper from "../../Styles/mySwiper.css";
-import job from "../../assets/images/Job.png";
+import jobImage from "../../assets/images/Job.png";
 import bg from "../../assets/images/job-bg.jpg";
-
-function MediaJobCircular() {
-  const arr = [
-    { id: 1, image: 1 },
-    { id: 2, image: 2 },
-    { id: 3, image: 3 },
-    { id: 4, image: 4 },
-    { id: 5, image: 5 },
-    { id: 6, image: 6 },
-    { id: 7, image: 7 },
-    { id: 8, image: 8 },
+import MediaJobCard from "./Cards/MediaJobCard";
+const MediaJobCircular = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const handleModalOpen = () => setOpenModal(true);
+  const handleModalClose = () => setOpenModal(false);
+  const medialJobCirculars = [
+    {
+      id: 1,
+      position: "সাংবাদিক ১",
+      organization: "সময় টিভি ১",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 2,
+      position: "সাংবাদিক ২",
+      organization: "সময় টিভি ২",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 3,
+      position: "সাংবাদিক ৩",
+      organization: "সময় টিভি ৩",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 4,
+      position: "সাংবাদিক ৪",
+      organization: "সময় টিভি ৪",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 5,
+      position: "সাংবাদিক ৫",
+      organization: "সময় টিভি ৫",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 6,
+      position: "সাংবাদিক ৬",
+      organization: "সময় টিভি ৬",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 7,
+      position: "সাংবাদিক ৭",
+      organization: "সময় টিভি ৭",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
+    {
+      id: 8,
+      position: "সাংবাদিক ৮",
+      organization: "সময় টিভি ৮",
+      lastDate: "১০.১০.২৩",
+      image: jobImage,
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,29 +132,9 @@ function MediaJobCircular() {
               modules={[FreeMode, Pagination]}
               className={mySwiper}
             >
-              {arr.map((a) => (
+              {medialJobCirculars.map((circulars, index) => (
                 <SwiperSlide className="mb-14 cursor-pointer">
-                  <Link to={`/jobs/${a.id}`}>
-                    <div key={a} className="rounded-lg bg-[#222]">
-                      <img src={job} alt="" />
-                      <div className="text-basic p-5">
-                        <h3 className="text-xl">
-                          <span className="font-bold">পদবিঃ </span> সাংবাদিক
-                        </h3>
-                        <p>
-                          <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
-                          সাংবাদিক
-                        </p>
-                        <p>
-                          <span className="font-bold">প্রতিষ্ঠানঃ </span> সময়
-                          টিভি
-                        </p>
-                        <button className="block 2xs:my-4 xs:my-6 sm:my-8 md:my-5 md:mx-5 py-2 px-5 border-2 border-[#f40a5c] hover:bg-[#f40a5c] 2xs: sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
-                          আবেদন করো এখনি
-                        </button>
-                      </div>
-                    </div>
-                  </Link>
+                  <MediaJobCard circulars={circulars} key={index} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -113,6 +143,6 @@ function MediaJobCircular() {
       </div>
     </div>
   );
-}
+};
 
 export default MediaJobCircular;

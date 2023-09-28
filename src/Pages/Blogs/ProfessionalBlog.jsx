@@ -5,6 +5,7 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import { Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -157,22 +158,27 @@ const ProfessionalBlog = () => {
         }}
         className=""
       >
-        {data?.map((a, index) => (
+        {data?.map((d, index) => (
           <SwiperSlide key={index} className="mb-10">
-            <div key={a} className="rounded-lg bg-[#222]">
-              <Link to={`/blogs/${a?.id}`}>
-                <div className="relative text-basic ">
-                  <img className="opacity-50 rounded-md" src={blog} alt="" />
-                  <div className="absolute bottom-[20px] mx-5">
-                    <h3 className="text-2xl font-bold">{a.headline}</h3>
-                    <p>
-                      পড়ুন আজকের আবহাওয়ার খবর, ঢাকা সহ এই মুহুর্তের বাংলাদেশের
-                      আবহাওয়ার খবর। জেনে নিন আবহাওয়ার পূর্বাভাস...
+            <Zoom>
+              <Link to={`/blogs/${d.id}`}>
+                <div className="bg-white rounded-lg">
+                  <img className="w-full  rounded-t-lg" src={blog} alt="" />
+                  <div className="p-5">
+                    <h3 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] text-secondary font-bold">
+                      {/* {d.heading} <br /> */}
+                      {d.headline}
+                    </h3>
+                    <p className="text-[#7B7B7B] 2xs:text-[12px]">
+                      {d.subHeading}
+                      <br />
+                      {d.subDescription1}
                     </p>
                   </div>
                 </div>
               </Link>
-            </div>
+            </Zoom>
+            ;
           </SwiperSlide>
         ))}
       </Swiper>
