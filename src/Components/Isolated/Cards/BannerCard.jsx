@@ -4,7 +4,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 
 function BannerCard() {
   return (
-    <div className="scaling-div2 my-5 relative">
+    <div className="2xs:hidden xs:block scaling-div2 my-5 relative">
       <div className="">
         <AiOutlineShareAlt className="text-3xl icon" />
         <div className="flex justify-between items-center">

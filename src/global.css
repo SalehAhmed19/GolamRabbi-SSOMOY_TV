@@ -44,16 +44,16 @@ audio::-webkit-media-controls-volume-slider {
 }
 /*  */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #f40a5c;
   border-radius: 10px;
 }
-/* ::-webkit-scrollbar-track {
-  background-color: #f40a5c;
-  border-radius: 10px;
-} */
+::-webkit-scrollbar-track {
+  background-color: #d8b4fe;
+  /* border-radius: 10px; */
+}
 ::-webkit-scrollbar-thumb:hover {
   background-color: #f6b30f;
 }
@@ -87,6 +87,15 @@ audio::-webkit-media-controls-volume-slider {
 
 .custom-text-stroke-4 {
   color: #f6b30f;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  opacity: 0.2;
+}
+.custom-text-stroke-5 {
+  color: white;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
