@@ -9,28 +9,28 @@ const JobsDetail = () => {
       <div className="grid grid-cols-1 xl:grid-cols-5">
         {/* left side */}
         <div className="col-span-3 md:pr-10">
-          <h1 className="2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] font-bold">
+          <h1 className="2xs:text-[16px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[35px] 2xl:text-[28px] font-bold">
             শিল্পকলা একাডেমিতে ৯ম-২০তম গ্রেডে চাকরির সুযোগ, আবেদন ফি ২০০-৬০০
           </h1>
           <ul>
             <li>
               {/* item 1  */}
               <div className="">
-                <h2 className="mt-10 font-semibold md:mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
+                <h2 className="mt-10 font-semibold md:mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[22px] text-primary">
                   শূন্যপদ:
                 </h2>
-                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
-                  &bull; ২
+                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[16px]">
+                  &bull; ০২
                 </span>
               </div>
             </li>
             <li>
               {/* item 2 */}
               <div className="">
-                <h2 className="mt-5 md:mt-10 font-semibold md:mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
+                <h2 className="mt-5 md:mt-10 font-semibold md:mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[22px] text-primary">
                   কাজের প্রসঙ্গ:
                 </h2>
-                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
+                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[16px]">
                   &bull; সূত্রের বরাত দিয়ে এই তথ্য দিয়েছে যুক্তরাজ্যভিত্তিক
                   সংবাদমাধ্যম দ্য গার্ডিয়ান। তাদের এক প্রতিবেদনে বলা হয়েছে,
                   রাশিয়া যদি ইউক্রেনের ভেতরে বা কাছাকাছি এলাকায় পরমাণু বোমার
@@ -47,10 +47,10 @@ const JobsDetail = () => {
             <li>
               {/* item 3 */}
               <div className="">
-                <h2 className="mt-5 md:mt-10 font-semibold mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
+                <h2 className="mt-5 md:mt-10 font-semibold mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[22px] text-primary">
                   কাজের দায়িত্ব:
                 </h2>
-                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
+                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[16px]">
                   &bull; সূত্রের বরাত দিয়ে এই তথ্য দিয়েছে যুক্তরাজ্যভিত্তিক
                   সংবাদমাধ্যম দ্য গার্ডিয়ান। তাদের এক প্রতিবেদনে বলা হয়েছে,
                   রাশিয়া যদি ইউক্রেনের ভেতরে বা কাছাকাছি এলাকায় পরমাণু বোমার
@@ -67,10 +67,10 @@ const JobsDetail = () => {
             <li>
               {/* item 4  */}
               <div className="">
-                <h2 className="mt-5 md:mt-10 font-semibold mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px]">
+                <h2 className="mt-5 md:mt-10 font-semibold mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[22px] text-primary">
                   কর্মসংস্থানের অবস্থা:
                 </h2>
-                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px] mb-16">
+                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[16px] mb-16">
                   &bull; পূর্ণকাল
                 </span>
               </div>
@@ -80,7 +80,7 @@ const JobsDetail = () => {
         {/* right side  */}
         <div className="lg:flex flex-row xl:flex-col">
           {/* item 1 */}
-          <div className="w-full lg:w-[411px] h-[450px] border-2 border-[#fff] rounded-lg mt-5">
+          {/* <div className="w-full lg:w-[411px] h-[450px] rounded-lg mt-5 bg-[#1e1e1e]">
             <div className="relative text-center w-[411px] h-[56px]">
               <h2 className=" text-white absolute top-5 md:left-[200px] lg:left-[160px] font-bold">
                 ডেসক্রিপশন:
@@ -113,10 +113,57 @@ const JobsDetail = () => {
                   &nbsp;পূর্ণকাল
                 </li>
               </ul>
-              <button className="block 2xs:my-4 xs:my-6 sm:my-8 md:my-10 md:mx-10 py-2 px-5 border-2 border-[#fff] hover:bg-[#fff] 2xs: sm:w-[180px] md:w-[290px] text-center rounded-full hover:text-black font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
+              <button className="block 2xs:my-4 xs:my-6 sm:my-8 md:my-10 md:mx-10 py-2 px-5 border border-[#222] hover:bg-[#fff] 2xs: sm:w-[180px] md:w-[290px] text-center rounded-full hover:text-black font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[16px]">
                 অংশ নিতে ক্লিক করো
               </button>
             </div>
+          </div> */}
+          <div className="w-full lg:w-[350px] bg-[#F6B30F] pb-5">
+            <div className="w-full bg-[#222] p-5">
+              <h3 className="font-bold text-xl text-center">ডেসক্রিপশন</h3>
+            </div>
+            <ul className="pt-5 ps-7 pe-7 text-[#222]">
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">শূন্যপদঃ </span> ০২
+                </p>
+              </li>
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">কর্মসংস্থানের অবস্থাঃ </span>{" "}
+                  পূর্ণকাল
+                </p>
+              </li>
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">অভিজ্ঞতাঃ </span> পূর্ণকাল
+                </p>
+              </li>
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">বয়সঃ </span> পূর্ণকাল
+                </p>
+              </li>
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">চাকুরিস্থানঃ </span> পূর্ণকাল
+                </p>
+              </li>
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">বেতনঃ </span> পূর্ণকাল
+                </p>
+              </li>
+              <li className="my-3">
+                <p className="text-[#333]">
+                  <span className="font-semibold">আবেদনের শেষ তারিখঃ </span>{" "}
+                  পূর্ণকাল
+                </p>
+              </li>
+            </ul>
+            <button className="block mx-auto bg-[#222] rounded-full py-2 px-5">
+              তাহলে আবেদন করো এখনই
+            </button>
           </div>
           {/* item 2 */}
           <div>
@@ -131,7 +178,7 @@ const JobsDetail = () => {
       {/* bottom item */}
       <div className="">
         <div className="">
-          <h2 className="2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] font-bold mt-10">
+          <h2 className="2xs:text-[16px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[35px] 2xl:text-[28px] font-bold my-10">
             অন্যান্য জব
           </h2>
           <div className="space-y-5">

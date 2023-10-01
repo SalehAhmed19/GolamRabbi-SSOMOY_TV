@@ -137,12 +137,12 @@ const Statistics = () => {
               <Zoom>
                 <div
                   key={statistic._id}
-                  className="hidden lg:block sm:px-10 py-10 rounded-lg bg-secondary text-white font-bold lg:flex lg:flex-col lg:items-center"
+                  className="hidden lg:block sm:px-10 py-10 rounded-lg bg-secondary text-white lg:flex lg:flex-col lg:items-center"
                 >
-                  <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[22px] drop-shadow-xl">
+                  <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[18px] 2xl:text-[27px] font-bold drop-shadow-lg">
                     {statistic.qty}
                   </h3>
-                  <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[13px] xl:text-[18px] 2xl:text-[22px] text-center">
+                  <h3 className="2xs:text-[10px] xs:text-[12px] sm:text-[13px] xl:text-[14px] 2xl:text-[18px] text-center">
                     {statistic.activity}
                   </h3>
                 </div>

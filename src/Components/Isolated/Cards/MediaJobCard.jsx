@@ -9,20 +9,21 @@ const MediaJobCard = ({ circulars }) => {
       <div key={circulars.id} className="relative rounded-lg bg-[#222]">
         <Link to={`/jobs/${circulars.id}`}>
           <img src={circulars.image} alt="" className="rounded-t-lg" />
+
+          <div className="text-basic p-5">
+            <h3>
+              <span className="font-bold">পদবিঃ </span> {circulars.position}
+            </h3>
+            <p>
+              <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
+              {circulars.lastDate}
+            </p>
+            <p>
+              <span className="font-bold">প্রতিষ্ঠানঃ </span>{" "}
+              {circulars.organization}
+            </p>
+          </div>
         </Link>
-        <div className="text-basic p-5">
-          <h3>
-            <span className="font-bold">পদবিঃ </span> {circulars.position}
-          </h3>
-          <p>
-            <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
-            {circulars.lastDate}
-          </p>
-          <p>
-            <span className="font-bold">প্রতিষ্ঠানঃ </span>{" "}
-            {circulars.organization}
-          </p>
-        </div>
         <div className="flex justify-center items-center pb-3">
           <button
             onClick={() => setOpenModal(true)}

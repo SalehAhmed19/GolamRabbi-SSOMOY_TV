@@ -4,7 +4,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 
 function BannerCard() {
   return (
-    <div className="scaling-div2 my-5 relative">
+    <div className="2xs:hidden xs:block scaling-div2 my-5 relative">
       <div className="">
         <AiOutlineShareAlt className="text-3xl icon" />
         <div className="flex justify-between items-center">
@@ -23,7 +23,7 @@ function BannerCard() {
       <form className="input">
         <input
           placeholder="তোমার কথা লিখো"
-          className="outline-none rounded-full px-5 py-2 my-2 w-full"
+          className="outline-none rounded-full px-5 py-2 my-2 w-full border mt-5"
           type="text"
         />
         <button className="bg-primary w-full text-[#222] py-1 rounded-full font-bold">

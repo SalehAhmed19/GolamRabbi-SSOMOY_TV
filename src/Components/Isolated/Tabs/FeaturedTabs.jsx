@@ -88,7 +88,7 @@ const FeaturedTabs = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [clickId, setClickId] =useState(0)
+  const [clickId, setClickId] = useState(0);
   const allTvNews = [
     {
       id: 1,

@@ -4,14 +4,14 @@ import { MdLocationOn } from "react-icons/md";
 import { Zoom } from "react-reveal";
 import EventRegistrationModal from "../Modals/EventRegistrationModal";
 const EventsCard = ({ evened }) => {
-    const [openModal, setOpenModal] = useState(false);
-    const handleOpenModal = () => setOpenModal(true);
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => setOpenModal(true);
   return (
     <>
       <div className="-p-5 flex items-center flex-col md:flex-row">
         <div className="mb-8 md:mb-0 text-primary mr-5 border-2 bg-white text-secondary shadow-xl p-5  rounded-md">
           <h2
-            className="2xs:text-[36px] text-6xl font-bold drop-shadow-xl"
+            className="2xs:text-[36px] text-6xl font-bold drop-shadow-lg"
             style={{ fontFamily: "Hind Siliguri" }}
           >
             {evened?.date}

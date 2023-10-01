@@ -37,7 +37,7 @@ const AnnsEventCard = ({ event }) => {
         <button
           onClick={() => setOpenModal(!openModal)}
           style={{ fontFamily: "Hind Siliguri" }}
-          className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#AF1453] hover:bg-[#AF1453] sm:w-[180px] md:w-[290px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+          className="block mx-auto 2xs:my-4 xs:my-6 sm:my-8 md:my-10 py-2 px-5 border-2 border-[#AF1453] hover:bg-[#AF1453] sm:w-[180px] md:w-[260px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
         >
           বুক করো এখনি
         </button>

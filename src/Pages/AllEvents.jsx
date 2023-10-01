@@ -2,7 +2,6 @@ import React from "react";
 import { Fade } from "react-reveal";
 import AnnsEventCard from "../Components/Isolated/Cards/AnnsEventCard";
 
-
 function AllEvents() {
   const events = [
     {
