@@ -3,8 +3,7 @@ import Modal from "@mui/material/Modal";
 import React from "react";
 import { MdOutlineClose } from "react-icons/md";
 
-const GalleryModal = ({image,  openModal, setOpenModal}) => {
-  const handleModalClose = () => setOpenModal(false);
+const GalleryModal = ({ image, openModal, handleModalClose }) => {
   const style = {
     position: "absolute",
     top: "50%",
@@ -31,17 +30,17 @@ const GalleryModal = ({image,  openModal, setOpenModal}) => {
             style={{ fontFamily: "Hind Siliguri" }}
           >
             <div className="font-bold text-secondary flex justify-between items-center">
-              <h1 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]  my-5">
+              {/* <h1 className="font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]  my-5">
                 descriptionText?.webinar?.title
-              </h1>
+              </h1> */}
               <MdOutlineClose
                 onClick={handleModalClose}
                 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]  cursor-pointer"
               />
             </div>
-            <p className="text-justify 2xs:text-[12px]">
+            {/* <p className="text-justify 2xs:text-[12px]">
               descriptionText?.webinar?.description ....
-            </p>
+            </p> */}
 
             <img src={image.image} alt="" />
           </div>

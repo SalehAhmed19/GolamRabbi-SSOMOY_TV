@@ -3,6 +3,7 @@ import GalleryModal from "../Modals/GalleryModal";
 
 const GalleryCard = ({ image }) => {
   const [openModal, setOpenModal] = useState(false);
+  const handleModalClose = () => setOpenModal(false);
   return (
     <div
       onClick={() => setOpenModal(true)}
@@ -24,7 +25,7 @@ const GalleryCard = ({ image }) => {
         <GalleryModal
           image={image}
           openModal={openModal}
-          setOpenModal={setOpenModal}
+          handleModalClose={handleModalClose}
         />
       )}
     </div>

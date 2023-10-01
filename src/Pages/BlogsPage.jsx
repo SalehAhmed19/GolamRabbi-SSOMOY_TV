@@ -199,9 +199,10 @@ function BlogsPage() {
                         {d.headline}
                       </h3>
                       <p className="text-[#7B7B7B] 2xs:text-[12px]">
-                        {d.subHeading}
-                        <br />
-                        {d.subDescription1}
+                        {d.subHeading?.slice(0, 155)}
+                        <span className="text-[15px] font-semibold text-secondary">
+                          <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link>
+                        </span>
                       </p>
                     </div>
                   </div>

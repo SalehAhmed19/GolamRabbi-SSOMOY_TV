@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -8,7 +8,7 @@ import img2 from "../assets/images/gr2.jpg";
 import img3 from "../assets/images/gr3.jpg";
 import img4 from "../assets/images/gr4.jpg";
 import img5 from "../assets/images/gr5.jpg";
-const IimageGalleryPage = () => {
+const ImageGalleryPage = () => {
   const galleryImages = [
     { id: 1, image: img1, title: "Golam Rabby 1" },
     { id: 2, image: img2, title: "Golam Rabby 2" },
@@ -39,4 +39,4 @@ const IimageGalleryPage = () => {
   );
 };
 
-export default IimageGalleryPage;
+export default ImageGalleryPage;
