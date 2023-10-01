@@ -24,7 +24,7 @@ const Blogs = () => {
       subTitle2: "এখন বাংলাদেশে",
       description: "বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 1",
       subDescription: "আজ ৩০ জুলাই ২০২৩ ইং রোজ রবিবার প্রকাশিত হয়েছে। জিপিএ ৫",
-      subDescription1: "পেয়েছে ১ লক্ষ্য ৮৫ হাজার...",
+      subDescription1: "পেয়েছে ১ লক্ষ্য ৮৫ হাজার",
       editor: "গোলাম রাব্বী",
       date: "২ এপ্রিল ২০২৩",
       subHeading:
@@ -39,7 +39,7 @@ const Blogs = () => {
       subTitle2: "এখন বাংলাদেশে",
       description: "বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 2",
       subDescription: "আজ ৩০ জুলাই ২০২৩ ইং রোজ রবিবার প্রকাশিত হয়েছে। জিপিএ ৫",
-      subDescription1: "পেয়েছে ১ লক্ষ্য ৮৫ হাজার...",
+      subDescription1: "পেয়েছে ১ লক্ষ্য ৮৫ হাজার",
       editor: "গোলাম রাব্বী",
       date: "২৬ এপ্রিল ২০২৩",
       subHeading:
@@ -54,7 +54,7 @@ const Blogs = () => {
       subTitle2: "এখন বাংলাদেশে",
       description: "বিশ্বের এক নম্বর কারখানা এখন বাংলাদেশে 3",
       subDescription: "আজ ৩০ জুলাই ২০২৩ ইং রোজ রবিবার প্রকাশিত হয়েছে। জিপিএ ৫",
-      subDescription1: "পেয়েছে ১ লক্ষ্য ৮৫ হাজার...",
+      subDescription1: "পেয়েছে ১ লক্ষ্য ৮৫ হাজার",
       editor: "গোলাম রাব্বী",
       date: "12 এপ্রিল ২০২৩",
       subHeading:
@@ -89,7 +89,10 @@ const Blogs = () => {
                       <p className="text-[#7B7B7B] 2xs:text-[12px]">
                         {d.subDescription}
                         <br />
-                         {d.subDescription1}
+                        {d.subDescription1} &nbsp;
+                        <span className="text-[15px] font-semibold text-secondary">
+                          <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link>
+                        </span>
                       </p>
                     </div>
                   </div>

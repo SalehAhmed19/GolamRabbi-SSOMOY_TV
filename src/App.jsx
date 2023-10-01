@@ -30,7 +30,7 @@ import FeaturedIn from "./Pages/Dashboard/FeaturedIn";
 import Quotes from "./Pages/Dashboard/Quotes";
 import Testimonials from "./Pages/Dashboard/Testimonials";
 import Home from "./Pages/Home";
-import IimageGalleryPage from "./Pages/IimageGalleryPage";
+import ImageGalleryPage from "./Pages/ImageGalleryPage";
 import InvitePage from "./Pages/InvitePage";
 import Jobs from "./Pages/Jobs";
 import JobsDetail from "./Pages/JobsDetail";
@@ -74,7 +74,7 @@ function App() {
           <Route path="/blogs/:id" element={<Blog1 />} />
           <Route path="/invite" element={<InvitePage />} />
           <Route path="/whats-new" element={<WhatsNew />} />
-          <Route path="/gallery" element={<IimageGalleryPage />} />
+          <Route path="/gallery" element={<ImageGalleryPage />} />
           <Route path="/professional-blogs" element={<ProfessionalBlogs />} />
           <Route path="/personal-blogs" element={<PersonalBlogs />} />
           <Route path="/media-courses" element={<MediaCourses />} />
