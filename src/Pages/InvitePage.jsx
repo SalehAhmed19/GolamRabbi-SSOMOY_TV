@@ -5,9 +5,8 @@ const InvitePage = () => {
   const invite = {
     id: 1,
     name: "Golam Rabby",
-    stroke: "আমার সম্পর্কে",
-    title: "আমার সম্পর্কে",
-    subTitle: "ইনভাইট",
+    stroke: "ইনভাইট",
+    title: "ইনভাইট",
     image: inviteImage,
     signatureImage: signatureImage,
     description1:
@@ -28,15 +27,15 @@ const InvitePage = () => {
     <div className="bg-primary" style={{ fontFamily: "Hind Siliguri" }}>
       <div className="relative">
         <div className="pr-8 absolute right-0 top-8 2xs:mt-5">
-          <h1 className="2xs:mr-[45px] xs:mr-[80px] md:mt-[80px] lg:-mb-20  custom-text-stroke-4 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
+          <h1 className="2xs:mr-[65px] xs:mr-[140px] md:mt-[80px] lg:-mb-20  custom-text-stroke-4 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
             {invite?.stroke}
           </h1>
-          <h2 className="lg:ml-[335px] invisible lg:visible md:text-[23px] lg:text-[41px] font-bold">
+          <h2 className="lg:ml-[180px] invisible lg:visible md:text-[23px] lg:text-[41px] font-bold">
             {invite?.title}
           </h2>
-          <h3 className="invisible lg:visible  lg:-mt-1 lg:ml-[465px] 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold">
+          {/* <h3 className="invisible lg:visible  lg:-mt-1 lg:ml-[465px] 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold">
             {invite?.subTitle}
-          </h3>
+          </h3> */}
         </div>
       </div>
       {/* content */}

@@ -39,45 +39,53 @@ const FanFunModal = ({ open, handleClose }) => {
               </div>
               {/*content 1 */}
               <div className="w-full">
-                <label htmlFor="">নাম</label>
+                <label htmlFor="" className="2xs:text-[12px]">
+                  নাম
+                </label>
                 <input
                   name="name"
                   type="text"
                   placeholder="আপনার নাম লিখুন"
-                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                 />
               </div>
               {/*content 2 */}
               <div className="w-full">
-                <label htmlFor="">ই-মেইল</label>
+                <label htmlFor="" className="2xs:text-[12px]">
+                  ই-মেইল
+                </label>
                 <input
                   name="email"
                   type="email"
                   placeholder="আপনার ই-মেইল লিখুন"
-                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                 />
               </div>
               {/*content 3 */}
               <div className="w-full">
-                <label htmlFor="">মোবাইল</label>
+                <label htmlFor="" className="2xs:text-[12px]">
+                  মোবাইল নাম্বার
+                </label>
                 <input
-                  name="courseName"
-                  type="text"
+                  name="mobile"
+                  type="number"
                   placeholder="আপনার মোবাইল নাম্বার লিখুন"
-                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                 />
               </div>
               {/*content 4 */}
               <div className="w-full">
-                <label htmlFor="">ফেইসবুক/ লিঙ্কডইন আইডি লিঙ্ক</label>
+                <label htmlFor="" className="2xs:text-[12px]">
+                  ফেইসবুক/ লিঙ্কডইন আইডি লিঙ্ক
+                </label>
                 <input
                   name="courseName"
                   type="text"
                   placeholder="আপনার ফেইসবুক/ লিঙ্কডইন আইডি লিঙ্ক লিখুন"
-                  className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                 />
               </div>
-              <button className="bg-secondary text-white w-ful  my-3 px-10 py-1 rounded">
+              <button className="2xs:text-[12px] bg-secondary text-white w-ful  my-3 px-10 py-1 rounded">
                 সাবমিট
               </button>
             </form>

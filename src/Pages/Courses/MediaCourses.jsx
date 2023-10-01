@@ -44,9 +44,9 @@ const MediaCourses = () => {
      <div className="">
        {allMediaCoursesData.map((courses) => (
          <div className="mt-10 mx-5 lg:mx-0" key={courses._id}>
-           <h3 className="text-primary text-2xl font-bold my-5">
+           {/* <h3 className="text-primary text-2xl font-bold my-5">
              {courses.title}
-           </h3>
+           </h3> */}
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
              {/* this map for mediaCourses  */}
              {courses?.mediaCourse?.map((course, index) => (

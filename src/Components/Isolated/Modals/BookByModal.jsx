@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React from "react";
-import { AiOutlineCloudUpload } from "react-icons/ai";
 import { IoIosClose } from "react-icons/io";
 const BookByModal = ({ book, openModal, setOpenModal }) => {
   const handleModalClose = () => setOpenModal(!openModal);
@@ -30,7 +29,7 @@ const BookByModal = ({ book, openModal, setOpenModal }) => {
           <div>
             <form className="">
               <div className="text-secondary font-bold flex justify-between items-center">
-                <span className="mb-2">Application for</span>
+                <span className="mb-2 2xs:text-[12px]">বইয়ের নাম</span>
                 <span>
                   <IoIosClose
                     onClick={handleModalClose}
@@ -41,127 +40,100 @@ const BookByModal = ({ book, openModal, setOpenModal }) => {
               {/*content 1 */}
               <div className="w-full">
                 <input
-                  name="courseName"
+                  name="bookName"
                   type="text"
                   value={book.name}
-                  placeholder="পদের নাম"
-                  className="cursor-not-allowed  w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  placeholder="বইয়ের নাম"
+                  className="2xs:text-[12px] cursor-not-allowed  w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   readOnly
                 />
               </div>
-              <h4 className="mt-8 mb-5 ">Personal data</h4>
+              <h4 className="2xs:text-[12px] mt-8 mb-5 font-bold text-secondary">
+                বিস্তারিত
+              </h4>
               {/* content 2 */}
               <div className="w-full grid md:grid-cols-2 gap-5">
                 <div className="">
-                  <label htmlFor="" className="">
-                    First name
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    বইয়ের মূল্য
                   </label>
                   <input
-                    name="courseName"
+                    name="bookPrice"
                     type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    value={book.price}
+                    placeholder="বইয়ের মূল্য"
+                    className="2xs:text-[12px] cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    readOnly
                   />
                 </div>
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    প্রকাশিত
+                  </label>
                   <input
-                    name="courseName"
+                    name="bookPublishedDate"
                     type="text"
+                    value={book.date}
                     placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    className="2xs:text-[12px] cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    readOnly
                   />
                 </div>
               </div>
+              <h4 className="2xs:text-[12px] mt-10 mb-5 font-bold text-secondary">
+                আপনার তথ্য
+              </h4>
               {/* content 3 */}
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    সম্পূর্ণনাম
+                  </label>
                   <input
-                    name="courseName"
+                    name="name"
                     type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    placeholder="আপনার নাম লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    ই-মেইল
+                  </label>
                   <input
                     name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    type="email"
+                    placeholder="আপনার ই-মেইল লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>
               {/* content 4 */}
               <div className="">
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    মোবাইল নাম্বার
+                  </label>
                   <input
-                    name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    name="mobile"
+                    type="number"
+                    placeholder="আপনার মোবাইল নাম্বার লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>
               {/* content 5 */}
-              <div className="grid md:grid-cols-2 gap-5">
+              <div className="">
                 <div className="">
-                  <label htmlFor="">First name</label>
-                  <input
-                    name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                  />
-                </div>
-                <div className="">
-                  <label htmlFor="">First name</label>
-                  <input
-                    name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                  />
-                </div>
-              </div>
-              {/* content 6 */}
-              <h4 className="mt-10 mb-5 font-bold">Application documents</h4>
-              <div className="grid md:grid-cols-2 gap-5">
-                {/* item 1 */}
-                <div>
-                  <span>First name</span>
-                  <label htmlFor="fileUpload">
-                    <p className="text-white flex justify-center  items-center my-2.5 bg-secondary w-full h-9 rounded">
-                      <span className="mx-2">আপলোড</span>
-                      <AiOutlineCloudUpload className="text-2xl cursor-pointer" />
-                    </p>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    ঠিকানা
                   </label>
-                  <input
-                    id="fileUpload"
-                    name="fileUpload"
-                    type="file"
-                    placeholder="কোর্সের ফি"
-                    className="hidden w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                  />
-                </div>
-                {/* item 2 */}
-                <div>
-                  <span>First name</span>
-                  <label htmlFor="fileUpload">
-                    <p className="text-white flex justify-center  items-center my-2.5 bg-secondary w-full h-9 rounded">
-                      <span className="mx-2">আপলোড</span>
-                      <AiOutlineCloudUpload className="text-2xl cursor-pointer" />
-                    </p>
-                  </label>
-                  <input
-                    id="fileUpload"
-                    name="fileUpload"
-                    type="file"
-                    placeholder="কোর্সের ফি"
-                    className="hidden w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  <textarea
+                    name="address"
+                    id=""
+                    type="text"
+                    placeholder="আপনার ঠিকানা লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>
@@ -171,7 +143,7 @@ const BookByModal = ({ book, openModal, setOpenModal }) => {
               </button>
               <button
                 onClick={handleModalClose}
-                className=" xs:ms-2 md:mx-5 px-10 py-1 rounded 2xs:my-4 xs:my-6 sm:my-8 md:my-10 bg-secondary text-white my-3 text-center 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
+                className="xs:ms-2 md:mx-5 px-10 py-1 rounded 2xs:my-4 xs:my-6 sm:my-8 md:my-10 bg-secondary text-white my-3 text-center 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]"
               >
                 বন্ধ করুন
               </button>

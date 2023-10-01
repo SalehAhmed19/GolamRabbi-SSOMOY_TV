@@ -14,7 +14,7 @@ const EventsCard = ({ evened }) => {
             className="2xs:text-[36px] text-6xl font-bold drop-shadow-lg"
             style={{ fontFamily: "Hind Siliguri" }}
           >
-            {evened?.date}
+            {evened?.date2}
           </h2>
           <p
             className="text-center text-black font-bold"

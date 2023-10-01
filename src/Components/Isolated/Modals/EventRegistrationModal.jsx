@@ -1,11 +1,10 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React from "react";
-import { AiOutlineCloudUpload } from "react-icons/ai";
 import { IoIosClose } from "react-icons/io";
 const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
   const handleModalClose = () => setOpenModal(false);
-  const {title} = evened;
+  const { title, date1, startingTime, endingTime, location } = evened;
   const style = {
     position: "absolute",
     top: "50%",
@@ -32,7 +31,7 @@ const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
           <div>
             <form className="">
               <div className="text-secondary font-bold flex justify-between items-center">
-                <span className="mb-2">Application for</span>
+                <span className="mb-2 2xs:text-[12px]">অনুষ্ঠানের নাম</span>
                 <span>
                   <IoIosClose
                     onClick={handleModalClose}
@@ -43,127 +42,128 @@ const EventRegistrationModal = ({ evened, openModal, setOpenModal }) => {
               {/*content 1 */}
               <div className="w-full">
                 <input
-                  name="courseName"
+                  name="eventName"
                   type="text"
                   value={title}
                   placeholder="পদের নাম"
-                  className="cursor-not-allowed  w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  className="2xs:text-[12px] cursor-not-allowed  w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   readOnly
                 />
               </div>
-              <h4 className="mt-8 mb-5 ">Personal data</h4>
+              <h4 className="mt-8 mb-5 font-bold text-secondary 2xs:text-[12px]">
+                বিস্তারিত
+              </h4>
               {/* content 2 */}
               <div className="w-full grid md:grid-cols-2 gap-5">
                 <div className="">
-                  <label htmlFor="" className="">
-                    First name
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    স্থান
                   </label>
                   <input
-                    name="courseName"
+                    name="eventPlace"
                     type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    value={location}
+                    placeholder="অনুষ্ঠানের স্থান"
+                    className="2xs:text-[12px] cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    readOnly
                   />
                 </div>
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    তারিখ
+                  </label>
                   <input
-                    name="courseName"
+                    name="eventDate"
                     type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    value={date1}
+                    placeholder="অনুষ্ঠানের তারিখ"
+                    className="2xs:text-[12px] cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>
               {/* content 3 */}
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    অনুষ্ঠান শুরু
+                  </label>
                   <input
-                    name="courseName"
+                    name="eventStartingTime"
                     type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    value={startingTime}
+                    placeholder="অনুষ্ঠান শুরু"
+                    className="2xs:text-[12px] cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    readOnly
                   />
                 </div>
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    অনুষ্ঠান শেষে
+                  </label>
+                  <input
+                    name="eventEndingTime"
+                    type="text"
+                    value={endingTime}
+                    placeholder="অনুষ্ঠান শেষে"
+                    className="2xs:text-[12px] cursor-not-allowed w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    readOnly
+                  />
+                </div>
+              </div>
+              <h4 className="2xs:text-[12px] mt-10 mb-5 font-bold text-secondary">
+                আপনার তথ্য
+              </h4>
+              {/* content 3 */}
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="">
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    সম্পূর্ণনাম
+                  </label>
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="আপনার নাম লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  />
+                </div>
+                <div className="">
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    ই-মেইল
+                  </label>
                   <input
                     name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    type="email"
+                    placeholder="আপনার ই-মেইল লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>
               {/* content 4 */}
               <div className="">
                 <div className="">
-                  <label htmlFor="">First name</label>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    মোবাইল নাম্বার
+                  </label>
                   <input
-                    name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                    name="mobile"
+                    type="number"
+                    placeholder="আপনার মোবাইল নাম্বার লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>
               {/* content 5 */}
-              <div className="grid md:grid-cols-2 gap-5">
+              <div className="">
                 <div className="">
-                  <label htmlFor="">First name</label>
-                  <input
-                    name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                  />
-                </div>
-                <div className="">
-                  <label htmlFor="">First name</label>
-                  <input
-                    name="courseName"
-                    type="text"
-                    placeholder="পদের নাম"
-                    className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                  />
-                </div>
-              </div>
-              {/* content 6 */}
-              <h4 className="mt-10 mb-5 font-bold">Application documents</h4>
-              <div className="grid md:grid-cols-2 gap-5">
-                {/* item 1 */}
-                <div>
-                  <span>First name</span>
-                  <label htmlFor="fileUpload">
-                    <p className="text-white flex justify-center  items-center my-2.5 bg-secondary w-full h-9 rounded">
-                      <span className="mx-2">আপলোড</span>
-                      <AiOutlineCloudUpload className="text-2xl cursor-pointer" />
-                    </p>
+                  <label htmlFor="" className="2xs:text-[12px]">
+                    ঠিকানা
                   </label>
-                  <input
-                    id="fileUpload"
-                    name="fileUpload"
-                    type="file"
-                    placeholder="কোর্সের ফি"
-                    className="hidden w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
-                  />
-                </div>
-                {/* item 2 */}
-                <div>
-                  <span>First name</span>
-                  <label htmlFor="fileUpload">
-                    <p className="text-white flex justify-center  items-center my-2.5 bg-secondary w-full h-9 rounded">
-                      <span className="mx-2">আপলোড</span>
-                      <AiOutlineCloudUpload className="text-2xl cursor-pointer" />
-                    </p>
-                  </label>
-                  <input
-                    id="fileUpload"
-                    name="fileUpload"
-                    type="file"
-                    placeholder="কোর্সের ফি"
-                    className="hidden w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                  <textarea
+                    name="address"
+                    id=""
+                    type="text"
+                    placeholder="আপনার ঠিকানা লিখুন"
+                    className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
                   />
                 </div>
               </div>

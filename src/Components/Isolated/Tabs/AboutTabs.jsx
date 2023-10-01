@@ -57,9 +57,8 @@ const AboutTabs = () => {
     shortBio: {
       id: 1,
       name: "Golam Rabby",
-      stroke: "আমার সম্পর্কে",
-      title: "আমার সম্পর্কে",
-      subTitle: "শর্ট বায়ো",
+      stroke: "শর্ট বায়ো",
+      title: "শর্ট বায়ো",
       image: demoImage,
       image2: demoImage2,
       signatureImage: signatureImage,
@@ -79,9 +78,8 @@ const AboutTabs = () => {
     presentationCareer: {
       id: 2,
       name: "Golam Rabby",
-      stroke: "আমার সম্পর্কে",
-      title: "আমার সম্পর্কে",
-      subTitle: "প্রেজেন্টেশন ক্যারিয়ার",
+      stroke: "প্রেজেন্টেশন ক্যারিয়ার",
+      title: "প্রেজেন্টেশন ক্যারিয়ার",
       image: demoImage,
       image2: demoImage2,
       signatureImage: signatureImage,
@@ -101,9 +99,8 @@ const AboutTabs = () => {
     rj: {
       id: 3,
       name: "Golam Rabby",
-      stroke: "আমার সম্পর্কে",
-      title: "আমার সম্পর্কে",
-      subTitle: "আর জে",
+      stroke: "আর জে",
+      title: "আর জে",
       image: demoImage,
       image2: demoImage2,
       signatureImage: signatureImage,
@@ -123,9 +120,8 @@ const AboutTabs = () => {
     writer: {
       id: 4,
       name: "Golam Rabby",
-      stroke: "আমার সম্পর্কে",
-      title: "আমার সম্পর্কে",
-      subTitle: "রাইটার",
+      stroke: "রাইটার",
+      title: "রাইটার",
       image: demoImage,
       image2: demoImage2,
       signatureImage: signatureImage,
@@ -145,9 +141,8 @@ const AboutTabs = () => {
     influencer: {
       id: 5,
       name: "Golam Rabby",
-      stroke: "আমার সম্পর্কে",
-      title: "আমার সম্পর্কে",
-      subTitle: "ইনফ্লুয়েন্সার",
+      stroke: "ইনফ্লুয়েন্সার",
+      title: "ইনফ্লুয়েন্সার",
       image: demoImage,
       image2: demoImage2,
       signatureImage: signatureImage,
@@ -249,7 +244,7 @@ const AboutTabs = () => {
           </div>
           <div className="xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {aboutDescriptionText?.shortBio?.subTitle}
+              {aboutDescriptionText?.shortBio?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {aboutDescriptionText?.shortBio?.name}
@@ -284,7 +279,7 @@ const AboutTabs = () => {
           </div>
           <div className="xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {aboutDescriptionText?.presentationCareer?.subTitle}
+              {aboutDescriptionText?.presentationCareer?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {aboutDescriptionText?.presentationCareer?.name}
@@ -323,7 +318,7 @@ const AboutTabs = () => {
           </div>
           <div className="xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {aboutDescriptionText?.rj?.subTitle}
+              {aboutDescriptionText?.rj?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {aboutDescriptionText?.rj?.name}
@@ -359,7 +354,7 @@ const AboutTabs = () => {
           </div>
           <div className="xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {aboutDescriptionText?.writer?.subTitle}
+              {aboutDescriptionText?.writer?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {aboutDescriptionText?.writer?.name}
@@ -395,7 +390,7 @@ const AboutTabs = () => {
           </div>
           <div className="xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {aboutDescriptionText?.influencer?.subTitle}
+              {aboutDescriptionText?.influencer?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {aboutDescriptionText?.influencer?.name}

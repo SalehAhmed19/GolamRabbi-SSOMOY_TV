@@ -171,8 +171,8 @@ const ProfessionalBlog = () => {
                     </h3>
                     <p className="text-[#7B7B7B] 2xs:text-[12px]">
                       {d.subHeading?.slice(0, 155)}
-                      <span className="text-[15px] font-semibold text-secondary">
-                        <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link> 
+                      <span className="2xs:text-[12px] text-[15px] font-semibold text-secondary">
+                        <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link>
                       </span>
                     </p>
                   </div>
