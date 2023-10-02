@@ -11,14 +11,14 @@ const MediaJobCard = ({ circulars }) => {
           <img src={circulars.image} alt="" className="rounded-t-lg" />
 
           <div className="text-basic p-5">
-            <h3>
+            <h3 className="2xs:text-[12px]">
               <span className="font-bold">পদবিঃ </span> {circulars.position}
             </h3>
-            <p>
+            <p className="2xs:text-[12px]">
               <span className="font-bold">আবেদনের শেষ তারিখঃ </span>{" "}
               {circulars.lastDate}
             </p>
-            <p>
+            <p className="2xs:text-[12px]">
               <span className="font-bold">প্রতিষ্ঠানঃ </span>{" "}
               {circulars.organization}
             </p>

@@ -9,14 +9,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../../Styles/Events.css";
 import bg from "../../assets/images/event-bg.jpg";
 import EventsCard from "./Cards/EventsCard";
-import EventRegistrationModal from "./Modals/EventRegistrationModal";
 
 const Events = () => {
   const allEvents = [
     {
       id: 1,
       title: "আইডিয়া ডেভেলপমেন্ট অ্যান্ড ক্রিয়েটিভ রাইটিং ",
-      date: "০১",
+      date1: "০১ সেপ্টেম্বর",
+      date2: "০১",
       month: "সেপ্টেম্বর",
       startingTime: "সকাল ১০:০০ টা",
       endingTime: "বিকাল ০৪:০০ টা",
@@ -25,52 +25,52 @@ const Events = () => {
     {
       id: 2,
       title: "কীভাবে হবো নিউজ প্রেজেন্টার?",
-      date: "১০",
+      date1: "১০ সেপ্টেম্বর",
+      date2: "১০",
       month: "সেপ্টেম্বর",
       startingTime: "সকাল ১০:০০ টা",
       endingTime: "বিকাল ০৪:০০ টা",
       location: "বিশ্বসাহিত্য কেন্দ্র, বাংলা মোটর, ঢাকা",
-      btnHidden: "hidden",
     },
     {
       id: 3,
       title: "জীবনের রূপকথা",
-      date: "১২",
+      date1: "১২ এপ্রিল",
+      date2: "১২",
       month: "এপ্রিল",
       startingTime: "সকাল ০৮:০০",
       endingTime: "দুপুর ০২:০০",
       location: "মিরপুর, ঢাকা",
-      btnHidden: "hidden",
     },
     {
       id: 4,
       title: "বেকারত্বের কালো মেঘ",
-      date: "২৩",
+      date1: "২৩ এপ্রিল",
+      date2: "২৩",
       month: "এপ্রিল",
       startingTime: "সকাল ১০:০০",
       endingTime: "দুপুর ০১:০০",
       location: "ধানমন্ডি, ঢাকা",
-      btnHidden: "hidden",
     },
     {
       id: 5,
       title: "জীবন নিয়ে কিছু কথা",
-      date: "১০",
+      date1: "১০ মে",
+      date2: "১০",
       month: "মে",
       startingTime: "সকাল ০৮:০০",
       endingTime: "দুপুর ০২:০০",
       location: "মিরপুর, ঢাকা",
-      btnHidden: "hidden",
     },
     {
       id: 6,
       title: "জীবনের রূপকথা",
-      date: "১৯",
+      date1: "১৯ জুন",
+      date2: "১৯",
       month: "জুন",
       startingTime: "সকাল ০৮:০০",
       endingTime: "দুপুর ০২:০০",
       location: "মিরপুর, ঢাকা",
-      btnHidden: "hidden",
     },
   ];
   return (

@@ -156,8 +156,8 @@ function Navbar(props) {
                   sx={{
                     display: { xs: "none", sm: "block", paddingRight: "28px" },
                   }}
+                  className="space-x-5"
                 >
-                  {" "}
                   {/* <input
                     className="bg-transparent py-2 mr-3 px-5 rounded-full border-2 border-[#333] text-center text-[#fff]"
                     style={{ fontFamily: "Hind Siliguri" }}
@@ -174,6 +174,7 @@ function Navbar(props) {
                           fontSize: "18px",
                           fontFamily: "Hind Siliguri",
                         }}
+                        className=""
                       >
                         {item.menu}
                       </Button>

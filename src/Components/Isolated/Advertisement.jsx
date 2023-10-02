@@ -3,7 +3,7 @@ import React from "react";
 import { toast } from "react-hot-toast";
 import { Zoom } from "react-reveal";
 import depressed from "../../assets/images/sky.jpg";
-import MuiModal from "./Modals/MuiModal";
+import ShareModal from "./Modals/ShareModal";
 
 function Advertisement() {
   const [open, setOpen] = React.useState(false);
@@ -93,47 +93,10 @@ function Advertisement() {
           </button>
         </Zoom>
       </Zoom>
-      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
-        <h4 className="text-primary font-bold text-xl">
-          সমাধান পেতে; লিখো এখানে
-        </h4>
-        <form onSubmit={() => handleSubmit(event)} action="">
-          <input
-            type="text"
-            name="title"
-            readOnly
-            value="Share your feelings and Problems"
-            className="hidden"
-          />
-          <input
-            name="name"
-            placeholder="তোমার নাম লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-          <input
-            name="email"
-            placeholder="তোমার ইমেইল লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-          <input
-            name="mobile"
-            placeholder="তোমার মোবাইল নাম্বার লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-          <textarea
-            className="w-full mt-3 bg-[#333] rounded py-1 px-3 focus:outline-none text-primary"
-            placeholder="তোমার কথা লিখো"
-            name="description"
-            id=""
-          ></textarea>
-          <button className="bg-primary w-full block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-            সাবমিট করো
-          </button>
-        </form>
-      </MuiModal>
+      <ShareModal
+        open={open}
+        handleClose={handleClose}
+      />
     </div>
   );
 }

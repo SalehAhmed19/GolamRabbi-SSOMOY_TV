@@ -118,7 +118,9 @@ const ProfessionalBlog = () => {
     <div className="my-10">
       {/* title and arrows */}
       <div className="flex justify-between items-center">
-        <h2 className="text-primary text-2xl font-bold my-5">প্রফেশনাল ব্লগ</h2>
+        <h2 className="text-primary 2xs:text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold my-5">
+          প্রফেশনাল ব্লগ
+        </h2>
         <div className="flex space-x-5">
           {/* prev btn */}
           <div className="professional-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
@@ -171,8 +173,8 @@ const ProfessionalBlog = () => {
                     </h3>
                     <p className="text-[#7B7B7B] 2xs:text-[12px]">
                       {d.subHeading?.slice(0, 155)}
-                      <span className="text-[15px] font-semibold text-secondary">
-                        <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link> 
+                      <span className="2xs:text-[12px] text-[15px] font-semibold text-secondary">
+                        <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link>
                       </span>
                     </p>
                   </div>

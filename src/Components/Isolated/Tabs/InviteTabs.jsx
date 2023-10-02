@@ -57,9 +57,8 @@ export default function InviteTabs() {
         anchor: {
           id: 1,
           name: "Golam Rabby",
-          stroke: "আমার সম্পর্কে",
-          title: "আমার সম্পর্কে",
-          subTitle: "অ্যাংকর / MC",
+          stroke: "অ্যাংকর / MC",
+          title: "অ্যাংকর / MC",
           image: demoImage,
           image2: demoImage2,
           signatureImage: signatureImage,
@@ -79,9 +78,8 @@ export default function InviteTabs() {
         consultant: {
           id: 2,
           name: "Golam Rabby",
-          stroke: "আমার সম্পর্কে",
-          title: "আমার সম্পর্কে",
-          subTitle: "কনসালটেন্ট",
+          stroke: "কনসালটেন্ট",
+          title: "কনসালটেন্ট",
           image: demoImage,
           image2: demoImage2,
           signatureImage: signatureImage,
@@ -101,9 +99,8 @@ export default function InviteTabs() {
         webinar: {
           id: 3,
           name: "Golam Rabby",
-          stroke: "আমার সম্পর্কে",
-          title: "আমার সম্পর্কে",
-          subTitle: "ওয়েবিনার",
+          stroke: "ওয়েবিনার",
+          title: "ওয়েবিনার",
           image: demoImage,
           image2: demoImage2,
           signatureImage: signatureImage,
@@ -174,11 +171,11 @@ export default function InviteTabs() {
       <TabPanel value={value} index={0} className="bg-black rounded-lg">
         <div
           style={{ fontFamily: "Hind Siliguri" }}
-          className="p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
+          className="2xs:p-0 p-5 text-primary grid grid-cols-1 xl:grid-cols-2 place-items-center  bg-black rounded-lg"
         >
           <div className="order-2 xl:order-none xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {descriptionText?.anchor?.subTitle}
+              {descriptionText?.anchor?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {descriptionText?.anchor?.description1?.slice(0, 500)} ....
@@ -212,7 +209,7 @@ export default function InviteTabs() {
         >
           <div className="order-2 xl:order-none xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {descriptionText?.consultant?.subTitle}
+              {descriptionText?.consultant?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {descriptionText?.consultant?.description1?.slice(0, 500)} ....
@@ -246,7 +243,7 @@ export default function InviteTabs() {
         >
           <div className="order-2 xl:order-none xl:mr-[100px]">
             <h1 className="2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold my-5">
-              {descriptionText?.webinar?.subTitle}
+              {descriptionText?.webinar?.title}
             </h1>
             <p className="text-justify 2xs:text-[12px]">
               I {descriptionText?.webinar?.description1?.slice(0, 500)} ....

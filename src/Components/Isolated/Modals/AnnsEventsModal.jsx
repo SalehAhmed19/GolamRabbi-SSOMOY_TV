@@ -44,7 +44,10 @@ const AnnsEventsModal = ({ event, openModal, setOpenModal }) => {
       aria-describedby="modal-modal-description"
       sx={{ fontFamily: "Hind Siliguri" }}
     >
-      <Box sx={style} className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px] rounded-md">
+      <Box
+        sx={style}
+        className="p-5 2xs:w-[85%] xs:w-[90%] md:w-[600px] rounded-md"
+      >
         <div
           className="2xs:h-[50vh]  overflow-auto bg-white "
           style={{ fontFamily: "Hind Siliguri" }}
@@ -63,36 +66,42 @@ const AnnsEventsModal = ({ event, openModal, setOpenModal }) => {
             </div>
             {/*content 1 */}
             <div className="w-full">
-              <label htmlFor="">নাম</label>
+              <label htmlFor="" className="2xs:text-[12px]">
+                নাম
+              </label>
               <input
                 name="name"
                 type="text"
                 value={event?.title}
                 placeholder="আপনার নাম লিখুন"
-                className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
               />
             </div>
             {/*content 2 */}
             <div className="w-full">
-              <label htmlFor="">ই-মেইল</label>
+              <label htmlFor="" className="2xs:text-[12px]">
+                ই-মেইল
+              </label>
               <input
                 name="email"
                 type="email"
                 placeholder="আপনার ই-মেইল লিখুন"
-                className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
               />
             </div>
             {/*content 3 */}
             <div className="w-full">
-              <label htmlFor="">মোবাইল</label>
+              <label htmlFor="" className="2xs:text-[12px]">
+                মোবাইল
+              </label>
               <input
                 name="courseName"
                 type="number"
                 placeholder="আপনার মোবাইল নাম্বার লিখুন"
-                className="w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
+                className="2xs:text-[12px] w-full my-2 py-1 px-3 focus:outline-none placeholder:text-[#787878] bg-[#F1F1F1] text-black rounded"
               />
             </div>
-            <button className="bg-secondary text-white w-ful  my-3 px-10 py-1 rounded">
+            <button className="2xs:text-[12px] bg-secondary text-white w-ful  my-3 px-10 py-1 rounded">
               সাবমিট
             </button>
           </form>

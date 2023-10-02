@@ -90,8 +90,8 @@ const Blogs = () => {
                         {d.subDescription}
                         <br />
                         {d.subDescription1} &nbsp;
-                        <span className="text-[15px] font-semibold text-secondary">
-                          <Link to={`/blogs/${d.id}`}>আরও পড়ুন ...</Link>
+                        <span className="2xs:text-[12px] text-[15px] font-semibold text-secondary">
+                          <Link to={`/blogs/${d.id}`}> আরও পড়ুন ...</Link>
                         </span>
                       </p>
                     </div>

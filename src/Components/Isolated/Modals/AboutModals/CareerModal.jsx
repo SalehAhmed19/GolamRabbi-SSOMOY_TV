@@ -42,9 +42,9 @@ const CareerModal = ({ descriptionText, open, handleClose }) => {
                 <h2 className="lg:ml-[335px] invisible lg:visible md:text-[23px] lg:text-[41px] font-bold">
                   {descriptionText?.presentationCareer?.title}
                 </h2>
-                <h3 className="invisible lg:visible  lg:-mt-1 lg:ml-[465px] 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold">
+                {/* <h3 className="invisible lg:visible  lg:-mt-1 lg:ml-[465px] 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-bold">
                   {descriptionText?.presentationCareer?.subTitle}
-                </h3>
+                </h3> */}
               </div>
             </div>
             {/* content */}

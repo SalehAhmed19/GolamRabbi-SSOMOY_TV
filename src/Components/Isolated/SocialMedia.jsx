@@ -29,8 +29,8 @@ function SocialMedia() {
     },
   ];
   return (
-    <div className="p-5 md:p-16 text-[#fff] px-5">
-      <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-2 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">
+    <div className="md:p-16 text-[#fff]">
+      <h1 className="-mb-5 md:-mb-10 lg:-mb-20  custom-text-stroke-2 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[50px] lg:text-[70px] xl:text-[95px] my-5">
         সোশ্যাল মিডিয়াতে সংযুক্ত হোন
       </h1>
       <Zoom>

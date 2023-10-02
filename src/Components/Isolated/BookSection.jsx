@@ -21,7 +21,7 @@ function BookSection() {
       title: "বই মেলায় আসছে",
       date: "এপ্রিল ১৪",
       image: book2,
-      price: "২০৬",
+      price: "২০৬ টাকা",
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ function BookSection() {
       title: "বই মেলায় আসছে",
       date: "এপ্রিল ১৪",
       image: book1,
-      price: "২০৬",
+      price: "২০৬ টাকা",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ function BookSection() {
       title: "বই মেলায় আসছে",
       date: "এপ্রিল ১৪",
       image: book2,
-      price: "২০৬",
+      price: "২০৬ টাকা",
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ function BookSection() {
       title: "বই মেলায় আসছে",
       date: "এপ্রিল ১৪",
       image: book1,
-      price: "২০৬",
+      price: "২০৬ টাকা",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ function BookSection() {
       title: "বই মেলায় আসছে",
       date: "এপ্রিল ১৪",
       image: book2,
-      price: "২০৬",
+      price: "২০৬ টাকা",
     },
     {
       id: 6,
@@ -61,7 +61,7 @@ function BookSection() {
       title: "বই মেলায় আসছে",
       date: "এপ্রিল ১৪",
       image: book1,
-      price: "২০৬",
+      price: "২০৬ টাকা",
     },
   ];
   return (

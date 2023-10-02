@@ -27,7 +27,7 @@ const BlogContent = ({ blogContent }) => {
     <div className="text-[#bbbbbb]">
       {groupedSentences.map((group, index) => (
         <React.Fragment key={index}>
-          <p>{group}</p>
+          <p className="2xs:text-[12px]">{group}</p>
           {index % 5 === 4 && <br />}{" "}
           {/* Add a line break after every group of five */}
         </React.Fragment>

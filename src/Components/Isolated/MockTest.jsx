@@ -4,7 +4,6 @@ import { Zoom } from "react-reveal";
 import box from "../../assets/SVGs/box.png";
 import news from "../../assets/images/interview.png";
 import MockTestModal from "./Modals/MockTestModal";
-import MuiModal from "./Modals/MuiModal";
 
 function MockTest() {
   const [open, setOpen] = React.useState(false);
@@ -101,39 +100,6 @@ function MockTest() {
           টেস্ট দিতে সেট করে নাও টাইম
         </button>
       </Zoom>
-      <MuiModal open={open} handleOpen={handleOpen} handleClose={handleClose}>
-        <form onSubmit={() => handleSubmit(event)} action="">
-          <h4 className="text-primary font-bold text-xl">মক টেস্ট দিতে চাও?</h4>
-          <input
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="datetime-local"
-            id="birthdaytime"
-            name="birthdaytime"
-          ></input>
-          <input
-            name="name"
-            placeholder="তোমার নাম লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-          <input
-            name="email"
-            placeholder="তোমার ইমেইল লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-          <input
-            name="mobile"
-            placeholder="তোমার মোবাইল নাম্বার লিখো"
-            className="w-full my-2 py-1 px-3 focus:outline-none bg-[#333] text-primary rounded"
-            type="text"
-          />
-
-          <button className="bg-primary block ml-auto my-3 px-10 py-1 text-[#222] rounded">
-            সাবমিট করো
-          </button>
-        </form>
-      </MuiModal>
       <MockTestModal open={open} handleClose={handleClose}/>
       <img
         src={box}

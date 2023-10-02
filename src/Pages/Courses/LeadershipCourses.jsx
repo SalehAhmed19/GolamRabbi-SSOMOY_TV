@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import leadership from "../../assets/images/leadership.jpg";
 import CourseCard from "../../Components/Isolated/Cards/CourseCard";
+import leadership from "../../assets/images/leadership.jpg";
 
 
 const LeadershipCourses = () => {
@@ -37,16 +37,16 @@ const LeadershipCourses = () => {
   return (
     <div className="lg:px-24 py-10">
       <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
+        <h2 className="mt-10 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
           লিডারশীপ কোর্স
         </h2>
       </Fade>
       <div className="">
         {allLeaderShipCoursesData.map((courses) => (
           <div className="mt-10 mx-5 lg:mx-0" key={courses._id}>
-            <h3 className="text-primary text-2xl font-bold my-5">
+            {/* <h3 className="text-primary text-2xl font-bold my-5">
               {courses.title}
-            </h3>
+            </h3> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {/* this map for leadershipCourses  */}
               {courses?.leadershipCourse?.map((course, index) => (

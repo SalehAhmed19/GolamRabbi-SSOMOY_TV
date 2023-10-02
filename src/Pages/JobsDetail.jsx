@@ -165,14 +165,7 @@ const JobsDetail = () => {
               তাহলে আবেদন করো এখনই
             </button>
           </div>
-          {/* item 2 */}
-          <div>
-            <img
-              src={jobAdd}
-              alt=""
-              className="hidden lg:block lg:w-[411px] lg:h-[450px] xl:h-[300px] mt-5 mx-[70px] md:mx-[90px] xl:mx-[30px] rounded-lg"
-            />
-          </div>
+       
         </div>
       </div>
       {/* bottom item */}

@@ -9,7 +9,7 @@ import Footer from "./Components/Shared/Footer";
 import Navbar from "./Components/Shared/Navbar";
 import "./global.css";
 import AllEvents from "./Pages/AllEvents";
-import Blog1 from "./Pages/Blogs/Blog1";
+import BlogDetail from "./Pages/Blogs/BlogDetail";
 import PersonalBlogs from "./Pages/Blogs/PersonalBlogs";
 import ProfessionalBlogs from "./Pages/Blogs/ProfessionalBlogs";
 import BlogsPage from "./Pages/BlogsPage";
@@ -71,7 +71,7 @@ function App() {
           <Route path="/events" element={<AllEvents />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/blogs" element={<BlogsPage />} />
-          <Route path="/blogs/:id" element={<Blog1 />} />
+          <Route path="/blogs/:id" element={<BlogDetail />} />
           <Route path="/invite" element={<InvitePage />} />
           <Route path="/whats-new" element={<WhatsNew />} />
           <Route path="/gallery" element={<ImageGalleryPage />} />
