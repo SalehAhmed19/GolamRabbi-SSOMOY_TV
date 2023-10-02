@@ -66,7 +66,7 @@ function Jobs() {
     <div>
       <div className="lg:px-24 py-20 p-5 pb-36">
         <Fade down>
-          <h2 className="mt-12 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
+          <h2 className="mt-5 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
             চাকুরী সমূহ
           </h2>
         </Fade>

@@ -20,7 +20,9 @@ function CommentBox() {
   return (
     <div className="my-5 text-basic">
       <div className="flex items-center justify-between border-b-2 border-[#333] py-3">
-        <h3 className="text-xl font-bold">মন্তব্য করুন</h3>
+        <h3 className="text-accent 2xs:text-[12px] text-basic text-xl font-bold">
+          মন্তব্য করুন
+        </h3>
         {/* <button className="bg-[#222] border-2 border-[#333] px-5 py-2 rounded-full">
           সাইন ইন করুন
         </button> */}
@@ -35,29 +37,29 @@ function CommentBox() {
           <textarea
             name="comment"
             placeholder="তোমার কমেন্ট লিখ"
-            className="bg-[#333] my-1 rounded-md p-3 h-24"
+            className="2xs:text-[12px] bg-[#333] my-1 rounded-md p-3 2xs:h-20 h-24"
             type="text"
           />
           <input
             name="name"
             placeholder="তোমার নাম লিখ"
-            className="bg-[#333] my-1 rounded-md py-2 px-3"
+            className="2xs:text-[12px] bg-[#333] my-1 rounded-md py-2 px-3"
             type="text"
           />
           <input
             name="email"
             placeholder="তোমার ইমেইল লিখ"
-            className="bg-[#333] my-1 rounded-md py-2 px-3"
+            className="2xs:text-[12px] bg-[#333] my-1 rounded-md py-2 px-3"
             type="text"
           />
           <input
             name="mobile"
             placeholder="তোমার মোবাইল লিখ"
-            className="bg-[#333] my-1 rounded-md py-2 px-3"
+            className="2xs:text-[12px] bg-[#333] my-1 rounded-md py-2 px-3"
             type="text"
           />
           <button
-            className="px-4 py-2 bg-[#F6B30E] my-2 w-full ml-auto text-[#222] rounded-md"
+            className="2xs:text-[12px] px-4 py-2 bg-[#F6B30E] my-2 w-full ml-auto text-[#222] rounded-md"
             type="submit"
           >
             কমেন্ট পোস্ট করো

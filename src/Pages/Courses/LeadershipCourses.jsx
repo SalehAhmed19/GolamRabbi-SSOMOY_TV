@@ -37,7 +37,7 @@ const LeadershipCourses = () => {
   return (
     <div className="lg:px-24 py-10">
       <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary pt-14 my-5">
+        <h2 className="mt-10 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
           লিডারশীপ কোর্স
         </h2>
       </Fade>

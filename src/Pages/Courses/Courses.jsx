@@ -154,7 +154,7 @@ function Courses() {
   return (
     <div className="lg:px-24 py-20 p-5 pb-36">
       <Fade down>
-        <h2 className="mt-12 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
+        <h2 className="mt-5 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
           কোর্স সমূহ
         </h2>
       </Fade>
@@ -162,7 +162,9 @@ function Courses() {
       <div className="my-10">
         {/* title and arrows */}
         <div className="flex justify-between items-center">
-          <h3 className="text-primary text-2xl font-bold my-5">মিডিয়া কোর্স</h3>
+          <h3 className="text-primary 2xs:text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold my-5">
+            মিডিয়া কোর্স
+          </h3>
           <div className="flex space-x-5">
             {/* prev btn */}
             <div className="media-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">
@@ -210,7 +212,7 @@ function Courses() {
       <div className="my-10">
         {/* title and arrows */}
         <div className="flex justify-between items-center">
-          <h3 className="text-primary text-2xl font-bold my-5">
+          <h3 className="text-primary 2xs:text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold my-5">
             লিডারশীপ কোর্স
           </h3>
           <div className="flex space-x-5">
@@ -260,7 +262,9 @@ function Courses() {
       <div className="my-10">
         {/* title and arrows */}
         <div className="flex justify-between items-center">
-          <h3 className="text-primary text-2xl font-bold my-5">লাইফ কোর্স</h3>
+          <h3 className="text-primary 2xs:text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold my-5">
+            লাইফ কোর্স
+          </h3>
           <div className="flex space-x-5">
             {/* prev btn */}
             <div className="life-btn-prev cursor-pointer bg-primary rounded-full w-[20px]">

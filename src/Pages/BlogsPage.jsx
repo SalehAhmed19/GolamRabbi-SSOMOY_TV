@@ -119,7 +119,7 @@ function BlogsPage() {
   return (
     <div className="lg:py-20 py-10 lg:mx-20 mx-5">
       <Fade down>
-        <h2 className="text-center text-4xl font-bold text-primary py-14 my-5">
+        <h2 className="mt-12 md:mt-20 mb-5  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[43px] 2xl:text-[48px] text-primary text-center font-bold">
           ব্লগ
         </h2>
       </Fade>
@@ -145,7 +145,7 @@ function BlogsPage() {
       <div className="my-10">
         {/* title and arrows */}
         <div className="flex justify-between items-center">
-          <h2 className="text-primary text-2xl font-bold my-5">
+          <h2 className="text-primary 2xs:text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold my-5">
             পার্সোনাল ব্লগ
           </h2>
           <div className="flex space-x-5">

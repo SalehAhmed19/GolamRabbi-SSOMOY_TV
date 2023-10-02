@@ -35,7 +35,7 @@ const BookSectionCard = ({ book }) => {
         <div className="lg:group-hover:visible lg:invisible  lg:group-hover:transition-all lg:group-hover:duration-1000 lg:group-hover:delay-75 transition-all duration-200  delay-150 relative w-full h-[83px]">
           <div className="-mt-3 md:mt-8 mr-5 lg:w-[20%] absolute right-0">
             <button className="w-full text-primary p-5  font-bold 2xs:text-[12px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px]">
-              মূল্যঃ {book.price} টাকা
+              মূল্যঃ {book.price}
             </button>
           </div>
         </div>

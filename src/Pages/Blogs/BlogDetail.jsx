@@ -1,12 +1,12 @@
 import React from "react";
-import BlogsHeading from "../../Components/Isolated/BlogsComponents/BlogsHeading";
-import BlogsSubHeading from "../../Components/Isolated/BlogsComponents/BlogsSubHeading";
+import { Link, useParams } from "react-router-dom";
 import BlogContent from "../../Components/Isolated/BlogsComponents/BlogContent";
 import BlogsAdd from "../../Components/Isolated/BlogsComponents/BlogsAdd";
-import MoreBlogsVertical from "../../Components/Isolated/BlogsComponents/MoreBlogsVertical";
+import BlogsHeading from "../../Components/Isolated/BlogsComponents/BlogsHeading";
+import BlogsSubHeading from "../../Components/Isolated/BlogsComponents/BlogsSubHeading";
 import CommentBox from "../../Components/Isolated/BlogsComponents/CommentBox";
+import MoreBlogsVertical from "../../Components/Isolated/BlogsComponents/MoreBlogsVertical";
 import SocialMedia from "../../Components/Isolated/SocialMedia";
-import { Link, useParams } from "react-router-dom";
 
 const data = [
   {
@@ -45,7 +45,7 @@ const data = [
   },
 ];
 
-function Blog1() {
+function BlogDetail() {
   const { id } = useParams();
 
   const found = data.find((obj) => {
@@ -73,12 +73,11 @@ function Blog1() {
           <div className="mb-5 flex flex-col items-end lg:mx-36 mx-5">
             <BlogsAdd />
             <div className="my-5">
-              <h3 className="text-basic text-xl font-bold text-left my-5">
+              <h3 className="2xs:text-[12px] text-basic text-xl font-bold text-left my-5">
                 আরও পড়ুন
               </h3>
               {filteredData?.map((data) => (
                 <Link to={`/blogs/${data?.id}`}>
-                  {" "}
                   <MoreBlogsVertical data={data} />
                 </Link>
               ))}
@@ -97,4 +96,4 @@ function Blog1() {
   );
 }
 
-export default Blog1;
+export default BlogDetail;
