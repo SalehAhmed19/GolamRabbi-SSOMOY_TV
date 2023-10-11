@@ -4,9 +4,10 @@ import { Toaster } from "react-hot-toast";
 import { TbArrowBigUpLinesFilled } from "react-icons/tb";
 import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
+// import Navbar from "../src/Components/Shared/Navbar";
 import "./App.css";
 import Footer from "./Components/Shared/Footer";
-import Navbar from "./Components/Shared/Navbar";
+import Header from "./Components/Shared/Header";
 import "./global.css";
 import AllEvents from "./Pages/AllEvents";
 import BlogDetail from "./Pages/Blogs/BlogDetail";
@@ -63,7 +64,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Navbar />
+        <Header/>
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/jobs" element={<Jobs />} />

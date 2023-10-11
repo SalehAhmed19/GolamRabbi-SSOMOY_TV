@@ -24,7 +24,7 @@ const InvitePage = () => {
   };
 
   return (
-    <div className="bg-primary" style={{ fontFamily: "Hind Siliguri" }}>
+    <div className="bg-primary p-5" style={{ fontFamily: "Hind Siliguri" }}>
       <div className="relative">
         <div className="pr-8 absolute right-0 top-8 2xs:mt-5">
           <h1 className="2xs:mr-[65px] xs:mr-[140px] md:mt-[80px] lg:-mb-20  custom-text-stroke-4 text-center  2xs:text-[18px] xs:text-[23px] sm:text-[28px] md:text-[55px] lg:text-[100px] my-5">

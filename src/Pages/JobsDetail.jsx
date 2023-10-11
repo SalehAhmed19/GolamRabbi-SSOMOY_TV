@@ -1,15 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import jobAdd from "../assets/images/jobAdd.gif";
 const JobsDetail = () => {
   const { id } = useParams();
   return (
-    <div className="mt-[80px] xl:mt-5 p-5 xl:p-24 text-white">
+    <div className="mt-[40px] xl:mt-5 p-5 xl:p-24 text-white">
       {/* top item */}
       <div className="grid grid-cols-1 xl:grid-cols-5">
         {/* left side */}
         <div className="col-span-3 md:pr-10">
-          <h1 className="2xs:text-[16px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[35px] 2xl:text-[28px] font-bold">
+          <h1 className="mt-16 2xs:text-[16px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[35px] 2xl:text-[28px] font-bold">
             শিল্পকলা একাডেমিতে ৯ম-২০তম গ্রেডে চাকরির সুযোগ, আবেদন ফি ২০০-৬০০
           </h1>
           <ul>
@@ -67,10 +66,10 @@ const JobsDetail = () => {
             <li>
               {/* item 4  */}
               <div className="">
-                <h2 className="mt-5 md:mt-10 font-semibold mb-5 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[22px] text-primary">
+                <h2 className="my-5  md:mt-10 font-semibold 2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[22px] text-primary">
                   কর্মসংস্থানের অবস্থা:
                 </h2>
-                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[16px] mb-16">
+                <span className="2xs:text-[10px] xs:text-[12px] sm:text-[16px] xl:text-[16px] 2xl:text-[16px]">
                   &bull; পূর্ণকাল
                 </span>
               </div>
@@ -78,260 +77,262 @@ const JobsDetail = () => {
           </ul>
         </div>
         {/* right side  */}
-        <div className="lg:flex flex-row xl:flex-col">
-          {/* item 1 */}
-          {/* <div className="w-full lg:w-[411px] h-[450px] rounded-lg mt-5 bg-[#1e1e1e]">
-            <div className="relative text-center w-[411px] h-[56px]">
-              <h2 className=" text-white absolute top-5 md:left-[200px] lg:left-[160px] font-bold">
-                ডেসক্রিপশন:
-              </h2>
-            </div>
-            <div>
-              <ul className="space-y-5 p-5">
-                <li>
-                  <span className="font-semibold">শূন্যপদ:</span> &nbsp;২
-                </li>
-                <li>
-                  <span className="font-semibold"> কর্মসংস্থানের অবস্থা: </span>
-                  &nbsp;পূর্ণকাল
-                </li>
-                <li>
-                  <span className="font-semibold">অভিজ্ঞতা: </span>{" "}
-                  &nbsp;পূর্ণকাল
-                </li>
-                <li>
-                  <span className="font-semibold"> চাকুরি স্থান: </span>
-                  &nbsp;পূর্ণকাল
-                </li>
-                <li>
-                  <span className="font-semibold">বেতন: </span> &nbsp;পূর্ণকাল
-                </li>
-                <li>
-                  <span className="font-semibold">
-                    আবেদন পাঠাবার শেষ তারিখ:
-                  </span>
-                  &nbsp;পূর্ণকাল
-                </li>
-              </ul>
-              <button className="block 2xs:my-4 xs:my-6 sm:my-8 md:my-10 md:mx-10 py-2 px-5 border border-[#222] hover:bg-[#fff] 2xs: sm:w-[180px] md:w-[290px] text-center rounded-full hover:text-black font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[16px]">
-                অংশ নিতে ক্লিক করো
-              </button>
-            </div>
-          </div> */}
-          <div className="w-full lg:w-[350px] bg-[#F6B30F] pb-5">
+        <div className="mt-5 xl:mt-0 lg:flex flex-row xl:flex-col">
+          <div className="w-full xl:w-[350px] rounded-[5px] bg-[#F6B30F] pb-5">
             <div className="w-full bg-[#222] p-5">
               <h3 className="font-bold text-xl text-center">ডেসক্রিপশন</h3>
             </div>
-            <ul className="pt-5 ps-7 pe-7 text-[#222]">
-              <li className="my-3">
+            <ul className="p-5 text-[#222]">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
                   <span className="font-semibold">শূন্যপদঃ </span> ০২
                 </p>
               </li>
-              <li className="my-3">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
                   <span className="font-semibold">কর্মসংস্থানের অবস্থাঃ </span>{" "}
                   পূর্ণকাল
                 </p>
               </li>
-              <li className="my-3">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
                   <span className="font-semibold">অভিজ্ঞতাঃ </span> পূর্ণকাল
                 </p>
               </li>
-              <li className="my-3">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
                   <span className="font-semibold">বয়সঃ </span> পূর্ণকাল
                 </p>
               </li>
-              <li className="my-3">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
                   <span className="font-semibold">চাকুরিস্থানঃ </span> পূর্ণকাল
                 </p>
               </li>
-              <li className="my-3">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
                   <span className="font-semibold">বেতনঃ </span> পূর্ণকাল
                 </p>
               </li>
-              <li className="my-3">
+              <li className="my-3 2xs:text-[12px]">
                 <p className="text-[#333]">
-                  <span className="font-semibold">আবেদনের শেষ তারিখঃ </span>{" "}
+                  <span className="font-semibold">আবেদনের শেষ তারিখঃ </span>
                   পূর্ণকাল
                 </p>
               </li>
             </ul>
-            <button className="block mx-auto bg-[#222] rounded-full py-2 px-5">
+            <button className="block mx-auto 2xs:text-[12px] bg-[#222] rounded-full 2xs:w-[180px] w-[200px] p-2">
               তাহলে আবেদন করো এখনই
             </button>
           </div>
-       
         </div>
       </div>
       {/* bottom item */}
       <div className="">
         <div className="">
-          <h2 className="2xs:text-[16px] xs:text-[23px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[35px] 2xl:text-[28px] font-bold my-10">
+          <h2 className="2xs:text-[14px] xs:text-[20px] sm:text-[28px] md:text-[33px] lg:text-[38px] xl:text-[35px] 2xl:text-[28px] font-bold my-8">
             অন্যান্য জব
           </h2>
           <div className="space-y-5">
             {/* row 1 */}
-            <div className="grid grid-cols-7 p-5 bg-white text-black rounded-[5px]">
+            <div className="space-y-3 grid 2xs:grid-cols-1 grid-cols-2 lg:grid-cols-7 p-5 bg-black text-white rounded-[5px]">
               {/* item 1 */}
-              <div className="">
+              <div className="2xs:text-[12px]">
                 <h2 className="font-bold">পদের নাম </h2>
                 <p>কনটেন্ট রাইটার (ইন্টার্ন)</p>
               </div>
               {/* item 2 */}
-              <div className="">
+              <div className="2xs:text-[12px]">
                 <h2 className="font-bold">কাজের ধরন</h2>
                 <p>ফুল টাইম</p>
               </div>
               {/* item 3 */}
-              <div className="">
+              <div className="2xs:text-[12px]">
                 <h2 className="font-bold">কর্মস্থল</h2>
                 <p> মিরপুর, ঢাকা</p>
               </div>
               {/* item 4 */}
-              <div className="">
+              <div className="2xs:text-[12px]">
                 <h2 className="font-bold">শিক্ষা</h2>
                 <p>উচ্ছ মাধ্যমিক</p>
               </div>
               {/* item 5 */}
-              <div className="">
+              <div className="2xs:text-[12px]">
                 <h2 className="font-bold">অভিজ্ঞতা </h2>
                 <p>২ বছর</p>
               </div>
               {/* item 6 */}
-              <div className="">
+              <div className="2xs:text-[12px]">
                 <h2 className="font-bold">আবেদনের শেষ তারিখ </h2>
                 <p> ২০ অক্টোবর ২০২২</p>
               </div>
               {/* item 7 */}
               <div className="">
-                <button className="bg-black px-14 py-2 rounded-full text-white font-bold">
+                <button className="mt-3 lg:mt-0 lg:block lg:mx-auto 2xs:py-1 2xs:px-1 py-2 px-2 bg-white w-[160px] sm:w-[140px] 2xl:w-[180px] 3xl:w-[200px] text-center rounded-full text-black font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
                   বিস্তারিত দেখুন
                 </button>
               </div>
             </div>
             {/* row 2 */}
-            <div className="grid grid-cols-7 p-5 bg-black  rounded-[5px]">
+            <div className="space-y-3 grid 2xs:grid-cols-1 grid-cols-2 lg:grid-cols-7 p-5 bg-white text-black rounded-[5px]">
               {/* item 1 */}
-              <div className="">
-                <h2 className="font-bold text-white">পদের নাম </h2>
-                <p className="text-white">কনটেন্ট রাইটার (ইন্টার্ন)</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">পদের নাম </h2>
+                <p>কনটেন্ট রাইটার (ইন্টার্ন)</p>
               </div>
               {/* item 2 */}
-              <div className="">
-                <h2 className="font-bold text-white">কাজের ধরন</h2>
-                <p className="text-white">ফুল টাইম</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কাজের ধরন</h2>
+                <p>ফুল টাইম</p>
               </div>
               {/* item 3 */}
-              <div className="">
-                <h2 className="font-bold text-white">কর্মস্থল</h2>
-                <p className="text-white"> মিরপুর, ঢাকা</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কর্মস্থল</h2>
+                <p> মিরপুর, ঢাকা</p>
               </div>
               {/* item 4 */}
-              <div className="">
-                <h2 className="font-bold text-white">শিক্ষা</h2>
-                <p className="text-white">উচ্ছ মাধ্যমিক</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">শিক্ষা</h2>
+                <p>উচ্ছ মাধ্যমিক</p>
               </div>
               {/* item 5 */}
-              <div className="">
-                <h2 className="font-bold text-white">অভিজ্ঞতা </h2>
-                <p className="text-white">২ বছর</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">অভিজ্ঞতা </h2>
+                <p>২ বছর</p>
               </div>
               {/* item 6 */}
-              <div className="">
-                <h2 className="font-bold text-white">আবেদনের শেষ তারিখ </h2>
-                <p className="text-white"> ২০ অক্টোবর ২০২২</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">আবেদনের শেষ তারিখ </h2>
+                <p> ২০ অক্টোবর ২০২২</p>
               </div>
               {/* item 7 */}
               <div className="">
-                <button className="bg-white text-black px-14 py-2 rounded-full font-bold">
+                <button className="mt-3 lg:mt-0 lg:block lg:mx-auto 2xs:py-1 2xs:px-1 py-2 px-2 border-2 bg-black  w-[160px] sm:w-[140px] 2xl:w-[180px] 3xl:w-[200px] text-center rounded-full text-white font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
                   বিস্তারিত দেখুন
                 </button>
               </div>
             </div>
             {/* row 3 */}
-            <div className="grid grid-cols-7 p-5 bg-secondary text-black rounded-[5px]">
+            <div className="space-y-3 grid 2xs:grid-cols-1 grid-cols-2 lg:grid-cols-7 p-5 bg-secondary text-black rounded-[5px]">
               {/* item 1 */}
-              <div className="">
-                <h2 className="font-bold text-white">পদের নাম </h2>
-                <p className="text-white">কনটেন্ট রাইটার (ইন্টার্ন)</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">পদের নাম </h2>
+                <p>কনটেন্ট রাইটার (ইন্টার্ন)</p>
               </div>
               {/* item 2 */}
-              <div className="">
-                <h2 className="font-bold text-white">কাজের ধরন</h2>
-                <p className="text-white">ফুল টাইম</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কাজের ধরন</h2>
+                <p>ফুল টাইম</p>
               </div>
               {/* item 3 */}
-              <div className="">
-                <h2 className="font-bold text-white">কর্মস্থল</h2>
-                <p className="text-white"> মিরপুর, ঢাকা</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কর্মস্থল</h2>
+                <p> মিরপুর, ঢাকা</p>
               </div>
               {/* item 4 */}
-              <div className="">
-                <h2 className="font-bold text-white">শিক্ষা</h2>
-                <p className="text-white">উচ্ছ মাধ্যমিক</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">শিক্ষা</h2>
+                <p>উচ্ছ মাধ্যমিক</p>
               </div>
               {/* item 5 */}
-              <div className="">
-                <h2 className="font-bold text-white">অভিজ্ঞতা </h2>
-                <p className="text-white">২ বছর</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">অভিজ্ঞতা </h2>
+                <p>২ বছর</p>
               </div>
               {/* item 6 */}
-              <div className="">
-                <h2 className="font-bold text-white">আবেদনের শেষ তারিখ </h2>
-                <p className="text-white"> ২০ অক্টোবর ২০২২</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">আবেদনের শেষ তারিখ </h2>
+                <p> ২০ অক্টোবর ২০২২</p>
               </div>
               {/* item 7 */}
               <div className="">
-                <button className="bg-white text-secondary px-14 py-2 rounded-full font-bold">
+                <button className="mt-3 lg:mt-0 lg:block lg:mx-auto 2xs:py-1 2xs:px-1 py-2 px-2 bg-black w-[160px] sm:w-[140px] 2xl:w-[180px] 3xl:w-[200px] text-center rounded-full text-secondary font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
                   বিস্তারিত দেখুন
                 </button>
               </div>
             </div>
             {/* row 4 */}
-            <div className="grid grid-cols-7 p-5 bg-primary text-black rounded-[5px]">
+            <div className="space-y-3 grid 2xs:grid-cols-1 grid-cols-2 lg:grid-cols-7 p-5 bg-secondary text-whtie rounded-[5px]">
               {/* item 1 */}
-              <div className="">
-                <h2 className="font-bold text-black">পদের নাম </h2>
-                <p className="text-black">কনটেন্ট রাইটার (ইন্টার্ন)</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">পদের নাম </h2>
+                <p>কনটেন্ট রাইটার (ইন্টার্ন)</p>
               </div>
               {/* item 2 */}
-              <div className="">
-                <h2 className="font-bold text-black">কাজের ধরন</h2>
-                <p className="text-black">ফুল টাইম</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কাজের ধরন</h2>
+                <p>ফুল টাইম</p>
               </div>
               {/* item 3 */}
-              <div className="">
-                <h2 className="font-bold text-black">কর্মস্থল</h2>
-                <p className="text-black"> মিরপুর, ঢাকা</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কর্মস্থল</h2>
+                <p> মিরপুর, ঢাকা</p>
               </div>
               {/* item 4 */}
-              <div className="">
-                <h2 className="font-bold text-black">শিক্ষা</h2>
-                <p className="text-black">উচ্ছ মাধ্যমিক</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">শিক্ষা</h2>
+                <p>উচ্ছ মাধ্যমিক</p>
               </div>
               {/* item 5 */}
-              <div className="">
-                <h2 className="font-bold text-black">অভিজ্ঞতা </h2>
-                <p className="text-black">২ বছর</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">অভিজ্ঞতা </h2>
+                <p>২ বছর</p>
               </div>
               {/* item 6 */}
-              <div className="">
-                <h2 className="font-bold text-black">আবেদনের শেষ তারিখ </h2>
-                <p className="text-black"> ২০ অক্টোবর ২০২২</p>
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">আবেদনের শেষ তারিখ </h2>
+                <p> ২০ অক্টোবর ২০২২</p>
               </div>
               {/* item 7 */}
               <div className="">
-                <button className="bg-black text-primary px-14 py-2 rounded-full font-bold">
+                <button className="mt-3 lg:mt-0 lg:block lg:mx-auto 2xs:py-1 2xs:px-1 py-2 px-2 bg-white w-[160px] sm:w-[140px] 2xl:w-[180px] 3xl:w-[200px] text-center rounded-full text-secondary font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
+                  বিস্তারিত দেখুন
+                </button>
+              </div>
+            </div>
+            {/* row 5 */}
+            <div className="space-y-3 grid 2xs:grid-cols-1 grid-cols-2 lg:grid-cols-7 p-5 bg-primary text-black rounded-[5px]">
+              {/* item 1 */}
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">পদের নাম </h2>
+                <p>কনটেন্ট রাইটার (ইন্টার্ন)</p>
+              </div>
+              {/* item 2 */}
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কাজের ধরন</h2>
+                <p>ফুল টাইম</p>
+              </div>
+              {/* item 3 */}
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">কর্মস্থল</h2>
+                <p> মিরপুর, ঢাকা</p>
+              </div>
+              {/* item 4 */}
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">শিক্ষা</h2>
+                <p>উচ্ছ মাধ্যমিক</p>
+              </div>
+              {/* item 5 */}
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">অভিজ্ঞতা </h2>
+                <p>২ বছর</p>
+              </div>
+              {/* item 6 */}
+              <div className="2xs:text-[12px]">
+                <h2 className="font-bold">আবেদনের শেষ তারিখ </h2>
+                <p> ২০ অক্টোবর ২০২২</p>
+              </div>
+              {/* item 7 */}
+              <div className="">
+                <button className="mt-3 lg:mt-0 lg:block lg:mx-auto 2xs:py-1 2xs:px-1 py-2 px-2  bg-black  w-[160px] sm:w-[140px] 2xl:w-[180px] 3xl:w-[200px] text-center rounded-full text-primary font-bold 2xs:text-[12px]  sm:text-[14px] md:text-[16px] lg:text-[18px]">
                   বিস্তারিত দেখুন
                 </button>
               </div>
             </div>
           </div>
+          <button className="block mx-auto 2xs:text-[12px] bg-secondary font-bold m-5 rounded-full 2xs:w-[180px] w-[200px] p-2">
+            আরো দেখতে
+          </button>
         </div>
       </div>
     </div>
